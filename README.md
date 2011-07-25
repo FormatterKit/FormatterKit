@@ -1,5 +1,4 @@
 # FormatterKit
-*`stringWithFormat:` for the sophisticated hacker set*
 
 `FormatterKit` is a collection of well-crafted `NSFormatter` subclasses for things like hours of operation, distance, and relative time intervals. Each formatter abstracts away the complex business logic of their respective domain, so that you can focus on the more important aspects of your application.
 
