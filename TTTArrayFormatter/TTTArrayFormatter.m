@@ -134,8 +134,8 @@
     NSMutableArray *components = nil;
     
     if (string) {
-        components = [[string componentsSeparatedByString:self.delimiter] mutableCopy];
-        NSMutableString *lastComponent = [(NSString *)[components lastObject] mutableCopy];
+        components = [[[string componentsSeparatedByString:self.delimiter] mutableCopy] autorelease];
+        NSMutableString *lastComponent = [[(NSString *)[components lastObject] mutableCopy] autorelease];
         NSRange lastComponentConjunctionRange = [lastComponent rangeOfString:self.conjunction];
         if (lastComponentConjunctionRange.location != NSNotFound) {
             [lastComponent replaceCharactersInRange:lastComponentConjunctionRange withString:self.delimiter];
