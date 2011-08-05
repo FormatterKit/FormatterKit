@@ -79,11 +79,11 @@ TTTWeekday TTTWeekdayForNSDate(NSDate *date) {
 	NSArray *components = [[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] componentsSeparatedByCharactersInSet:nonDecimalCharacterSet];
 	
 	NSArray *openingComponents = [components subarrayWithRange:NSMakeRange(0, 2)];
-	dailyHours.openingHour = [[[openingComponents firstObject] stringByTrimmingCharactersInSet:nonDecimalCharacterSet] integerValue];
+	dailyHours.openingHour = [[[openingComponents objectAtIndex:0] stringByTrimmingCharactersInSet:nonDecimalCharacterSet] integerValue];
 	dailyHours.openingMinute = [[[openingComponents lastObject] stringByTrimmingCharactersInSet:nonDecimalCharacterSet] integerValue];
 	
 	NSArray *closingComponents = [components subarrayWithRange:NSMakeRange(2, 2)];
-	dailyHours.closingHour = [[[closingComponents firstObject] stringByTrimmingCharactersInSet:nonDecimalCharacterSet] integerValue];
+	dailyHours.closingHour = [[[closingComponents objectAtIndex:0] stringByTrimmingCharactersInSet:nonDecimalCharacterSet] integerValue];
 	dailyHours.closingMinute = [[[closingComponents lastObject] stringByTrimmingCharactersInSet:nonDecimalCharacterSet] integerValue];
 	
 	return dailyHours;
