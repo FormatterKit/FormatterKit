@@ -120,7 +120,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 
 - (NSString *)enOrdinalIndicatorStringFromNumber:(NSNumber *)number {
     // If 11, 12, or 13
-    if (NSLocationInRange([number integerValue], NSMakeRange(11, 3)) {
+    if (NSLocationInRange([number integerValue], NSMakeRange(11, 3))) {
         return @"th";
     }
     
