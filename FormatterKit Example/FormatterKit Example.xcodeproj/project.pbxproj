@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F8FBF9E91427A456001409DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBF9E81427A456001409DB /* UIKit.framework */; };
+		F8FBF9EB1427A456001409DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBF9EA1427A456001409DB /* Foundation.framework */; };
+		F8FBF9ED1427A456001409DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBF9EC1427A456001409DB /* CoreGraphics.framework */; };
+		F8FBF9F31427A456001409DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8FBF9F11427A456001409DB /* InfoPlist.strings */; };
+		F8FBF9F51427A456001409DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBF9F41427A456001409DB /* main.m */; };
+		F8FBF9F91427A456001409DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBF9F81427A456001409DB /* AppDelegate.m */; };
+		F8FBFA1B1427A4EB001409DB /* TTTArrayFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA0B1427A4EB001409DB /* TTTArrayFormatter.m */; };
+		F8FBFA1C1427A4EB001409DB /* TTTHoursOfOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA0E1427A4EB001409DB /* TTTHoursOfOperation.m */; };
+		F8FBFA1D1427A4EB001409DB /* TTTLocationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA111427A4EB001409DB /* TTTLocationFormatter.m */; };
+		F8FBFA1E1427A4EB001409DB /* TTTOrdinalNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA141427A4EB001409DB /* TTTOrdinalNumberFormatter.m */; };
+		F8FBFA1F1427A4EB001409DB /* TTTTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA171427A4EB001409DB /* TTTTimeIntervalFormatter.m */; };
+		F8FBFA201427A4EB001409DB /* TTTURLRequestFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA1A1427A4EB001409DB /* TTTURLRequestFormatter.m */; };
+		F8FBFA351427CEC0001409DB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA341427CEC0001409DB /* RootViewController.m */; };
+		F8FBFA381427D159001409DB /* FormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA371427D159001409DB /* FormatterViewController.m */; };
+		F8FBFA3B1427D3DA001409DB /* ArrayFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA3A1427D3DA001409DB /* ArrayFormatterViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F8FBF9E41427A456001409DB /* FormatterKit Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FormatterKit Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8FBF9E81427A456001409DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F8FBF9EA1427A456001409DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F8FBF9EC1427A456001409DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F8FBF9F01427A456001409DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8FBF9F21427A456001409DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F8FBF9F41427A456001409DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F8FBF9F61427A456001409DB /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		F8FBF9F71427A456001409DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F8FBF9F81427A456001409DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F8FBFA0A1427A4EB001409DB /* TTTArrayFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTArrayFormatter.h; sourceTree = "<group>"; };
+		F8FBFA0B1427A4EB001409DB /* TTTArrayFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTArrayFormatter.m; sourceTree = "<group>"; };
+		F8FBFA0D1427A4EB001409DB /* TTTHoursOfOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTHoursOfOperation.h; sourceTree = "<group>"; };
+		F8FBFA0E1427A4EB001409DB /* TTTHoursOfOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTHoursOfOperation.m; sourceTree = "<group>"; };
+		F8FBFA101427A4EB001409DB /* TTTLocationFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTLocationFormatter.h; sourceTree = "<group>"; };
+		F8FBFA111427A4EB001409DB /* TTTLocationFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTLocationFormatter.m; sourceTree = "<group>"; };
+		F8FBFA131427A4EB001409DB /* TTTOrdinalNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTOrdinalNumberFormatter.h; sourceTree = "<group>"; };
+		F8FBFA141427A4EB001409DB /* TTTOrdinalNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTOrdinalNumberFormatter.m; sourceTree = "<group>"; };
+		F8FBFA161427A4EB001409DB /* TTTTimeIntervalFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTTimeIntervalFormatter.h; sourceTree = "<group>"; };
+		F8FBFA171427A4EB001409DB /* TTTTimeIntervalFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTTimeIntervalFormatter.m; sourceTree = "<group>"; };
+		F8FBFA191427A4EB001409DB /* TTTURLRequestFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTURLRequestFormatter.h; sourceTree = "<group>"; };
+		F8FBFA1A1427A4EB001409DB /* TTTURLRequestFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTURLRequestFormatter.m; sourceTree = "<group>"; };
+		F8FBFA331427CEC0001409DB /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		F8FBFA341427CEC0001409DB /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		F8FBFA361427D159001409DB /* FormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormatterViewController.h; sourceTree = "<group>"; };
+		F8FBFA371427D159001409DB /* FormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormatterViewController.m; sourceTree = "<group>"; };
+		F8FBFA391427D3DA001409DB /* ArrayFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayFormatterViewController.h; sourceTree = "<group>"; };
+		F8FBFA3A1427D3DA001409DB /* ArrayFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayFormatterViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8FBF9E11427A456001409DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8FBF9E91427A456001409DB /* UIKit.framework in Frameworks */,
+				F8FBF9EB1427A456001409DB /* Foundation.framework in Frameworks */,
+				F8FBF9ED1427A456001409DB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F8FBF9D91427A456001409DB = {
+			isa = PBXGroup;
+			children = (
+				F8FBF9EE1427A456001409DB /* FormatterKit Example */,
+				F8FBFA071427A4D2001409DB /* Vendor */,
+				F8FBF9E71427A456001409DB /* Frameworks */,
+				F8FBF9E51427A456001409DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8FBF9E51427A456001409DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8FBF9E41427A456001409DB /* FormatterKit Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8FBF9E71427A456001409DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8FBF9E81427A456001409DB /* UIKit.framework */,
+				F8FBF9EA1427A456001409DB /* Foundation.framework */,
+				F8FBF9EC1427A456001409DB /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8FBF9EE1427A456001409DB /* FormatterKit Example */ = {
+			isa = PBXGroup;
+			children = (
+				F8FBFA321427CEA5001409DB /* Controllers */,
+				F8FBF9F71427A456001409DB /* AppDelegate.h */,
+				F8FBF9F81427A456001409DB /* AppDelegate.m */,
+				F8FBF9EF1427A456001409DB /* Supporting Files */,
+			);
+			path = "FormatterKit Example";
+			sourceTree = "<group>";
+		};
+		F8FBF9EF1427A456001409DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8FBF9F01427A456001409DB /* Info.plist */,
+				F8FBF9F11427A456001409DB /* InfoPlist.strings */,
+				F8FBF9F41427A456001409DB /* main.m */,
+				F8FBF9F61427A456001409DB /* Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8FBFA071427A4D2001409DB /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				F8FBFA091427A4EB001409DB /* TTTArrayFormatter */,
+				F8FBFA0C1427A4EB001409DB /* TTTHoursOfOperation */,
+				F8FBFA0F1427A4EB001409DB /* TTTLocationFormatter */,
+				F8FBFA121427A4EB001409DB /* TTTOrdinalNumberFormatter */,
+				F8FBFA151427A4EB001409DB /* TTTTimeIntervalFormatter */,
+				F8FBFA181427A4EB001409DB /* TTTURLRequestFormatter */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		F8FBFA091427A4EB001409DB /* TTTArrayFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				F8FBFA0A1427A4EB001409DB /* TTTArrayFormatter.h */,
+				F8FBFA0B1427A4EB001409DB /* TTTArrayFormatter.m */,
+			);
+			name = TTTArrayFormatter;
+			path = ../TTTArrayFormatter;
+			sourceTree = "<group>";
+		};
+		F8FBFA0C1427A4EB001409DB /* TTTHoursOfOperation */ = {
+			isa = PBXGroup;
+			children = (
+				F8FBFA0D1427A4EB001409DB /* TTTHoursOfOperation.h */,
+				F8FBFA0E1427A4EB001409DB /* TTTHoursOfOperation.m */,
+			);
+			name = TTTHoursOfOperation;
+			path = ../TTTHoursOfOperation;
+			sourceTree = "<group>";
+		};
+		F8FBFA0F1427A4EB001409DB /* TTTLocationFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				F8FBFA101427A4EB001409DB /* TTTLocationFormatter.h */,
+				F8FBFA111427A4EB001409DB /* TTTLocationFormatter.m */,
+			);
+			name = TTTLocationFormatter;
+			path = ../TTTLocationFormatter;
+			sourceTree = "<group>";
+		};
+		F8FBFA121427A4EB001409DB /* TTTOrdinalNumberFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				F8FBFA131427A4EB001409DB /* TTTOrdinalNumberFormatter.h */,
+				F8FBFA141427A4EB001409DB /* TTTOrdinalNumberFormatter.m */,
+			);
+			name = TTTOrdinalNumberFormatter;
+			path = ../TTTOrdinalNumberFormatter;
+			sourceTree = "<group>";
+		};
+		F8FBFA151427A4EB001409DB /* TTTTimeIntervalFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				F8FBFA161427A4EB001409DB /* TTTTimeIntervalFormatter.h */,
+				F8FBFA171427A4EB001409DB /* TTTTimeIntervalFormatter.m */,
+			);
+			name = TTTTimeIntervalFormatter;
+			path = ../TTTTimeIntervalFormatter;
+			sourceTree = "<group>";
+		};
+		F8FBFA181427A4EB001409DB /* TTTURLRequestFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				F8FBFA191427A4EB001409DB /* TTTURLRequestFormatter.h */,
+				F8FBFA1A1427A4EB001409DB /* TTTURLRequestFormatter.m */,
+			);
+			name = TTTURLRequestFormatter;
+			path = ../TTTURLRequestFormatter;
+			sourceTree = "<group>";
+		};
+		F8FBFA321427CEA5001409DB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F8FBFA331427CEC0001409DB /* RootViewController.h */,
+				F8FBFA341427CEC0001409DB /* RootViewController.m */,
+				F8FBFA361427D159001409DB /* FormatterViewController.h */,
+				F8FBFA371427D159001409DB /* FormatterViewController.m */,
+				F8FBFA3C1427D94D001409DB /* Formatters */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F8FBFA3C1427D94D001409DB /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				F8FBFA391427D3DA001409DB /* ArrayFormatterViewController.h */,
+				F8FBFA3A1427D3DA001409DB /* ArrayFormatterViewController.m */,
+			);
+			name = Formatters;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8FBF9E31427A456001409DB /* FormatterKit Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8FBF9FC1427A456001409DB /* Build configuration list for PBXNativeTarget "FormatterKit Example" */;
+			buildPhases = (
+				F8FBF9E01427A456001409DB /* Sources */,
+				F8FBF9E11427A456001409DB /* Frameworks */,
+				F8FBF9E21427A456001409DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FormatterKit Example";
+			productName = "FormatterKit Example";
+			productReference = F8FBF9E41427A456001409DB /* FormatterKit Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8FBF9DB1427A456001409DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Gowalla;
+			};
+			buildConfigurationList = F8FBF9DE1427A456001409DB /* Build configuration list for PBXProject "FormatterKit Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F8FBF9D91427A456001409DB;
+			productRefGroup = F8FBF9E51427A456001409DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8FBF9E31427A456001409DB /* FormatterKit Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8FBF9E21427A456001409DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8FBF9F31427A456001409DB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8FBF9E01427A456001409DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8FBF9F51427A456001409DB /* main.m in Sources */,
+				F8FBF9F91427A456001409DB /* AppDelegate.m in Sources */,
+				F8FBFA1B1427A4EB001409DB /* TTTArrayFormatter.m in Sources */,
+				F8FBFA1C1427A4EB001409DB /* TTTHoursOfOperation.m in Sources */,
+				F8FBFA1D1427A4EB001409DB /* TTTLocationFormatter.m in Sources */,
+				F8FBFA1E1427A4EB001409DB /* TTTOrdinalNumberFormatter.m in Sources */,
+				F8FBFA1F1427A4EB001409DB /* TTTTimeIntervalFormatter.m in Sources */,
+				F8FBFA201427A4EB001409DB /* TTTURLRequestFormatter.m in Sources */,
+				F8FBFA351427CEC0001409DB /* RootViewController.m in Sources */,
+				F8FBFA381427D159001409DB /* FormatterViewController.m in Sources */,
+				F8FBFA3B1427D3DA001409DB /* ArrayFormatterViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F8FBF9F11427A456001409DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8FBF9F21427A456001409DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F8FBF9FA1427A456001409DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "FormatterKit Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F8FBF9FB1427A456001409DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "FormatterKit Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8FBF9FD1427A456001409DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FormatterKit Example/Prefix.pch";
+				INFOPLIST_FILE = "FormatterKit Example/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F8FBF9FE1427A456001409DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FormatterKit Example/Prefix.pch";
+				INFOPLIST_FILE = "FormatterKit Example/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8FBF9DE1427A456001409DB /* Build configuration list for PBXProject "FormatterKit Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8FBF9FA1427A456001409DB /* Debug */,
+				F8FBF9FB1427A456001409DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8FBF9FC1427A456001409DB /* Build configuration list for PBXNativeTarget "FormatterKit Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8FBF9FD1427A456001409DB /* Debug */,
+				F8FBF9FE1427A456001409DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8FBF9DB1427A456001409DB /* Project object */;
+}
