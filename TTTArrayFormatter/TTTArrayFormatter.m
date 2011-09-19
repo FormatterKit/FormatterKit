@@ -80,8 +80,9 @@
         
         BOOL isFirstComponent = (idx == 0);
         BOOL isLastComponent = (idx == [anArray count] - 1);
+        BOOL isPenultimateComponent = (idx == [anArray count] - 2);
         if (self.conjunction && self.arrayStyle != TTTArrayFormatterDataStyle && (isLastComponent && !isFirstComponent)) {
-            [mutableString appendString:self.conjunction];
+            [mutableString appendString:self.usesAbbreviatedConjunction ? self.abbreviatedConjunction : self.conjunction];
             [mutableString appendString:self.separator];
         }
         
@@ -90,9 +91,18 @@
         
         [mutableString appendString:component];
 
-        if (self.delimiter && [anArray count] > 2 && (!isLastComponent || (isLastComponent ^ self.usesSerialDelimiter))) {
-            [mutableString appendString:self.delimiter];
-            [mutableString appendString:self.separator];
+        if (self.arrayStyle == TTTArrayFormatterDataStyle) {
+            if (!isLastComponent) {
+                [mutableString appendString:self.delimiter];
+                [mutableString appendString:self.separator];
+            }
+        } else if (self.delimiter && [anArray count] > 2 && !isLastComponent) {
+            if (isPenultimateComponent && !self.usesSerialDelimiter) {
+                [mutableString appendString:self.separator];   
+            } else {
+                [mutableString appendString:self.delimiter];
+                [mutableString appendString:self.separator];   
+            }
         } else if ([anArray count] == 2 && !isLastComponent) {
             [mutableString appendString:self.separator];
         }
