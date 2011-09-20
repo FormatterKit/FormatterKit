@@ -22,6 +22,12 @@
 		F8FBFA351427CEC0001409DB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA341427CEC0001409DB /* RootViewController.m */; };
 		F8FBFA381427D159001409DB /* FormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA371427D159001409DB /* FormatterViewController.m */; };
 		F8FBFA3B1427D3DA001409DB /* ArrayFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA3A1427D3DA001409DB /* ArrayFormatterViewController.m */; };
+		F8FBFA3F1427E162001409DB /* HoursOfOperationFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA3E1427E162001409DB /* HoursOfOperationFormatterViewController.m */; };
+		F8FBFA421427E1DC001409DB /* LocationFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA411427E1DB001409DB /* LocationFormatterViewController.m */; };
+		F8FBFA451427E21C001409DB /* OrdinalNumberFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA441427E21C001409DB /* OrdinalNumberFormatterViewController.m */; };
+		F8FBFA481427E23C001409DB /* TimeIntervalFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA471427E23C001409DB /* TimeIntervalFormatterViewController.m */; };
+		F8FBFA4B1427E260001409DB /* URLRequestFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA4A1427E260001409DB /* URLRequestFormatterViewController.m */; };
+		F8FBFA591428EE32001409DB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBFA581428EE31001409DB /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +59,17 @@
 		F8FBFA371427D159001409DB /* FormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormatterViewController.m; sourceTree = "<group>"; };
 		F8FBFA391427D3DA001409DB /* ArrayFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayFormatterViewController.h; sourceTree = "<group>"; };
 		F8FBFA3A1427D3DA001409DB /* ArrayFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayFormatterViewController.m; sourceTree = "<group>"; };
+		F8FBFA3D1427E162001409DB /* HoursOfOperationFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoursOfOperationFormatterViewController.h; sourceTree = "<group>"; };
+		F8FBFA3E1427E162001409DB /* HoursOfOperationFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoursOfOperationFormatterViewController.m; sourceTree = "<group>"; };
+		F8FBFA401427E1DB001409DB /* LocationFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationFormatterViewController.h; sourceTree = "<group>"; };
+		F8FBFA411427E1DB001409DB /* LocationFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationFormatterViewController.m; sourceTree = "<group>"; };
+		F8FBFA431427E21C001409DB /* OrdinalNumberFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrdinalNumberFormatterViewController.h; sourceTree = "<group>"; };
+		F8FBFA441427E21C001409DB /* OrdinalNumberFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrdinalNumberFormatterViewController.m; sourceTree = "<group>"; };
+		F8FBFA461427E23C001409DB /* TimeIntervalFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeIntervalFormatterViewController.h; sourceTree = "<group>"; };
+		F8FBFA471427E23C001409DB /* TimeIntervalFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeIntervalFormatterViewController.m; sourceTree = "<group>"; };
+		F8FBFA491427E260001409DB /* URLRequestFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLRequestFormatterViewController.h; sourceTree = "<group>"; };
+		F8FBFA4A1427E260001409DB /* URLRequestFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLRequestFormatterViewController.m; sourceTree = "<group>"; };
+		F8FBFA581428EE31001409DB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8FBFA591428EE32001409DB /* CoreLocation.framework in Frameworks */,
 				F8FBF9E91427A456001409DB /* UIKit.framework in Frameworks */,
 				F8FBF9EB1427A456001409DB /* Foundation.framework in Frameworks */,
 				F8FBF9ED1427A456001409DB /* CoreGraphics.framework in Frameworks */,
@@ -90,6 +108,7 @@
 		F8FBF9E71427A456001409DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F8FBFA581428EE31001409DB /* CoreLocation.framework */,
 				F8FBF9E81427A456001409DB /* UIKit.framework */,
 				F8FBF9EA1427A456001409DB /* Foundation.framework */,
 				F8FBF9EC1427A456001409DB /* CoreGraphics.framework */,
@@ -209,6 +228,16 @@
 			children = (
 				F8FBFA391427D3DA001409DB /* ArrayFormatterViewController.h */,
 				F8FBFA3A1427D3DA001409DB /* ArrayFormatterViewController.m */,
+				F8FBFA3D1427E162001409DB /* HoursOfOperationFormatterViewController.h */,
+				F8FBFA3E1427E162001409DB /* HoursOfOperationFormatterViewController.m */,
+				F8FBFA401427E1DB001409DB /* LocationFormatterViewController.h */,
+				F8FBFA411427E1DB001409DB /* LocationFormatterViewController.m */,
+				F8FBFA431427E21C001409DB /* OrdinalNumberFormatterViewController.h */,
+				F8FBFA441427E21C001409DB /* OrdinalNumberFormatterViewController.m */,
+				F8FBFA461427E23C001409DB /* TimeIntervalFormatterViewController.h */,
+				F8FBFA471427E23C001409DB /* TimeIntervalFormatterViewController.m */,
+				F8FBFA491427E260001409DB /* URLRequestFormatterViewController.h */,
+				F8FBFA4A1427E260001409DB /* URLRequestFormatterViewController.m */,
 			);
 			name = Formatters;
 			sourceTree = "<group>";
@@ -286,6 +315,11 @@
 				F8FBFA351427CEC0001409DB /* RootViewController.m in Sources */,
 				F8FBFA381427D159001409DB /* FormatterViewController.m in Sources */,
 				F8FBFA3B1427D3DA001409DB /* ArrayFormatterViewController.m in Sources */,
+				F8FBFA3F1427E162001409DB /* HoursOfOperationFormatterViewController.m in Sources */,
+				F8FBFA421427E1DC001409DB /* LocationFormatterViewController.m in Sources */,
+				F8FBFA451427E21C001409DB /* OrdinalNumberFormatterViewController.m in Sources */,
+				F8FBFA481427E23C001409DB /* TimeIntervalFormatterViewController.m in Sources */,
+				F8FBFA4B1427E260001409DB /* URLRequestFormatterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

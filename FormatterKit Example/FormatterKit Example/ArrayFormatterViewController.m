@@ -1,18 +1,28 @@
+// ArrayFormatterViewController.m
 //
-//  ArrayFormatterViewController.m
-//  FormatterKit Example
-//
-//  Created by Mattt Thompson on 11/09/19.
-//  Copyright 2011年 Gowalla. All rights reserved.
-//
+// Copyright (c) 2011 Mattt Thompson (http://mattt.me)
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
 
 #import "ArrayFormatterViewController.h"
 
 #import "TTTArrayFormatter.h"
-
-@interface ArrayFormatterViewController ()
-@property (readwrite, nonatomic, retain) NSArray *examples;
-@end
 
 enum {
     StandardSectionIndex,
@@ -20,6 +30,10 @@ enum {
     NoSerialDelimeterSectionIndex,
     DataStyleSectionIndex,
 } ArrayFormatterViewControllerSectionIndexes;
+
+@interface ArrayFormatterViewController ()
+@property (readwrite, nonatomic, retain) NSArray *examples;
+@end
 
 @implementation ArrayFormatterViewController
 @synthesize examples = _examples;
@@ -43,7 +57,7 @@ enum {
 }
 
 + (NSString *)formatterDescription {
-    return NSLocalizedString(@"Think of this as a production-ready alternative to `NSArray -componentsJoinedByString:`. `TTTArrayFormatter` comes with internationalization baked-in, and provides a concise API that allows you to configure for any edge cases.", nil);
+    return NSLocalizedString(@"Think of this as a production-ready alternative to NSArray -componentsJoinedByString:. TTTArrayFormatter comes with internationalization baked-in, and provides a concise API that allows you to configure for any edge cases.", nil);
 }
 
 #pragma mark - UITableViewDataSource
@@ -54,6 +68,19 @@ enum {
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.examples count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    switch (section) {
+        case AbbreviatedConjunctionSectionIndex:
+            return NSLocalizedString(@"Abbreviated Conjunction", nil);
+        case NoSerialDelimeterSectionIndex:
+            return NSLocalizedString(@"No Serial Delimiter (Oxford Comma)", nil);
+        case DataStyleSectionIndex:
+            return NSLocalizedString(@"Data Style", nil);
+        default:
+            return nil;
+    }
 }
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {

@@ -1,13 +1,32 @@
+// RootViewController.m
 //
-//  RootViewController.m
-//  FormatterKit Example
-//
-//  Created by Mattt Thompson on 11/09/19.
-//  Copyright 2011年 Gowalla. All rights reserved.
-//
+// Copyright (c) 2011 Mattt Thompson (http://mattt.me)
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
 
 #import "RootViewController.h"
 #import "ArrayFormatterViewController.h"
+#import "HoursOfOperationFormatterViewController.h"
+#import "LocationFormatterViewController.h"
+#import "OrdinalNumberFormatterViewController.h"
+#import "TimeIntervalFormatterViewController.h"
+#import "URLRequestFormatterViewController.h"
 
 enum {
     ArrayRowIndex,
@@ -103,9 +122,24 @@ enum {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UIViewController *viewController = nil;
     
-    switch (indexPath.section) {
+    switch (indexPath.row) {
         case ArrayRowIndex:
             viewController = [[[ArrayFormatterViewController alloc] init] autorelease];
+            break;
+        case HoursOfOperationRowIndex:
+            viewController = [[[HoursOfOperationFormatterViewController alloc] init] autorelease];
+            break;
+        case LocationRowIndex:
+            viewController = [[[LocationFormatterViewController alloc] init] autorelease];
+            break;
+        case OrdinalNumberRowIndex:
+            viewController = [[[OrdinalNumberFormatterViewController alloc] init] autorelease];
+            break;
+        case TimeIntervalRowIndex:
+            viewController = [[[TimeIntervalFormatterViewController alloc] init] autorelease];
+            break;
+        case URLRequestRowIndex:
+            viewController = [[[URLRequestFormatterViewController alloc] init] autorelease];
             break;
     }
     
