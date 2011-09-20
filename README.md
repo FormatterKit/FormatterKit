@@ -11,15 +11,15 @@ In short, use this library if you're manually formatting any of the following (w
 * __Time Intervals__: Show relative time distance between any two `NSDate` objects *(eg. "3 minutes ago" / "yesterday")*
 * __URL Requests__: Print out `cURL` or `Wget` command equivalents for any `NSURLRequest` *(eg. `curl "https://api.gowalla.com/spots/" -H "Accept: application/json"`)*
 
+## Demo
+
+Build and run the `FormatterKit Example` project in Xcode to see an inventory of the available `FormatterKit` components.
+
 ---
 
 ## TTTArrayFormatter
 
 Think of this as a production-ready alternative to `NSArray -componentsJoinedByString:`. `TTTArrayFormatter` comes with internationalization baked-in, and provides a concise API that allows you to configure for any edge cases.
-
-## Demo
-
-Build and run the `FormatterKit Example` project in Xcode to see an inventory of the available `FormatterKit` components.
 
 ### Example Usage
 
