@@ -17,6 +17,10 @@ In short, use this library if you're manually formatting any of the following (w
 
 Think of this as a production-ready alternative to `NSArray -componentsJoinedByString:`. `TTTArrayFormatter` comes with internationalization baked-in, and provides a concise API that allows you to configure for any edge cases.
 
+## Demo
+
+Build and run the `FormatterKit Example` project in Xcode to see an inventory of the available `FormatterKit` components.
+
 ### Example Usage
 
 ``` objective-c
