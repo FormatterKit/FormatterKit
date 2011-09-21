@@ -39,9 +39,9 @@ typedef enum {
 
 @interface TTTOrdinalNumberFormatter : NSNumberFormatter {
 @private
-    NSString *ordinalIndicator;
-    TTTOrdinalNumberFormatterPredicateGrammaticalGender grammaticalGender;
-    TTTOrdinalNumberFormatterPredicateGrammaticalNumber grammaticalNumber;
+    NSString *_ordinalIndicator;
+    TTTOrdinalNumberFormatterPredicateGrammaticalGender _grammaticalGender;
+    TTTOrdinalNumberFormatterPredicateGrammaticalNumber _grammaticalNumber;
 }
 
 - (NSString *)ordinalIndicator;

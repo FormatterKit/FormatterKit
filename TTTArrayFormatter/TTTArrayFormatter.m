@@ -165,4 +165,32 @@
     return returnValue;
 }
 
+#pragma mark - NSCoding
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    
+    self.arrayStyle = [aDecoder decodeIntegerForKey:@"arrayStyle"];
+    self.delimiter = [aDecoder decodeObjectForKey:@"delimiter"];
+    self.separator = [aDecoder decodeObjectForKey:@"separator"];
+    self.conjunction = [aDecoder decodeObjectForKey:@"conjunction"];
+    self.abbreviatedConjunction = [aDecoder decodeObjectForKey:@"abbreviatedConjunction"];
+    self.usesAbbreviatedConjunction = [aDecoder decodeBoolForKey:@"usesAbbreviatedConjunction"];
+    self.usesSerialDelimiter = [aDecoder decodeBoolForKey:@"usesSerialDelimiter"];
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [super encodeWithCoder:aCoder];
+    
+    [aCoder encodeInteger:self.arrayStyle forKey:@"arrayStyle"];
+    [aCoder encodeObject:self.delimiter forKey:@"delimiter"];
+    [aCoder encodeObject:self.separator forKey:@"separator"];
+    [aCoder encodeObject:self.conjunction forKey:@"conjunction"];
+    [aCoder encodeObject:self.abbreviatedConjunction forKey:@"abbreviatedConjunction"];
+    [aCoder encodeBool:self.usesAbbreviatedConjunction forKey:@"usesAbbreviatedConjunction"];
+    [aCoder encodeBool:self.usesSerialDelimiter forKey:@"usesSerialDelimiter"];
+}
+
 @end

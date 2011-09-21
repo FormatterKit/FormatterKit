@@ -228,4 +228,38 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     return nil;
 }
 
+#pragma mark - NSCoding
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    
+    self.locale = [aDecoder decodeObjectForKey:@"locale"];
+    self.pastDeicticExpression = [aDecoder decodeObjectForKey:@"pastDeicticExpression"];
+    self.presentDeicticExpression = [aDecoder decodeObjectForKey:@"presentDeicticExpression"];
+    self.futureDeicticExpression = [aDecoder decodeObjectForKey:@"futureDeicticExpression"];
+    self.deicticExpressionFormat = [aDecoder decodeObjectForKey:@"deicticExpressionFormat"];
+    self.approximateQualifierFormat = [aDecoder decodeObjectForKey:@"approximateQualifierFormat"];
+    self.presentTimeIntervalMargin = [aDecoder decodeDoubleForKey:@"presentTimeIntervalMargin"];
+    self.usesAbbreviatedCalendarUnits = [aDecoder decodeBoolForKey:@"usesAbbreviatedCalendarUnits"];
+    self.usesApproximateQualifier = [aDecoder decodeBoolForKey:@"usesApproximateQualifier"];
+    self.usesIdiomaticDeicticExpressions = [aDecoder decodeBoolForKey:@"usesIdiomaticDeicticExpressions"];
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [super encodeWithCoder:aCoder];
+    
+    [aCoder encodeObject:self.locale forKey:@"locale"];
+    [aCoder encodeObject:self.pastDeicticExpression forKey:@"pastDeicticExpression"];
+    [aCoder encodeObject:self.presentDeicticExpression forKey:@"presentDeicticExpression"];
+    [aCoder encodeObject:self.futureDeicticExpression forKey:@"futureDeicticExpression"];
+    [aCoder encodeObject:self.deicticExpressionFormat forKey:@"deicticExpressionFormat"];
+    [aCoder encodeObject:self.approximateQualifierFormat forKey:@"approximateQualifierFormat"];
+    [aCoder encodeDouble:self.presentTimeIntervalMargin forKey:@"presentTimeIntervalMargin"];
+    [aCoder encodeBool:self.usesAbbreviatedCalendarUnits forKey:@"usesAbbreviatedCalendarUnits"];
+    [aCoder encodeBool:self.usesApproximateQualifier forKey:@"usesApproximateQualifier"];
+    [aCoder encodeBool:self.usesIdiomaticDeicticExpressions forKey:@"usesIdiomaticDeicticExpressions"];
+}
+
 @end

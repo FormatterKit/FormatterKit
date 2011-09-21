@@ -35,10 +35,11 @@ typedef enum {
 extern TTTWeekday TTTWeekdayForNSDate(NSDate *date);
 
 @interface TTTHoursOfOperationSegment : NSObject {
-	NSUInteger openingHour;
-	NSUInteger openingMinute;
-	NSUInteger closingHour;
-	NSUInteger closingMinute;
+@private
+	NSUInteger _openingHour;
+	NSUInteger _openingMinute;
+	NSUInteger _closingHour;
+	NSUInteger _closingMinute;
 }
 
 @property (nonatomic, assign) NSUInteger openingHour;
@@ -57,9 +58,10 @@ extern TTTWeekday TTTWeekdayForNSDate(NSDate *date);
 #pragma mark -
 
 @interface TTTDailyHoursOfOperation : NSObject {
-	TTTWeekday weekday;
-	BOOL closed;
-	NSSet *segments;
+@private
+	TTTWeekday _weekday;
+	BOOL _closed;
+	NSSet *_segments;
 }
 
 @property (nonatomic, assign, getter = isClosed) BOOL closed;
@@ -75,13 +77,14 @@ extern TTTWeekday TTTWeekdayForNSDate(NSDate *date);
 #pragma mark -
 
 @interface TTTWeeklyHoursOfOperation : NSObject {
-	TTTDailyHoursOfOperation *sundayHours;
-	TTTDailyHoursOfOperation *mondayHours;
-	TTTDailyHoursOfOperation *tuesdayHours;
-	TTTDailyHoursOfOperation *wednesdayHours;
-	TTTDailyHoursOfOperation *thursdayHours;
-	TTTDailyHoursOfOperation *fridayHours;
-	TTTDailyHoursOfOperation *saturdayHours;
+@private
+	TTTDailyHoursOfOperation *_sundayHours;
+	TTTDailyHoursOfOperation *_mondayHours;
+	TTTDailyHoursOfOperation *_tuesdayHours;
+	TTTDailyHoursOfOperation *_wednesdayHours;
+	TTTDailyHoursOfOperation *_thursdayHours;
+	TTTDailyHoursOfOperation *_fridayHours;
+	TTTDailyHoursOfOperation *_saturdayHours;
 }
 
 - (TTTDailyHoursOfOperation *)hoursForWeekday:(TTTWeekday)weekday;

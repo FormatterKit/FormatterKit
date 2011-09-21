@@ -53,6 +53,7 @@ typedef enum {
 } TTTLocationUnitSystem;
 
 @interface TTTLocationFormatter : NSFormatter {
+@private
     TTTLocationFormatterCoordinateOrder _coordinateOrder;
     TTTLocationFormatterBearingStyle _bearingStyle;
     TTTLocationUnitSystem _unitSystem;

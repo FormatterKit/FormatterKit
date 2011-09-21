@@ -145,6 +145,11 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
     return self;
 }
 
+- (void)dealloc {
+    [_numberFormatter release];
+    [super dealloc];
+}
+
 - (NSString *)stringFromCoordinate:(CLLocationCoordinate2D)coordinate {
     return [NSString stringWithFormat:NSLocalizedString(@"(%@, %@)", @"Coordinate format"), [self.numberFormatter stringFromNumber:[NSNumber numberWithDouble:coordinate.latitude]], [self.numberFormatter stringFromNumber:[NSNumber numberWithDouble:coordinate.longitude]], nil];
 }
@@ -294,6 +299,28 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
 
 - (NSString *)stringFromVelocityFromLocation:(CLLocation *)originLocation toLocation:(CLLocation *)destinationLocation atSpeed:(CLLocationSpeed)speed {
     return [NSString stringWithFormat:NSLocalizedString(@"%@ %@", @"#{Dimensional Quantity} #{Direction}"), [self stringFromSpeed:speed], [self stringFromBearingFromLocation:originLocation toLocation:destinationLocation]];
+}
+
+#pragma mark - NSCoding
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    
+    self.coordinateOrder = [aDecoder decodeIntegerForKey:@"coordinateOrder"];
+    self.bearingStyle = [aDecoder decodeIntegerForKey:@"bearingStyle"];
+    self.unitSystem = [aDecoder decodeIntegerForKey:@"unitSystem"];
+    self.numberFormatter = [aDecoder decodeObjectForKey:@"numberFormatter"];
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [super encodeWithCoder:aCoder];
+    
+    [aCoder encodeInteger:self.coordinateOrder forKey:@"coordinateOrder"];
+    [aCoder encodeInteger:self.bearingStyle forKey:@"bearingStyle"];
+    [aCoder encodeInteger:self.unitSystem forKey:@"unitSystem"];
+    [aCoder encodeObject:self.numberFormatter forKey:@"numberFormatter"];
 }
 
 @end

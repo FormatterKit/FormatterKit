@@ -43,9 +43,9 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 @end
 
 @implementation TTTOrdinalNumberFormatter
-@synthesize ordinalIndicator;
-@synthesize grammaticalGender;
-@synthesize grammaticalNumber;
+@synthesize ordinalIndicator = _ordinalIndicator;
+@synthesize grammaticalGender = _grammaticalGender;
+@synthesize grammaticalNumber = _grammaticalNumber;
 
 - (id)init {
     self = [super init];
@@ -64,7 +64,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 }
 
 - (void)dealloc {
-    [ordinalIndicator release];
+    [_ordinalIndicator release];
     [super dealloc];
 }
 
@@ -200,6 +200,26 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 
 - (NSString *)zhHansOrdinalIndicatorStringFromNumber:(NSNumber *)number {
     return @"第";
+}
+
+#pragma mark - NSCoding
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    
+    self.ordinalIndicator = [aDecoder decodeObjectForKey:@"ordinalIndicator"];
+    self.grammaticalGender = [aDecoder decodeIntegerForKey:@"grammaticalGender"];
+    self.grammaticalNumber = [aDecoder decodeIntegerForKey:@"grammaticalNumber"];
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [super encodeWithCoder:aCoder];
+    
+    [aCoder encodeObject:self.ordinalIndicator forKey:@"ordinalIndicator"];
+    [aCoder encodeInteger:self.grammaticalGender forKey:@"grammaticalGender"];
+    [aCoder encodeInteger:self.grammaticalNumber forKey:@"grammaticalNumber"];
 }
 
 @end

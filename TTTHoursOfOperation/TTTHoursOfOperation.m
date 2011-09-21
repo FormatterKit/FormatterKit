@@ -22,9 +22,6 @@
 
 #import "TTTHoursOfOperation.h"
 
-static NSCalendar *_calendar;
-static NSDateFormatter *_dateFormatter;
-
 @interface TTTHoursOfOperation : NSObject {}
 + (NSCalendar *)calendar;
 + (NSDateFormatter *)dateFormatter;
@@ -33,6 +30,7 @@ static NSDateFormatter *_dateFormatter;
 @implementation TTTHoursOfOperation
 
 + (NSCalendar *)calendar {
+    static NSCalendar *_calendar;
 	if (!_calendar) {
 		_calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 	}
@@ -41,6 +39,7 @@ static NSDateFormatter *_dateFormatter;
 }
 
 + (NSDateFormatter *)dateFormatter {
+    static NSDateFormatter *_dateFormatter;
 	if (!_dateFormatter) {
 		_dateFormatter = [[NSDateFormatter alloc] init];
 		[_dateFormatter setTimeStyle:NSDateFormatterShortStyle];
@@ -54,8 +53,7 @@ static NSDateFormatter *_dateFormatter;
 @end
 
 TTTWeekday TTTWeekdayForNSDate(NSDate *date) {
-	NSDateComponents *components = [[TTTHoursOfOperation calendar] components:NSWeekdayCalendarUnit
-																  fromDate:date];
+	NSDateComponents *components = [[TTTHoursOfOperation calendar] components:NSWeekdayCalendarUnit fromDate:date];
 	return (TTTWeekday)[components weekday];
 }
 
@@ -69,8 +67,10 @@ TTTWeekday TTTWeekdayForNSDate(NSDate *date) {
 @end
 
 @implementation TTTHoursOfOperationSegment
-@synthesize openingHour, openingMinute;
-@synthesize closingHour, closingMinute;
+@synthesize openingHour = _openingHour;
+@synthesize openingMinute = _openingMinute;
+@synthesize closingHour = _closingHour;
+@synthesize closingMinute = _closingMinute;
 
 + (id)hoursWithString:(NSString *)string {
 	TTTHoursOfOperationSegment *dailyHours = [[[TTTHoursOfOperationSegment alloc] init] autorelease];
@@ -160,7 +160,6 @@ TTTWeekday TTTWeekdayForNSDate(NSDate *date) {
 @end
 
 #pragma mark -
-#pragma mark -
 
 @interface TTTDailyHoursOfOperation ()
 @property (nonatomic, assign) TTTWeekday weekday;
@@ -172,9 +171,9 @@ TTTWeekday TTTWeekdayForNSDate(NSDate *date) {
 @end
 
 @implementation TTTDailyHoursOfOperation
-@synthesize weekday;
-@synthesize closed;
-@synthesize segments;
+@synthesize weekday = _weekday;
+@synthesize closed = _closed;
+@synthesize segments = _segments;
 @dynamic weekdaySymbol;
 @dynamic hasDefinedHours;
 
@@ -208,7 +207,7 @@ TTTWeekday TTTWeekdayForNSDate(NSDate *date) {
 }
 
 - (void)dealloc {
-	[segments release];
+	[_segments release];
 	[super dealloc];
 }
 
@@ -249,13 +248,13 @@ TTTWeekday TTTWeekdayForNSDate(NSDate *date) {
 @end
 
 @implementation TTTWeeklyHoursOfOperation
-@synthesize sundayHours;
-@synthesize mondayHours;
-@synthesize tuesdayHours;
-@synthesize wednesdayHours;
-@synthesize thursdayHours;
-@synthesize fridayHours;
-@synthesize saturdayHours;
+@synthesize sundayHours = _sundayHours;
+@synthesize mondayHours = _mondayHours;
+@synthesize tuesdayHours = _tuesdayHours;
+@synthesize wednesdayHours = _wednesdayHours;
+@synthesize thursdayHours = _thursdayHours;
+@synthesize fridayHours = _fridayHours;
+@synthesize saturdayHours = _saturdayHours;
 
 - (id)init {
 	self = [super init];
@@ -263,13 +262,13 @@ TTTWeekday TTTWeekdayForNSDate(NSDate *date) {
 		return nil;
 	}
 	
-	sundayHours = [[TTTDailyHoursOfOperation alloc] initWithWeekday:TTTSunday];
-	mondayHours = [[TTTDailyHoursOfOperation alloc] initWithWeekday:TTTMonday];
-	tuesdayHours = [[TTTDailyHoursOfOperation alloc] initWithWeekday:TTTTuesday];
-	wednesdayHours = [[TTTDailyHoursOfOperation alloc] initWithWeekday:TTTWednesday];
-	thursdayHours = [[TTTDailyHoursOfOperation alloc] initWithWeekday:TTTThursday];
-	fridayHours = [[TTTDailyHoursOfOperation alloc] initWithWeekday:TTTFriday];
-	saturdayHours = [[TTTDailyHoursOfOperation alloc] initWithWeekday:TTTSaturday];
+	self.sundayHours = [[[TTTDailyHoursOfOperation alloc] initWithWeekday:TTTSunday] autorelease];
+	self.mondayHours = [[[TTTDailyHoursOfOperation alloc] initWithWeekday:TTTMonday] autorelease];
+	self.tuesdayHours = [[[TTTDailyHoursOfOperation alloc] initWithWeekday:TTTTuesday] autorelease];
+	self.wednesdayHours = [[[TTTDailyHoursOfOperation alloc] initWithWeekday:TTTWednesday] autorelease];
+	self.thursdayHours = [[[TTTDailyHoursOfOperation alloc] initWithWeekday:TTTThursday] autorelease];
+	self.fridayHours = [[[TTTDailyHoursOfOperation alloc] initWithWeekday:TTTFriday] autorelease];
+	self.saturdayHours = [[[TTTDailyHoursOfOperation alloc] initWithWeekday:TTTSaturday] autorelease];
 	
 	return self;
 }
@@ -376,8 +375,7 @@ TTTWeekday TTTWeekdayForNSDate(NSDate *date) {
 }
 
 - (BOOL)isTimeWithinOpeningHours:(NSDate *)time {
-	NSDateComponents *components = [[TTTHoursOfOperation calendar] components:NSWeekdayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit 
-																  fromDate:time];
+	NSDateComponents *components = [[TTTHoursOfOperation calendar] components:NSWeekdayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit fromDate:time];
 	TTTDailyHoursOfOperation *dailyHours = [self hoursForWeekday:(TTTWeekday)[components weekday]];
 	
 	for (TTTHoursOfOperationSegment *segment in dailyHours.segments) {

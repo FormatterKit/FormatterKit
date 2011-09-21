@@ -28,6 +28,7 @@ typedef enum {
 } TTTArrayFormatterStyle;
 
 @interface TTTArrayFormatter : NSFormatter {
+@private
     TTTArrayFormatterStyle _arrayStyle;
     NSString *_delimiter;
     NSString *_separator;
