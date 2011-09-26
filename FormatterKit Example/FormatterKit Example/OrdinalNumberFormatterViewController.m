@@ -42,8 +42,8 @@
     self.title = NSLocalizedString(@"Hours of Operation Formatter", nil);
     
     NSMutableArray *mutableLocales = [NSMutableArray array];
-    for (NSString *language in [TTTOrdinalNumberFormatter supportedLanguages]) {
-        [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:language] autorelease]];
+    for (NSLocale *locale in [TTTOrdinalNumberFormatter supportedLocales]) {
+        [mutableLocales addObject:locale];
     }
     self.locales = [NSArray arrayWithArray:mutableLocales];
     

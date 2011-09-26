@@ -38,21 +38,23 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 @synthesize grammaticalGender = _grammaticalGender;
 @synthesize grammaticalNumber = _grammaticalNumber;
 
-+ (NSArray *)supportedLanguages {
-    NSMutableArray *supportedLanguages = [NSMutableArray array];
++ (NSArray *)supportedLocales {
+    NSMutableArray *supportedLocales = [NSMutableArray array];
     unsigned int count = 0;
     Method *methods = class_copyMethodList(self, &count);
     for (unsigned int idx = 0; idx < count; idx++) {
         NSString *methodName = NSStringFromSelector(method_getName(methods[idx]));
         if ([methodName hasSuffix:@"OrdinalIndicatorStringFromNumber:"]) {
-            NSString *language = [methodName substringToIndex:[methodName rangeOfString:@"OrdinalIndicatorStringFromNumber:"].location];
-            if (![language isEqualToString:@"localized"]) {
-                [supportedLanguages addObject:language];
+            NSString *localeIdentifier = [methodName substringToIndex:[methodName rangeOfString:@"OrdinalIndicatorStringFromNumber:"].location];
+            if (![localeIdentifier isEqualToString:@"localized"]) {
+                NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:localeIdentifier];
+                [supportedLocales addObject:locale];
+                [locale release];
             }
         }
     }
     free(methods);
-    return supportedLanguages;
+    return supportedLocales;
 }
 
 - (id)init {
