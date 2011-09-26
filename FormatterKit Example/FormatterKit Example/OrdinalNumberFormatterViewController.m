@@ -42,16 +42,9 @@
     self.title = NSLocalizedString(@"Hours of Operation Formatter", nil);
     
     NSMutableArray *mutableLocales = [NSMutableArray array];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"es_ES"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"fr_FR"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"de_DE"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"ga_IE"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"it_IT"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"nl_NL"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"pt_PT"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"zh-Hant_CN"] autorelease]];
+    for (NSString *language in [TTTOrdinalNumberFormatter supportedLanguages]) {
+        [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:language] autorelease]];
+    }
     self.locales = [NSArray arrayWithArray:mutableLocales];
     
     NSMutableArray *mutableNumbers = [NSMutableArray array];
