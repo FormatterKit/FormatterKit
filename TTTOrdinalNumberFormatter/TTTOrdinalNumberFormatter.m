@@ -148,19 +148,29 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 }
 
 - (NSString *)frOrdinalIndicatorStringFromNumber:(NSNumber *)number {
+    NSString *ordinalIndicator = nil;
     if ([number integerValue] == 1) {
         switch (self.grammaticalGender) {
             case TTTOrdinalNumberFormatterMaleGender:
-                return @"er";
+                ordinalIndicator = @"er";
+                break;
             case TTTOrdinalNumberFormatterFemaleGender:
-                return @"ère";
+                ordinalIndicator = @"ère";
+                break;
             default:
-                return @"er";
+                ordinalIndicator = @"er";
+                break;
         }
     }
     else {
-            return @"ème";
+            ordinalIndicator = @"ème";
     }
+    
+    if (self.grammaticalNumber == TTTOrdinalNumberFormatterDual || self.grammaticalNumber == TTTOrdinalNumberFormatterTrial || self.grammaticalNumber == TTTOrdinalNumberFormatterQuadral || self.grammaticalNumber == TTTOrdinalNumberFormatterPlural) {
+        ordinalIndicator = [ordinalIndicator stringByAppendingString:@"s"];
+    }
+    
+    return ordinalIndicator;
 }
 
 - (NSString *)gaOrdinalIndicatorStringFromNumber:(NSNumber *)number {
