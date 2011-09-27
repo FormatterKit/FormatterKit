@@ -108,7 +108,22 @@
     NSNumber *number = [self.numbers objectAtIndex:indexPath.row];
     
     [_ordinalNumberFormatter setLocale:locale];
-    cell.textLabel.text = [_ordinalNumberFormatter stringFromNumber:number];
+    
+    _ordinalNumberFormatter.grammaticalGender = TTTOrdinalNumberFormatterMaleGender;
+    _ordinalNumberFormatter.grammaticalNumber = TTTOrdinalNumberFormatterSingular;
+    NSString *maleSingular = [_ordinalNumberFormatter stringFromNumber:number];
+
+    _ordinalNumberFormatter.grammaticalGender = TTTOrdinalNumberFormatterFemaleGender;
+    NSString *femaleSingular = [_ordinalNumberFormatter stringFromNumber:number];
+    
+    _ordinalNumberFormatter.grammaticalGender = TTTOrdinalNumberFormatterMaleGender;
+    _ordinalNumberFormatter.grammaticalNumber = TTTOrdinalNumberFormatterPlural;
+    NSString *malePlural = [_ordinalNumberFormatter stringFromNumber:number];
+    
+    _ordinalNumberFormatter.grammaticalGender = TTTOrdinalNumberFormatterFemaleGender;
+    NSString *femalePlural = [_ordinalNumberFormatter stringFromNumber:number];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ / %@ / %@ / %@", maleSingular, femaleSingular, malePlural, femalePlural];
 }
 
 @end
