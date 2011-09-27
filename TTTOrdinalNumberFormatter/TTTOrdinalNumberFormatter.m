@@ -148,19 +148,18 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 }
 
 - (NSString *)frOrdinalIndicatorStringFromNumber:(NSNumber *)number {
-    NSUInteger ulp = [number integerValue] % 10;
-    switch (ulp) {
-        case 1:
-            switch (self.grammaticalGender) {
-                case TTTOrdinalNumberFormatterMaleGender:
-                    return @"er";
-                case TTTOrdinalNumberFormatterFemaleGender:
-                    return @"ère";
-                default:
-                    return @"er";
-            }
-        default:
-            return @"eme";
+    if ([number integerValue] == 1) {
+        switch (self.grammaticalGender) {
+            case TTTOrdinalNumberFormatterMaleGender:
+                return @"er";
+            case TTTOrdinalNumberFormatterFemaleGender:
+                return @"ère";
+            default:
+                return @"er";
+        }
+    }
+    else {
+            return @"ème";
     }
 }
 
