@@ -155,7 +155,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
                 ordinalIndicator = @"er";
                 break;
             case TTTOrdinalNumberFormatterFemaleGender:
-                ordinalIndicator = @"ère";
+                ordinalIndicator = @"re";
                 break;
             default:
                 ordinalIndicator = @"er";
@@ -163,7 +163,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
         }
     }
     else {
-            ordinalIndicator = @"ème";
+            ordinalIndicator = @"e";
     }
     
     if (self.grammaticalNumber == TTTOrdinalNumberFormatterDual || self.grammaticalNumber == TTTOrdinalNumberFormatterTrial || self.grammaticalNumber == TTTOrdinalNumberFormatterQuadral || self.grammaticalNumber == TTTOrdinalNumberFormatterPlural) {
