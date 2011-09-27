@@ -42,23 +42,15 @@
     self.title = NSLocalizedString(@"Hours of Operation Formatter", nil);
     
     NSMutableArray *mutableLocales = [NSMutableArray array];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"es_ES"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"fr_FR"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"de_DE"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"ga_IE"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"it_IT"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"nl_NL"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"pt_PT"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"zh-Hant_CN"] autorelease]];
+    for (NSLocale *locale in [TTTOrdinalNumberFormatter supportedLocales]) {
+        [mutableLocales addObject:locale];
+    }
     self.locales = [NSArray arrayWithArray:mutableLocales];
     
     NSMutableArray *mutableNumbers = [NSMutableArray array];
-    [mutableNumbers addObject:[NSNumber numberWithInteger:1]];
-    [mutableNumbers addObject:[NSNumber numberWithInteger:2]];
-    [mutableNumbers addObject:[NSNumber numberWithInteger:3]];
-    [mutableNumbers addObject:[NSNumber numberWithInteger:4]];
+    for (NSUInteger idx = 1; idx <= 20; idx++) {
+        [mutableNumbers addObject:[NSNumber numberWithUnsignedInteger:idx]];
+    }
     self.numbers = [NSArray arrayWithArray:mutableNumbers];
     
     return self;
@@ -72,6 +64,14 @@
 
 + (NSString *)formatterDescription {
     return NSLocalizedString(@"TTTOrdinalNumberFormatter formats cardinals (1, 2, 3, etc.) into ordinals (1st, 2nd, 3rd, etc.), and supports English, Spanish, French, German, Irish, Italian, Japanese, Dutch, Portuguese, and Mandarin Chinese. For other languages, you can use the standard default, or override it with your own. For languages whose ordinal indicator depends upon the grammatical properties of the predicate, TTTOrdinalNumberFormatter can format according to a specified gender and/or plurality.", nil);
+}
+
+#pragma mark - UIViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.tableView.rowHeight = 32.0f;
 }
 
 #pragma mark - UITableViewDataSource
