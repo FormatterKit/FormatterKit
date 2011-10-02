@@ -41,6 +41,11 @@
         [command appendCommandLineArgument:[NSString stringWithFormat:@"-d %@", [[NSString alloc] initWithData:[request HTTPBody] encoding:NSUTF8StringEncoding]]];
     }
     
+    if ([((NSString*)[[request allHTTPHeaderFields] objectForKey:@"Accept-Encoding"]) rangeOfString:@"gzip"].location!=NSNotFound) 
+    {
+        [command appendCommandLineArgument:@"--compressed"];
+    }
+    
     for (id field in [request allHTTPHeaderFields]) {
         [command appendCommandLineArgument:[NSString stringWithFormat:@"-H %@", [NSString stringWithFormat:@"'%@: %@'", field, [[request valueForHTTPHeaderField:field] stringByReplacingOccurrencesOfString:@"\'" withString:@"\\\'"]]]];
     }
