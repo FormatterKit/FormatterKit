@@ -38,7 +38,9 @@
     [command appendCommandLineArgument:[NSString stringWithFormat:@"-X %@", [request HTTPMethod]]];
 
     if ([[request HTTPBody] length] > 0) {
-        [command appendCommandLineArgument:[NSString stringWithFormat:@"-d %@", [[NSString alloc] initWithData:[request HTTPBody] encoding:NSUTF8StringEncoding]]];
+        NSString *HTTPBodyString = [[NSString alloc] initWithData:[request HTTPBody] encoding:NSUTF8StringEncoding];
+        [command appendCommandLineArgument:[NSString stringWithFormat:@"-d %@", HTTPBodyString]];
+        [HTTPBodyString release];
     }
     
     for (id field in [request allHTTPHeaderFields]) {
@@ -58,7 +60,9 @@
     NSMutableString *command = [NSMutableString stringWithString:@"curl"];
     
     if ([[request HTTPBody] length] > 0) {
-        [command appendCommandLineArgument:[NSString stringWithFormat:@"-d %@", [[NSString alloc] initWithData:[request HTTPBody] encoding:NSUTF8StringEncoding]]];
+        NSString *HTTPBodyString = [[NSString alloc] initWithData:[request HTTPBody] encoding:NSUTF8StringEncoding];
+        [command appendCommandLineArgument:[NSString stringWithFormat:@"-d %@", HTTPBodyString]];
+        [HTTPBodyString release];
     }
     
     for (id field in [request allHTTPHeaderFields]) {
