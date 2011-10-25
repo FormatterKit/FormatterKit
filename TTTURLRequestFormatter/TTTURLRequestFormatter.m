@@ -42,14 +42,13 @@
         [command appendCommandLineArgument:[NSString stringWithFormat:@"-d %@", HTTPBodyString]];
     }
     
-    if ([((NSString*)[[request allHTTPHeaderFields] objectForKey:@"Accept-Encoding"]) rangeOfString:@"gzip"].location!=NSNotFound) 
-    {
+    NSString *acceptEncodingHeader = [[request allHTTPHeaderFields] valueForKey:@"Accept-Encoding"];
+    if ([acceptEncodingHeader rangeOfString:@"gzip"].location != NSNotFound) {
         [command appendCommandLineArgument:@"--compressed"];
     }
     
     NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[request URL]];
-    for (NSHTTPCookie *cookie in cookies) 
-    {
+    for (NSHTTPCookie *cookie in cookies) {
         [command appendCommandLineArgument:[NSString stringWithFormat:@"--cookie \"%@=%@\"", [cookie name], [cookie value]]];
     }    
     
