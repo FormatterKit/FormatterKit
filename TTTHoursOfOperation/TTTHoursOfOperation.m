@@ -101,7 +101,7 @@ TTTWeekday TTTWeekdayForNSDate(NSDate *date) {
 	NSUInteger prime = 17;
 	NSUInteger result = 1;
 	
-	result = prime * result + self.openingHour;
+	result = prime + self.openingHour;
 	result = prime * result + self.openingMinute;
 	result = prime * result + self.closingHour;
 	result = prime * result + self.closingMinute;
