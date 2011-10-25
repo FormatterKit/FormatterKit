@@ -55,10 +55,9 @@
     self.locales = [NSArray arrayWithArray:mutableLocales];
     
     NSMutableArray *mutableNumbers = [NSMutableArray array];
-    [mutableNumbers addObject:[NSNumber numberWithInteger:1]];
-    [mutableNumbers addObject:[NSNumber numberWithInteger:2]];
-    [mutableNumbers addObject:[NSNumber numberWithInteger:3]];
-    [mutableNumbers addObject:[NSNumber numberWithInteger:4]];
+    for (NSUInteger idx = 1; idx <= 20; idx++) {
+        [mutableNumbers addObject:[NSNumber numberWithUnsignedInteger:idx]];
+    }
     self.numbers = [NSArray arrayWithArray:mutableNumbers];
     
     return self;
@@ -72,6 +71,14 @@
 
 + (NSString *)formatterDescription {
     return NSLocalizedString(@"TTTOrdinalNumberFormatter formats cardinals (1, 2, 3, etc.) into ordinals (1st, 2nd, 3rd, etc.), and supports English, Spanish, French, German, Irish, Italian, Japanese, Dutch, Portuguese, and Mandarin Chinese. For other languages, you can use the standard default, or override it with your own. For languages whose ordinal indicator depends upon the grammatical properties of the predicate, TTTOrdinalNumberFormatter can format according to a specified gender and/or plurality.", nil);
+}
+
+#pragma mark - UIViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.tableView.rowHeight = 32.0f;
 }
 
 #pragma mark - UITableViewDataSource
@@ -101,7 +108,22 @@
     NSNumber *number = [self.numbers objectAtIndex:indexPath.row];
     
     [_ordinalNumberFormatter setLocale:locale];
-    cell.textLabel.text = [_ordinalNumberFormatter stringFromNumber:number];
+    
+    _ordinalNumberFormatter.grammaticalGender = TTTOrdinalNumberFormatterMaleGender;
+    _ordinalNumberFormatter.grammaticalNumber = TTTOrdinalNumberFormatterSingular;
+    NSString *maleSingular = [_ordinalNumberFormatter stringFromNumber:number];
+
+    _ordinalNumberFormatter.grammaticalGender = TTTOrdinalNumberFormatterFemaleGender;
+    NSString *femaleSingular = [_ordinalNumberFormatter stringFromNumber:number];
+    
+    _ordinalNumberFormatter.grammaticalGender = TTTOrdinalNumberFormatterMaleGender;
+    _ordinalNumberFormatter.grammaticalNumber = TTTOrdinalNumberFormatterPlural;
+    NSString *malePlural = [_ordinalNumberFormatter stringFromNumber:number];
+    
+    _ordinalNumberFormatter.grammaticalGender = TTTOrdinalNumberFormatterFemaleGender;
+    NSString *femalePlural = [_ordinalNumberFormatter stringFromNumber:number];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ / %@ / %@ / %@", maleSingular, femaleSingular, malePlural, femalePlural];
 }
 
 @end
