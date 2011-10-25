@@ -139,9 +139,9 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 - (NSString *)esOrdinalIndicatorStringFromNumber:(NSNumber *)number {
     switch (self.grammaticalGender) {
         case TTTOrdinalNumberFormatterMaleGender:
-            return @".o";
+            return @"\u00BA"; // MASCULINE ORDINAL INDICATOR
         case TTTOrdinalNumberFormatterFemaleGender:
-            return @".a";
+            return @"\u00AA"; // FEMININE ORDINAL INDICATOR
         default:
             return kTTTOrdinalNumberFormatterDefaultOrdinalIndicator;
     }
@@ -180,9 +180,9 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 - (NSString *)itOrdinalIndicatorStringFromNumber:(NSNumber *)number {
     switch (self.grammaticalGender) {
         case TTTOrdinalNumberFormatterMaleGender:
-            return @".o";
+            return @"\u00BA"; // MASCULINE ORDINAL INDICATOR
         case TTTOrdinalNumberFormatterFemaleGender:
-            return @".a";
+            return @"\u00AA"; // FEMININE ORDINAL INDICATOR
         default:
             return kTTTOrdinalNumberFormatterDefaultOrdinalIndicator;
     }
@@ -199,9 +199,9 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 - (NSString *)ptOrdinalIndicatorStringFromNumber:(NSNumber *)number {
     switch (self.grammaticalGender) {
         case TTTOrdinalNumberFormatterMaleGender:
-            return @".o";
+            return @"\u00BA"; // MASCULINE ORDINAL INDICATOR
         case TTTOrdinalNumberFormatterFemaleGender:
-            return @".a";
+            return @"\u00AA"; // FEMININE ORDINAL INDICATOR
         default:
             return kTTTOrdinalNumberFormatterDefaultOrdinalIndicator;
     }
