@@ -42,6 +42,17 @@
         [command appendCommandLineArgument:[NSString stringWithFormat:@"-d %@", HTTPBodyString]];
     }
     
+    if ([((NSString*)[[request allHTTPHeaderFields] objectForKey:@"Accept-Encoding"]) rangeOfString:@"gzip"].location!=NSNotFound) 
+    {
+        [command appendCommandLineArgument:@"--compressed"];
+    }
+    
+    NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[request URL]];
+    for (NSHTTPCookie *cookie in cookies) 
+    {
+        [command appendCommandLineArgument:[NSString stringWithFormat:@"--cookie \"%@=%@\"", [cookie name], [cookie value]]];
+    }    
+    
     for (id field in [request allHTTPHeaderFields]) {
         [command appendCommandLineArgument:[NSString stringWithFormat:@"-H %@", [NSString stringWithFormat:@"'%@: %@'", field, [[request valueForHTTPHeaderField:field] stringByReplacingOccurrencesOfString:@"\'" withString:@"\\\'"]]]];
     }
