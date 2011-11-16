@@ -182,7 +182,7 @@ TTTWeekday TTTWeekdayForNSDate(NSDate *date) {
 	
 	if ([string isEqualToString:@"closed"]) {
 		dailyHours.closed = YES;
-		return dailyHours;
+		return [dailyHours autorelease];
 	}
 	
 	NSMutableSet *mutableSegments = [[dailyHours.segments mutableCopy] autorelease];
@@ -191,7 +191,7 @@ TTTWeekday TTTWeekdayForNSDate(NSDate *date) {
 	}
 	dailyHours.segments = [NSSet setWithSet:mutableSegments];
 	
-	return dailyHours;
+	return [dailyHours autorelease];
 }
 
 - (id)initWithWeekday:(TTTWeekday)someWeekday {
