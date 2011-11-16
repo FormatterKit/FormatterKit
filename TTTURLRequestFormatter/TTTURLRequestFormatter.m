@@ -58,7 +58,8 @@
     NSMutableString *command = [NSMutableString stringWithString:@"curl"];
     
     if ([[request HTTPBody] length] > 0) {
-        [command appendCommandLineArgument:[NSString stringWithFormat:@"-d %@", [[NSString alloc] initWithData:[request HTTPBody] encoding:NSUTF8StringEncoding]]];
+        NSString *string = [[[NSString alloc] initWithData:[request HTTPBody] encoding:NSUTF8StringEncoding]autorelease];
+        [command appendCommandLineArgument:[NSString stringWithFormat:@"-d %@", string]];
     }
     
     for (id field in [request allHTTPHeaderFields]) {
