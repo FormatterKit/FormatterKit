@@ -22,20 +22,24 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
+enum _TTTOrdinalNumberFormatterPredicateGrammaticalGender {
     TTTOrdinalNumberFormatterMaleGender     = 1,
     TTTOrdinalNumberFormatterFemaleGender   = 2,
     TTTOrdinalNumberFormatterNeuterGender   = 3,
-} TTTOrdinalNumberFormatterPredicateGrammaticalGender;
+};
 
-typedef enum {
+typedef NSUInteger TTTOrdinalNumberFormatterPredicateGrammaticalGender;
+
+enum _TTTOrdinalNumberFormatterPredicateGrammaticalNumber {
     TTTOrdinalNumberFormatterSingular       = 1,
     TTTOrdinalNumberFormatterDual           = 2,
     TTTOrdinalNumberFormatterTrial          = 3,
     TTTOrdinalNumberFormatterQuadral        = 4,
     TTTOrdinalNumberFormatterSingularCollective,
     TTTOrdinalNumberFormatterPlural,
-} TTTOrdinalNumberFormatterPredicateGrammaticalNumber;
+};
+
+typedef NSUInteger TTTOrdinalNumberFormatterPredicateGrammaticalNumber;
 
 @interface TTTOrdinalNumberFormatter : NSNumberFormatter {
 @private

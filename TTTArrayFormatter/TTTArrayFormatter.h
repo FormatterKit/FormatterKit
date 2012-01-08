@@ -22,10 +22,11 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
+enum _TTTArrayFormatterStyle {
     TTTArrayFormatterSentenceStyle = 0,
     TTTArrayFormatterDataStyle,
-} TTTArrayFormatterStyle;
+};
+typedef NSUInteger TTTArrayFormatterStyle;
 
 @interface TTTArrayFormatter : NSFormatter {
 @private
