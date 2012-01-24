@@ -38,12 +38,8 @@
     [command appendCommandLineArgument:[NSString stringWithFormat:@"-X %@", [request HTTPMethod]]];
 
     if ([[request HTTPBody] length] > 0) {
-        NSMutableString *HTTPBodyString = [[[NSMutableString alloc] initWithData:[request HTTPBody] encoding:NSUTF8StringEncoding] autorelease];
-        [HTTPBodyString replaceOccurrencesOfString:@"\\" withString:@"\\\\" options:0 range:NSMakeRange(0, [HTTPBodyString length])];
-        [HTTPBodyString replaceOccurrencesOfString:@"`" withString:@"\\`" options:0 range:NSMakeRange(0, [HTTPBodyString length])];
-        [HTTPBodyString replaceOccurrencesOfString:@"\"" withString:@"\\\"" options:0 range:NSMakeRange(0, [HTTPBodyString length])];
-        [HTTPBodyString replaceOccurrencesOfString:@"$" withString:@"\\$" options:0 range:NSMakeRange(0, [HTTPBodyString length])];
-        [command appendCommandLineArgument:[NSString stringWithFormat:@"-d \"%@\"", HTTPBodyString]];
+        NSString *HTTPBodyString = [[[NSString alloc] initWithData:[request HTTPBody] encoding:NSUTF8StringEncoding] autorelease];
+        [command appendCommandLineArgument:[NSString stringWithFormat:@"-d %@", HTTPBodyString]];
     }
     
     NSString *acceptEncodingHeader = [[request allHTTPHeaderFields] valueForKey:@"Accept-Encoding"];
@@ -70,7 +66,7 @@
         [NSException raise:@"Invalid HTTP Method" format:@"Wget can only make GET and POST requests", request];
     }
     
-    NSMutableString *command = [NSMutableString stringWithString:@"wget"];
+    NSMutableString *command = [NSMutableString stringWithString:@"curl"];
     
     if ([[request HTTPBody] length] > 0) {
         NSString *HTTPBodyString = [[[NSString alloc] initWithData:[request HTTPBody] encoding:NSUTF8StringEncoding] autorelease];
