@@ -50,9 +50,12 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
 @property (readwrite, nonatomic, copy) NSString *deicticExpressionFormat;
 @property (readwrite, nonatomic, copy) NSString *approximateQualifierFormat;
 @property (readwrite, nonatomic, assign) NSTimeInterval presentTimeIntervalMargin;
+@property (readwrite, nonatomic, assign) BOOL usesRelativeToThePresentExpressions;
 @property (readwrite, nonatomic, assign) BOOL usesAbbreviatedCalendarUnits;
 @property (readwrite, nonatomic, assign) BOOL usesApproximateQualifier;
 @property (readwrite, nonatomic, assign) BOOL usesIdiomaticDeicticExpressions;
+
+
 
 - (NSString *)localizedStringForNumber:(NSUInteger)number ofCalendarUnit:(NSCalendarUnit)unit;
 
@@ -72,6 +75,8 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
 @synthesize usesAbbreviatedCalendarUnits = _usesAbbreviatedCalendarUnits;
 @synthesize usesApproximateQualifier = _usesApproximateQualifier;
 @synthesize usesIdiomaticDeicticExpressions = _usesIdiomaticDeicticExpressions;
+@synthesize usesRelativeToThePresentExpressions = _usesRelativeToThePresentExpressions;
+
 
 - (id)init {
     self = [super init];
@@ -87,7 +92,7 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     self.approximateQualifierFormat = NSLocalizedString(@"about %@", @"Approximate Qualifier Format");
     
     self.presentTimeIntervalMargin = 1;
-        
+            
     return self;
 }
 
@@ -136,15 +141,19 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
         }
     }
     
-    if (string) {
-        if (seconds > 0) {
-            string = [NSString stringWithFormat:self.deicticExpressionFormat, string, self.pastDeicticExpression];
-        } else {
-            string = [NSString stringWithFormat:self.deicticExpressionFormat, string, self.futureDeicticExpression];
-        }
-        
-        if (isApproximate && self.usesApproximateQualifier) {
-            string = [NSString stringWithFormat:self.approximateQualifierFormat, string]; 
+    if (string) 
+    {
+        if (self.usesRelativeToThePresentExpressions)
+        {
+            if (seconds > 0) {
+                string = [NSString stringWithFormat:self.deicticExpressionFormat, string, self.pastDeicticExpression];
+            } else {
+                string = [NSString stringWithFormat:self.deicticExpressionFormat, string, self.futureDeicticExpression];
+            }
+            
+            if (isApproximate && self.usesApproximateQualifier) {
+                string = [NSString stringWithFormat:self.approximateQualifierFormat, string]; 
+            }
         }
     }
     
