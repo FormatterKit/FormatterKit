@@ -31,7 +31,6 @@
     NSString *_deicticExpressionFormat;
     NSString *_approximateQualifierFormat;
     NSTimeInterval _presentTimeIntervalMargin;
-    BOOL _usesRelativeToThePresentExpressions;
     BOOL _usesAbbreviatedCalendarUnits;
     BOOL _usesApproximateQualifier;
     BOOL _usesIdiomaticDeicticExpressions;
@@ -60,9 +59,6 @@
 
 - (NSTimeInterval)presentTimeIntervalMargin;
 - (void)setPresentTimeIntervalMargin:(NSTimeInterval)presentTimeIntervalMargin;
-
--(BOOL)usesRelativeToThePresentExpressions;
--(void)setUsesRelativeToThePresentExpressions:(BOOL)usesRelativeToThePresentExpressions;
 
 - (BOOL)usesAbbreviatedCalendarUnits;
 - (void)setUsesAbbreviatedCalendarUnits:(BOOL)usesAbbreviatedCalendarUnits;
