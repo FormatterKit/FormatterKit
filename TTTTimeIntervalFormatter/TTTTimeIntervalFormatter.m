@@ -108,7 +108,7 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
 
 - (NSString *)stringForTimeIntervalFromDate:(NSDate *)startingDate toDate:(NSDate *)resultDate {
     NSTimeInterval seconds = [startingDate timeIntervalSinceDate:resultDate];
-    if (abs(seconds) < self.presentTimeIntervalMargin) {
+    if (fabs(seconds) < self.presentTimeIntervalMargin) {
         return self.presentDeicticExpression;
     }
     

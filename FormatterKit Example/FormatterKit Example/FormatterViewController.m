@@ -43,7 +43,7 @@
     descriptionLabel.font = [UIFont systemFontOfSize:13];
     descriptionLabel.text = [[self class] formatterDescription];
     descriptionLabel.backgroundColor = [UIColor clearColor];
-    descriptionLabel.textColor = [UIColor colorWithRed:0.298 green:0.337 blue:0.424 alpha:1.000];
+    descriptionLabel.textColor = [UIColor colorWithRed:0.298f green:0.337f blue:0.424f alpha:1.000f];
     descriptionLabel.shadowColor = [UIColor whiteColor];
     descriptionLabel.shadowOffset = CGSizeMake(0.0f, 1.0f);
     
