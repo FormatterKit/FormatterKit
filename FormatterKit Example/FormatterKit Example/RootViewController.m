@@ -26,6 +26,7 @@
 #import "LocationFormatterViewController.h"
 #import "OrdinalNumberFormatterViewController.h"
 #import "TimeIntervalFormatterViewController.h"
+#import "UnitOfInformationFormatterViewController.h"
 #import "URLRequestFormatterViewController.h"
 
 enum {
@@ -34,6 +35,7 @@ enum {
     LocationRowIndex,
     OrdinalNumberRowIndex,
     TimeIntervalRowIndex,
+    UnitOfInformationRowIndex,
     URLRequestRowIndex
 } RootViewControllerRowIndexes;
 
@@ -76,7 +78,7 @@ enum {
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -109,6 +111,9 @@ enum {
         case TimeIntervalRowIndex:
             cell.textLabel.text = NSLocalizedString(@"Time Interval Formatter", nil);
             break;
+        case UnitOfInformationRowIndex:
+            cell.textLabel.text = NSLocalizedString(@"Unit of Information Formatter", nil);
+            break;
         case URLRequestRowIndex:
             cell.textLabel.text = NSLocalizedString(@"URL Request Formatter", nil);
             break;
@@ -137,6 +142,9 @@ enum {
             break;
         case TimeIntervalRowIndex:
             viewController = [[[TimeIntervalFormatterViewController alloc] init] autorelease];
+            break;
+        case UnitOfInformationRowIndex:
+            viewController = [[[UnitOfInformationFormatterViewController alloc] init] autorelease];
             break;
         case URLRequestRowIndex:
             viewController = [[[URLRequestFormatterViewController alloc] init] autorelease];

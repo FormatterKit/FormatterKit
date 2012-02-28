@@ -4,12 +4,13 @@
 
 In short, use this library if you're manually formatting any of the following (with string interpolation or the like):
 
-* __Arrays__: Display `NSArray` elements in a comma-delimited list *(eg. "Russell, Spinoza & Rawls")*
-* __Hours of Operation__: Format and collapse recurring weekly business hours *(eg. "Mon-Wed: 8:00AM - 7:00PM")*
+* __Arrays__: Display `NSArray` elements in a comma-delimited list *(e.g. "Russell, Spinoza & Rawls")*
+* __Hours of Operation__: Format and collapse recurring weekly business hours *(e.g. "Mon-Wed: 8:00AM - 7:00PM")*
 * __Location, Distance & Direction__: Show `CLLocationDistance`, `CLLocationDirection`, and `CLLocationSpeed` in metric or imperial units *(eg. "240ft Northwest" / "45 km/h SE")*
 * __Ordinal Numbers__: Convert cardinal `NSNumber` objects to their ordinal in most major languages *(eg. "1st, 2nd, 3rd" / "1ère, 2ème, 3ème")*
-* __Time Intervals__: Show relative time distance between any two `NSDate` objects *(eg. "3 minutes ago" / "yesterday")*
-* __URL Requests__: Print out `cURL` or `Wget` command equivalents for any `NSURLRequest` *(eg. `curl "https://api.gowalla.com/spots/" -H "Accept: application/json"`)*
+* __Time Intervals__: Show relative time distance between any two `NSDate` objects *(e.g. "3 minutes ago" / "yesterday")*
+* __Units of Information__: Humanized representations of quantities of bits and bytes *(e.g. "2.7 MB")*
+* __URL Requests__: Print out `cURL` or `Wget` command equivalents for any `NSURLRequest` *(e.g. `curl "https://api.gowalla.com/spots/" -H "Accept: application/json"`)*
 
 ## Demo
 
@@ -155,8 +156,33 @@ TTTTimeIntervalFormatter *timeIntervalFormatter = [[TTTTimeIntervalFormatter all
 
 // Expand the time interval for present tense
 [timeIntervalFormatter stringForTimeInterval:3]; // "3 seconds ago"
-[timeIntervalFormatter setPresentTimeIntervalMargin:3]; 
+[timeIntervalFormatter setPresentTimeIntervalMargin:3];
 [timeIntervalFormatter stringForTimeInterval:3]; // "seconds ago"
+```
+
+## TTTUnitOfInformationFormatter
+
+No matter how far abstracted from its underlying hardware an application may be, there comes a day when it has to communicate the size of a file to the user.
+
+`TTTUnitOfInformationFormatter` transforms a number of bits or bytes and into a humanized representation, using either SI decimal or IEC binary unit prefixes.
+
+### Example Usage
+
+``` objective-c
+TTTUnitOfInformationFormatter *unitOfInformationFormatter = [[TTTUnitOfInformationFormatter alloc] init];
+[unitOfInformationFormatter stringFromNumberOfBits:[NSNumber numberWithInteger:416]]; // "56 bytes"
+
+// Display in either bits or bytes
+[unitOfInformationFormatter setDisplaysInTermsOfBytes:NO];
+[unitOfInformationFormatter stringFromNumberOfBits:[NSNumber numberWithInteger:416]]; // "416 bits"
+
+// Use IEC Binary prefixes (base 2 rather than SI base 10; see http://en.wikipedia.org/wiki/IEC_60027)
+[unitOfInformationFormatter setUsesIECBinaryPrefixesForCalculation:NO];
+[unitOfInformationFormatter stringFromNumberOfBits:[NSNumber numberWithInteger:8660]]; // "8.66 Kbit"
+
+[unitOfInformationFormatter setUsesIECBinaryPrefixesForCalculation:YES];
+[unitOfInformationFormatter setUsesIECBinaryPrefixesForDisplay:YES];
+[unitOfInformationFormatter stringFromNumberOfBits:[NSNumber numberWithInteger:416]]; // "8.46 Kibit"
 ```
 
 ## TTTURLRequestFormatter

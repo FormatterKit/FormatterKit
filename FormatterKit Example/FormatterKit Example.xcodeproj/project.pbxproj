@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F872622714FAEC3700800E11 /* TTTUnitOfInformationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F872622614FAEC3700800E11 /* TTTUnitOfInformationFormatter.m */; };
+		F872625414FD3BED00800E11 /* UnitOfInformationFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F872625314FD3BED00800E11 /* UnitOfInformationFormatterViewController.m */; };
 		F8FBF9E91427A456001409DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBF9E81427A456001409DB /* UIKit.framework */; };
 		F8FBF9EB1427A456001409DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBF9EA1427A456001409DB /* Foundation.framework */; };
 		F8FBF9ED1427A456001409DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBF9EC1427A456001409DB /* CoreGraphics.framework */; };
@@ -31,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F872622514FAEC3700800E11 /* TTTUnitOfInformationFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTTUnitOfInformationFormatter.h; path = ../TTTUnitOfInformationFormatter/TTTUnitOfInformationFormatter.h; sourceTree = "<group>"; };
+		F872622614FAEC3700800E11 /* TTTUnitOfInformationFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTTUnitOfInformationFormatter.m; path = ../TTTUnitOfInformationFormatter/TTTUnitOfInformationFormatter.m; sourceTree = "<group>"; };
+		F872625214FD3BED00800E11 /* UnitOfInformationFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitOfInformationFormatterViewController.h; sourceTree = "<group>"; };
+		F872625314FD3BED00800E11 /* UnitOfInformationFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitOfInformationFormatterViewController.m; sourceTree = "<group>"; };
 		F8FBF9E41427A456001409DB /* FormatterKit Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FormatterKit Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8FBF9E81427A456001409DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F8FBF9EA1427A456001409DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -87,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F872622814FAEC3D00800E11 /* TTTUnitOfInformationFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				F872622514FAEC3700800E11 /* TTTUnitOfInformationFormatter.h */,
+				F872622614FAEC3700800E11 /* TTTUnitOfInformationFormatter.m */,
+			);
+			name = TTTUnitOfInformationFormatter;
+			sourceTree = "<group>";
+		};
 		F8FBF9D91427A456001409DB = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +161,7 @@
 				F8FBFA0F1427A4EB001409DB /* TTTLocationFormatter */,
 				F8FBFA121427A4EB001409DB /* TTTOrdinalNumberFormatter */,
 				F8FBFA151427A4EB001409DB /* TTTTimeIntervalFormatter */,
+				F872622814FAEC3D00800E11 /* TTTUnitOfInformationFormatter */,
 				F8FBFA181427A4EB001409DB /* TTTURLRequestFormatter */,
 			);
 			name = Vendor;
@@ -236,6 +252,8 @@
 				F8FBFA441427E21C001409DB /* OrdinalNumberFormatterViewController.m */,
 				F8FBFA461427E23C001409DB /* TimeIntervalFormatterViewController.h */,
 				F8FBFA471427E23C001409DB /* TimeIntervalFormatterViewController.m */,
+				F872625214FD3BED00800E11 /* UnitOfInformationFormatterViewController.h */,
+				F872625314FD3BED00800E11 /* UnitOfInformationFormatterViewController.m */,
 				F8FBFA491427E260001409DB /* URLRequestFormatterViewController.h */,
 				F8FBFA4A1427E260001409DB /* URLRequestFormatterViewController.m */,
 			);
@@ -320,6 +338,8 @@
 				F8FBFA451427E21C001409DB /* OrdinalNumberFormatterViewController.m in Sources */,
 				F8FBFA481427E23C001409DB /* TimeIntervalFormatterViewController.m in Sources */,
 				F8FBFA4B1427E260001409DB /* URLRequestFormatterViewController.m in Sources */,
+				F872622714FAEC3700800E11 /* TTTUnitOfInformationFormatter.m in Sources */,
+				F872625414FD3BED00800E11 /* UnitOfInformationFormatterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +363,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -356,6 +377,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_PEDANTIC = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "FormatterKit Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
@@ -369,12 +391,14 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_PEDANTIC = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "FormatterKit Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
