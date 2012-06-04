@@ -170,7 +170,7 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     
-    self.arrayStyle = [aDecoder decodeIntegerForKey:@"arrayStyle"];
+    self.arrayStyle = (TTTArrayFormatterStyle)[aDecoder decodeIntegerForKey:@"arrayStyle"];
     self.delimiter = [aDecoder decodeObjectForKey:@"delimiter"];
     self.separator = [aDecoder decodeObjectForKey:@"separator"];
     self.conjunction = [aDecoder decodeObjectForKey:@"conjunction"];
