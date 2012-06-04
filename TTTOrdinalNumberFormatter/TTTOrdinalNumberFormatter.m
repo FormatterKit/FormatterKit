@@ -25,10 +25,6 @@
 static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @".";
 
 @interface TTTOrdinalNumberFormatter ()
-@property (nonatomic, copy) NSString *ordinalIndicator;
-@property (nonatomic, assign) TTTOrdinalNumberFormatterPredicateGrammaticalGender grammaticalGender;
-@property (nonatomic, assign) TTTOrdinalNumberFormatterPredicateGrammaticalNumber grammaticalNumber;
-
 - (NSString *)localizedOrdinalIndicatorStringFromNumber:(NSNumber *)number;
 - (NSString *)deOrdinalIndicatorStringFromNumber:(NSNumber *)number;
 - (NSString *)enOrdinalIndicatorStringFromNumber:(NSNumber *)number;
@@ -63,10 +59,6 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     return self;
 }
 
-- (void)dealloc {
-    [_ordinalIndicator release];
-    [super dealloc];
-}
 
 - (NSString *)stringFromNumber:(NSNumber *)number {
     NSString *indicator = self.ordinalIndicator;
@@ -174,7 +166,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 }
 
 - (NSString *)gaOrdinalIndicatorStringFromNumber:(NSNumber *)number {
-    return @"ú";
+    return @"\u00fa"; // LATIN SMALL LETTER U WITH ACUTE
 }
 
 - (NSString *)itOrdinalIndicatorStringFromNumber:(NSNumber *)number {
@@ -189,7 +181,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 }
 
 - (NSString *)jaOrdinalIndicatorStringFromNumber:(NSNumber *)number {
-    return @"番";
+    return @"\u756a";
 }
 
 - (NSString *)nlOrdinalIndicatorStringFromNumber:(NSNumber *)number {
@@ -208,7 +200,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 }
 
 - (NSString *)zhHansOrdinalIndicatorStringFromNumber:(NSNumber *)number {
-    return @"第";
+    return @"\u7b2c";
 }
 
 #pragma mark - NSCoding

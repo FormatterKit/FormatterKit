@@ -22,19 +22,38 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ 
+ */
 @interface TTTURLRequestFormatter : NSFormatter
 
+/**
+ 
+ */
 - (NSString *)stringFromURLRequest:(NSURLRequest *)request;
 
+/**
+ 
+ */
 + (NSString *)cURLCommandFromURLRequest:(NSURLRequest *)request;
+
+/**
+ 
+ */
 + (NSString *)WgetCommandFromURLRequest:(NSURLRequest *)request;
 
 @end
 
 #pragma mark -
 
+/**
+ 
+ */
 @interface TTTHTTPURLResponseFormatter : NSFormatter
 
+/**
+ 
+ */
 - (NSString *)stringFromHTTPURLResponse:(NSHTTPURLResponse *)response;
 
 @end

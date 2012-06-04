@@ -32,7 +32,7 @@ enum {
 } HoursOfOperationFormatterViewControllerSectionIndexes;
 
 @interface HoursOfOperationFormatterViewController ()
-@property (readwrite, nonatomic, retain) NSArray *examples;
+@property (readwrite, nonatomic) NSArray *examples;
 @end
 
 @implementation HoursOfOperationFormatterViewController
@@ -48,7 +48,7 @@ enum {
     
     NSMutableArray *mutableExamples = [NSMutableArray array];
     
-    TTTWeeklyHoursOfOperation *hoursOfOperation = [[[TTTWeeklyHoursOfOperation alloc] init] autorelease];
+    TTTWeeklyHoursOfOperation *hoursOfOperation = [[TTTWeeklyHoursOfOperation alloc] init];
     [hoursOfOperation setHoursWithString:@"08:00-19:00" forWeekday:TTTMonday];
     [hoursOfOperation setHoursWithString:@"08:00-19:00" forWeekday:TTTTuesday];
     [hoursOfOperation setHoursWithString:@"08:00-19:00" forWeekday:TTTWednesday];
@@ -58,7 +58,7 @@ enum {
     [hoursOfOperation setHoursWithString:@"11:00-25:00" forWeekday:TTTSunday];
     [mutableExamples addObject:hoursOfOperation];
     
-    TTTWeeklyHoursOfOperation *weekdaysAndWeekendsHoursOfOperation = [[[TTTWeeklyHoursOfOperation alloc] init] autorelease];
+    TTTWeeklyHoursOfOperation *weekdaysAndWeekendsHoursOfOperation = [[TTTWeeklyHoursOfOperation alloc] init];
     [weekdaysAndWeekendsHoursOfOperation setHoursWithString:@"09:00-19:00" forWeekday:TTTMonday];
     [weekdaysAndWeekendsHoursOfOperation setHoursWithString:@"09:00-19:00" forWeekday:TTTTuesday];
     [weekdaysAndWeekendsHoursOfOperation setHoursWithString:@"09:00-19:00" forWeekday:TTTWednesday];
@@ -68,7 +68,7 @@ enum {
     [weekdaysAndWeekendsHoursOfOperation setHoursWithString:@"10:00-14:00" forWeekday:TTTSunday];
     [mutableExamples addObject:weekdaysAndWeekendsHoursOfOperation];
     
-    TTTWeeklyHoursOfOperation *everydayHoursOfOperation = [[[TTTWeeklyHoursOfOperation alloc] init] autorelease];
+    TTTWeeklyHoursOfOperation *everydayHoursOfOperation = [[TTTWeeklyHoursOfOperation alloc] init];
     [everydayHoursOfOperation setHoursWithString:@"11:00-20:00" forWeekday:TTTMonday];
     [everydayHoursOfOperation setHoursWithString:@"11:00-20:00" forWeekday:TTTTuesday];
     [everydayHoursOfOperation setHoursWithString:@"11:00-20:00" forWeekday:TTTWednesday];
@@ -78,7 +78,7 @@ enum {
     [everydayHoursOfOperation setHoursWithString:@"11:00-20:00" forWeekday:TTTSunday];
     [mutableExamples addObject:everydayHoursOfOperation];
     
-    TTTWeeklyHoursOfOperation *singleDayHoursOfOperation = [[[TTTWeeklyHoursOfOperation alloc] init] autorelease];
+    TTTWeeklyHoursOfOperation *singleDayHoursOfOperation = [[TTTWeeklyHoursOfOperation alloc] init];
     [singleDayHoursOfOperation setHoursWithString:@"11:00-15:00" forWeekday:TTTMonday];
     [mutableExamples addObject:singleDayHoursOfOperation];
     

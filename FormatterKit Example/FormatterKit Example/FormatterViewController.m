@@ -37,7 +37,7 @@
 - (void)loadView {
     [super loadView];
     
-    UILabel *descriptionLabel = [[[UILabel alloc] initWithFrame:CGRectZero] autorelease];
+    UILabel *descriptionLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     descriptionLabel.numberOfLines = 0;
     descriptionLabel.lineBreakMode = UILineBreakModeWordWrap;
     descriptionLabel.font = [UIFont systemFontOfSize:13];
@@ -50,7 +50,7 @@
     CGSize descriptionSize = [descriptionLabel.text sizeWithFont:descriptionLabel.font constrainedToSize:CGRectInset(self.tableView.frame, 20.0f, 0.0f).size lineBreakMode:UILineBreakModeWordWrap];    
     descriptionLabel.frame = CGRectMake(20.0f, 10.0f, descriptionSize.width, descriptionSize.height);
     
-    UIView *tableHeaderView = [[[UIView alloc] initWithFrame:CGRectInset(descriptionLabel.frame, -20.0f, -10.0f)] autorelease];
+    UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectInset(descriptionLabel.frame, -20.0f, -10.0f)];
     [tableHeaderView addSubview:descriptionLabel];
     
     self.tableView.tableHeaderView = tableHeaderView;
@@ -75,7 +75,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
     [self configureCell:cell atIndexPath:indexPath];
@@ -84,7 +84,7 @@
 }
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    
+    return;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

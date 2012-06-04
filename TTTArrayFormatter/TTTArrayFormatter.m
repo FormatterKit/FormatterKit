@@ -22,16 +22,6 @@
 
 #import "TTTArrayFormatter.h"
 
-@interface TTTArrayFormatter ()
-@property (readwrite, nonatomic, assign) TTTArrayFormatterStyle arrayStyle;
-@property (readwrite, nonatomic, copy) NSString *delimiter;
-@property (readwrite, nonatomic, copy) NSString *separator;
-@property (readwrite, nonatomic, copy) NSString *conjunction;
-@property (readwrite, nonatomic, copy) NSString *abbreviatedConjunction;
-@property (readwrite, nonatomic, assign) BOOL usesAbbreviatedConjunction;
-@property (readwrite, nonatomic, assign) BOOL usesSerialDelimiter;
-@end
-
 @implementation TTTArrayFormatter
 @synthesize arrayStyle = _arrayStyle;
 @synthesize delimiter = _delimiter;
@@ -55,14 +45,6 @@
     self.usesSerialDelimiter = YES;
     
     return self;
-}
-
-- (void)dealloc {
-    [_delimiter release];
-    [_separator release];
-    [_conjunction release];
-    [_abbreviatedConjunction release];
-    [super dealloc];
 }
 
 - (NSString *)stringFromArray:(NSArray *)anArray {
@@ -123,7 +105,7 @@
 }
 
 + (NSString *)localizedStringFromArray:(NSArray *)anArray arrayStyle:(TTTArrayFormatterStyle)style {
-    TTTArrayFormatter *formatter = [[[TTTArrayFormatter alloc] init] autorelease];
+    TTTArrayFormatter *formatter = [[TTTArrayFormatter alloc] init];
     [formatter setArrayStyle:style];
     
     return [formatter stringFromArray:anArray];
@@ -144,8 +126,8 @@
     NSMutableArray *components = nil;
     
     if (string) {
-        components = [[[string componentsSeparatedByString:self.delimiter] mutableCopy] autorelease];
-        NSMutableString *lastComponent = [[(NSString *)[components lastObject] mutableCopy] autorelease];
+        components = [[string componentsSeparatedByString:self.delimiter] mutableCopy];
+        NSMutableString *lastComponent = [(NSString *)[components lastObject] mutableCopy];
         NSRange lastComponentConjunctionRange = [lastComponent rangeOfString:self.conjunction];
         if (lastComponentConjunctionRange.location != NSNotFound) {
             [lastComponent replaceCharactersInRange:lastComponentConjunctionRange withString:self.delimiter];

@@ -142,11 +142,6 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
 @interface TTTUnitOfInformationFormatter ()
 - (double)scaleFactorForPrefix:(TTTUnitPrefix)prefix;
 - (TTTUnitPrefix)prefixForInteger:(NSUInteger)value;
-
-@property (readwrite, nonatomic, retain) NSNumberFormatter *numberFormatter;
-@property (readwrite, nonatomic, assign) BOOL displaysInTermsOfBytes;
-@property (readwrite, nonatomic, assign) BOOL usesIECBinaryPrefixesForCalculation;
-@property (readwrite, nonatomic, assign) BOOL usesIECBinaryPrefixesForDisplay;
 @end
 
 @implementation TTTUnitOfInformationFormatter
@@ -161,9 +156,9 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
         return nil;
     }
     
-    self.numberFormatter = [[[NSNumberFormatter alloc] init] autorelease];
-    [self.numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
-    [self.numberFormatter setRoundingIncrement:[NSNumber numberWithFloat:0.01f]];
+    _numberFormatter = [[NSNumberFormatter alloc] init];
+    [_numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    [_numberFormatter setRoundingIncrement:[NSNumber numberWithFloat:0.01f]];
     
     self.displaysInTermsOfBytes = YES;
     self.usesIECBinaryPrefixesForCalculation = YES;
@@ -172,10 +167,6 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
     return self;
 }
 
-- (void)dealloc {
-    [_numberFormatter release];
-    [super dealloc];
-}
 
 #pragma mark -
 
@@ -230,7 +221,7 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
         doubleValue /= [self scaleFactorForPrefix:prefix];
     }
     
-    return [NSString stringWithFormat:NSLocalizedStringWithDefaultValue(@"Unit of Information Format String", nil, [NSBundle mainBundle], @"%@ %@", @"#{Value} #{Unit}"), [self.numberFormatter stringFromNumber:[NSNumber numberWithDouble:doubleValue]], unitString];
+    return [NSString stringWithFormat:NSLocalizedStringWithDefaultValue(@"Unit of Information Format String", nil, [NSBundle mainBundle], @"%@ %@", @"#{Value} #{Unit}"), [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:doubleValue]], unitString];
 }
 
 - (NSString *)stringFromNumber:(NSNumber *)number 

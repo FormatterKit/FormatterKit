@@ -32,14 +32,11 @@ enum {
     CoordinatesSectionIndex,
 } LocationFormatterViewControllerSectionIndexes;
 
-@interface LocationFormatterViewController ()
-@property (readwrite, nonatomic, retain) CLLocation *austin;
-@property (readwrite, nonatomic, retain) CLLocation *pittsburgh;
-@end
 
-@implementation LocationFormatterViewController
-@synthesize austin = _austin;
-@synthesize pittsburgh = _pittsburgh;
+@implementation LocationFormatterViewController {
+    __strong CLLocation *_austin;
+    __strong CLLocation *_pittsburgh;
+}
 
 - (id)init {
     self = [super initWithStyle:UITableViewStyleGrouped];
@@ -49,17 +46,12 @@ enum {
     
     self.title = NSLocalizedString(@"Hours of Operation Formatter", nil);
     
-    self.austin = [[[CLLocation alloc] initWithLatitude:30.2669444 longitude:-97.7427778] autorelease];
-    self.pittsburgh = [[[CLLocation alloc] initWithLatitude:40.4405556 longitude:-79.9961111] autorelease];
+    _austin = [[CLLocation alloc] initWithLatitude:30.2669444 longitude:-97.7427778];
+    _pittsburgh = [[CLLocation alloc] initWithLatitude:40.4405556 longitude:-79.9961111];
     
     return self;
 }
 
-- (void)dealloc {
-    [_austin release];
-    [_pittsburgh release];
-    [super dealloc];
-}
 
 + (NSString *)formatterDescription {
     return NSLocalizedString(@"TTTLocationFormatter gives you a lot of flexibility in the display of coordinates, distances, direction, speed, and velocity. Choose Metric or Imperial, cardinal directions, abbreviations, or degrees, and configure everything else (number of significant digits, etc.), with the associated NSNumberFormatter.", nil);
@@ -93,11 +85,12 @@ enum {
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     static TTTLocationFormatter *_locationFormatter = nil;
-    if (!_locationFormatter) {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         _locationFormatter = [[TTTLocationFormatter alloc] init];
         [_locationFormatter.numberFormatter setMaximumSignificantDigits:4];
-    }
-    
+    });
+
     [_locationFormatter.numberFormatter setUsesSignificantDigits:YES];
     
     cell.textLabel.font = [UIFont systemFontOfSize:16];
@@ -106,24 +99,24 @@ enum {
             [_locationFormatter setUnitSystem:TTTMetricSystem];
             [_locationFormatter setBearingStyle:TTTBearingWordStyle];
             
-            cell.textLabel.text = [_locationFormatter stringFromDistanceAndBearingFromLocation:self.pittsburgh toLocation:self.austin];
+            cell.textLabel.text = [_locationFormatter stringFromDistanceAndBearingFromLocation:_pittsburgh toLocation:_austin];
             break;
         case DistanceInImperialWithcardinalDirectionAbbreviationsSectionIndex:
             [_locationFormatter setUnitSystem:TTTImperialSystem];
             [_locationFormatter setBearingStyle:TTTBearingAbbreviationWordStyle];
             
-            cell.textLabel.text = [_locationFormatter stringFromDistanceAndBearingFromLocation:self.pittsburgh toLocation:self.austin];
+            cell.textLabel.text = [_locationFormatter stringFromDistanceAndBearingFromLocation:_pittsburgh toLocation:_austin];
             break;
         case SpeedInImperialWithBearingsInDegreesSectionIndex:
             [_locationFormatter setUnitSystem:TTTImperialSystem];
             [_locationFormatter setBearingStyle:TTTBearingNumericStyle];
             
-            cell.textLabel.text = [_locationFormatter stringFromVelocityFromLocation:self.pittsburgh toLocation:self.austin atSpeed:25];
+            cell.textLabel.text = [_locationFormatter stringFromVelocityFromLocation:_pittsburgh toLocation:_austin atSpeed:25];
             break;
         case CoordinatesSectionIndex:
             [_locationFormatter.numberFormatter setUsesSignificantDigits:NO];
             
-            cell.textLabel.text = [_locationFormatter stringFromLocation:self.austin];
+            cell.textLabel.text = [_locationFormatter stringFromLocation:_austin];
             break;
     }
 }

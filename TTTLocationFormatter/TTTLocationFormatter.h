@@ -23,6 +23,9 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
+/**
+ 
+ */
 typedef enum {
     TTTNorthDirection,
     TTTNortheastDirection,
@@ -34,51 +37,108 @@ typedef enum {
     TTTNorthwestDirection,
 } TTTLocationCardinalDirection;
 
+/**
+ 
+ */
 extern TTTLocationCardinalDirection TTTLocationCardinalDirectionFromBearing(CLLocationDegrees bearing);
 
+/**
+ 
+ */
 typedef enum {
     TTTCoordinateLatLngOrder = 0,
     TTTCoordinateLngLatOrder,
 } TTTLocationFormatterCoordinateOrder;
 
+/**
+ 
+ */
 typedef enum {
     TTTBearingWordStyle = 0,
     TTTBearingAbbreviationWordStyle,
     TTTBearingNumericStyle,
 } TTTLocationFormatterBearingStyle;
 
+/**
+ 
+ */
 typedef enum {
     TTTMetricSystem = 0,
     TTTImperialSystem,
 } TTTLocationUnitSystem;
 
-@interface TTTLocationFormatter : NSFormatter {
-@private
-    TTTLocationFormatterCoordinateOrder _coordinateOrder;
-    TTTLocationFormatterBearingStyle _bearingStyle;
-    TTTLocationUnitSystem _unitSystem;
-    NSNumberFormatter *_numberFormatter;
-}
+/**
+ 
+ */
+@interface TTTLocationFormatter : NSFormatter
+/**
+ 
+ */
+@property (readonly, nonatomic, strong) NSNumberFormatter *numberFormatter;
 
-@property (readonly, nonatomic, retain) NSNumberFormatter *numberFormatter;
-
+/**
+ 
+ */
 - (NSString *)stringFromCoordinate:(CLLocationCoordinate2D)coordinate;
+
+/**
+ 
+ */
 - (NSString *)stringFromLocation:(CLLocation *)location;
+
+/**
+ 
+ */
 - (NSString *)stringFromDistance:(CLLocationDistance)distance;
+
+/**
+ 
+ */
 - (NSString *)stringFromBearing:(CLLocationDegrees)bearing;
+
+/**
+ 
+ */
 - (NSString *)stringFromSpeed:(CLLocationSpeed)speed;
-- (NSString *)stringFromDistanceFromLocation:(CLLocation *)originLocation toLocation:(CLLocation *)destinationLocation;
-- (NSString *)stringFromBearingFromLocation:(CLLocation *)originLocation toLocation:(CLLocation *)destinationLocation;
-- (NSString *)stringFromDistanceAndBearingFromLocation:(CLLocation *)originLocation toLocation:(CLLocation *)destinationLocation;
-- (NSString *)stringFromVelocityFromLocation:(CLLocation *)originLocation toLocation:(CLLocation *)destinationLocation atSpeed:(CLLocationSpeed)speed;
 
-- (TTTLocationFormatterCoordinateOrder)coordinateOrder; 
-- (void)setCoordinateOrder:(TTTLocationFormatterCoordinateOrder)coordinateOrder;
+/**
+ 
+ */
+- (NSString *)stringFromDistanceFromLocation:(CLLocation *)originLocation 
+                                  toLocation:(CLLocation *)destinationLocation;
 
-- (TTTLocationFormatterBearingStyle)bearingStyle;
-- (void)setBearingStyle:(TTTLocationFormatterBearingStyle)bearingStyle;
+/**
+ 
+ */
+- (NSString *)stringFromBearingFromLocation:(CLLocation *)originLocation 
+                                 toLocation:(CLLocation *)destinationLocation;
 
-- (TTTLocationUnitSystem)unitSystem;
-- (void)setUnitSystem:(TTTLocationUnitSystem)unitSystem;
+/**
+ 
+ */
+- (NSString *)stringFromDistanceAndBearingFromLocation:(CLLocation *)originLocation 
+                                            toLocation:(CLLocation *)destinationLocation;
+
+/**
+ 
+ */
+- (NSString *)stringFromVelocityFromLocation:(CLLocation *)originLocation 
+                                  toLocation:(CLLocation *)destinationLocation 
+                                     atSpeed:(CLLocationSpeed)speed;
+
+/**
+ 
+ */
+@property (nonatomic, assign) TTTLocationFormatterCoordinateOrder coordinateOrder; 
+
+/**
+ 
+ */
+@property (nonatomic, assign) TTTLocationFormatterBearingStyle bearingStyle;
+
+/**
+ 
+ */
+@property (nonatomic, assign) TTTLocationUnitSystem unitSystem;
 
 @end

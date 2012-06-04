@@ -22,51 +22,66 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TTTTimeIntervalFormatter : NSFormatter {
-@private
-    NSLocale *_locale;
-    NSString *_pastDeicticExpression;
-    NSString *_presentDeicticExpression;
-    NSString *_futureDeicticExpression;
-    NSString *_deicticExpressionFormat;
-    NSString *_approximateQualifierFormat;
-    NSTimeInterval _presentTimeIntervalMargin;
-    BOOL _usesAbbreviatedCalendarUnits;
-    BOOL _usesApproximateQualifier;
-    BOOL _usesIdiomaticDeicticExpressions;
-}
+@interface TTTTimeIntervalFormatter : NSFormatter
 
+/**
+ 
+ */
 - (NSString *)stringForTimeInterval:(NSTimeInterval)seconds;
+
+/**
+ 
+ */
 - (NSString *)stringForTimeIntervalFromDate:(NSDate *)startingDate toDate:(NSDate *)resultDate;
 
-- (NSLocale *)locale;
-- (void)setLocale:(NSLocale *)locale;
+/**
+ 
+ */
+@property (nonatomic, strong) NSLocale *locale;
 
-- (NSString *)pastDeicticExpression;
-- (void)setPastDeicticExpression:(NSString *)pastDeicticExpression;
+/**
+ 
+ */
+@property (nonatomic, strong) NSString *pastDeicticExpression;
 
-- (NSString *)presentDeicticExpression;
-- (void)setPresentDeicticExpression:(NSString *)presentDeicticExpression;
+/**
+ 
+ */
+@property (nonatomic, strong) NSString *presentDeicticExpression;
 
-- (NSString *)futureDeicticExpression;
-- (void)setFutureDeicticExpression:(NSString *)futureDeicticExpression;
+/**
+ 
+ */
+@property (nonatomic, strong) NSString *futureDeicticExpression;
 
-- (NSString *)deicticExpressionFormat;
-- (void)setDeicticExpressionFormat:(NSString *)deicticExpressionFormat;
+/**
+ 
+ */
+@property (nonatomic, strong) NSString *deicticExpressionFormat;
 
-- (NSString *)approximateQualifierFormat;
-- (void)setApproximateQualifierFormat:(NSString *)approximateQualifierFormat;
+/**
+ 
+ */
+@property (nonatomic, strong) NSString *approximateQualifierFormat;
 
-- (NSTimeInterval)presentTimeIntervalMargin;
-- (void)setPresentTimeIntervalMargin:(NSTimeInterval)presentTimeIntervalMargin;
+/**
+ 
+ */
+@property (nonatomic, assign) NSTimeInterval presentTimeIntervalMargin;
 
-- (BOOL)usesAbbreviatedCalendarUnits;
-- (void)setUsesAbbreviatedCalendarUnits:(BOOL)usesAbbreviatedCalendarUnits;
+/**
+ 
+ */
+@property (nonatomic, assign) BOOL usesAbbreviatedCalendarUnits;
 
-- (BOOL)usesApproximateQualifier;
-- (void)setUsesApproximateQualifier:(BOOL)usesApproximateQualifier;
+/**
+ 
+ */
+@property (nonatomic, assign) BOOL usesApproximateQualifier;
 
-- (BOOL)usesIdiomaticDeicticExpressions;
-- (void)setUsesIdiomaticDeicticExpressions:(BOOL)usesIdiomaticDeicticExpressions;
+/**
+ 
+ */
+@property (nonatomic, assign) BOOL usesIdiomaticDeicticExpressions;
 
 @end

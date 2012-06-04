@@ -22,46 +22,74 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ 
+ */
 typedef enum {
     TTTArrayFormatterSentenceStyle = 0,
     TTTArrayFormatterDataStyle,
 } TTTArrayFormatterStyle;
 
-@interface TTTArrayFormatter : NSFormatter {
-@private
-    TTTArrayFormatterStyle _arrayStyle;
-    NSString *_delimiter;
-    NSString *_separator;
-    NSString *_conjunction;
-    NSString *_abbreviatedConjunction;
-    BOOL _usesAbbreviatedConjunction;
-    BOOL _usesSerialDelimiter;
-}
+/**
+ 
+ */
+@interface TTTArrayFormatter : NSFormatter
 
+/**
+ 
+ */
 - (NSString *)stringFromArray:(NSArray *)anArray;
-- (NSString *)stringFromArray:(NSArray *)anArray rangesOfComponents:(NSArray **)rangeValues;
+
+/**
+ 
+ */
+- (NSString *)stringFromArray:(NSArray *)anArray 
+           rangesOfComponents:(NSArray **)rangeValues;
+
+/**
+ 
+ */
 - (NSArray *)arrayFromString:(NSString *)aString;
-+ (NSString *)localizedStringFromArray:(NSArray *)anArray arrayStyle:(TTTArrayFormatterStyle)style;
 
-- (TTTArrayFormatterStyle)arrayStyle;
-- (void)setArrayStyle:(TTTArrayFormatterStyle)style;
+/**
+ 
+ */
++ (NSString *)localizedStringFromArray:(NSArray *)anArray 
+                            arrayStyle:(TTTArrayFormatterStyle)style;
 
-- (NSString *)delimiter;
-- (void)setDelimiter:(NSString *)aDelimiter;
+/**
+ 
+ */
+@property (nonatomic, assign) TTTArrayFormatterStyle arrayStyle;
 
-- (NSString *)separator;
-- (void)setSeparator:(NSString *)aSeparator;
+/**
+ 
+ */
+@property (nonatomic, strong) NSString *delimiter;
 
-- (NSString *)conjunction;
-- (void)setConjunction:(NSString *)aConjunction;
+/**
+ 
+ */
+@property (nonatomic, strong) NSString *separator;
 
-- (NSString *)abbreviatedConjunction;
-- (void)setAbbreviatedConjunction:(NSString *)anAbbreviatedConjunction;
+/**
+ 
+ */
+@property (nonatomic, strong) NSString *conjunction;
 
-- (BOOL)usesAbbreviatedConjunction;
-- (void)setUsesAbbreviatedConjunction:(BOOL)flag;
+/**
+ 
+ */
+@property (nonatomic, strong) NSString *abbreviatedConjunction;
 
-- (BOOL)usesSerialDelimiter;
-- (void)setUsesSerialDelimiter:(BOOL)flag;
+/**
+ 
+ */
+@property (nonatomic, assign) BOOL usesAbbreviatedConjunction;
+
+/**
+ 
+ */
+@property (nonatomic, assign) BOOL usesSerialDelimiter;
 
 @end

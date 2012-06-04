@@ -32,7 +32,7 @@ enum {
 } ArrayFormatterViewControllerSectionIndexes;
 
 @interface ArrayFormatterViewController ()
-@property (readwrite, nonatomic, retain) NSArray *examples;
+@property (readwrite, nonatomic) NSArray *examples;
 @end
 
 @implementation ArrayFormatterViewController
@@ -85,10 +85,10 @@ enum {
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     static TTTArrayFormatter *_arrayFormatter = nil;
-    if (!_arrayFormatter) {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         _arrayFormatter = [[TTTArrayFormatter alloc] init];
-    }
-    
+    });
     
     [_arrayFormatter setArrayStyle:TTTArrayFormatterSentenceStyle];
     [_arrayFormatter setUsesSerialDelimiter:YES];

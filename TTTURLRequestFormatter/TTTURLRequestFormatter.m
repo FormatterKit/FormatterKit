@@ -38,7 +38,7 @@
     [command appendCommandLineArgument:[NSString stringWithFormat:@"-X %@", [request HTTPMethod]]];
 
     if ([[request HTTPBody] length] > 0) {
-        NSMutableString *HTTPBodyString = [[[NSMutableString alloc] initWithData:[request HTTPBody] encoding:NSUTF8StringEncoding] autorelease];
+        NSMutableString *HTTPBodyString = [[NSMutableString alloc] initWithData:[request HTTPBody] encoding:NSUTF8StringEncoding];
         [HTTPBodyString replaceOccurrencesOfString:@"\\" withString:@"\\\\" options:0 range:NSMakeRange(0, [HTTPBodyString length])];
         [HTTPBodyString replaceOccurrencesOfString:@"`" withString:@"\\`" options:0 range:NSMakeRange(0, [HTTPBodyString length])];
         [HTTPBodyString replaceOccurrencesOfString:@"\"" withString:@"\\\"" options:0 range:NSMakeRange(0, [HTTPBodyString length])];
@@ -73,7 +73,7 @@
     NSMutableString *command = [NSMutableString stringWithString:@"wget"];
     
     if ([[request HTTPBody] length] > 0) {
-        NSString *HTTPBodyString = [[[NSString alloc] initWithData:[request HTTPBody] encoding:NSUTF8StringEncoding] autorelease];
+        NSString *HTTPBodyString = [[NSString alloc] initWithData:[request HTTPBody] encoding:NSUTF8StringEncoding];
         [command appendCommandLineArgument:[NSString stringWithFormat:@"-d %@", HTTPBodyString]];
     }
     

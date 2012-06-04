@@ -112,14 +112,6 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
     return speed * kTTTMetersPerSecondToMilesPerHourCoefficient;
 }
 
-
-@interface TTTLocationFormatter ()
-@property (readwrite, nonatomic, assign) TTTLocationFormatterCoordinateOrder coordinateOrder;
-@property (readwrite, nonatomic, assign) TTTLocationFormatterBearingStyle bearingStyle;
-@property (readwrite, nonatomic, assign) TTTLocationUnitSystem unitSystem;
-@property (readwrite, nonatomic, retain) NSNumberFormatter *numberFormatter;
-@end
-
 @implementation TTTLocationFormatter
 @synthesize coordinateOrder = _coordinateOrder;
 @synthesize bearingStyle = _bearingStyle;
@@ -136,19 +128,15 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
     self.bearingStyle = TTTBearingWordStyle;
     self.unitSystem = TTTMetricSystem;
     
-    self.numberFormatter = [[[NSNumberFormatter alloc] init] autorelease];
-    [self.numberFormatter setLocale:[NSLocale currentLocale]];
-    [self.numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
-    [self.numberFormatter setMaximumSignificantDigits:2];
-    [self.numberFormatter setUsesSignificantDigits:YES];
+    _numberFormatter = [[NSNumberFormatter alloc] init];
+    [_numberFormatter setLocale:[NSLocale currentLocale]];
+    [_numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    [_numberFormatter setMaximumSignificantDigits:2];
+    [_numberFormatter setUsesSignificantDigits:YES];
     
     return self;
 }
 
-- (void)dealloc {
-    [_numberFormatter release];
-    [super dealloc];
-}
 
 - (NSString *)stringFromCoordinate:(CLLocationCoordinate2D)coordinate {
     return [NSString stringWithFormat:NSLocalizedString(@"(%@, %@)", @"Coordinate format"), [self.numberFormatter stringFromNumber:[NSNumber numberWithDouble:coordinate.latitude]], [self.numberFormatter stringFromNumber:[NSNumber numberWithDouble:coordinate.longitude]], nil];
@@ -285,19 +273,28 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
     return [NSString stringWithFormat:NSLocalizedString(@"%@ %@", @"#{Speed} #{Unit}"), speedString, unitString];
 }
 
-- (NSString *)stringFromDistanceFromLocation:(CLLocation *)originLocation toLocation:(CLLocation *)destinationLocation {    
+- (NSString *)stringFromDistanceFromLocation:(CLLocation *)originLocation 
+                                  toLocation:(CLLocation *)destinationLocation 
+{    
     return [self stringFromDistance:[destinationLocation distanceFromLocation:originLocation]];
 }
 
-- (NSString *)stringFromBearingFromLocation:(CLLocation *)originLocation toLocation:(CLLocation *)destinationLocation {
+- (NSString *)stringFromBearingFromLocation:(CLLocation *)originLocation 
+                                 toLocation:(CLLocation *)destinationLocation 
+{
     return [self stringFromBearing:CLLocationDegreesBearingBetweenCoordinates(originLocation.coordinate, destinationLocation.coordinate)];
 }
 
-- (NSString *)stringFromDistanceAndBearingFromLocation:(CLLocation *)originLocation toLocation:(CLLocation *)destinationLocation {
+- (NSString *)stringFromDistanceAndBearingFromLocation:(CLLocation *)originLocation 
+                                            toLocation:(CLLocation *)destinationLocation 
+{
     return [NSString stringWithFormat:NSLocalizedString(@"%@ %@", @"#{Dimensional Quantity} #{Direction}"), [self stringFromDistanceFromLocation:originLocation toLocation:destinationLocation], [self stringFromBearingFromLocation:originLocation toLocation:destinationLocation]];
 }
 
-- (NSString *)stringFromVelocityFromLocation:(CLLocation *)originLocation toLocation:(CLLocation *)destinationLocation atSpeed:(CLLocationSpeed)speed {
+- (NSString *)stringFromVelocityFromLocation:(CLLocation *)originLocation 
+                                  toLocation:(CLLocation *)destinationLocation 
+                                     atSpeed:(CLLocationSpeed)speed 
+{
     return [NSString stringWithFormat:NSLocalizedString(@"%@ %@", @"#{Dimensional Quantity} #{Direction}"), [self stringFromSpeed:speed], [self stringFromBearingFromLocation:originLocation toLocation:destinationLocation]];
 }
 
@@ -309,7 +306,7 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
     self.coordinateOrder = [aDecoder decodeIntegerForKey:@"coordinateOrder"];
     self.bearingStyle = [aDecoder decodeIntegerForKey:@"bearingStyle"];
     self.unitSystem = [aDecoder decodeIntegerForKey:@"unitSystem"];
-    self.numberFormatter = [aDecoder decodeObjectForKey:@"numberFormatter"];
+    _numberFormatter = [aDecoder decodeObjectForKey:@"numberFormatter"];
     
     return self;
 }

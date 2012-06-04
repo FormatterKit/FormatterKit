@@ -77,13 +77,12 @@ enum {
     }
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    cell.textLabel.font = [UIFont systemFontOfSize:14];
-    
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {    
     static TTTUnitOfInformationFormatter *_unitOfInformationFormatter = nil;
-    if (!_unitOfInformationFormatter) {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         _unitOfInformationFormatter = [[TTTUnitOfInformationFormatter alloc] init];
-    }
+    });
     
     switch (indexPath.section) {
         case SIPrefixByteSectionIndex:
@@ -118,7 +117,8 @@ enum {
             numberOfBits = 1896176573;
             break;
     }
-        
+
+    cell.textLabel.font = [UIFont systemFontOfSize:14];
     cell.textLabel.text = [_unitOfInformationFormatter stringFromNumberOfBits:[NSNumber numberWithInteger:numberOfBits]];
 }
 

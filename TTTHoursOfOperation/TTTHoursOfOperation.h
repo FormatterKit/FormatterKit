@@ -22,6 +22,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ 
+ */
 typedef enum {
 	TTTSunday = 1,
 	TTTMonday,
@@ -32,63 +35,108 @@ typedef enum {
 	TTTSaturday,
 } TTTWeekday;
 
+/**
+ 
+ */
 extern TTTWeekday TTTWeekdayForNSDate(NSDate *date);
 
-@interface TTTHoursOfOperationSegment : NSObject {
-@private
-	NSUInteger _openingHour;
-	NSUInteger _openingMinute;
-	NSUInteger _closingHour;
-	NSUInteger _closingMinute;
-}
+/**
+ 
+ */
+@interface TTTHoursOfOperationSegment : NSObject
 
+/**
+ 
+ */
 @property (nonatomic, assign) NSUInteger openingHour;
+
+/**
+ 
+ */
 @property (nonatomic, assign) NSUInteger openingMinute;
+
+/**
+ 
+ */
+@property (readonly) NSDate *openingDate;
+
+/**
+ 
+ */
 @property (nonatomic, assign) NSUInteger closingHour;
+
+/**
+ 
+ */
 @property (nonatomic, assign) NSUInteger closingMinute;
 
+/**
+ 
+ */
+@property (readonly) NSDate *closingDate;
+
+/**
+ 
+ */
 + (id)hoursWithString:(NSString *)string;
 
-- (NSDate *)openingDate;
-- (NSDate *)closingDate;
-
 @end
 
 #pragma mark -
-#pragma mark -
 
-@interface TTTDailyHoursOfOperation : NSObject {
-@private
-	TTTWeekday _weekday;
-	BOOL _closed;
-	NSSet *_segments;
-}
 
+/**
+ 
+ */
+@interface TTTDailyHoursOfOperation : NSObject
+
+/**
+ 
+ */
 @property (nonatomic, assign, getter = isClosed) BOOL closed;
+
+/**
+ 
+ */
 @property (readonly) BOOL hasDefinedHours;
 
+/**
+ 
+ */
 - (id)initWithWeekday:(TTTWeekday)someWeekday;
+
+/**
+ 
+ */
 + (id)hoursWithString:(NSString *)string forWeekday:(TTTWeekday)someWeekday;
-- (NSString *)description;
 
 @end
 
 #pragma mark -
-#pragma mark -
 
-@interface TTTWeeklyHoursOfOperation : NSObject {
-@private
-	TTTDailyHoursOfOperation *_sundayHours;
-	TTTDailyHoursOfOperation *_mondayHours;
-	TTTDailyHoursOfOperation *_tuesdayHours;
-	TTTDailyHoursOfOperation *_wednesdayHours;
-	TTTDailyHoursOfOperation *_thursdayHours;
-	TTTDailyHoursOfOperation *_fridayHours;
-	TTTDailyHoursOfOperation *_saturdayHours;
-}
+/**
+ 
+ */
+@interface TTTWeeklyHoursOfOperation : NSObject
 
+/**
+ 
+ */
 - (TTTDailyHoursOfOperation *)hoursForWeekday:(TTTWeekday)weekday;
+
+/**
+ 
+ */
 - (void)setHoursWithString:(NSString *)string forWeekday:(TTTWeekday)weekday;
+
+/**
+ 
+ */
 - (BOOL)isTimeWithinOpeningHours:(NSDate *)time;
+
+/**
+ 
+ */
 - (BOOL)isCurrentTimeWithinOpeningHours;
+
 @end

@@ -61,7 +61,7 @@ enum {
     
     self.title = NSLocalizedString(@"FormatterKit", nil);
     
-    self.navigationItem.backBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Back", nil) style:UIBarButtonItemStyleDone target:nil action:nil] autorelease];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Back", nil) style:UIBarButtonItemStyleDone target:nil action:nil];
 }
 
 
@@ -86,7 +86,7 @@ enum {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
     [self configureCell:cell atIndexPath:indexPath];
@@ -129,25 +129,25 @@ enum {
     
     switch (indexPath.row) {
         case ArrayRowIndex:
-            viewController = [[[ArrayFormatterViewController alloc] init] autorelease];
+            viewController = [[ArrayFormatterViewController alloc] init];
             break;
         case HoursOfOperationRowIndex:
-            viewController = [[[HoursOfOperationFormatterViewController alloc] init] autorelease];
+            viewController = [[HoursOfOperationFormatterViewController alloc] init];
             break;
         case LocationRowIndex:
-            viewController = [[[LocationFormatterViewController alloc] init] autorelease];
+            viewController = [[LocationFormatterViewController alloc] init];
             break;
         case OrdinalNumberRowIndex:
-            viewController = [[[OrdinalNumberFormatterViewController alloc] init] autorelease];
+            viewController = [[OrdinalNumberFormatterViewController alloc] init];
             break;
         case TimeIntervalRowIndex:
-            viewController = [[[TimeIntervalFormatterViewController alloc] init] autorelease];
+            viewController = [[TimeIntervalFormatterViewController alloc] init];
             break;
         case UnitOfInformationRowIndex:
-            viewController = [[[UnitOfInformationFormatterViewController alloc] init] autorelease];
+            viewController = [[UnitOfInformationFormatterViewController alloc] init];
             break;
         case URLRequestRowIndex:
-            viewController = [[[URLRequestFormatterViewController alloc] init] autorelease];
+            viewController = [[URLRequestFormatterViewController alloc] init];
             break;
     }
     

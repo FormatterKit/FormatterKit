@@ -22,6 +22,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ 
+ */
 typedef enum {
     TTTBit,
     TTTNibble,
@@ -30,6 +33,9 @@ typedef enum {
     TTTDoubleWord
 } TTTUnitOfInformation;
 
+/**
+ 
+ */
 typedef enum {
     TTTKilo,
     TTTMega,
@@ -39,33 +45,47 @@ typedef enum {
     TTTExa,
 } TTTUnitPrefix;
 
-@interface TTTUnitOfInformationFormatter : NSFormatter {
-@private
-    BOOL _displaysInTermsOfBytes;
-    BOOL _usesIECBinaryPrefixesForCalculation;
-    BOOL _usesIECBinaryPrefixesForDisplay;
-    
-    NSNumberFormatter *_numberFormatter;
-}
+/**
+ 
+ */
+@interface TTTUnitOfInformationFormatter : NSFormatter
 
-@property (readonly, nonatomic, retain) NSNumberFormatter *numberFormatter;
+/**
+ 
+ */
+@property (readonly) NSNumberFormatter *numberFormatter;
 
+/**
+ 
+ */
 - (NSString *)stringFromNumberOfBits:(NSNumber *)numberOfBits;
 
+/**
+ 
+ */
 - (NSString *)stringFromNumber:(NSNumber *)number 
                         ofUnit:(TTTUnitOfInformation)unit;
 
+/**
+ 
+ */
 - (NSString *)stringFromNumber:(NSNumber *)number 
                         ofUnit:(TTTUnitOfInformation)unit
                     withPrefix:(TTTUnitPrefix)prefix;
 
-- (BOOL)displaysInTermsOfBytes;
-- (void)setDisplaysInTermsOfBytes:(BOOL)flag;
+/**
+ 
+ */
+@property (nonatomic, assign) BOOL displaysInTermsOfBytes;
 
-- (BOOL)usesIECBinaryPrefixesForCalculation;
-- (void)setUsesIECBinaryPrefixesForCalculation:(BOOL)flag;
+/**
+ 
+ */
+@property (nonatomic, assign) BOOL usesIECBinaryPrefixesForCalculation;
 
-- (BOOL)usesIECBinaryPrefixesForDisplay;
-- (void)setUsesIECBinaryPrefixesForDisplay:(BOOL)flag;
+/**
+ 
+ */
+@property (nonatomic, assign) BOOL usesIECBinaryPrefixesForDisplay;
 
 @end

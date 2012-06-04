@@ -25,8 +25,8 @@
 #import "TTTOrdinalNumberFormatter.h"
 
 @interface OrdinalNumberFormatterViewController ()
-@property (readwrite, nonatomic, retain) NSArray *locales;
-@property (readwrite, nonatomic, retain) NSArray *numbers;
+@property (readwrite, nonatomic) NSArray *locales;
+@property (readwrite, nonatomic) NSArray *numbers;
 @end
 
 @implementation OrdinalNumberFormatterViewController
@@ -42,16 +42,16 @@
     self.title = NSLocalizedString(@"Hours of Operation Formatter", nil);
     
     NSMutableArray *mutableLocales = [NSMutableArray array];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"es_ES"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"fr_FR"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"de_DE"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"ga_IE"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"it_IT"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"nl_NL"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"pt_PT"] autorelease]];
-    [mutableLocales addObject:[[[NSLocale alloc] initWithLocaleIdentifier:@"zh-Hant_CN"] autorelease]];
+    [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
+    [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"es_ES"]];
+    [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"fr_FR"]];
+    [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"de_DE"]];
+    [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"ga_IE"]];
+    [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"it_IT"]];
+    [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"]];
+    [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"nl_NL"]];
+    [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"pt_PT"]];
+    [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"zh-Hant_CN"]];
     self.locales = [NSArray arrayWithArray:mutableLocales];
     
     NSMutableArray *mutableNumbers = [NSMutableArray array];
@@ -64,11 +64,6 @@
     return self;
 }
 
-- (void)dealloc {
-    [_locales release];
-    [_numbers release];
-    [super dealloc];
-}
 
 + (NSString *)formatterDescription {
     return NSLocalizedString(@"TTTOrdinalNumberFormatter formats cardinals (1, 2, 3, etc.) into ordinals (1st, 2nd, 3rd, etc.), and supports English, Spanish, French, German, Irish, Italian, Japanese, Dutch, Portuguese, and Mandarin Chinese. For other languages, you can use the standard default, or override it with your own. For languages whose ordinal indicator depends upon the grammatical properties of the predicate, TTTOrdinalNumberFormatter can format according to a specified gender and/or plurality.", nil);
@@ -91,10 +86,11 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     static TTTOrdinalNumberFormatter *_ordinalNumberFormatter = nil;
-    if (!_ordinalNumberFormatter) {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         _ordinalNumberFormatter = [[TTTOrdinalNumberFormatter alloc] init];
-    }
-
+    });
+    
     cell.textLabel.font = [UIFont systemFontOfSize:16];
     
     NSLocale *locale = [self.locales objectAtIndex:indexPath.section];

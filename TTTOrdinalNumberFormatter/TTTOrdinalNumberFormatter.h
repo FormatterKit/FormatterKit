@@ -22,12 +22,18 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ 
+ */
 typedef enum {
     TTTOrdinalNumberFormatterMaleGender     = 1,
     TTTOrdinalNumberFormatterFemaleGender   = 2,
     TTTOrdinalNumberFormatterNeuterGender   = 3,
 } TTTOrdinalNumberFormatterPredicateGrammaticalGender;
 
+/**
+ 
+ */
 typedef enum {
     TTTOrdinalNumberFormatterSingular       = 1,
     TTTOrdinalNumberFormatterDual           = 2,
@@ -37,20 +43,24 @@ typedef enum {
     TTTOrdinalNumberFormatterPlural,
 } TTTOrdinalNumberFormatterPredicateGrammaticalNumber;
 
-@interface TTTOrdinalNumberFormatter : NSNumberFormatter {
-@private
-    NSString *_ordinalIndicator;
-    TTTOrdinalNumberFormatterPredicateGrammaticalGender _grammaticalGender;
-    TTTOrdinalNumberFormatterPredicateGrammaticalNumber _grammaticalNumber;
-}
+/**
+ 
+ */
+@interface TTTOrdinalNumberFormatter : NSNumberFormatter
 
-- (NSString *)ordinalIndicator;
-- (void)setOrdinalIndicator:(NSString *)indicator;
+/**
+ 
+ */
+@property (nonatomic, strong) NSString *ordinalIndicator;
 
-- (TTTOrdinalNumberFormatterPredicateGrammaticalGender)grammaticalGender;
-- (void)setGrammaticalGender:(TTTOrdinalNumberFormatterPredicateGrammaticalGender)gender;
+/**
+ 
+ */
+@property (nonatomic, assign) TTTOrdinalNumberFormatterPredicateGrammaticalGender grammaticalGender;
 
-- (TTTOrdinalNumberFormatterPredicateGrammaticalNumber)grammaticalNumber;
-- (void)setGrammaticalNumber:(TTTOrdinalNumberFormatterPredicateGrammaticalNumber)number;
+/**
+ 
+ */
+@property (nonatomic, assign) TTTOrdinalNumberFormatterPredicateGrammaticalNumber grammaticalNumber;
 
 @end
