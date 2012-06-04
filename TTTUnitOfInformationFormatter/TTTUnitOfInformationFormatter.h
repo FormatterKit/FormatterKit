@@ -48,7 +48,7 @@ typedef enum {
 /**
  
  */
-@interface TTTUnitOfInformationFormatter : NSFormatter
+@interface TTTUnitOfInformationFormatter : NSFormatter <NSCoding>
 
 /**
  
