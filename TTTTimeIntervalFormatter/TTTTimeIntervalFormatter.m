@@ -98,7 +98,6 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     [_futureDeicticExpression release];
     [_deicticExpressionFormat release];
     [_approximateQualifierFormat release];
-    [_approximateQualifierFormat release];
     [super dealloc];
 }
 
