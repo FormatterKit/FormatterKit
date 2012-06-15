@@ -1,16 +1,15 @@
 # FormatterKit
 
-`FormatterKit` is a collection of well-crafted `NSFormatter` subclasses for things like hours of operation, distance, and relative time intervals. Each formatter abstracts away the complex business logic of their respective domain, so that you can focus on the more important aspects of your application.
+`FormatterKit` is a collection of well-crafted `NSFormatter` subclasses for things like units of information, distance, and relative time intervals. Each formatter abstracts away the complex business logic of their respective domain, so that you can focus on the more important aspects of your application.
 
 In short, use this library if you're manually formatting any of the following (with string interpolation or the like):
 
 * __Arrays__: Display `NSArray` elements in a comma-delimited list *(e.g. "Russell, Spinoza & Rawls")*
-* __Hours of Operation__: Format and collapse recurring weekly business hours *(e.g. "Mon-Wed: 8:00AM - 7:00PM")*
 * __Location, Distance & Direction__: Show `CLLocationDistance`, `CLLocationDirection`, and `CLLocationSpeed` in metric or imperial units *(eg. "240ft Northwest" / "45 km/h SE")*
 * __Ordinal Numbers__: Convert cardinal `NSNumber` objects to their ordinal in most major languages *(eg. "1st, 2nd, 3rd" / "1ère, 2ème, 3ème")*
 * __Time Intervals__: Show relative time distance between any two `NSDate` objects *(e.g. "3 minutes ago" / "yesterday")*
 * __Units of Information__: Humanized representations of quantities of bits and bytes *(e.g. "2.7 MB")*
-* __URL Requests__: Print out `cURL` or `Wget` command equivalents for any `NSURLRequest` *(e.g. `curl "https://api.gowalla.com/spots/" -H "Accept: application/json"`)*
+* __URL Requests__: Print out `cURL` or `Wget` command equivalents for any `NSURLRequest` *(e.g. `curl -X POST "https://www.example.com/" -H "Accept: text/html"`)*
 
 ## Demo
 
@@ -26,40 +25,10 @@ Think of this as a production-ready alternative to `NSArray -componentsJoinedByS
 
 ``` objective-c
 NSArray *list = [NSArray arrayWithObjects:@"Russel", @"Spinoza", @"Rawls", nil];
-TTTArrayFormatter *arrayFormatter = [[[TTTArrayFormatter alloc] init] autorelease];
+TTTArrayFormatter *arrayFormatter = [[TTTArrayFormatter alloc] init];
 [arrayFormatter setUsesAbbreviatedConjunction:YES]; // Use '&' instead of 'and'
 [arrayFormatter setUsesSerialDelimiter:NO]; // Omit Oxford Comma
 NSLog(@"%@", [arrayFormatter stringFromArray:list]); // # => "Russell, Spinoza & Rawls"
-```
-
-## TTTHoursOfOperation
-
-Modeling and displaying hours of operation is tricky business. It's perhaps one of the most prolific ratholes that has ever existed--a trap that has ensnared many a venturing programmer with its tendrils of perceived simplicity and maddening edge-cases.
-
-TTTHoursOfOperation makes it easy to programmatically do the following:
-
-    Mon-Wed: 8:00AM - 7:00PM
-    Thu: 9:00AM - 12:00PM, 3:00PM - 10:00PM
-    Fri: Closed
-    Weekends: 11:00AM - 1:00AM
-
-Additional features include:
-- Built-in hours parser to handle simply-formatted input, such as `"08:45-15:00,17:00-22:00"` or `"closed"`
-- Check if the current time is within today's store hours, or get the NSDates associated with this weeks hours for a particular weekday
-- Wrap-around time support, i.e. `"20:00-26:00"` would be the hours 8PM - 2AM, associated with a specified weekday
-- Localized output, such that a Japanese user, for example would see hours in a format like "火: 8:00 - 20:00" or "閉店"
-
-### Example Usage
-
-``` objective-c
-TTTWeeklyHoursOfOperation *hoursOfOperation = [[TTTWeeklyHoursOfOperation alloc] init];
-[hoursOfOperation setHoursWithString:@"08:00-19:00" forWeekday:TTTMonday];
-[hoursOfOperation setHoursWithString:@"08:00-19:00" forWeekday:TTTTuesday];
-[hoursOfOperation setHoursWithString:@"08:00-19:00" forWeekday:TTTWednesday];
-[hoursOfOperation setHoursWithString:@"09:00-12:00,15:00-22:00" forWeekday:TTTThursday];
-[hoursOfOperation setHoursWithString:@"closed" forWeekday:TTTFriday];
-[hoursOfOperation setHoursWithString:@"11:00-25:00" forWeekday:TTTSaturday];
-[hoursOfOperation setHoursWithString:@"11:00-25:00" forWeekday:TTTSunday];
 ```
 
 ## TTTLocationFormatter
@@ -71,9 +40,9 @@ When working with `CoreLocation`, you can use your favorite unit for distance...
 ### Example Usage
 
 ``` objective-c
-TTTLocationFormatter *locationFormatter = [[[TTTLocationFormatter alloc] init] autorelease];
-CLLocation *austin = [[[CLLocation alloc] initWithLatitude:30.2669444 longitude:-97.7427778] autorelease];
-CLLocation *pittsburgh = [[[CLLocation alloc] initWithLatitude:40.4405556 longitude:-79.9961111] autorelease];
+TTTLocationFormatter *locationFormatter = [[TTTLocationFormatter alloc] init];
+CLLocation *austin = [[CLLocation alloc] initWithLatitude:30.2669444 longitude:-97.7427778];
+CLLocation *pittsburgh = [[CLLocation alloc] initWithLatitude:40.4405556 longitude:-79.9961111];
 ```
 
 #### Distance in Metric Units with Cardinal Directions
@@ -109,7 +78,7 @@ NSLog(@"%@", [locationFormatter stringFromLocation:austin]);
 
 ## TTTOrdinalNumberFormatter
 
-Core Foundation's NSNumberFormatter is great for [Cardinal numbers](http://en.wikipedia.org/wiki/Cardinal_number) (17, 42, 69, etc.), but it doesn't have built-in support for [Ordinal numbers](http://en.wikipedia.org/wiki/Ordinal_number_(linguistics)) (1st, 2nd, 3rd, etc.)
+`NSNumberFormatter` is great for [Cardinal numbers](http://en.wikipedia.org/wiki/Cardinal_number) (17, 42, 69, etc.), but it doesn't have built-in support for [Ordinal numbers](http://en.wikipedia.org/wiki/Ordinal_number_(linguistics)) (1st, 2nd, 3rd, etc.)
 
 A naïve implementation might be as simple as throwing the one's place in a switch statement and appending "-st", "-nd", etc. But what if you want to support French, which appends "-er", "-ère", and "-eme" in various contexts? How about Spanish? Japanese?
 
@@ -189,18 +158,18 @@ TTTUnitOfInformationFormatter *unitOfInformationFormatter = [[TTTUnitOfInformati
 
 `NSURLRequest` objects encapsulate all of the information made in a network request, including url, headers, body, etc. This isn't something you'd normally want to show to a user, but it'd be nice to have a way to make it more portable for debugging.
 
-Enter `TTTURLRequestFormatter`. In addition to formatting requests simply as `GET http://api.gowalla.com/spots`, it will also generate `cURL` and `Wget` commands with all of its headers and data fields intact to debug in the console.
+Enter `TTTURLRequestFormatter`. In addition to formatting requests simply as `POST http://www.example.com/`, it will also generate `cURL` and `Wget` commands with all of its headers and data fields intact to debug in the console.
 
 ### Example Usage
 
 ``` objective-c
-NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://api.gowalla.com/spots"]] autorelease];
+NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://www.example.com/"]];
 [request setHTTPMethod:@"POST"];
-[request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+[request addValue:@"text/html" forHTTPHeaderField:@"Accept"];
 [TTTURLRequestFormatter cURLCommandFromURLRequest:request];
 ```
 
-    curl -X POST "https://api.gowalla.com/spots/" -H "Accept: application/json"
+    curl -X POST "https://www.example.com/" -H "Accept: text/html"
 
 ---
 
