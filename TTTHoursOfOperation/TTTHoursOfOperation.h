@@ -23,7 +23,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- 
+ Specifies the day of the week.
  */
 typedef enum {
 	TTTSunday = 1,
@@ -36,107 +36,61 @@ typedef enum {
 } TTTWeekday;
 
 /**
- 
+ Returns the day of the week for a specified date.
  */
 extern TTTWeekday TTTWeekdayForNSDate(NSDate *date);
 
-/**
- 
- */
-@interface TTTHoursOfOperationSegment : NSObject
+@class TTTDailyHoursOfOperation;
 
 /**
- 
- */
-@property (nonatomic, assign) NSUInteger openingHour;
-
-/**
- 
- */
-@property (nonatomic, assign) NSUInteger openingMinute;
-
-/**
- 
- */
-@property (readonly) NSDate *openingDate;
-
-/**
- 
- */
-@property (nonatomic, assign) NSUInteger closingHour;
-
-/**
- 
- */
-@property (nonatomic, assign) NSUInteger closingMinute;
-
-/**
- 
- */
-@property (readonly) NSDate *closingDate;
-
-/**
- 
- */
-+ (id)hoursWithString:(NSString *)string;
-
-@end
-
-#pragma mark -
-
-
-/**
- 
- */
-@interface TTTDailyHoursOfOperation : NSObject
-
-/**
- 
- */
-@property (nonatomic, assign, getter = isClosed) BOOL closed;
-
-/**
- 
- */
-@property (readonly) BOOL hasDefinedHours;
-
-/**
- 
- */
-- (id)initWithWeekday:(TTTWeekday)someWeekday;
-
-/**
- 
- */
-+ (id)hoursWithString:(NSString *)string forWeekday:(TTTWeekday)someWeekday;
-
-@end
-
-#pragma mark -
-
-/**
- 
+ Instances of `TTTWeeklyHoursOfOperation` represent the weekly hours of operation for an establishment.
  */
 @interface TTTWeeklyHoursOfOperation : NSObject
 
 /**
+ Returns the hours of operation on a particular day of the week.
  
+ @param weekday The day of the week.
  */
 - (TTTDailyHoursOfOperation *)hoursForWeekday:(TTTWeekday)weekday;
 
 /**
+ Sets the daily hours of operation for a particular day of the week from a formatted time interval string.
  
+ @param string The time interval string parsed to determine hours of operation. The format for this string is two 24-hour times separated by a dash, such as "08:00-19:00"
  */
-- (void)setHoursWithString:(NSString *)string forWeekday:(TTTWeekday)weekday;
+- (void)setHoursWithString:(NSString *)string 
+                forWeekday:(TTTWeekday)weekday;
 
 /**
+ Returns whether the specified time is open during the weekly hours of operation.
  
+ @param time The time to check for opening hours
  */
 - (BOOL)isTimeWithinOpeningHours:(NSDate *)time;
 
 /**
- 
+ Returns whether the current time is open within the weekly hours of operation. 
  */
 - (BOOL)isCurrentTimeWithinOpeningHours;
+
+@end
+
+#pragma mark -
+
+/**
+ Instances of `TTTDailyHoursOfOperation` represent the daily hours of operation for an establishment on a particular weekday. 
+ */
+@interface TTTDailyHoursOfOperation : NSObject
+
+/**
+ Specifies whether an establishment is closed on this particular weekday.
+ */
+@property (nonatomic, assign, getter = isClosed) BOOL closed;
+
+/**
+ Specifies whether an establishment has defined hours of operation on this particular weekday.
+ */
+@property (readonly) BOOL hasDefinedHours;
 
 @end

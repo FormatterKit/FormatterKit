@@ -23,7 +23,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- 
+ Defines units of information.
  */
 typedef enum {
     TTTBit,
@@ -34,7 +34,7 @@ typedef enum {
 } TTTUnitOfInformation;
 
 /**
- 
+ Defines unit prefixes.
  */
 typedef enum {
     TTTKilo,
@@ -46,46 +46,59 @@ typedef enum {
 } TTTUnitPrefix;
 
 /**
+ Instances of `TTTUnitOfInformationFormatter` create localized string representations of quantities of information.
  
+ For example, the the value 1080 bytes could be formatted as "1.08 KB" or "8.46 Kibit".
+ 
+ @discussion By default, `TTTUnitOfInformationFormatter` uses IEC binary prefixes to calculate (i.e. 1 kilobit = 1,024 bits rather than 1,000 bits), but displays in terms of standard prefixes (i.e. kbit rather than kibit). See http://en.wikipedia.org/wiki/Binary_prefix#IEC_prefixes for more informaion about IEC prefixes. Additionally.
  */
 @interface TTTUnitOfInformationFormatter : NSFormatter <NSCoding>
 
 /**
- 
+ Specifies the `NSNumberFormatter` object used to format numeric values in all formatted strings. By default, this uses the `NSNumberFormatterDecimalStyle` number style, and sets a rounding increment of `0.01f`.
  */
 @property (readonly) NSNumberFormatter *numberFormatter;
 
 /**
+ Specifies whether to display units of information in terms of bytes, as opposed to bits. `YES` by default.
+ */
+@property (nonatomic, assign) BOOL displaysInTermsOfBytes;
+
+/**
+ Specifies whether to use IEC binary prefixes for calculation. `YES` by default. 
+ */
+@property (nonatomic, assign) BOOL usesIECBinaryPrefixesForCalculation;
+
+/**
+ Specifies whether to use IEC binary prefixes for display. `NO` by default.
+ */
+@property (nonatomic, assign) BOOL usesIECBinaryPrefixesForDisplay;
+
+/**
+ Returns a string representation of a given number of bits formatted using the receiver’s current settings.
  
+ @param numberOfBits The number of bits to format.
  */
 - (NSString *)stringFromNumberOfBits:(NSNumber *)numberOfBits;
 
 /**
+ Returns a string representation of a given number of a specified unit of information formatted using the receiver’s current settings.
  
+ @param number The number of specified units for format.
+ @param unit The number unit.
  */
 - (NSString *)stringFromNumber:(NSNumber *)number 
                         ofUnit:(TTTUnitOfInformation)unit;
 
 /**
+ Returns a string representation of a given number of a specified unit of information with a particular prefix formatted using the receiver’s current settings.
  
+ @param number The number of specified units for format.
+ @param unit The number unit.
+ @param prefix The unit prefix.
  */
 - (NSString *)stringFromNumber:(NSNumber *)number 
                         ofUnit:(TTTUnitOfInformation)unit
                     withPrefix:(TTTUnitPrefix)prefix;
-
-/**
- 
- */
-@property (nonatomic, assign) BOOL displaysInTermsOfBytes;
-
-/**
- 
- */
-@property (nonatomic, assign) BOOL usesIECBinaryPrefixesForCalculation;
-
-/**
- 
- */
-@property (nonatomic, assign) BOOL usesIECBinaryPrefixesForDisplay;
 
 @end

@@ -23,22 +23,30 @@
 #import <Foundation/Foundation.h>
 
 /**
+ Instances of `TTTURLRequestFormatter` create localized string representations of `NSURLRequest` objects. There are also class methods that generate equivalent `curl` and `wget` command strings.
  
+ For example, a particular request may be formatted as "GET http://example.com/"
  */
 @interface TTTURLRequestFormatter : NSFormatter
 
 /**
+ Returns a string representation of a given request.
  
+ @param request The request to format.
  */
 - (NSString *)stringFromURLRequest:(NSURLRequest *)request;
 
 /**
+ Returns a `curl` command string equivalent of the specified request object.
  
+ @param request The request to format.
  */
 + (NSString *)cURLCommandFromURLRequest:(NSURLRequest *)request;
 
 /**
+ Returns a `wget` command string equivalent of the specified request object.
  
+ @param request The request to format.
  */
 + (NSString *)WgetCommandFromURLRequest:(NSURLRequest *)request;
 
@@ -47,12 +55,16 @@
 #pragma mark -
 
 /**
+ Instances of `TTTHTTPURLResponseFormatter` create localized string representations of `NSHTTPURLResponse` objects.
  
+ For example, a particular response may be formatted as "200 http://example.com/"
  */
 @interface TTTHTTPURLResponseFormatter : NSFormatter
 
 /**
+ Returns a string representation of a given HTTP response.
  
+ @param response The HTTP response to format.
  */
 - (NSString *)stringFromHTTPURLResponse:(NSHTTPURLResponse *)response;
 

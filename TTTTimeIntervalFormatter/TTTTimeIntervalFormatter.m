@@ -83,15 +83,17 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     return [self stringForTimeIntervalFromDate:[NSDate date] toDate:[NSDate dateWithTimeIntervalSinceNow:seconds]];
 }
 
-- (NSString *)stringForTimeIntervalFromDate:(NSDate *)startingDate toDate:(NSDate *)resultDate {
-    NSTimeInterval seconds = [startingDate timeIntervalSinceDate:resultDate];
+- (NSString *)stringForTimeIntervalFromDate:(NSDate *)startingDate 
+                                     toDate:(NSDate *)endingDate 
+{
+    NSTimeInterval seconds = [startingDate timeIntervalSinceDate:endingDate];
     if (fabs(seconds) < self.presentTimeIntervalMargin) {
         return self.presentDeicticExpression;
     }
     
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSUInteger unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSWeekCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
-    NSDateComponents *components = [calendar components:unitFlags fromDate:startingDate toDate:resultDate options:0];
+    NSDateComponents *components = [calendar components:unitFlags fromDate:startingDate toDate:endingDate options:0];
     
     if (self.usesIdiomaticDeicticExpressions) {
         NSString *idiomaticDeicticExpression = [self localizedIdiomaticDeicticExpressionForComponents:components];

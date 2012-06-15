@@ -59,7 +59,6 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     return self;
 }
 
-
 - (NSString *)stringFromNumber:(NSNumber *)number {
     NSString *indicator = self.ordinalIndicator;
     if (!indicator) {
@@ -155,7 +154,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
         }
     }
     else {
-            ordinalIndicator = @"e";
+        ordinalIndicator = @"e";
     }
     
     if (self.grammaticalNumber == TTTOrdinalNumberFormatterDual || self.grammaticalNumber == TTTOrdinalNumberFormatterTrial || self.grammaticalNumber == TTTOrdinalNumberFormatterQuadral || self.grammaticalNumber == TTTOrdinalNumberFormatterPlural) {

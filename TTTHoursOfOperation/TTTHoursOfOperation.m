@@ -22,6 +22,22 @@
 
 #import "TTTHoursOfOperation.h"
 
+@interface TTTHoursOfOperationSegment : NSObject
+
+@property (nonatomic, assign) NSUInteger openingHour;
+@property (nonatomic, assign) NSUInteger openingMinute;
+@property (readonly) NSDate *openingDate;
+
+@property (nonatomic, assign) NSUInteger closingHour;
+@property (nonatomic, assign) NSUInteger closingMinute;
+@property (readonly) NSDate *closingDate;
+
++ (id)hoursWithString:(NSString *)string;
+
+@end
+
+#pragma mark -
+
 @interface TTTHoursOfOperation : NSObject {}
 + (NSCalendar *)calendar;
 + (NSDateFormatter *)dateFormatter;
@@ -165,9 +181,11 @@ TTTWeekday TTTWeekdayForNSDate(NSDate *date) {
 
 @interface TTTDailyHoursOfOperation ()
 @property (nonatomic, assign) TTTWeekday weekday;
-@property (nonatomic) NSSet *segments;
-@property (weak, weak, readonly) NSString *weekdaySymbol;
+@property (nonatomic, strong) NSSet *segments;
+@property (readonly) NSString *weekdaySymbol;
 
++ (id)hoursWithString:(NSString *)string 
+           forWeekday:(TTTWeekday)someWeekday;
 - (id)initWithWeekday:(TTTWeekday)someWeekday;
 - (BOOL)hasSameHoursAsDailyHours:(TTTDailyHoursOfOperation *)dailyHours;
 @end
@@ -179,7 +197,9 @@ TTTWeekday TTTWeekdayForNSDate(NSDate *date) {
 @dynamic weekdaySymbol;
 @dynamic hasDefinedHours;
 
-+ (id)hoursWithString:(NSString *)string forWeekday:(TTTWeekday)someWeekday {
++ (id)hoursWithString:(NSString *)string 
+           forWeekday:(TTTWeekday)someWeekday 
+{
 	TTTDailyHoursOfOperation *dailyHours = [[[self class] alloc] initWithWeekday:someWeekday];
 	
 	if ([string isEqualToString:@"closed"]) {

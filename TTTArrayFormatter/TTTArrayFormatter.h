@@ -23,72 +23,93 @@
 #import <Foundation/Foundation.h>
 
 /**
- 
+ Specifies the style of how array components are joined.
  */
 typedef enum {
-    TTTArrayFormatterSentenceStyle = 0,
-    TTTArrayFormatterDataStyle,
+    TTTArrayFormatterSentenceStyle = 0, // Join with delimiters and a conjunction before the penultimate component.
+    TTTArrayFormatterDataStyle,         // Join with delimiters, bound within square brackets like an array literal.
 } TTTArrayFormatterStyle;
 
 /**
+ Instances of `TTTArrayFormatter` create localized string representations of `NSArray` objects, and convert textual representations of arrays into `NSArray` objects.
  
+ For example, the array `@[@"Russel", @"Spinoza", @"Rawls"]` would be formatted as @"Russel, Spinoza, and Rawls" in English.
  */
 @interface TTTArrayFormatter : NSFormatter
 
 /**
+ Returns a string representation of a given array formatted using the receiver’s current settings.
  
+ @param anArray The array to format.
  */
 - (NSString *)stringFromArray:(NSArray *)anArray;
 
 /**
+ Returns a string representation of a given array formatted using the receiver’s current settings along with the substring ranges for the components in the formatted string.
  
+ @param anArray The array to format.
+ @param rangeValues Upon return contains an array of NSRange objects that represent the substring ranges of the components in the formatted string.
  */
 - (NSString *)stringFromArray:(NSArray *)anArray 
            rangesOfComponents:(NSArray **)rangeValues;
 
 /**
+ Returns an array representation of a given string interpreted using the receiver’s current settings.
  
+ @param aString The string to parse.
  */
 - (NSArray *)arrayFromString:(NSString *)aString;
 
 /**
+ Returns a string representation of a given array formatted using the default settings in the specified array format style.
+
+ @param anArray The array to be formatted.
+ @param style The style used to format the array. 
  
  */
 + (NSString *)localizedStringFromArray:(NSArray *)anArray 
                             arrayStyle:(TTTArrayFormatterStyle)style;
 
 /**
- 
+ Specifies the style used to format arrays. `TTTArrayFormatterSentenceStyle` by default.
  */
 @property (nonatomic, assign) TTTArrayFormatterStyle arrayStyle;
 
 /**
+ Specifies the string used to delimit the components in the array. "," by default.
  
+ @discussion Delimiters are added immediately after each component, before the `separator`.
  */
 @property (nonatomic, strong) NSString *delimiter;
 
 /**
- 
+ Specifies the string used to separate delimiters from the next component. " " by default.
  */
 @property (nonatomic, strong) NSString *separator;
 
 /**
+ Specifies the localized string used to join the penultimate and last components together when applied with the `TTTArrayFormatterSentenceStyle`. "and" by default.
  
+ @see usesAbbreviatedConjunction
  */
 @property (nonatomic, strong) NSString *conjunction;
 
 /**
+ Specifies the abbreviated localized string used to join the penultimate and last components together when applied with the `TTTArrayFormatterSentenceStyle`. "&" by default.
  
+ @see usesAbbreviatedConjunction
  */
 @property (nonatomic, strong) NSString *abbreviatedConjunction;
 
 /**
- 
+ Specifies whether to use the standard or abbreviated conjunction when applied with the `TTTArrayFormatterSentenceStyle`. `NO` by default.
  */
 @property (nonatomic, assign) BOOL usesAbbreviatedConjunction;
 
 /**
+ Specifies whether to use a delimiter between the conjunction when applied with the `TTTArrayFormatterSentenceStyle`. `YES` by default.
  
+ @discussion This is also known as the "Oxford Comma".
  */
 @property (nonatomic, assign) BOOL usesSerialDelimiter;
 

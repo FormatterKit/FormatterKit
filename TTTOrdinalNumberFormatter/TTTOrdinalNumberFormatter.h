@@ -23,7 +23,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- 
+ Specifies the grammatical gender of the word conjugated by the ordinal number.
  */
 typedef enum {
     TTTOrdinalNumberFormatterMaleGender     = 1,
@@ -32,7 +32,7 @@ typedef enum {
 } TTTOrdinalNumberFormatterPredicateGrammaticalGender;
 
 /**
- 
+ Specifies the grammatical number of the word conjugatd by the ordinal number.
  */
 typedef enum {
     TTTOrdinalNumberFormatterSingular       = 1,
@@ -44,22 +44,26 @@ typedef enum {
 } TTTOrdinalNumberFormatterPredicateGrammaticalNumber;
 
 /**
+ Instances of `TTTOrdinalNumberFormatter` create localized ordinal string representations of `NSNumber` objects.
  
+ Each instance has a default number style of `NSNumberFormatterNoStyle`, does not allow floats nor generates decimal numbers, has a rounding mode of `NSNumberFormatterRoundFloor`, a minimum value of @0, and is has leniency turned on.
+ 
+ For example, the numbers `@1`, `@2`, and `@3` would be formatted as `@"1st"`, `@"2nd"`, and `@"3rd"` in English. 
  */
 @interface TTTOrdinalNumberFormatter : NSNumberFormatter
 
 /**
- 
+ When specified, this overrides the indicator determined by the formatter. `nil` by default.
  */
 @property (nonatomic, strong) NSString *ordinalIndicator;
 
 /**
- 
+ Specifies the grammatical gender of the word conjugatd by the ordinal number.
  */
 @property (nonatomic, assign) TTTOrdinalNumberFormatterPredicateGrammaticalGender grammaticalGender;
 
 /**
- 
+ Specifies the grammatical number of the word conjugatd by the ordinal number.
  */
 @property (nonatomic, assign) TTTOrdinalNumberFormatterPredicateGrammaticalNumber grammaticalNumber;
 
