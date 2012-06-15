@@ -1,17 +1,17 @@
 // TTTURLRequestFormatter.m
 //
 // Copyright (c) 2011 Mattt Thompson (http://mattt.me)
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -34,7 +34,7 @@
 
 + (NSString *)cURLCommandFromURLRequest:(NSURLRequest *)request {
     NSMutableString *command = [NSMutableString stringWithString:@"curl"];
-    
+
     [command appendCommandLineArgument:[NSString stringWithFormat:@"-X %@", [request HTTPMethod]]];
 
     if ([[request HTTPBody] length] > 0) {
@@ -45,23 +45,23 @@
         [HTTPBodyString replaceOccurrencesOfString:@"$" withString:@"\\$" options:0 range:NSMakeRange(0, [HTTPBodyString length])];
         [command appendCommandLineArgument:[NSString stringWithFormat:@"-d \"%@\"", HTTPBodyString]];
     }
-    
+
     NSString *acceptEncodingHeader = [[request allHTTPHeaderFields] valueForKey:@"Accept-Encoding"];
     if ([acceptEncodingHeader rangeOfString:@"gzip"].location != NSNotFound) {
         [command appendCommandLineArgument:@"--compressed"];
     }
-    
+
     NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[request URL]];
     for (NSHTTPCookie *cookie in cookies) {
         [command appendCommandLineArgument:[NSString stringWithFormat:@"--cookie \"%@=%@\"", [cookie name], [cookie value]]];
-    }    
-    
+    }
+
     for (id field in [request allHTTPHeaderFields]) {
         [command appendCommandLineArgument:[NSString stringWithFormat:@"-H %@", [NSString stringWithFormat:@"'%@: %@'", field, [[request valueForHTTPHeaderField:field] stringByReplacingOccurrencesOfString:@"\'" withString:@"\\\'"]]]];
     }
-    
+
     [command appendCommandLineArgument:[NSString stringWithFormat:@"\"%@\"", [[request URL] absoluteString]]];
-    
+
     return [NSString stringWithString:command];
 }
 
@@ -69,20 +69,20 @@
     if (!([[request HTTPMethod] isEqualToString:@"GET"] || [[request HTTPMethod] isEqualToString:@"POST"])) {
         [NSException raise:@"Invalid HTTP Method" format:@"Wget can only make GET and POST requests", request];
     }
-    
+
     NSMutableString *command = [NSMutableString stringWithString:@"wget"];
-    
+
     if ([[request HTTPBody] length] > 0) {
         NSString *HTTPBodyString = [[NSString alloc] initWithData:[request HTTPBody] encoding:NSUTF8StringEncoding];
         [command appendCommandLineArgument:[NSString stringWithFormat:@"-d %@", HTTPBodyString]];
     }
-    
+
     for (id field in [request allHTTPHeaderFields]) {
         [command appendCommandLineArgument:[NSString stringWithFormat:@"--header=%@", [NSString stringWithFormat:@"'%@: %@'", field, [[request valueForHTTPHeaderField:field] stringByReplacingOccurrencesOfString:@"\'" withString:@"\\\'"]]]];
     }
-    
+
     [command appendCommandLineArgument:[NSString stringWithFormat:@"\"%@\"", [[request URL] absoluteString]]];
-    
+
     return [NSString stringWithString:command];
 }
 

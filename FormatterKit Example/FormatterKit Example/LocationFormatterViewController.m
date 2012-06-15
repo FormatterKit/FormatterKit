@@ -44,7 +44,7 @@ enum {
         return nil;
     }
     
-    self.title = NSLocalizedString(@"Hours of Operation Formatter", nil);
+    self.title = NSLocalizedString(@"Location Formatter", nil);
     
     _austin = [[CLLocation alloc] initWithLatitude:30.2669444 longitude:-97.7427778];
     _pittsburgh = [[CLLocation alloc] initWithLatitude:40.4405556 longitude:-79.9961111];

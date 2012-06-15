@@ -22,7 +22,6 @@
 
 #import "RootViewController.h"
 #import "ArrayFormatterViewController.h"
-#import "HoursOfOperationFormatterViewController.h"
 #import "LocationFormatterViewController.h"
 #import "OrdinalNumberFormatterViewController.h"
 #import "TimeIntervalFormatterViewController.h"
@@ -31,7 +30,6 @@
 
 enum {
     ArrayRowIndex,
-    HoursOfOperationRowIndex,
     LocationRowIndex,
     OrdinalNumberRowIndex,
     TimeIntervalRowIndex,
@@ -99,9 +97,6 @@ enum {
         case ArrayRowIndex:
             cell.textLabel.text = NSLocalizedString(@"Array Formatter", nil);
             break;
-        case HoursOfOperationRowIndex:
-            cell.textLabel.text = NSLocalizedString(@"Hours of Operation Formatter", nil);
-            break;
         case LocationRowIndex:
             cell.textLabel.text = NSLocalizedString(@"Location Formatter", nil);
             break;
@@ -130,9 +125,6 @@ enum {
     switch (indexPath.row) {
         case ArrayRowIndex:
             viewController = [[ArrayFormatterViewController alloc] init];
-            break;
-        case HoursOfOperationRowIndex:
-            viewController = [[HoursOfOperationFormatterViewController alloc] init];
             break;
         case LocationRowIndex:
             viewController = [[LocationFormatterViewController alloc] init];

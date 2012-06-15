@@ -16,7 +16,6 @@
 		F8FBF9F51427A456001409DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBF9F41427A456001409DB /* main.m */; };
 		F8FBF9F91427A456001409DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBF9F81427A456001409DB /* AppDelegate.m */; };
 		F8FBFA1B1427A4EB001409DB /* TTTArrayFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA0B1427A4EB001409DB /* TTTArrayFormatter.m */; };
-		F8FBFA1C1427A4EB001409DB /* TTTHoursOfOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA0E1427A4EB001409DB /* TTTHoursOfOperation.m */; };
 		F8FBFA1D1427A4EB001409DB /* TTTLocationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA111427A4EB001409DB /* TTTLocationFormatter.m */; };
 		F8FBFA1E1427A4EB001409DB /* TTTOrdinalNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA141427A4EB001409DB /* TTTOrdinalNumberFormatter.m */; };
 		F8FBFA1F1427A4EB001409DB /* TTTTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA171427A4EB001409DB /* TTTTimeIntervalFormatter.m */; };
@@ -24,7 +23,6 @@
 		F8FBFA351427CEC0001409DB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA341427CEC0001409DB /* RootViewController.m */; };
 		F8FBFA381427D159001409DB /* FormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA371427D159001409DB /* FormatterViewController.m */; };
 		F8FBFA3B1427D3DA001409DB /* ArrayFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA3A1427D3DA001409DB /* ArrayFormatterViewController.m */; };
-		F8FBFA3F1427E162001409DB /* HoursOfOperationFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA3E1427E162001409DB /* HoursOfOperationFormatterViewController.m */; };
 		F8FBFA421427E1DC001409DB /* LocationFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA411427E1DB001409DB /* LocationFormatterViewController.m */; };
 		F8FBFA451427E21C001409DB /* OrdinalNumberFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA441427E21C001409DB /* OrdinalNumberFormatterViewController.m */; };
 		F8FBFA481427E23C001409DB /* TimeIntervalFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA471427E23C001409DB /* TimeIntervalFormatterViewController.m */; };
@@ -49,8 +47,6 @@
 		F8FBF9F81427A456001409DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F8FBFA0A1427A4EB001409DB /* TTTArrayFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTArrayFormatter.h; sourceTree = "<group>"; };
 		F8FBFA0B1427A4EB001409DB /* TTTArrayFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTArrayFormatter.m; sourceTree = "<group>"; };
-		F8FBFA0D1427A4EB001409DB /* TTTHoursOfOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTHoursOfOperation.h; sourceTree = "<group>"; };
-		F8FBFA0E1427A4EB001409DB /* TTTHoursOfOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTHoursOfOperation.m; sourceTree = "<group>"; };
 		F8FBFA101427A4EB001409DB /* TTTLocationFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTLocationFormatter.h; sourceTree = "<group>"; };
 		F8FBFA111427A4EB001409DB /* TTTLocationFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTLocationFormatter.m; sourceTree = "<group>"; };
 		F8FBFA131427A4EB001409DB /* TTTOrdinalNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTOrdinalNumberFormatter.h; sourceTree = "<group>"; };
@@ -65,8 +61,6 @@
 		F8FBFA371427D159001409DB /* FormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormatterViewController.m; sourceTree = "<group>"; };
 		F8FBFA391427D3DA001409DB /* ArrayFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayFormatterViewController.h; sourceTree = "<group>"; };
 		F8FBFA3A1427D3DA001409DB /* ArrayFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayFormatterViewController.m; sourceTree = "<group>"; };
-		F8FBFA3D1427E162001409DB /* HoursOfOperationFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoursOfOperationFormatterViewController.h; sourceTree = "<group>"; };
-		F8FBFA3E1427E162001409DB /* HoursOfOperationFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoursOfOperationFormatterViewController.m; sourceTree = "<group>"; };
 		F8FBFA401427E1DB001409DB /* LocationFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationFormatterViewController.h; sourceTree = "<group>"; };
 		F8FBFA411427E1DB001409DB /* LocationFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationFormatterViewController.m; sourceTree = "<group>"; };
 		F8FBFA431427E21C001409DB /* OrdinalNumberFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrdinalNumberFormatterViewController.h; sourceTree = "<group>"; };
@@ -157,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				F8FBFA091427A4EB001409DB /* TTTArrayFormatter */,
-				F8FBFA0C1427A4EB001409DB /* TTTHoursOfOperation */,
 				F8FBFA0F1427A4EB001409DB /* TTTLocationFormatter */,
 				F8FBFA121427A4EB001409DB /* TTTOrdinalNumberFormatter */,
 				F8FBFA151427A4EB001409DB /* TTTTimeIntervalFormatter */,
@@ -175,16 +168,6 @@
 			);
 			name = TTTArrayFormatter;
 			path = ../TTTArrayFormatter;
-			sourceTree = "<group>";
-		};
-		F8FBFA0C1427A4EB001409DB /* TTTHoursOfOperation */ = {
-			isa = PBXGroup;
-			children = (
-				F8FBFA0D1427A4EB001409DB /* TTTHoursOfOperation.h */,
-				F8FBFA0E1427A4EB001409DB /* TTTHoursOfOperation.m */,
-			);
-			name = TTTHoursOfOperation;
-			path = ../TTTHoursOfOperation;
 			sourceTree = "<group>";
 		};
 		F8FBFA0F1427A4EB001409DB /* TTTLocationFormatter */ = {
@@ -244,8 +227,6 @@
 			children = (
 				F8FBFA391427D3DA001409DB /* ArrayFormatterViewController.h */,
 				F8FBFA3A1427D3DA001409DB /* ArrayFormatterViewController.m */,
-				F8FBFA3D1427E162001409DB /* HoursOfOperationFormatterViewController.h */,
-				F8FBFA3E1427E162001409DB /* HoursOfOperationFormatterViewController.m */,
 				F8FBFA401427E1DB001409DB /* LocationFormatterViewController.h */,
 				F8FBFA411427E1DB001409DB /* LocationFormatterViewController.m */,
 				F8FBFA431427E21C001409DB /* OrdinalNumberFormatterViewController.h */,
@@ -325,7 +306,6 @@
 				F8FBF9F51427A456001409DB /* main.m in Sources */,
 				F8FBF9F91427A456001409DB /* AppDelegate.m in Sources */,
 				F8FBFA1B1427A4EB001409DB /* TTTArrayFormatter.m in Sources */,
-				F8FBFA1C1427A4EB001409DB /* TTTHoursOfOperation.m in Sources */,
 				F8FBFA1D1427A4EB001409DB /* TTTLocationFormatter.m in Sources */,
 				F8FBFA1E1427A4EB001409DB /* TTTOrdinalNumberFormatter.m in Sources */,
 				F8FBFA1F1427A4EB001409DB /* TTTTimeIntervalFormatter.m in Sources */,
@@ -333,7 +313,6 @@
 				F8FBFA351427CEC0001409DB /* RootViewController.m in Sources */,
 				F8FBFA381427D159001409DB /* FormatterViewController.m in Sources */,
 				F8FBFA3B1427D3DA001409DB /* ArrayFormatterViewController.m in Sources */,
-				F8FBFA3F1427E162001409DB /* HoursOfOperationFormatterViewController.m in Sources */,
 				F8FBFA421427E1DC001409DB /* LocationFormatterViewController.m in Sources */,
 				F8FBFA451427E21C001409DB /* OrdinalNumberFormatterViewController.m in Sources */,
 				F8FBFA481427E23C001409DB /* TimeIntervalFormatterViewController.m in Sources */,

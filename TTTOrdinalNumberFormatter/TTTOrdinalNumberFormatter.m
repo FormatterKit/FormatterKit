@@ -1,17 +1,17 @@
 // TTTOrdinalNumberFormatter.m
 //
 // Copyright (c) 2011 Mattt Thompson (http://mattt.me)
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -48,14 +48,14 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     if (!self) {
         return nil;
     }
-    
+
     [self setNumberStyle:NSNumberFormatterNoStyle];
     [self setAllowsFloats:NO];
     [self setGeneratesDecimalNumbers:NO];
     [self setRoundingMode:NSNumberFormatterRoundFloor];
     [self setMinimum:[NSNumber numberWithInteger:0]];
     [self setLenient:YES];
-    
+
     return self;
 }
 
@@ -64,17 +64,17 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     if (!indicator) {
         indicator = [self localizedOrdinalIndicatorStringFromNumber:number];
     }
-    
+
     [self setPositivePrefix:nil];
     [self setPositiveSuffix:nil];
-    
+
     NSString *languageCode = [[self locale] objectForKey:NSLocaleLanguageCode];
     if ([languageCode isEqualToString:@"zh"]) {
         [self setPositivePrefix:indicator];
     } else {
         [self setPositiveSuffix:indicator];
     }
-    
+
     return [super stringFromNumber:number];
 }
 
@@ -114,7 +114,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     if (NSLocationInRange([number integerValue], NSMakeRange(11, 3))) {
         return @"th";
     }
-    
+
     switch ([number integerValue] % 10) {
         case 1:
             return @"st";
@@ -156,11 +156,11 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     else {
         ordinalIndicator = @"e";
     }
-    
+
     if (self.grammaticalNumber == TTTOrdinalNumberFormatterDual || self.grammaticalNumber == TTTOrdinalNumberFormatterTrial || self.grammaticalNumber == TTTOrdinalNumberFormatterQuadral || self.grammaticalNumber == TTTOrdinalNumberFormatterPlural) {
         ordinalIndicator = [ordinalIndicator stringByAppendingString:@"s"];
     }
-    
+
     return ordinalIndicator;
 }
 
@@ -206,17 +206,17 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
-    
+
     self.ordinalIndicator = [aDecoder decodeObjectForKey:@"ordinalIndicator"];
     self.grammaticalGender = [aDecoder decodeIntegerForKey:@"grammaticalGender"];
     self.grammaticalNumber = [aDecoder decodeIntegerForKey:@"grammaticalNumber"];
-    
+
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [super encodeWithCoder:aCoder];
-    
+
     [aCoder encodeObject:self.ordinalIndicator forKey:@"ordinalIndicator"];
     [aCoder encodeInteger:self.grammaticalGender forKey:@"grammaticalGender"];
     [aCoder encodeInteger:self.grammaticalNumber forKey:@"grammaticalNumber"];

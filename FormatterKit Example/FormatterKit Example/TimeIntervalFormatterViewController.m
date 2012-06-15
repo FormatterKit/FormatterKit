@@ -47,7 +47,7 @@ enum {
         return nil;
     }
     
-    self.title = NSLocalizedString(@"Hours of Operation Formatter", nil);
+    self.title = NSLocalizedString(@"Time Interval Formatter", nil);
         
     return self;
 }

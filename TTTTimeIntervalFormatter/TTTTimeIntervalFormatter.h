@@ -1,17 +1,17 @@
 // TTTTimeIntervalFormatter.h
 //
 // Copyright (c) 2011 Mattt Thompson (http://mattt.me)
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -24,7 +24,7 @@
 
 /**
  Instances of `TTTTimeIntervalFormatter` create localized string representations of `NSTimeInterval` values.
- 
+
  For example, a time interval of -75 would be formatted as @"1 minute ago" in English.
  */
 @interface TTTTimeIntervalFormatter : NSFormatter
@@ -55,7 +55,7 @@
 @property (nonatomic, strong) NSString *deicticExpressionFormat;
 
 /**
- Specifies the time interval before and after the present moment that is described as still being in the present, rather than the past or future. Defaults to 1 second. 
+ Specifies the time interval before and after the present moment that is described as still being in the present, rather than the past or future. Defaults to 1 second.
  */
 @property (nonatomic, assign) NSTimeInterval presentTimeIntervalMargin;
 
@@ -76,25 +76,25 @@
 
 /**
  Specifies whether to use idiomatic deictic expressions when available, such as "last week" instead of "1 week ago". Defaults to `NO`.
- 
+
  @discussion This implementation is entirely separate from the equivalent behavior used by `NSDateFormatter`.
  */
 @property (nonatomic, assign) BOOL usesIdiomaticDeicticExpressions;
 
 /**
  Returns a string representation of a time interval formatted using the receiver’s current settings.
- 
+
  @param seconds The number of seconds to add to the receiver. Use a negative value for seconds to have the returned object specify a date before the receiver.
  */
 - (NSString *)stringForTimeInterval:(NSTimeInterval)seconds;
 
 /**
  Returns a string representation of the time interval between two specified dates formatted using the receiver’s current settings.
- 
+
  @param startingDate The starting date
  @param endingDate The ending date
  */
-- (NSString *)stringForTimeIntervalFromDate:(NSDate *)startingDate 
+- (NSString *)stringForTimeIntervalFromDate:(NSDate *)startingDate
                                      toDate:(NSDate *)endingDate;
 
 @end

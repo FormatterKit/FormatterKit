@@ -39,7 +39,7 @@
         return nil;
     }
     
-    self.title = NSLocalizedString(@"Hours of Operation Formatter", nil);
+    self.title = NSLocalizedString(@"Ordinal Number Formatter", nil);
     
     NSMutableArray *mutableLocales = [NSMutableArray array];
     [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
