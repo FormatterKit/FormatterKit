@@ -57,7 +57,7 @@ typedef enum {
 /**
  Specifies the `NSNumberFormatter` object used to format numeric values in all formatted strings. By default, this uses the `NSNumberFormatterDecimalStyle` number style, and sets a rounding increment of `0.01f`.
  */
-@property (readonly) NSNumberFormatter *numberFormatter;
+@property (nonatomic, readonly) NSNumberFormatter *numberFormatter;
 
 /**
  Specifies whether to display units of information in terms of bytes, as opposed to bits. `YES` by default.
