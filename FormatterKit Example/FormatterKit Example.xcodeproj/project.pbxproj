@@ -267,7 +267,7 @@
 		F8FBF9DB1427A456001409DB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = Gowalla;
 			};
 			buildConfigurationList = F8FBF9DE1427A456001409DB /* Build configuration list for PBXProject "FormatterKit Example" */;

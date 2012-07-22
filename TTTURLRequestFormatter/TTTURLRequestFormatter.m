@@ -67,7 +67,7 @@
 
 + (NSString *)WgetCommandFromURLRequest:(NSURLRequest *)request {
     if (!([[request HTTPMethod] isEqualToString:@"GET"] || [[request HTTPMethod] isEqualToString:@"POST"])) {
-        [NSException raise:@"Invalid HTTP Method" format:@"Wget can only make GET and POST requests", request];
+        [NSException raise:@"Invalid HTTP Method" format:@"Wget can only make GET and POST requests"];
     }
 
     NSMutableString *command = [NSMutableString stringWithString:@"wget"];
