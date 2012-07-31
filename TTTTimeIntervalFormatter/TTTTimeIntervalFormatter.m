@@ -170,7 +170,10 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
                 return singular ? NSLocalizedString(@"min.", @"Minute Unit (Singular, Abbreviated)") : NSLocalizedString(@"mins.", @"Minute Unit (Plural, Abbreviated)");
             case NSSecondCalendarUnit:
                 return singular ? NSLocalizedString(@"s.", @"Second Unit (Singular, Abbreviated)") : NSLocalizedString(@"s.", @"Second Unit (Plural, Abbreviated)");
+            default:
+                return nil;
         }
+        
     } else {
         switch (unit) {
             case NSYearCalendarUnit:
@@ -187,6 +190,8 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
                 return singular ? NSLocalizedString(@"minute", @"Minute Unit (Singular)") : NSLocalizedString(@"minutes", @"Minute Unit (Plural)");
             case NSSecondCalendarUnit:
                 return singular ? NSLocalizedString(@"second", @"Second Unit (Singular)") : NSLocalizedString(@"seconds", @"Second Unit (Plural)");
+            default:
+                return nil;
         }
     }
     
