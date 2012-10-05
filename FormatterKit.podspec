@@ -11,9 +11,16 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
+  s.ios.frameworks = 'AddressBook', 'AddressBookUI' 
+  s.prefix_header_contents = <<-EOS
+#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
+    #import <AddressBookUI/AddressBookUI.h>
+#endif
+EOS
+
   s.subspec 'AddressFormatter' do |ss|
+    ss.platform = :ios
     ss.source_files = 'TTTAddressFormatter/*.{h,m}'
-    ss.frameworks = ['AddressBook', 'AddressBookUI'] 
   end
 
   s.subspec 'ArrayFormatter' do |ss|
