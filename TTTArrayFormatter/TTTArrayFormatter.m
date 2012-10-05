@@ -121,7 +121,10 @@
     return [self stringFromArray:anObject rangesOfComponents:nil];
 }
 
-- (BOOL)getObjectValue:(id *)obj forString:(NSString *)string errorDescription:(NSString **)error {
+- (BOOL)getObjectValue:(id *)obj
+             forString:(NSString *)string
+      errorDescription:(NSString **)error
+{
     BOOL returnValue = NO;
     NSMutableArray *components = nil;
 

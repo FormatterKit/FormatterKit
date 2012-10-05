@@ -71,6 +71,41 @@
     return ABCreateStringWithAddressDictionary(mutableAddressComponents, !!country);
 }
 
+#pragma mark NSFormatter
+
+- (NSString *)stringForObjectValue:(id)anObject {
+    if (![anObject isKindOfClass:[NSDictionary class]]) {
+        return nil;
+    }
+    
+    return ABCreateStringWithAddressDictionary(anObject, YES);
+}
+
+- (BOOL)getObjectValue:(id *)obj
+             forString:(NSString *)string
+      errorDescription:(NSString **)error
+{
+    *error = NSLocalizedString(@"Method Not Implemented", nil);
+    
+    return NO;
+}
+
+#pragma mark - NSCoding
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    
+    self.locale = [aDecoder decodeObjectForKey:@"locale"];
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [super encodeWithCoder:aCoder];
+    
+    [aCoder encodeObject:self.locale forKey:@"locale"];
+}
+
 @end
 
 #endif
