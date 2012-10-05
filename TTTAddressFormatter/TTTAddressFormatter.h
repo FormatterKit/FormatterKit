@@ -25,6 +25,24 @@
 
 #if defined(__IPHONE_OS_VERSION_MIN_REQUIRED) && defined(__ABPerson__)
 
+/**
+ Instances of `TTTAddressFormatter` create address strings formatted according to a given locale.
+ 
+ For example, addresses in the United States take the form:
+    
+    Street Address
+    City State ZIP
+    Country
+ 
+ Whereas addresses in Japan follow a different convention:
+ 
+    Postal Code
+    Prefecture Municipality
+    Street Address
+    Country
+
+ All of the business logic for these rules is handled by`ABCreateStringWithAddressDictionary`, from the `AddressBookUI` framework. `TTTAddressFormatter` acts as a convenient wrapper to this functionality.
+ */
 @interface TTTAddressFormatter : NSFormatter
 
 /**
@@ -33,7 +51,13 @@
 @property (nonatomic, strong) NSLocale *locale;
 
 /**
+ Returns an address string for the specified components formatted with the receiver's locale.
  
+ @param street The street address
+ @param locality The locality (a.k.a. city, municipality, township)
+ @param region The region (a.k.a. state, prefecture, principality)
+ @param postalCode The postal code (a.k.a ZIP code)
+ @param country The country
  */
 - (NSString *)stringFromAddressWithStreet:(NSString *)street
                                  locality:(NSString *)locality

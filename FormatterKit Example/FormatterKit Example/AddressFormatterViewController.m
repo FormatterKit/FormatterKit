@@ -55,14 +55,14 @@ enum {
     NSMutableArray *mutableExamples = [NSMutableArray array];
     [mutableExamples addObject:[NSArray arrayWithObjects:@"633 Stag Trail Rd", @"North Caldwell", @"NJ", @"07006", @"United States", nil]];
     [mutableExamples addObject:[NSArray arrayWithObjects:@"221b Baker St", @"Paddington", @"Greater London", @"NW1 6XE", @"United Kingdom", nil]];
-    [mutableExamples addObject:[NSArray arrayWithObjects:@"渋谷１−１２−23", @"渋谷区", @"東京都", @"150-0002", @"日本", nil]];
+    [mutableExamples addObject:[NSArray arrayWithObjects:@"渋谷１−１２−23", @"渋谷区", @"東京都", @"〒１５０−０００２", @"日本", nil]];
     self.examples = [NSArray arrayWithArray:mutableExamples];
 
     return self;
 }
 
 + (NSString *)formatterDescription {
-    return NSLocalizedString(@"", nil);
+    return NSLocalizedString(@"Addresses formats vary greatly across different regions. TTTAddressFormatter ties into the Address Book frameworks to help your users find their place in the world.", nil);
 }
 
 #pragma mark - UITableViewDataSource
