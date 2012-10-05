@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import "RootViewController.h"
+#import "AddressFormatterViewController.h"
 #import "ArrayFormatterViewController.h"
 #import "LocationFormatterViewController.h"
 #import "OrdinalNumberFormatterViewController.h"
@@ -29,6 +30,7 @@
 #import "URLRequestFormatterViewController.h"
 
 enum {
+    AddressRowIndex,
     ArrayRowIndex,
     LocationRowIndex,
     OrdinalNumberRowIndex,
@@ -76,7 +78,7 @@ enum {
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -94,6 +96,9 @@ enum {
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.row) {
+        case AddressRowIndex:
+            cell.textLabel.text = NSLocalizedString(@"Address Formatter", nil);
+            break;
         case ArrayRowIndex:
             cell.textLabel.text = NSLocalizedString(@"Array Formatter", nil);
             break;
@@ -123,6 +128,9 @@ enum {
     UIViewController *viewController = nil;
     
     switch (indexPath.row) {
+        case AddressRowIndex:
+            viewController = [[AddressFormatterViewController alloc] init];
+            break;
         case ArrayRowIndex:
             viewController = [[ArrayFormatterViewController alloc] init];
             break;

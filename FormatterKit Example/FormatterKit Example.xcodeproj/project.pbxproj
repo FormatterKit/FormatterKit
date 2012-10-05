@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		F872622714FAEC3700800E11 /* TTTUnitOfInformationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F872622614FAEC3700800E11 /* TTTUnitOfInformationFormatter.m */; };
 		F872625414FD3BED00800E11 /* UnitOfInformationFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F872625314FD3BED00800E11 /* UnitOfInformationFormatterViewController.m */; };
+		F8A847A0161E93D800940F39 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8479F161E93D800940F39 /* AddressBookUI.framework */; };
+		F8A847A4161E940700940F39 /* TTTAddressFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A847A3161E940700940F39 /* TTTAddressFormatter.m */; };
+		F8A847A6161E982500940F39 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A847A5161E982500940F39 /* AddressBook.framework */; };
+		F8A847A9161E98D800940F39 /* AddressFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A847A8161E98D800940F39 /* AddressFormatterViewController.m */; };
 		F8FBF9E91427A456001409DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBF9E81427A456001409DB /* UIKit.framework */; };
 		F8FBF9EB1427A456001409DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBF9EA1427A456001409DB /* Foundation.framework */; };
 		F8FBF9ED1427A456001409DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBF9EC1427A456001409DB /* CoreGraphics.framework */; };
@@ -35,6 +39,12 @@
 		F872622614FAEC3700800E11 /* TTTUnitOfInformationFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTTUnitOfInformationFormatter.m; path = ../TTTUnitOfInformationFormatter/TTTUnitOfInformationFormatter.m; sourceTree = "<group>"; };
 		F872625214FD3BED00800E11 /* UnitOfInformationFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitOfInformationFormatterViewController.h; sourceTree = "<group>"; };
 		F872625314FD3BED00800E11 /* UnitOfInformationFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitOfInformationFormatterViewController.m; sourceTree = "<group>"; };
+		F8A8479F161E93D800940F39 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		F8A847A2161E940700940F39 /* TTTAddressFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTTAddressFormatter.h; path = ../TTTAddressFormatter/TTTAddressFormatter.h; sourceTree = "<group>"; };
+		F8A847A3161E940700940F39 /* TTTAddressFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTTAddressFormatter.m; path = ../TTTAddressFormatter/TTTAddressFormatter.m; sourceTree = "<group>"; };
+		F8A847A5161E982500940F39 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		F8A847A7161E98D800940F39 /* AddressFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressFormatterViewController.h; sourceTree = "<group>"; };
+		F8A847A8161E98D800940F39 /* AddressFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressFormatterViewController.m; sourceTree = "<group>"; };
 		F8FBF9E41427A456001409DB /* FormatterKit Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FormatterKit Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8FBF9E81427A456001409DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F8FBF9EA1427A456001409DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -77,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8A847A6161E982500940F39 /* AddressBook.framework in Frameworks */,
+				F8A847A0161E93D800940F39 /* AddressBookUI.framework in Frameworks */,
 				F8FBFA591428EE32001409DB /* CoreLocation.framework in Frameworks */,
 				F8FBF9E91427A456001409DB /* UIKit.framework in Frameworks */,
 				F8FBF9EB1427A456001409DB /* Foundation.framework in Frameworks */,
@@ -94,6 +106,15 @@
 				F872622614FAEC3700800E11 /* TTTUnitOfInformationFormatter.m */,
 			);
 			name = TTTUnitOfInformationFormatter;
+			sourceTree = "<group>";
+		};
+		F8A847A1161E93EB00940F39 /* TTTAddressFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				F8A847A2161E940700940F39 /* TTTAddressFormatter.h */,
+				F8A847A3161E940700940F39 /* TTTAddressFormatter.m */,
+			);
+			name = TTTAddressFormatter;
 			sourceTree = "<group>";
 		};
 		F8FBF9D91427A456001409DB = {
@@ -117,6 +138,8 @@
 		F8FBF9E71427A456001409DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F8A847A5161E982500940F39 /* AddressBook.framework */,
+				F8A8479F161E93D800940F39 /* AddressBookUI.framework */,
 				F8FBFA581428EE31001409DB /* CoreLocation.framework */,
 				F8FBF9E81427A456001409DB /* UIKit.framework */,
 				F8FBF9EA1427A456001409DB /* Foundation.framework */,
@@ -150,6 +173,7 @@
 		F8FBFA071427A4D2001409DB /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				F8A847A1161E93EB00940F39 /* TTTAddressFormatter */,
 				F8FBFA091427A4EB001409DB /* TTTArrayFormatter */,
 				F8FBFA0F1427A4EB001409DB /* TTTLocationFormatter */,
 				F8FBFA121427A4EB001409DB /* TTTOrdinalNumberFormatter */,
@@ -225,6 +249,8 @@
 		F8FBFA3C1427D94D001409DB /* Formatters */ = {
 			isa = PBXGroup;
 			children = (
+				F8A847A7161E98D800940F39 /* AddressFormatterViewController.h */,
+				F8A847A8161E98D800940F39 /* AddressFormatterViewController.m */,
 				F8FBFA391427D3DA001409DB /* ArrayFormatterViewController.h */,
 				F8FBFA3A1427D3DA001409DB /* ArrayFormatterViewController.m */,
 				F8FBFA401427E1DB001409DB /* LocationFormatterViewController.h */,
@@ -319,6 +345,8 @@
 				F8FBFA4B1427E260001409DB /* URLRequestFormatterViewController.m in Sources */,
 				F872622714FAEC3700800E11 /* TTTUnitOfInformationFormatter.m in Sources */,
 				F872625414FD3BED00800E11 /* UnitOfInformationFormatterViewController.m in Sources */,
+				F8A847A4161E940700940F39 /* TTTAddressFormatter.m in Sources */,
+				F8A847A9161E98D800940F39 /* AddressFormatterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
