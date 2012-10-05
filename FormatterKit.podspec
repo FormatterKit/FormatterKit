@@ -1,15 +1,20 @@
 Pod::Spec.new do |s|
   s.name     = 'FormatterKit'
-  s.version  = '1.0.1'
+  s.version  = '1.1.0'
   s.license  = { :type => 'MIT', :file => 'LICENSE' }
   s.summary  = '`stringWithFormat:` for the sophisticated hacker set.'
   s.homepage = 'https://github.com/mattt/FormatterKit'
   s.author   = { 'Mattt Thompson' => 'm@mattt.me' }
-  s.source   = { :git => 'https://github.com/mattt/FormatterKit.git', :tag => '1.0.1' }
+  s.source   = { :git => 'https://github.com/mattt/FormatterKit.git', :tag => '1.1.0' }
 
   s.description = "FormatterKit is a collection of well-crafted NSFormatter subclasses for things like units of information, distance, and relative time intervals. Each formatter abstracts away the complex business logic of their respective domain, so that you can focus on the more important aspects of your application."
 
   s.requires_arc = true
+
+  s.subspec 'AddressFormatter' do |ss|
+    ss.source_files = 'TTTAddressFormatter/*.{h,m}'
+    ss.frameworks = ['AddressBook', 'AddressBookUI'] 
+  end
 
   s.subspec 'ArrayFormatter' do |ss|
     ss.source_files = 'TTTArrayFormatter/*.{h,m}'
