@@ -4,6 +4,7 @@
 
 In short, use this library if you're manually formatting any of the following (with string interpolation or the like):
 
+* __Addresses__: Create formatted address strings from components *(e.g. 221b Baker St / Paddington / Greater London / NW1 6XE / United Kingdom )*
 * __Arrays__: Display `NSArray` elements in a comma-delimited list *(e.g. "Russell, Spinoza & Rawls")*
 * __Location, Distance & Direction__: Show `CLLocationDistance`, `CLLocationDirection`, and `CLLocationSpeed` in metric or imperial units *(eg. "240ft Northwest" / "45 km/h SE")*
 * __Ordinal Numbers__: Convert cardinal `NSNumber` objects to their ordinal in most major languages *(eg. "1st, 2nd, 3rd" / "1ère, 2ème, 3ème")*
@@ -16,6 +17,19 @@ In short, use this library if you're manually formatting any of the following (w
 Build and run the `FormatterKit Example` project in Xcode to see an inventory of the available `FormatterKit` components.
 
 ---
+
+## TTTAddressFormatter
+
+Addresses formats vary greatly across different regions. `TTTAddressFormatter` ties into the [Address Book frameworks](http://developer.apple.com/library/ios/#documentation/AddressBookUI/Reference/AddressBookUI_Framework/_index.html) to help your users find their place in the world.
+
+> Requires the `AddressBook` and `AddressBookUI` frameworks are included, with `#import` statements in `Prefix.pch`. Only available on iOS.
+
+### Example Usage
+
+```objective-c
+TTTAddressFormatter *addressFormatter = [[TTTAddressFormatter alloc] init];
+NSLog(@"%@", [addressFormatter stringFromAddressWithStreet:street locality:locality region:region postalCode:postalCode country:country]);
+```
 
 ## TTTArrayFormatter
 
