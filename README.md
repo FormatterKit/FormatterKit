@@ -20,7 +20,7 @@ Build and run the `FormatterKit Example` project in Xcode to see an inventory of
 
 ## TTTAddressFormatter
 
-Addresses formats vary greatly across different regions. `TTTAddressFormatter` ties into the [Address Book frameworks](http://developer.apple.com/library/ios/#documentation/AddressBookUI/Reference/AddressBookUI_Framework/_index.html) to help your users find their place in the world.
+Address formats vary greatly across different regions. `TTTAddressFormatter` ties into the [Address Book frameworks](http://developer.apple.com/library/ios/#documentation/AddressBookUI/Reference/AddressBookUI_Framework/_index.html) to help your users find their place in the world.
 
 For example, addresses in the United States take the form:
     
