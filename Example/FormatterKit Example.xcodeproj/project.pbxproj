@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F872622714FAEC3700800E11 /* TTTUnitOfInformationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F872622614FAEC3700800E11 /* TTTUnitOfInformationFormatter.m */; };
 		F872625414FD3BED00800E11 /* UnitOfInformationFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F872625314FD3BED00800E11 /* UnitOfInformationFormatterViewController.m */; };
+		F89C9F02166154AB0040FB03 /* TTTAddressFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EF5166154AB0040FB03 /* TTTAddressFormatter.m */; };
+		F89C9F03166154AB0040FB03 /* TTTArrayFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EF7166154AB0040FB03 /* TTTArrayFormatter.m */; };
+		F89C9F04166154AB0040FB03 /* TTTLocationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EF9166154AB0040FB03 /* TTTLocationFormatter.m */; };
+		F89C9F05166154AB0040FB03 /* TTTOrdinalNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EFB166154AB0040FB03 /* TTTOrdinalNumberFormatter.m */; };
+		F89C9F06166154AB0040FB03 /* TTTTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EFD166154AB0040FB03 /* TTTTimeIntervalFormatter.m */; };
+		F89C9F07166154AB0040FB03 /* TTTUnitOfInformationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EFF166154AB0040FB03 /* TTTUnitOfInformationFormatter.m */; };
+		F89C9F08166154AB0040FB03 /* TTTURLRequestFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9F01166154AB0040FB03 /* TTTURLRequestFormatter.m */; };
 		F8A847A0161E93D800940F39 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8479F161E93D800940F39 /* AddressBookUI.framework */; };
-		F8A847A4161E940700940F39 /* TTTAddressFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A847A3161E940700940F39 /* TTTAddressFormatter.m */; };
 		F8A847A6161E982500940F39 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A847A5161E982500940F39 /* AddressBook.framework */; };
 		F8A847A9161E98D800940F39 /* AddressFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A847A8161E98D800940F39 /* AddressFormatterViewController.m */; };
 		F8FBF9E91427A456001409DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBF9E81427A456001409DB /* UIKit.framework */; };
@@ -19,11 +24,6 @@
 		F8FBF9F31427A456001409DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8FBF9F11427A456001409DB /* InfoPlist.strings */; };
 		F8FBF9F51427A456001409DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBF9F41427A456001409DB /* main.m */; };
 		F8FBF9F91427A456001409DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBF9F81427A456001409DB /* AppDelegate.m */; };
-		F8FBFA1B1427A4EB001409DB /* TTTArrayFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA0B1427A4EB001409DB /* TTTArrayFormatter.m */; };
-		F8FBFA1D1427A4EB001409DB /* TTTLocationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA111427A4EB001409DB /* TTTLocationFormatter.m */; };
-		F8FBFA1E1427A4EB001409DB /* TTTOrdinalNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA141427A4EB001409DB /* TTTOrdinalNumberFormatter.m */; };
-		F8FBFA1F1427A4EB001409DB /* TTTTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA171427A4EB001409DB /* TTTTimeIntervalFormatter.m */; };
-		F8FBFA201427A4EB001409DB /* TTTURLRequestFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA1A1427A4EB001409DB /* TTTURLRequestFormatter.m */; };
 		F8FBFA351427CEC0001409DB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA341427CEC0001409DB /* RootViewController.m */; };
 		F8FBFA381427D159001409DB /* FormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA371427D159001409DB /* FormatterViewController.m */; };
 		F8FBFA3B1427D3DA001409DB /* ArrayFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA3A1427D3DA001409DB /* ArrayFormatterViewController.m */; };
@@ -35,13 +35,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F872622514FAEC3700800E11 /* TTTUnitOfInformationFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTTUnitOfInformationFormatter.h; path = ../TTTUnitOfInformationFormatter/TTTUnitOfInformationFormatter.h; sourceTree = "<group>"; };
-		F872622614FAEC3700800E11 /* TTTUnitOfInformationFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTTUnitOfInformationFormatter.m; path = ../TTTUnitOfInformationFormatter/TTTUnitOfInformationFormatter.m; sourceTree = "<group>"; };
 		F872625214FD3BED00800E11 /* UnitOfInformationFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitOfInformationFormatterViewController.h; sourceTree = "<group>"; };
 		F872625314FD3BED00800E11 /* UnitOfInformationFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitOfInformationFormatterViewController.m; sourceTree = "<group>"; };
+		F89C9EF4166154AB0040FB03 /* TTTAddressFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAddressFormatter.h; sourceTree = "<group>"; };
+		F89C9EF5166154AB0040FB03 /* TTTAddressFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAddressFormatter.m; sourceTree = "<group>"; };
+		F89C9EF6166154AB0040FB03 /* TTTArrayFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTArrayFormatter.h; sourceTree = "<group>"; };
+		F89C9EF7166154AB0040FB03 /* TTTArrayFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTArrayFormatter.m; sourceTree = "<group>"; };
+		F89C9EF8166154AB0040FB03 /* TTTLocationFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTLocationFormatter.h; sourceTree = "<group>"; };
+		F89C9EF9166154AB0040FB03 /* TTTLocationFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTLocationFormatter.m; sourceTree = "<group>"; };
+		F89C9EFA166154AB0040FB03 /* TTTOrdinalNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTOrdinalNumberFormatter.h; sourceTree = "<group>"; };
+		F89C9EFB166154AB0040FB03 /* TTTOrdinalNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTOrdinalNumberFormatter.m; sourceTree = "<group>"; };
+		F89C9EFC166154AB0040FB03 /* TTTTimeIntervalFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTTimeIntervalFormatter.h; sourceTree = "<group>"; };
+		F89C9EFD166154AB0040FB03 /* TTTTimeIntervalFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTTimeIntervalFormatter.m; sourceTree = "<group>"; };
+		F89C9EFE166154AB0040FB03 /* TTTUnitOfInformationFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTUnitOfInformationFormatter.h; sourceTree = "<group>"; };
+		F89C9EFF166154AB0040FB03 /* TTTUnitOfInformationFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTUnitOfInformationFormatter.m; sourceTree = "<group>"; };
+		F89C9F00166154AB0040FB03 /* TTTURLRequestFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTURLRequestFormatter.h; sourceTree = "<group>"; };
+		F89C9F01166154AB0040FB03 /* TTTURLRequestFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTURLRequestFormatter.m; sourceTree = "<group>"; };
 		F8A8479F161E93D800940F39 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
-		F8A847A2161E940700940F39 /* TTTAddressFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTTAddressFormatter.h; path = ../TTTAddressFormatter/TTTAddressFormatter.h; sourceTree = "<group>"; };
-		F8A847A3161E940700940F39 /* TTTAddressFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTTAddressFormatter.m; path = ../TTTAddressFormatter/TTTAddressFormatter.m; sourceTree = "<group>"; };
 		F8A847A5161E982500940F39 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		F8A847A7161E98D800940F39 /* AddressFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressFormatterViewController.h; sourceTree = "<group>"; };
 		F8A847A8161E98D800940F39 /* AddressFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressFormatterViewController.m; sourceTree = "<group>"; };
@@ -55,16 +65,6 @@
 		F8FBF9F61427A456001409DB /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		F8FBF9F71427A456001409DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F8FBF9F81427A456001409DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F8FBFA0A1427A4EB001409DB /* TTTArrayFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTArrayFormatter.h; sourceTree = "<group>"; };
-		F8FBFA0B1427A4EB001409DB /* TTTArrayFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTArrayFormatter.m; sourceTree = "<group>"; };
-		F8FBFA101427A4EB001409DB /* TTTLocationFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTLocationFormatter.h; sourceTree = "<group>"; };
-		F8FBFA111427A4EB001409DB /* TTTLocationFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTLocationFormatter.m; sourceTree = "<group>"; };
-		F8FBFA131427A4EB001409DB /* TTTOrdinalNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTOrdinalNumberFormatter.h; sourceTree = "<group>"; };
-		F8FBFA141427A4EB001409DB /* TTTOrdinalNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTOrdinalNumberFormatter.m; sourceTree = "<group>"; };
-		F8FBFA161427A4EB001409DB /* TTTTimeIntervalFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTTimeIntervalFormatter.h; sourceTree = "<group>"; };
-		F8FBFA171427A4EB001409DB /* TTTTimeIntervalFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTTimeIntervalFormatter.m; sourceTree = "<group>"; };
-		F8FBFA191427A4EB001409DB /* TTTURLRequestFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTURLRequestFormatter.h; sourceTree = "<group>"; };
-		F8FBFA1A1427A4EB001409DB /* TTTURLRequestFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTURLRequestFormatter.m; sourceTree = "<group>"; };
 		F8FBFA331427CEC0001409DB /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		F8FBFA341427CEC0001409DB /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		F8FBFA361427D159001409DB /* FormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormatterViewController.h; sourceTree = "<group>"; };
@@ -99,22 +99,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F872622814FAEC3D00800E11 /* TTTUnitOfInformationFormatter */ = {
+		F89C9EF3166154AB0040FB03 /* FormatterKit */ = {
 			isa = PBXGroup;
 			children = (
-				F872622514FAEC3700800E11 /* TTTUnitOfInformationFormatter.h */,
-				F872622614FAEC3700800E11 /* TTTUnitOfInformationFormatter.m */,
+				F89C9EF4166154AB0040FB03 /* TTTAddressFormatter.h */,
+				F89C9EF5166154AB0040FB03 /* TTTAddressFormatter.m */,
+				F89C9EF6166154AB0040FB03 /* TTTArrayFormatter.h */,
+				F89C9EF7166154AB0040FB03 /* TTTArrayFormatter.m */,
+				F89C9EF8166154AB0040FB03 /* TTTLocationFormatter.h */,
+				F89C9EF9166154AB0040FB03 /* TTTLocationFormatter.m */,
+				F89C9EFA166154AB0040FB03 /* TTTOrdinalNumberFormatter.h */,
+				F89C9EFB166154AB0040FB03 /* TTTOrdinalNumberFormatter.m */,
+				F89C9EFC166154AB0040FB03 /* TTTTimeIntervalFormatter.h */,
+				F89C9EFD166154AB0040FB03 /* TTTTimeIntervalFormatter.m */,
+				F89C9EFE166154AB0040FB03 /* TTTUnitOfInformationFormatter.h */,
+				F89C9EFF166154AB0040FB03 /* TTTUnitOfInformationFormatter.m */,
+				F89C9F00166154AB0040FB03 /* TTTURLRequestFormatter.h */,
+				F89C9F01166154AB0040FB03 /* TTTURLRequestFormatter.m */,
 			);
-			name = TTTUnitOfInformationFormatter;
-			sourceTree = "<group>";
-		};
-		F8A847A1161E93EB00940F39 /* TTTAddressFormatter */ = {
-			isa = PBXGroup;
-			children = (
-				F8A847A2161E940700940F39 /* TTTAddressFormatter.h */,
-				F8A847A3161E940700940F39 /* TTTAddressFormatter.m */,
-			);
-			name = TTTAddressFormatter;
+			name = FormatterKit;
+			path = ../FormatterKit;
 			sourceTree = "<group>";
 		};
 		F8FBF9D91427A456001409DB = {
@@ -173,65 +177,9 @@
 		F8FBFA071427A4D2001409DB /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				F8A847A1161E93EB00940F39 /* TTTAddressFormatter */,
-				F8FBFA091427A4EB001409DB /* TTTArrayFormatter */,
-				F8FBFA0F1427A4EB001409DB /* TTTLocationFormatter */,
-				F8FBFA121427A4EB001409DB /* TTTOrdinalNumberFormatter */,
-				F8FBFA151427A4EB001409DB /* TTTTimeIntervalFormatter */,
-				F872622814FAEC3D00800E11 /* TTTUnitOfInformationFormatter */,
-				F8FBFA181427A4EB001409DB /* TTTURLRequestFormatter */,
+				F89C9EF3166154AB0040FB03 /* FormatterKit */,
 			);
 			name = Vendor;
-			sourceTree = "<group>";
-		};
-		F8FBFA091427A4EB001409DB /* TTTArrayFormatter */ = {
-			isa = PBXGroup;
-			children = (
-				F8FBFA0A1427A4EB001409DB /* TTTArrayFormatter.h */,
-				F8FBFA0B1427A4EB001409DB /* TTTArrayFormatter.m */,
-			);
-			name = TTTArrayFormatter;
-			path = ../TTTArrayFormatter;
-			sourceTree = "<group>";
-		};
-		F8FBFA0F1427A4EB001409DB /* TTTLocationFormatter */ = {
-			isa = PBXGroup;
-			children = (
-				F8FBFA101427A4EB001409DB /* TTTLocationFormatter.h */,
-				F8FBFA111427A4EB001409DB /* TTTLocationFormatter.m */,
-			);
-			name = TTTLocationFormatter;
-			path = ../TTTLocationFormatter;
-			sourceTree = "<group>";
-		};
-		F8FBFA121427A4EB001409DB /* TTTOrdinalNumberFormatter */ = {
-			isa = PBXGroup;
-			children = (
-				F8FBFA131427A4EB001409DB /* TTTOrdinalNumberFormatter.h */,
-				F8FBFA141427A4EB001409DB /* TTTOrdinalNumberFormatter.m */,
-			);
-			name = TTTOrdinalNumberFormatter;
-			path = ../TTTOrdinalNumberFormatter;
-			sourceTree = "<group>";
-		};
-		F8FBFA151427A4EB001409DB /* TTTTimeIntervalFormatter */ = {
-			isa = PBXGroup;
-			children = (
-				F8FBFA161427A4EB001409DB /* TTTTimeIntervalFormatter.h */,
-				F8FBFA171427A4EB001409DB /* TTTTimeIntervalFormatter.m */,
-			);
-			name = TTTTimeIntervalFormatter;
-			path = ../TTTTimeIntervalFormatter;
-			sourceTree = "<group>";
-		};
-		F8FBFA181427A4EB001409DB /* TTTURLRequestFormatter */ = {
-			isa = PBXGroup;
-			children = (
-				F8FBFA191427A4EB001409DB /* TTTURLRequestFormatter.h */,
-				F8FBFA1A1427A4EB001409DB /* TTTURLRequestFormatter.m */,
-			);
-			name = TTTURLRequestFormatter;
-			path = ../TTTURLRequestFormatter;
 			sourceTree = "<group>";
 		};
 		F8FBFA321427CEA5001409DB /* Controllers */ = {
@@ -331,11 +279,6 @@
 			files = (
 				F8FBF9F51427A456001409DB /* main.m in Sources */,
 				F8FBF9F91427A456001409DB /* AppDelegate.m in Sources */,
-				F8FBFA1B1427A4EB001409DB /* TTTArrayFormatter.m in Sources */,
-				F8FBFA1D1427A4EB001409DB /* TTTLocationFormatter.m in Sources */,
-				F8FBFA1E1427A4EB001409DB /* TTTOrdinalNumberFormatter.m in Sources */,
-				F8FBFA1F1427A4EB001409DB /* TTTTimeIntervalFormatter.m in Sources */,
-				F8FBFA201427A4EB001409DB /* TTTURLRequestFormatter.m in Sources */,
 				F8FBFA351427CEC0001409DB /* RootViewController.m in Sources */,
 				F8FBFA381427D159001409DB /* FormatterViewController.m in Sources */,
 				F8FBFA3B1427D3DA001409DB /* ArrayFormatterViewController.m in Sources */,
@@ -343,10 +286,15 @@
 				F8FBFA451427E21C001409DB /* OrdinalNumberFormatterViewController.m in Sources */,
 				F8FBFA481427E23C001409DB /* TimeIntervalFormatterViewController.m in Sources */,
 				F8FBFA4B1427E260001409DB /* URLRequestFormatterViewController.m in Sources */,
-				F872622714FAEC3700800E11 /* TTTUnitOfInformationFormatter.m in Sources */,
 				F872625414FD3BED00800E11 /* UnitOfInformationFormatterViewController.m in Sources */,
-				F8A847A4161E940700940F39 /* TTTAddressFormatter.m in Sources */,
 				F8A847A9161E98D800940F39 /* AddressFormatterViewController.m in Sources */,
+				F89C9F02166154AB0040FB03 /* TTTAddressFormatter.m in Sources */,
+				F89C9F03166154AB0040FB03 /* TTTArrayFormatter.m in Sources */,
+				F89C9F04166154AB0040FB03 /* TTTLocationFormatter.m in Sources */,
+				F89C9F05166154AB0040FB03 /* TTTOrdinalNumberFormatter.m in Sources */,
+				F89C9F06166154AB0040FB03 /* TTTTimeIntervalFormatter.m in Sources */,
+				F89C9F07166154AB0040FB03 /* TTTUnitOfInformationFormatter.m in Sources */,
+				F89C9F08166154AB0040FB03 /* TTTURLRequestFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

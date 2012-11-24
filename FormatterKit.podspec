@@ -20,31 +20,31 @@ EOS
 
   s.subspec 'AddressFormatter' do |ss|
     ss.platform = :ios
-    ss.source_files = 'TTTAddressFormatter/*.{h,m}'
+    ss.source_files = 'FormatterKit/TTTAddressFormatter.{h,m}'
   end
 
   s.subspec 'ArrayFormatter' do |ss|
-    ss.source_files = 'TTTArrayFormatter/*.{h,m}'
+    ss.source_files = 'FormatterKit/TTTArrayFormatter.{h,m}'
   end
 
   s.subspec 'LocationFormatter' do |ss|
-    ss.source_files = 'TTTLocationFormatter/*.{h,m}'
+    ss.source_files = 'FormatterKit/TTTLocationFormatter.{h,m}'
     ss.frameworks = 'CoreLocation'
   end
 
   s.subspec 'OrdinalNumberFormatter' do |ss|
-    ss.source_files = 'TTTOrdinalNumberFormatter/*.{h,m}'
+    ss.source_files = 'FormatterKit/TTTOrdinalNumberFormatter.{h,m}'
   end
 
   s.subspec 'TimeIntervalFormatter' do |ss|
-    ss.source_files = 'TTTTimeIntervalFormatter/*.{h,m}'
+    ss.source_files = 'FormatterKit/TTTTimeIntervalFormatter.{h,m}'
   end
 
   s.subspec 'UnitOfInformationFormatter' do |ss|
-    ss.source_files = 'TTTUnitOfInformationFormatter/*.{h,m}'
+    ss.source_files = 'FormatterKit/TTTUnitOfInformationFormatter.{h,m}'
   end
 
   s.subspec 'URLRequestFormatter' do |ss|
-    ss.source_files = 'TTTURLRequestFormatter/*.{h,m}'
+    ss.source_files = 'FormatterKit/TTTURLRequestFormatter.{h,m}'
   end
 end
