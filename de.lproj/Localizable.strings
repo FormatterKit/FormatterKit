@@ -1,0 +1,45 @@
+/* 
+  Localizable.strings
+  
+
+  Created by Pit Garbe on 24.09.12.
+
+*/
+
+"ago" = "vor";
+"just now" = "Gerade eben";
+"from now" = "in";
+
+"%@ %@" = "%2$@ %1$@";
+"about %@" = "%@";
+
+"yr." = "a";
+"yrs." = "a";
+
+"mo." = "M";
+"mos." = "M";
+"wk." = "W";
+"wks." = "W";
+"day" = "T";
+"days" = "T";
+"hr" = "h";
+"hrs." = "h";
+"min." = "m";
+"mins." = "m";
+"s." = "s";
+"s." = "s";
+
+"year" = "Jahr";
+"years" = "Jahren";
+"month" = "Monat";
+"months" = "Monaten";
+"week" = "Woche";
+"weeks" = "Wochen";
+"day" = "Tag";
+"days" = "Tagen";
+"hour" = "Stunde";
+"hours" = "Stunden";
+"minute" = "Minute";
+"minutes" = "Minuten";
+"second" = "Sekunde";
+"seconds" = "Sekunden";

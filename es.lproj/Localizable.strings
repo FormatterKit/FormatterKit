@@ -1,0 +1,45 @@
+/* 
+  Localizable.strings
+  
+
+  Created by Alejandro Martinez on 02.10.12.
+
+*/
+
+"ago" = "";
+"just now" = "ahora";
+"from now" = "en";
+
+"%@ %@" = "%2$@ %1$@";
+"about %@" = "hace %@";
+
+"yr." = "año";
+"yrs." = "años";
+
+"mo." = "mes";
+"mos." = "meses";
+"wk." = "sem.";
+"wks." = "sem.";
+"day" = "día";
+"days" = "dias";
+"hr" = "h";
+"hrs." = "h";
+"min." = "min.";
+"mins." = "min.";
+"s." = "s.";
+"s." = "s.";
+
+"year" = "año";
+"years" = "años";
+"month" = "mes";
+"months" = "meses";
+"week" = "semana";
+"weeks" = "semanas";
+"day" = "día";
+"days" = "dias";
+"hour" = "hora";
+"hours" = "horas";
+"minute" = "minuto";
+"minutes" = "minutos";
+"second" = "segundo";
+"seconds" = "segundos";
