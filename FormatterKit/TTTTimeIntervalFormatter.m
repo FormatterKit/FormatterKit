@@ -188,21 +188,21 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
 - (NSString *)enRelativeDateStringForComponents:(NSDateComponents *)components {
     if ([components year] == -1) {
         return @"last year";
-    } else if ([components month] == -1) {
+    } else if ([components month] == -1 && [components year] == 0) {
         return @"last month";
-    } else if ([components week] == -1) {
+    } else if ([components week] == -1 && [components year] == 0 && [components month] == 0) {
         return @"last week";
-    } else if ([components day] == -1) {
+    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
         return @"yesterday";
     }
 
     if ([components year] == 1) {
         return @"next year";
-    } else if ([components month] == 1) {
+    } else if ([components month] == 1 && [components year] == 0) {
         return @"next month";
-    } else if ([components week] == 1) {
+    } else if ([components week] == 1 && [components year] == 0 && [components month] == 0) {
         return @"next week";
-    } else if ([components day] == 1) {
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
         return @"tomorrow";
     }
 
