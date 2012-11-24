@@ -22,7 +22,7 @@
 
 #import "TTTAddressFormatter.h"
 
-#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED) && defined(__ABPerson__)
+#if defined(__ABPerson__)
 
 @implementation TTTAddressFormatter
 @synthesize locale = _locale;
@@ -68,7 +68,13 @@
     
     [mutableAddressComponents setValue:[self.locale objectForKey:NSLocaleCountryCode] forKey:(__bridge NSString *)kABPersonAddressCountryCodeKey];
     
+#if __IPHONE_OS_VERSION_MIN_REQUIRED
     return ABCreateStringWithAddressDictionary(mutableAddressComponents, !!country);
+#elif __MAC_OS_X_VERSION_MIN_REQUIRED
+    return [[[ABAddressBook sharedAddressBook] formattedAddressFromDictionary:mutableAddressComponents] string];
+#else
+    return nil;
+#endif
 }
 
 #pragma mark NSFormatter

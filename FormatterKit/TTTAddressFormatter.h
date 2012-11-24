@@ -23,7 +23,7 @@
 #import <Foundation/Foundation.h>
 #import <Availability.h>
 
-#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED) && defined(__ABPerson__)
+#if defined(__ABPerson__)
 
 /**
  Instances of `TTTAddressFormatter` create address strings formatted according to a given locale.
