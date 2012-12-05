@@ -14,10 +14,12 @@ Pod::Spec.new do |s|
   s.ios.frameworks = 'AddressBook', 'AddressBookUI'
   s.osx.frameworks = 'AddressBook'
   s.prefix_header_contents = <<-EOS
-#if __IPHONE_OS_VERSION_MIN_REQUIRED
-    #import <AddressBookUI/AddressBookUI.h>
-#elif __MAC_OS_X_VERSION_MIN_REQUIRED
-    #import <AddressBook/AddressBook.h>
+#ifdef __OBJC__
+    #if __IPHONE_OS_VERSION_MIN_REQUIRED
+        #import <AddressBookUI/AddressBookUI.h>
+    #elif __MAC_OS_X_VERSION_MIN_REQUIRED
+        #import <AddressBook/AddressBook.h>
+    #endif
 #endif
 EOS
 
