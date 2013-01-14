@@ -57,15 +57,15 @@ static inline double TTTScaleFactorForIECPrefix(TTTUnitPrefix prefix) {
 static inline NSString * TTTBitUnitStringForIECPrefix(TTTUnitPrefix prefix) {
     switch (prefix) {
         case TTTKilo:
-            return NSLocalizedString(@"Kibit", @"Kibibit Unit");
+            return NSLocalizedStringFromTable(@"Kibit", @"FormatterKit", @"Kibibit Unit");
         case TTTMega:
-            return NSLocalizedString(@"Mibit", @"Mebibit Unit");
+            return NSLocalizedStringFromTable(@"Mibit", @"FormatterKit", @"Mebibit Unit");
         case TTTGiga:
-            return NSLocalizedString(@"Gibit", @"Gibibit Unit");
+            return NSLocalizedStringFromTable(@"Gibit", @"FormatterKit", @"Gibibit Unit");
         case TTTTera:
-            return NSLocalizedString(@"Tibit", @"Tebibit Unit");
+            return NSLocalizedStringFromTable(@"Tibit", @"FormatterKit", @"Tebibit Unit");
         case TTTPeta:
-            return NSLocalizedString(@"Pibit", @"Pebibit Unit");
+            return NSLocalizedStringFromTable(@"Pibit", @"FormatterKit", @"Pebibit Unit");
         case TTTExa:
             return nil;
     }
@@ -74,17 +74,17 @@ static inline NSString * TTTBitUnitStringForIECPrefix(TTTUnitPrefix prefix) {
 static inline NSString * TTTByteUnitStringForIECPrefix(TTTUnitPrefix prefix) {
     switch (prefix) {
         case TTTKilo:
-            return NSLocalizedString(@"KiB", @"Kibibyte Unit");
+            return NSLocalizedStringFromTable(@"KiB", @"FormatterKit", @"Kibibyte Unit");
         case TTTMega:
-            return NSLocalizedString(@"MiB", @"Mebibyte Unit");
+            return NSLocalizedStringFromTable(@"MiB", @"FormatterKit", @"Mebibyte Unit");
         case TTTGiga:
-            return NSLocalizedString(@"GiB", @"Gibibyte Unit");
+            return NSLocalizedStringFromTable(@"GiB", @"FormatterKit", @"Gibibyte Unit");
         case TTTTera:
-            return NSLocalizedString(@"TiB", @"Tebibyte Unit");
+            return NSLocalizedStringFromTable(@"TiB", @"FormatterKit", @"Tebibyte Unit");
         case TTTPeta:
-            return NSLocalizedString(@"PiB", @"Pebibyte Unit");
+            return NSLocalizedStringFromTable(@"PiB", @"FormatterKit", @"Pebibyte Unit");
         case TTTExa:
-            return NSLocalizedString(@"EiB", @"Exbibyte Unit");
+            return NSLocalizedStringFromTable(@"EiB", @"FormatterKit", @"Exbibyte Unit");
     }
 }
 
@@ -108,15 +108,15 @@ static inline double TTTScaleFactorForSIPrefix(TTTUnitPrefix prefix) {
 static inline NSString * TTTBitUnitStringForSIPrefix(TTTUnitPrefix prefix) {
     switch (prefix) {
         case TTTKilo:
-            return NSLocalizedString(@"kbit", @"Kilobit Unit");
+            return NSLocalizedStringFromTable(@"kbit", @"FormatterKit", @"Kilobit Unit");
         case TTTMega:
-            return NSLocalizedString(@"Mbit", @"Megabit Unit");
+            return NSLocalizedStringFromTable(@"Mbit", @"FormatterKit", @"Megabit Unit");
         case TTTGiga:
-            return NSLocalizedString(@"Gbit", @"Gigabit Unit");
+            return NSLocalizedStringFromTable(@"Gbit", @"FormatterKit", @"Gigabit Unit");
         case TTTTera:
-            return NSLocalizedString(@"Tbit", @"Terabit Unit");
+            return NSLocalizedStringFromTable(@"Tbit", @"FormatterKit", @"Terabit Unit");
         case TTTPeta:
-            return NSLocalizedString(@"Pbit", @"Petabit Unit");
+            return NSLocalizedStringFromTable(@"Pbit", @"FormatterKit", @"Petabit Unit");
         case TTTExa:
             return nil;
     }
@@ -125,17 +125,17 @@ static inline NSString * TTTBitUnitStringForSIPrefix(TTTUnitPrefix prefix) {
 static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
     switch (prefix) {
         case TTTKilo:
-            return NSLocalizedString(@"KB", @"Kilobyte Unit");
+            return NSLocalizedStringFromTable(@"KB", @"FormatterKit", @"Kilobyte Unit");
         case TTTMega:
-            return NSLocalizedString(@"MB", @"Megabyte Unit");
+            return NSLocalizedStringFromTable(@"MB", @"FormatterKit", @"Megabyte Unit");
         case TTTGiga:
-            return NSLocalizedString(@"GB", @"Gigabyte Unit");
+            return NSLocalizedStringFromTable(@"GB", @"FormatterKit", @"Gigabyte Unit");
         case TTTTera:
-            return NSLocalizedString(@"TB", @"Terabyte Unit");
+            return NSLocalizedStringFromTable(@"TB", @"FormatterKit", @"Terabyte Unit");
         case TTTPeta:
-            return NSLocalizedString(@"PB", @"Petabyte Unit");
+            return NSLocalizedStringFromTable(@"PB", @"FormatterKit", @"Petabyte Unit");
         case TTTExa:
-            return NSLocalizedString(@"EB", @"Exabyte Unit");
+            return NSLocalizedStringFromTable(@"EB", @"FormatterKit", @"Exabyte Unit");
     }
 }
 
@@ -209,7 +209,7 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
     }
 
     if (doubleValue < [self scaleFactorForPrefix:TTTKilo]) {
-        unitString = self.displaysInTermsOfBytes ? NSLocalizedString(@"bytes", @"Byte Unit") : NSLocalizedString(@"bits", @"Bit Unit");
+        unitString = self.displaysInTermsOfBytes ? NSLocalizedStringFromTable(@"bytes", @"FormatterKit", @"Byte Unit") : NSLocalizedStringFromTable(@"bits", @"FormatterKit", @"Bit Unit");
     } else {
         TTTUnitPrefix prefix = [self prefixForInteger:[number integerValue]];
         if (self.displaysInTermsOfBytes) {
@@ -221,7 +221,7 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
         doubleValue /= [self scaleFactorForPrefix:prefix];
     }
 
-    return [NSString stringWithFormat:NSLocalizedStringWithDefaultValue(@"Unit of Information Format String", nil, [NSBundle mainBundle], @"%@ %@", @"#{Value} #{Unit}"), [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:doubleValue]], unitString];
+    return [NSString stringWithFormat:NSLocalizedStringWithDefaultValue(@"Unit of Information Format String", @"FormatterKit", [NSBundle mainBundle], @"%@ %@", @"#{Value} #{Unit}"), [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:doubleValue]], unitString];
 }
 
 - (NSString *)stringFromNumber:(NSNumber *)number
