@@ -131,8 +131,6 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
         }
     }
     
-    string = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-
     return string;
 }
 
