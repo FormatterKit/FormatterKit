@@ -91,7 +91,7 @@
              forString:(NSString *)string
       errorDescription:(NSString **)error
 {
-    *error = NSLocalizedString(@"Method Not Implemented", nil);
+    *error = NSLocalizedStringFromTable(@"Method Not Implemented", @"FormatterKit", nil);
     
     return NO;
 }

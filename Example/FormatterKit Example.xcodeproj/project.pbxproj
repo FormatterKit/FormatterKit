@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F872625414FD3BED00800E11 /* UnitOfInformationFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F872625314FD3BED00800E11 /* UnitOfInformationFormatterViewController.m */; };
+		F892375416A4BE43002FCF70 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F892375316A4BE43002FCF70 /* Default-568h@2x.png */; };
 		F89C9F02166154AB0040FB03 /* TTTAddressFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EF5166154AB0040FB03 /* TTTAddressFormatter.m */; };
 		F89C9F03166154AB0040FB03 /* TTTArrayFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EF7166154AB0040FB03 /* TTTArrayFormatter.m */; };
 		F89C9F04166154AB0040FB03 /* TTTLocationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EF9166154AB0040FB03 /* TTTLocationFormatter.m */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		F872625214FD3BED00800E11 /* UnitOfInformationFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitOfInformationFormatterViewController.h; sourceTree = "<group>"; };
 		F872625314FD3BED00800E11 /* UnitOfInformationFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitOfInformationFormatterViewController.m; sourceTree = "<group>"; };
+		F892375316A4BE43002FCF70 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F89C9EF4166154AB0040FB03 /* TTTAddressFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAddressFormatter.h; sourceTree = "<group>"; };
 		F89C9EF5166154AB0040FB03 /* TTTAddressFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAddressFormatter.m; sourceTree = "<group>"; };
 		F89C9EF6166154AB0040FB03 /* TTTArrayFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTArrayFormatter.h; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		F8FBF9D91427A456001409DB = {
 			isa = PBXGroup;
 			children = (
+				F892375316A4BE43002FCF70 /* Default-568h@2x.png */,
 				F8FBF9EE1427A456001409DB /* FormatterKit Example */,
 				F8FBF9E71427A456001409DB /* Frameworks */,
 				F8FBF9E51427A456001409DB /* Products */,
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8FBF9F31427A456001409DB /* InfoPlist.strings in Resources */,
+				F892375416A4BE43002FCF70 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
