@@ -126,6 +126,8 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
             string = [NSString stringWithFormat:self.approximateQualifierFormat, string];
         }
     }
+    
+    string = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 
     return string;
 }
