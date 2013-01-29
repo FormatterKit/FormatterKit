@@ -114,19 +114,23 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
             }
         }
     }
-
+    
     if (string) {
         if (seconds > 0) {
-            string = [NSString stringWithFormat:self.deicticExpressionFormat, string, self.pastDeicticExpression];
+            if ([self.pastDeicticExpression length]) {
+                string = [NSString stringWithFormat:self.deicticExpressionFormat, string, self.pastDeicticExpression];
+            }
         } else {
-            string = [NSString stringWithFormat:self.deicticExpressionFormat, string, self.futureDeicticExpression];
+            if ([self.futureDeicticExpression length]) {
+                string = [NSString stringWithFormat:self.deicticExpressionFormat, string, self.futureDeicticExpression];
+            }
         }
 
         if (isApproximate && self.usesApproximateQualifier) {
             string = [NSString stringWithFormat:self.approximateQualifierFormat, string];
         }
     }
-
+    
     return string;
 }
 
