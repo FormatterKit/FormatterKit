@@ -187,6 +187,8 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     NSString *languageCode = [self.locale objectForKey:NSLocaleLanguageCode];
     if ([languageCode isEqualToString:@"en"]) {
         return [self enRelativeDateStringForComponents:components];
+    } else if ([languageCode isEqualToString:@"nl"]){
+        return [self nlRelativeDateStringForComponents:components];
     }
 
     return nil;
@@ -213,6 +215,34 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
         return @"tomorrow";
     }
 
+    return nil;
+}
+
+- (NSString *)nlRelativeDateStringForComponents:(NSDateComponents *)components {
+    if ([components year] == -1) {
+        return @"vorig jaar";
+    } else if ([components month] == -1 && [components year] == 0) {
+        return @"vorige maand";
+    } else if ([components week] == -1 && [components year] == 0 && [components month] == 0) {
+        return @"vorige week";
+    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"gisteren";
+    } else if ([components day] == -2 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"eergisteren";
+    }
+    
+    if ([components year] == 1) {
+        return @"volgend jaar";
+    } else if ([components month] == 1 && [components year] == 0) {
+        return @"volgende maand";
+    } else if ([components week] == 1 && [components year] == 0 && [components month] == 0) {
+        return @"volgende week";
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"morgern";
+    } else if ([components day] == 2 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"overmorgern";
+    }
+    
     return nil;
 }
 
