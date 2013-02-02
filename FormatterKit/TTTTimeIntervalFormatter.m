@@ -54,6 +54,7 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
 @synthesize presentDeicticExpression = _presentDeicticExpression;
 @synthesize futureDeicticExpression = _futureDeicticExpression;
 @synthesize deicticExpressionFormat = _deicticExpressionFormat;
+@synthesize futureDeicticExpressionFormat = _futureDeicticExpressionFormat;
 @synthesize approximateQualifierFormat = _approximateQualifierFormat;
 @synthesize presentTimeIntervalMargin = _presentTimeIntervalMargin;
 @synthesize usesAbbreviatedCalendarUnits = _usesAbbreviatedCalendarUnits;
@@ -71,6 +72,11 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     self.futureDeicticExpression = NSLocalizedStringFromTable(@"from now", @"FormatterKit", @"Future Deictic Expression");
 
     self.deicticExpressionFormat = NSLocalizedStringFromTable(@"%@ %@", @"FormatterKit", @"Deictic Expression Format (#{Time} #{Ago/From Now}");
+    self.futureDeicticExpressionFormat = NSLocalizedStringFromTable(@"futureDeicticExpressionFormat", @"FormatterKit", @"Future deictic Expression Format (#{Time} #{From Now}");
+    if ([self.futureDeicticExpressionFormat isEqualToString:@"futureDeicticExpressionFormat"]) {
+        // No translation available
+        self.futureDeicticExpressionFormat = self.deicticExpressionFormat;
+    }
     self.approximateQualifierFormat = NSLocalizedStringFromTable(@"about %@", @"FormatterKit", @"Approximate Qualifier Format");
 
     self.presentTimeIntervalMargin = 1;
@@ -122,7 +128,7 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
             }
         } else {
             if ([self.futureDeicticExpression length]) {
-                string = [NSString stringWithFormat:self.deicticExpressionFormat, string, self.futureDeicticExpression];
+                string = [NSString stringWithFormat:self.futureDeicticExpressionFormat, string, self.futureDeicticExpression];
             }
         }
 
@@ -184,7 +190,7 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     NSString *languageCode = [[self locale] objectForKey:NSLocaleLanguageCode];
     if ([languageCode isEqualToString:@"en"]) {
         return [self enRelativeDateStringForComponents:components];
-    } else if ([languageCode isEqualToString:@"nl"]){
+    } else if ([languageCode isEqualToString:@"nl"]) {
         return [self nlRelativeDateStringForComponents:components];
     }
 
@@ -253,6 +259,7 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     self.presentDeicticExpression = [aDecoder decodeObjectForKey:@"presentDeicticExpression"];
     self.futureDeicticExpression = [aDecoder decodeObjectForKey:@"futureDeicticExpression"];
     self.deicticExpressionFormat = [aDecoder decodeObjectForKey:@"deicticExpressionFormat"];
+    self.futureDeicticExpressionFormat = [aDecoder decodeObjectForKey:@"futureDeicticExpressionFormat"];
     self.approximateQualifierFormat = [aDecoder decodeObjectForKey:@"approximateQualifierFormat"];
     self.presentTimeIntervalMargin = [aDecoder decodeDoubleForKey:@"presentTimeIntervalMargin"];
     self.usesAbbreviatedCalendarUnits = [aDecoder decodeBoolForKey:@"usesAbbreviatedCalendarUnits"];
@@ -270,6 +277,7 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     [aCoder encodeObject:self.presentDeicticExpression forKey:@"presentDeicticExpression"];
     [aCoder encodeObject:self.futureDeicticExpression forKey:@"futureDeicticExpression"];
     [aCoder encodeObject:self.deicticExpressionFormat forKey:@"deicticExpressionFormat"];
+    [aCoder encodeObject:self.futureDeicticExpressionFormat forKey:@"futureDeicticExpressionFormat"];
     [aCoder encodeObject:self.approximateQualifierFormat forKey:@"approximateQualifierFormat"];
     [aCoder encodeDouble:self.presentTimeIntervalMargin forKey:@"presentTimeIntervalMargin"];
     [aCoder encodeBool:self.usesAbbreviatedCalendarUnits forKey:@"usesAbbreviatedCalendarUnits"];

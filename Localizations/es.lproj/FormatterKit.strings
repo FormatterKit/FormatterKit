@@ -111,3 +111,6 @@
 /* Year Unit (Plural, Abbreviated) */
 "yrs" = "años";
 
+/* Future deictic Expression Format (#{Time} #{From Now} */
+"futureDeicticExpressionFormat" = "%2$@ %1$@";
+

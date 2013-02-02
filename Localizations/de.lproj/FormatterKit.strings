@@ -169,3 +169,6 @@
 /* Year Unit (Plural, Abbreviated) */
 "yrs" = "a";
 
+/* Future deictic Expression Format (#{Time} #{From Now} */
+"futureDeicticExpressionFormat" = "%2$@ %1$@";
+

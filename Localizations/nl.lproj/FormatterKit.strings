@@ -43,7 +43,7 @@
 "East" = "Oost";
 
 /* Future Deictic Expression */
-"from now" = "vanaf nu";
+"from now" = "over";
 
 /* Feet Unit */
 "ft" = "ft";
@@ -180,4 +180,7 @@
 
 /* Year Unit (Plural, Abbreviated) */
 "yrs" = "jr.";
+
+/* Future deictic Expression Format (#{Time} #{From Now} */
+"futureDeicticExpressionFormat" = "%2$@ %1$@";
 

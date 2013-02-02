@@ -55,6 +55,11 @@
 @property (nonatomic, strong) NSString *deicticExpressionFormat;
 
 /**
+ Specifies the localized string used to format the time interval string before the present moment and deictic expression. Defaults to a format with the deictic expression following the time interval
+ */
+@property (nonatomic, strong) NSString *futureDeicticExpressionFormat;
+
+/**
  Specifies the time interval before and after the present moment that is described as still being in the present, rather than the past or future. Defaults to 1 second.
  */
 @property (nonatomic, assign) NSTimeInterval presentTimeIntervalMargin;
