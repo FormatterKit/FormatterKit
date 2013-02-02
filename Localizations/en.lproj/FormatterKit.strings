@@ -14,75 +14,150 @@
    #{Distance} #{Unit}
    #{Speed} #{Unit}
    Deictic Expression Format (#{Time} #{Ago/From Now} */
-"%@ %@" = "2$@ %1$@";
+"%@ %@" = "%1$@ %2$@";
 
 /* Approximate Qualifier Format */
-"about %@" = "%@";
+"about %@" = "about %@";
 
 /* Past Deictic Expression */
-"ago" = "vor";
+"ago" = "ago";
 
 /* List conjunction */
-"and" = "und";
+"and" = "and";
+
+/* Bit Unit */
+"bits" = "bits";
+
+/* Byte Unit */
+"bytes" = "bytes";
+
+/* Error converting to NSArray */
+"Couldn’t convert to NSArray" = "Couldn’t convert to NSArray";
 
 /* Day Unit (Singular)
    Day Unit (Singular, Abbreviated) */
-"day" = "Tag";
+"day" = "day";
 
 /* Day Unit (Plural)
    Day Unit (Plural, Abbreviated) */
-"days" = "Tagen";
+"days" = "days";
 
 /* East Direction Abbreviation */
-"E" = "O";
+"E" = "E";
 
 /* East Direction */
-"East" = "Ost";
+"East" = "East";
+
+/* Exabyte Unit */
+"EB" = "EB";
+
+/* Exbibyte Unit */
+"EiB" = "EiB";
 
 /* Future Deictic Expression */
-"from now" = "in";
+"from now" = "from now";
 
 /* Feet Unit */
 "ft" = "ft";
 
+/* Feet Per Second Unit */
+"ft/s" = "ft/s";
+
+/* Gigabyte Unit */
+"GB" = "GB";
+
+/* Gigabit Unit */
+"Gbit" = "Gbit";
+
+/* Gibibyte Unit */
+"GiB" = "GiB";
+
+/* Gibibit Unit */
+"Gibit" = "Gibit";
+
 /* Hour Unit (Singular) */
-"hour" = "Stunde";
+"hour" = "hour";
 
 /* Hour Unit (Plural) */
-"hours" = "Stunden";
+"hours" = "hours";
 
 /* Hour Unit (Singular, Abbreviated) */
-"hr" = "h";
+"hr" = "hr";
 
 /* Hour Unit (Plural, Abbreviated) */
-"hrs" = "h";
+"hrs" = "hrs";
 
 /* Present Deictic Expression */
-"just now" = "Gerade eben";
+"just now" = "just now";
+
+/* Kilobyte Unit */
+"KB" = "KB";
+
+/* Kilobit Unit */
+"kbit" = "kbit";
+
+/* Kibibyte Unit */
+"KiB" = "KiB";
+
+/* Kibibit Unit */
+"Kibit" = "Kibit";
+
+/* Kilometer Unit */
+"km" = "km";
+
+/* Kilometers Per Hour Unit */
+"km/h" = "km/h";
+
+/* Meter Unit */
+"m" = "m";
+
+/* Meters Per Second Unit */
+"m/s" = "m/s";
+
+/* Megabyte Unit */
+"MB" = "MB";
+
+/* Megabit Unit */
+"Mbit" = "Mbit";
+
+/* No comment provided by engineer. */
+"Method Not Implemented" = "Method Not Implemented";
+
+/* Mebibyte Unit */
+"MiB" = "MiB";
+
+/* Mebibit Unit */
+"Mibit" = "Mibit";
+
+/* Mile Unit (Singular) */
+"mile" = "mile";
+
+/* Mile Unit (Plural) */
+"miles" = "miles";
 
 /* Minute Unit (Singular, Abbreviated) */
-"min" = "m";
+"min" = "min";
 
 /* Minute Unit (Plural, Abbreviated) */
-"mins" = "m";
+"mins" = "mins";
 
 /* Minute Unit (Singular) */
-"minute" = "Minute";
+"minute" = "minute";
 
 /* Minute Unit (Plural) */
-"minutes" = "Minutes";
+"minutes" = "minutes";
 
 /* Month Unit (Singular, Abbreviated) */
-"mo" = "M";
+"mo" = "mo";
 
 /* Month Unit (Singular) */
-"month" = "Monat";
+"month" = "month";
 
 /* Month Unit (Plural) */
-"months" = "Monaten";
+"months" = "months";
 
 /* Month Unit (Plural, Abbreviated) */
-"mos" = "M";
+"mos" = "mos";
 
 /* Miles Per Hour Unit */
 "mph" = "mph";
@@ -91,19 +166,31 @@
 "N" = "N";
 
 /* Northeast Direction Abbreviation */
-"NE" = "NO";
+"NE" = "NE";
 
 /* North Direction */
-"North" = "Nord";
+"North" = "North";
 
 /* Northeast Direction */
-"Northeast" = "Nordost";
+"Northeast" = "Northeast";
 
 /* Northwest Direction */
-"Northwest" = "Nordwest";
+"Northwest" = "Northwest";
 
 /* Northwest Direction Abbreviation */
 "NW" = "NW";
+
+/* Petabyte Unit */
+"PB" = "PB";
+
+/* Petabit Unit */
+"Pbit" = "Pbit";
+
+/* Pebibyte Unit */
+"PiB" = "PiB";
+
+/* Pebibit Unit */
+"Pibit" = "Pibit";
 
 /* Second Unit (Plural, Abbreviated)
    Second Unit (Singular, Abbreviated) */
@@ -113,25 +200,37 @@
 "S" = "S";
 
 /* Southeast Direction Abbreviation */
-"SE" = "SO";
+"SE" = "SE";
 
 /* Second Unit (Singular) */
-"second" = "Sekunde";
+"second" = "second";
 
 /* Second Unit (Plural) */
-"seconds" = "Sekundes";
+"seconds" = "seconds";
 
 /* South Direction */
-"South" = "Süd";
+"South" = "South";
 
 /* Southeast Direction */
-"Southeast" = "Südost";
+"Southeast" = "Southeast";
 
 /* Southwest Direction */
-"Southwest" = "Südwest";
+"Southwest" = "Southwest";
 
 /* Southwest Direction Abbreviation */
 "SW" = "SW";
+
+/* Terabyte Unit */
+"TB" = "TB";
+
+/* Terabit Unit */
+"Tbit" = "Tbit";
+
+/* Tebibyte Unit */
+"TiB" = "TiB";
+
+/* Tebibit Unit */
+"Tibit" = "Tibit";
 
 /* #{Value} #{Unit} */
 "Unit of Information Format String" = "%1$@ %2$@";
@@ -140,32 +239,32 @@
 "W" = "W";
 
 /* Week Unit (Singular) */
-"week" = "Woche";
+"week" = "week";
 
 /* Week Unit (Plural) */
-"weeks" = "Wochen";
+"weeks" = "weeks";
 
 /* West Direction */
 "West" = "West";
 
 /* Week Unit (Singular, Abbreviated) */
-"wk" = "W";
+"wk" = "wk";
 
 /* Week Unit (Plural, Abbreviated) */
-"wks" = "W";
+"wks" = "wks";
 
 /* Yard Unit */
 "yds" = "yds";
 
 /* Year Unit (Singular) */
-"year" = "Jahr";
+"year" = "year";
 
 /* Year Unit (Plural) */
-"years" = "Jahre";
+"years" = "years";
 
 /* Year Unit (Singular, Abbreviated) */
-"yr" = "a";
+"yr" = "yr";
 
 /* Year Unit (Plural, Abbreviated) */
-"yrs" = "a";
+"yrs" = "yrs";
 

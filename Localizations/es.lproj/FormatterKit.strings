@@ -1,45 +1,113 @@
-/* 
-  Localizable.strings
-  
+/* List separator */
+" " = " ";
 
-  Created by Alejandro Martinez on 02.10.12.
+/* List delimiter */
+"," = ",";
 
-*/
+/* Coordinate format */
+"(%@, %@)" = "(%1$@, %2$@)";
 
-"ago" = "";
-"just now" = "ahora";
-"from now" = "en";
+/* No comment provided by engineer. */
+"&" = "&";
 
-"%@ %@" = "%2$@ %1$@";
+/* #{Dimensional Quantity} #{Direction}
+   #{Distance} #{Unit}
+   #{Speed} #{Unit}
+   Deictic Expression Format (#{Time} #{Ago/From Now} */
+"%@ %@" = "2$@ %1$@";
+
+/* Approximate Qualifier Format */
 "about %@" = "hace %@";
 
-"yr." = "año";
-"yrs." = "años";
+/* Past Deictic Expression */
+"ago" = " ";
 
-"mo." = "mes";
-"mos." = "meses";
-"wk." = "sem.";
-"wks." = "sem.";
-"day" = "día";
-"days" = "dias";
-"hr" = "h";
-"hrs." = "h";
-"min." = "min.";
-"mins." = "min.";
-"s." = "s.";
-"s." = "s.";
+/* List conjunction */
+"and" = "y";
 
-"year" = "año";
-"years" = "años";
-"month" = "mes";
-"months" = "meses";
-"week" = "semana";
-"weeks" = "semanas";
+/* Day Unit (Singular)
+   Day Unit (Singular, Abbreviated) */
 "day" = "día";
-"days" = "dias";
+
+/* Day Unit (Plural)
+   Day Unit (Plural, Abbreviated) */
+"days" = "días";
+
+/* Future Deictic Expression */
+"from now" = "en";
+
+/* Feet Unit */
+"ft" = "ft";
+
+/* Hour Unit (Singular) */
 "hour" = "hora";
+
+/* Hour Unit (Plural) */
 "hours" = "horas";
+
+/* Hour Unit (Singular, Abbreviated) */
+"hr" = "h";
+
+/* Hour Unit (Plural, Abbreviated) */
+"hrs" = "h";
+
+/* Present Deictic Expression */
+"just now" = "ahora";
+
+/* Minute Unit (Singular, Abbreviated) */
+"min" = "min.";
+
+/* Minute Unit (Plural, Abbreviated) */
+"mins" = "min.";
+
+/* Minute Unit (Singular) */
 "minute" = "minuto";
+
+/* Minute Unit (Plural) */
 "minutes" = "minutos";
+
+/* Month Unit (Singular, Abbreviated) */
+"mo" = "mes";
+
+/* Month Unit (Singular) */
+"month" = "mes";
+
+/* Month Unit (Plural) */
+"months" = "meses";
+
+/* Month Unit (Plural, Abbreviated) */
+"mos" = "meses";
+
+/* Miles Per Hour Unit */
+"mph" = "mph";
+
+/* Second Unit (Singular) */
 "second" = "segundo";
+
+/* Second Unit (Plural) */
 "seconds" = "segundos";
+
+/* #{Value} #{Unit} */
+"Unit of Information Format String" = "%1$@ %2$@";
+
+/* Week Unit (Singular) */
+"week" = "semana";
+
+/* Week Unit (Plural) */
+"weeks" = "semanas";
+
+/* Yard Unit */
+"yds" = "yds";
+
+/* Year Unit (Singular) */
+"year" = "año";
+
+/* Year Unit (Plural) */
+"years" = "años";
+
+/* Year Unit (Singular, Abbreviated) */
+"yr" = "año";
+
+/* Year Unit (Plural, Abbreviated) */
+"yrs" = "años";
+
