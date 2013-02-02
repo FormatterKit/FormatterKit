@@ -7,213 +7,214 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F872625414FD3BED00800E11 /* UnitOfInformationFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F872625314FD3BED00800E11 /* UnitOfInformationFormatterViewController.m */; };
-		F892375416A4BE43002FCF70 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F892375316A4BE43002FCF70 /* Default-568h@2x.png */; };
-		F89C9F02166154AB0040FB03 /* TTTAddressFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EF5166154AB0040FB03 /* TTTAddressFormatter.m */; };
-		F89C9F03166154AB0040FB03 /* TTTArrayFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EF7166154AB0040FB03 /* TTTArrayFormatter.m */; };
-		F89C9F04166154AB0040FB03 /* TTTLocationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EF9166154AB0040FB03 /* TTTLocationFormatter.m */; };
-		F89C9F05166154AB0040FB03 /* TTTOrdinalNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EFB166154AB0040FB03 /* TTTOrdinalNumberFormatter.m */; };
-		F89C9F06166154AB0040FB03 /* TTTTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EFD166154AB0040FB03 /* TTTTimeIntervalFormatter.m */; };
-		F89C9F07166154AB0040FB03 /* TTTUnitOfInformationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EFF166154AB0040FB03 /* TTTUnitOfInformationFormatter.m */; };
-		F89C9F08166154AB0040FB03 /* TTTURLRequestFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9F01166154AB0040FB03 /* TTTURLRequestFormatter.m */; };
-		F8A847A0161E93D800940F39 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8479F161E93D800940F39 /* AddressBookUI.framework */; };
-		F8A847A6161E982500940F39 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A847A5161E982500940F39 /* AddressBook.framework */; };
-		F8A847A9161E98D800940F39 /* AddressFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A847A8161E98D800940F39 /* AddressFormatterViewController.m */; };
-		F8FBF9E91427A456001409DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBF9E81427A456001409DB /* UIKit.framework */; };
-		F8FBF9EB1427A456001409DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBF9EA1427A456001409DB /* Foundation.framework */; };
-		F8FBF9ED1427A456001409DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBF9EC1427A456001409DB /* CoreGraphics.framework */; };
-		F8FBF9F31427A456001409DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8FBF9F11427A456001409DB /* InfoPlist.strings */; };
-		F8FBF9F51427A456001409DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBF9F41427A456001409DB /* main.m */; };
-		F8FBF9F91427A456001409DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBF9F81427A456001409DB /* AppDelegate.m */; };
-		F8FBFA351427CEC0001409DB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA341427CEC0001409DB /* RootViewController.m */; };
-		F8FBFA381427D159001409DB /* FormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA371427D159001409DB /* FormatterViewController.m */; };
-		F8FBFA3B1427D3DA001409DB /* ArrayFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA3A1427D3DA001409DB /* ArrayFormatterViewController.m */; };
-		F8FBFA421427E1DC001409DB /* LocationFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA411427E1DB001409DB /* LocationFormatterViewController.m */; };
-		F8FBFA451427E21C001409DB /* OrdinalNumberFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA441427E21C001409DB /* OrdinalNumberFormatterViewController.m */; };
-		F8FBFA481427E23C001409DB /* TimeIntervalFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA471427E23C001409DB /* TimeIntervalFormatterViewController.m */; };
-		F8FBFA4B1427E260001409DB /* URLRequestFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA4A1427E260001409DB /* URLRequestFormatterViewController.m */; };
-		F8FBFA591428EE32001409DB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBFA581428EE31001409DB /* CoreLocation.framework */; };
+		65FC0E9116BD4A5A00B33345 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FC0E9016BD4A5A00B33345 /* UIKit.framework */; };
+		65FC0E9316BD4A5A00B33345 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FC0E9216BD4A5A00B33345 /* Foundation.framework */; };
+		65FC0E9516BD4A5A00B33345 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FC0E9416BD4A5A00B33345 /* CoreGraphics.framework */; };
+		65FC0E9B16BD4A5A00B33345 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65FC0E9916BD4A5A00B33345 /* InfoPlist.strings */; };
+		65FC0E9D16BD4A5A00B33345 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC0E9C16BD4A5A00B33345 /* main.m */; };
+		65FC0EA116BD4A5A00B33345 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC0EA016BD4A5A00B33345 /* AppDelegate.m */; };
+		65FC0EC616BD4CB400B33345 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FC0EC416BD4CB400B33345 /* AddressBook.framework */; };
+		65FC0EC716BD4CB400B33345 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FC0EC516BD4CB400B33345 /* AddressBookUI.framework */; };
+		65FC0ED716BD4D4300B33345 /* TTTAddressFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC0ECA16BD4D4300B33345 /* TTTAddressFormatter.m */; };
+		65FC0ED816BD4D4300B33345 /* TTTArrayFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC0ECC16BD4D4300B33345 /* TTTArrayFormatter.m */; };
+		65FC0ED916BD4D4300B33345 /* TTTLocationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC0ECE16BD4D4300B33345 /* TTTLocationFormatter.m */; };
+		65FC0EDA16BD4D4300B33345 /* TTTOrdinalNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC0ED016BD4D4300B33345 /* TTTOrdinalNumberFormatter.m */; };
+		65FC0EDB16BD4D4300B33345 /* TTTTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC0ED216BD4D4300B33345 /* TTTTimeIntervalFormatter.m */; };
+		65FC0EDC16BD4D4300B33345 /* TTTUnitOfInformationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC0ED416BD4D4300B33345 /* TTTUnitOfInformationFormatter.m */; };
+		65FC0EDD16BD4D4300B33345 /* TTTURLRequestFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC0ED616BD4D4300B33345 /* TTTURLRequestFormatter.m */; };
+		65FC0EE416BD4DC300B33345 /* FormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC0EE116BD4DC300B33345 /* FormatterViewController.m */; };
+		65FC0EE516BD4DC300B33345 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC0EE316BD4DC300B33345 /* RootViewController.m */; };
+		65FC0EF416BD4DDF00B33345 /* AddressFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC0EE716BD4DDF00B33345 /* AddressFormatterViewController.m */; };
+		65FC0EF516BD4DDF00B33345 /* ArrayFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC0EE916BD4DDF00B33345 /* ArrayFormatterViewController.m */; };
+		65FC0EF616BD4DDF00B33345 /* LocationFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC0EEB16BD4DDF00B33345 /* LocationFormatterViewController.m */; };
+		65FC0EF716BD4DDF00B33345 /* OrdinalNumberFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC0EED16BD4DDF00B33345 /* OrdinalNumberFormatterViewController.m */; };
+		65FC0EF816BD4DDF00B33345 /* TimeIntervalFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC0EEF16BD4DDF00B33345 /* TimeIntervalFormatterViewController.m */; };
+		65FC0EF916BD4DDF00B33345 /* UnitOfInformationFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC0EF116BD4DDF00B33345 /* UnitOfInformationFormatterViewController.m */; };
+		65FC0EFA16BD4DDF00B33345 /* URLRequestFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC0EF316BD4DDF00B33345 /* URLRequestFormatterViewController.m */; };
+		65FC0EFC16BD4E2700B33345 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FC0EFB16BD4E2700B33345 /* CoreLocation.framework */; };
+		65FC0EFE16BD4F5D00B33345 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65FC0EFD16BD4F5D00B33345 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F872625214FD3BED00800E11 /* UnitOfInformationFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitOfInformationFormatterViewController.h; sourceTree = "<group>"; };
-		F872625314FD3BED00800E11 /* UnitOfInformationFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitOfInformationFormatterViewController.m; sourceTree = "<group>"; };
-		F892375316A4BE43002FCF70 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		F89C9EF4166154AB0040FB03 /* TTTAddressFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAddressFormatter.h; sourceTree = "<group>"; };
-		F89C9EF5166154AB0040FB03 /* TTTAddressFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAddressFormatter.m; sourceTree = "<group>"; };
-		F89C9EF6166154AB0040FB03 /* TTTArrayFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTArrayFormatter.h; sourceTree = "<group>"; };
-		F89C9EF7166154AB0040FB03 /* TTTArrayFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTArrayFormatter.m; sourceTree = "<group>"; };
-		F89C9EF8166154AB0040FB03 /* TTTLocationFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTLocationFormatter.h; sourceTree = "<group>"; };
-		F89C9EF9166154AB0040FB03 /* TTTLocationFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTLocationFormatter.m; sourceTree = "<group>"; };
-		F89C9EFA166154AB0040FB03 /* TTTOrdinalNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTOrdinalNumberFormatter.h; sourceTree = "<group>"; };
-		F89C9EFB166154AB0040FB03 /* TTTOrdinalNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTOrdinalNumberFormatter.m; sourceTree = "<group>"; };
-		F89C9EFC166154AB0040FB03 /* TTTTimeIntervalFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTTimeIntervalFormatter.h; sourceTree = "<group>"; };
-		F89C9EFD166154AB0040FB03 /* TTTTimeIntervalFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTTimeIntervalFormatter.m; sourceTree = "<group>"; };
-		F89C9EFE166154AB0040FB03 /* TTTUnitOfInformationFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTUnitOfInformationFormatter.h; sourceTree = "<group>"; };
-		F89C9EFF166154AB0040FB03 /* TTTUnitOfInformationFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTUnitOfInformationFormatter.m; sourceTree = "<group>"; };
-		F89C9F00166154AB0040FB03 /* TTTURLRequestFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTURLRequestFormatter.h; sourceTree = "<group>"; };
-		F89C9F01166154AB0040FB03 /* TTTURLRequestFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTURLRequestFormatter.m; sourceTree = "<group>"; };
-		F8A8479F161E93D800940F39 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
-		F8A847A5161E982500940F39 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		F8A847A7161E98D800940F39 /* AddressFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressFormatterViewController.h; sourceTree = "<group>"; };
-		F8A847A8161E98D800940F39 /* AddressFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressFormatterViewController.m; sourceTree = "<group>"; };
-		F8FBF9E41427A456001409DB /* FormatterKit Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FormatterKit Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8FBF9E81427A456001409DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		F8FBF9EA1427A456001409DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		F8FBF9EC1427A456001409DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F8FBF9F01427A456001409DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8FBF9F21427A456001409DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F8FBF9F41427A456001409DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F8FBF9F61427A456001409DB /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
-		F8FBF9F71427A456001409DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F8FBF9F81427A456001409DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F8FBFA331427CEC0001409DB /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		F8FBFA341427CEC0001409DB /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		F8FBFA361427D159001409DB /* FormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormatterViewController.h; sourceTree = "<group>"; };
-		F8FBFA371427D159001409DB /* FormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormatterViewController.m; sourceTree = "<group>"; };
-		F8FBFA391427D3DA001409DB /* ArrayFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayFormatterViewController.h; sourceTree = "<group>"; };
-		F8FBFA3A1427D3DA001409DB /* ArrayFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayFormatterViewController.m; sourceTree = "<group>"; };
-		F8FBFA401427E1DB001409DB /* LocationFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationFormatterViewController.h; sourceTree = "<group>"; };
-		F8FBFA411427E1DB001409DB /* LocationFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationFormatterViewController.m; sourceTree = "<group>"; };
-		F8FBFA431427E21C001409DB /* OrdinalNumberFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrdinalNumberFormatterViewController.h; sourceTree = "<group>"; };
-		F8FBFA441427E21C001409DB /* OrdinalNumberFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrdinalNumberFormatterViewController.m; sourceTree = "<group>"; };
-		F8FBFA461427E23C001409DB /* TimeIntervalFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeIntervalFormatterViewController.h; sourceTree = "<group>"; };
-		F8FBFA471427E23C001409DB /* TimeIntervalFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeIntervalFormatterViewController.m; sourceTree = "<group>"; };
-		F8FBFA491427E260001409DB /* URLRequestFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLRequestFormatterViewController.h; sourceTree = "<group>"; };
-		F8FBFA4A1427E260001409DB /* URLRequestFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLRequestFormatterViewController.m; sourceTree = "<group>"; };
-		F8FBFA581428EE31001409DB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		65FC0E8D16BD4A5A00B33345 /* FormatterKit Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FormatterKit Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65FC0E9016BD4A5A00B33345 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		65FC0E9216BD4A5A00B33345 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		65FC0E9416BD4A5A00B33345 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		65FC0E9816BD4A5A00B33345 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65FC0E9A16BD4A5A00B33345 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		65FC0E9C16BD4A5A00B33345 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		65FC0E9E16BD4A5A00B33345 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		65FC0E9F16BD4A5A00B33345 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		65FC0EA016BD4A5A00B33345 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		65FC0EC416BD4CB400B33345 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		65FC0EC516BD4CB400B33345 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		65FC0EC916BD4D4300B33345 /* TTTAddressFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAddressFormatter.h; sourceTree = "<group>"; };
+		65FC0ECA16BD4D4300B33345 /* TTTAddressFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAddressFormatter.m; sourceTree = "<group>"; };
+		65FC0ECB16BD4D4300B33345 /* TTTArrayFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTArrayFormatter.h; sourceTree = "<group>"; };
+		65FC0ECC16BD4D4300B33345 /* TTTArrayFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTArrayFormatter.m; sourceTree = "<group>"; };
+		65FC0ECD16BD4D4300B33345 /* TTTLocationFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTLocationFormatter.h; sourceTree = "<group>"; };
+		65FC0ECE16BD4D4300B33345 /* TTTLocationFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTLocationFormatter.m; sourceTree = "<group>"; };
+		65FC0ECF16BD4D4300B33345 /* TTTOrdinalNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTOrdinalNumberFormatter.h; sourceTree = "<group>"; };
+		65FC0ED016BD4D4300B33345 /* TTTOrdinalNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTOrdinalNumberFormatter.m; sourceTree = "<group>"; };
+		65FC0ED116BD4D4300B33345 /* TTTTimeIntervalFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTTimeIntervalFormatter.h; sourceTree = "<group>"; };
+		65FC0ED216BD4D4300B33345 /* TTTTimeIntervalFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTTimeIntervalFormatter.m; sourceTree = "<group>"; };
+		65FC0ED316BD4D4300B33345 /* TTTUnitOfInformationFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTUnitOfInformationFormatter.h; sourceTree = "<group>"; };
+		65FC0ED416BD4D4300B33345 /* TTTUnitOfInformationFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTUnitOfInformationFormatter.m; sourceTree = "<group>"; };
+		65FC0ED516BD4D4300B33345 /* TTTURLRequestFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTURLRequestFormatter.h; sourceTree = "<group>"; };
+		65FC0ED616BD4D4300B33345 /* TTTURLRequestFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTURLRequestFormatter.m; sourceTree = "<group>"; };
+		65FC0EE016BD4DC300B33345 /* FormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FormatterViewController.h; path = "FormatterKit Example/FormatterViewController.h"; sourceTree = "<group>"; };
+		65FC0EE116BD4DC300B33345 /* FormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FormatterViewController.m; path = "FormatterKit Example/FormatterViewController.m"; sourceTree = "<group>"; };
+		65FC0EE216BD4DC300B33345 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = "FormatterKit Example/RootViewController.h"; sourceTree = "<group>"; };
+		65FC0EE316BD4DC300B33345 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = "FormatterKit Example/RootViewController.m"; sourceTree = "<group>"; };
+		65FC0EE616BD4DDF00B33345 /* AddressFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddressFormatterViewController.h; path = "FormatterKit Example/AddressFormatterViewController.h"; sourceTree = "<group>"; };
+		65FC0EE716BD4DDF00B33345 /* AddressFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddressFormatterViewController.m; path = "FormatterKit Example/AddressFormatterViewController.m"; sourceTree = "<group>"; };
+		65FC0EE816BD4DDF00B33345 /* ArrayFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArrayFormatterViewController.h; path = "FormatterKit Example/ArrayFormatterViewController.h"; sourceTree = "<group>"; };
+		65FC0EE916BD4DDF00B33345 /* ArrayFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArrayFormatterViewController.m; path = "FormatterKit Example/ArrayFormatterViewController.m"; sourceTree = "<group>"; };
+		65FC0EEA16BD4DDF00B33345 /* LocationFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationFormatterViewController.h; path = "FormatterKit Example/LocationFormatterViewController.h"; sourceTree = "<group>"; };
+		65FC0EEB16BD4DDF00B33345 /* LocationFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationFormatterViewController.m; path = "FormatterKit Example/LocationFormatterViewController.m"; sourceTree = "<group>"; };
+		65FC0EEC16BD4DDF00B33345 /* OrdinalNumberFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrdinalNumberFormatterViewController.h; path = "FormatterKit Example/OrdinalNumberFormatterViewController.h"; sourceTree = "<group>"; };
+		65FC0EED16BD4DDF00B33345 /* OrdinalNumberFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrdinalNumberFormatterViewController.m; path = "FormatterKit Example/OrdinalNumberFormatterViewController.m"; sourceTree = "<group>"; };
+		65FC0EEE16BD4DDF00B33345 /* TimeIntervalFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeIntervalFormatterViewController.h; path = "FormatterKit Example/TimeIntervalFormatterViewController.h"; sourceTree = "<group>"; };
+		65FC0EEF16BD4DDF00B33345 /* TimeIntervalFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeIntervalFormatterViewController.m; path = "FormatterKit Example/TimeIntervalFormatterViewController.m"; sourceTree = "<group>"; };
+		65FC0EF016BD4DDF00B33345 /* UnitOfInformationFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnitOfInformationFormatterViewController.h; path = "FormatterKit Example/UnitOfInformationFormatterViewController.h"; sourceTree = "<group>"; };
+		65FC0EF116BD4DDF00B33345 /* UnitOfInformationFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnitOfInformationFormatterViewController.m; path = "FormatterKit Example/UnitOfInformationFormatterViewController.m"; sourceTree = "<group>"; };
+		65FC0EF216BD4DDF00B33345 /* URLRequestFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URLRequestFormatterViewController.h; path = "FormatterKit Example/URLRequestFormatterViewController.h"; sourceTree = "<group>"; };
+		65FC0EF316BD4DDF00B33345 /* URLRequestFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = URLRequestFormatterViewController.m; path = "FormatterKit Example/URLRequestFormatterViewController.m"; sourceTree = "<group>"; };
+		65FC0EFB16BD4E2700B33345 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		65FC0EFD16BD4F5D00B33345 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F8FBF9E11427A456001409DB /* Frameworks */ = {
+		65FC0E8A16BD4A5A00B33345 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8A847A6161E982500940F39 /* AddressBook.framework in Frameworks */,
-				F8A847A0161E93D800940F39 /* AddressBookUI.framework in Frameworks */,
-				F8FBFA591428EE32001409DB /* CoreLocation.framework in Frameworks */,
-				F8FBF9E91427A456001409DB /* UIKit.framework in Frameworks */,
-				F8FBF9EB1427A456001409DB /* Foundation.framework in Frameworks */,
-				F8FBF9ED1427A456001409DB /* CoreGraphics.framework in Frameworks */,
+				65FC0EFC16BD4E2700B33345 /* CoreLocation.framework in Frameworks */,
+				65FC0EC616BD4CB400B33345 /* AddressBook.framework in Frameworks */,
+				65FC0EC716BD4CB400B33345 /* AddressBookUI.framework in Frameworks */,
+				65FC0E9116BD4A5A00B33345 /* UIKit.framework in Frameworks */,
+				65FC0E9316BD4A5A00B33345 /* Foundation.framework in Frameworks */,
+				65FC0E9516BD4A5A00B33345 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F89C9EF3166154AB0040FB03 /* FormatterKit */ = {
+		65FC0E8416BD4A5900B33345 = {
 			isa = PBXGroup;
 			children = (
-				F89C9EF4166154AB0040FB03 /* TTTAddressFormatter.h */,
-				F89C9EF5166154AB0040FB03 /* TTTAddressFormatter.m */,
-				F89C9EF6166154AB0040FB03 /* TTTArrayFormatter.h */,
-				F89C9EF7166154AB0040FB03 /* TTTArrayFormatter.m */,
-				F89C9EF8166154AB0040FB03 /* TTTLocationFormatter.h */,
-				F89C9EF9166154AB0040FB03 /* TTTLocationFormatter.m */,
-				F89C9EFA166154AB0040FB03 /* TTTOrdinalNumberFormatter.h */,
-				F89C9EFB166154AB0040FB03 /* TTTOrdinalNumberFormatter.m */,
-				F89C9EFC166154AB0040FB03 /* TTTTimeIntervalFormatter.h */,
-				F89C9EFD166154AB0040FB03 /* TTTTimeIntervalFormatter.m */,
-				F89C9EFE166154AB0040FB03 /* TTTUnitOfInformationFormatter.h */,
-				F89C9EFF166154AB0040FB03 /* TTTUnitOfInformationFormatter.m */,
-				F89C9F00166154AB0040FB03 /* TTTURLRequestFormatter.h */,
-				F89C9F01166154AB0040FB03 /* TTTURLRequestFormatter.m */,
+				65FC0E9616BD4A5A00B33345 /* FormatterKit Example */,
+				65FC0E8F16BD4A5A00B33345 /* Frameworks */,
+				65FC0E8E16BD4A5A00B33345 /* Products */,
+				65FC0EAD16BD4AA700B33345 /* Vendor */,
+			);
+			sourceTree = "<group>";
+		};
+		65FC0E8E16BD4A5A00B33345 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65FC0E8D16BD4A5A00B33345 /* FormatterKit Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65FC0E8F16BD4A5A00B33345 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65FC0EFB16BD4E2700B33345 /* CoreLocation.framework */,
+				65FC0EC416BD4CB400B33345 /* AddressBook.framework */,
+				65FC0EC516BD4CB400B33345 /* AddressBookUI.framework */,
+				65FC0E9016BD4A5A00B33345 /* UIKit.framework */,
+				65FC0E9216BD4A5A00B33345 /* Foundation.framework */,
+				65FC0E9416BD4A5A00B33345 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		65FC0E9616BD4A5A00B33345 /* FormatterKit Example */ = {
+			isa = PBXGroup;
+			children = (
+				65FC0E9F16BD4A5A00B33345 /* AppDelegate.h */,
+				65FC0EA016BD4A5A00B33345 /* AppDelegate.m */,
+				65FC0EDE16BD4D9E00B33345 /* Controllers */,
+				65FC0E9716BD4A5A00B33345 /* Supporting Files */,
+			);
+			path = "FormatterKit Example";
+			sourceTree = "<group>";
+		};
+		65FC0E9716BD4A5A00B33345 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				65FC0EFD16BD4F5D00B33345 /* Default-568h@2x.png */,
+				65FC0E9816BD4A5A00B33345 /* Info.plist */,
+				65FC0E9916BD4A5A00B33345 /* InfoPlist.strings */,
+				65FC0E9C16BD4A5A00B33345 /* main.m */,
+				65FC0E9E16BD4A5A00B33345 /* Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65FC0EAD16BD4AA700B33345 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				65FC0EC816BD4D4300B33345 /* FormatterKit */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		65FC0EC816BD4D4300B33345 /* FormatterKit */ = {
+			isa = PBXGroup;
+			children = (
+				65FC0EC916BD4D4300B33345 /* TTTAddressFormatter.h */,
+				65FC0ECA16BD4D4300B33345 /* TTTAddressFormatter.m */,
+				65FC0ECB16BD4D4300B33345 /* TTTArrayFormatter.h */,
+				65FC0ECC16BD4D4300B33345 /* TTTArrayFormatter.m */,
+				65FC0ECD16BD4D4300B33345 /* TTTLocationFormatter.h */,
+				65FC0ECE16BD4D4300B33345 /* TTTLocationFormatter.m */,
+				65FC0ECF16BD4D4300B33345 /* TTTOrdinalNumberFormatter.h */,
+				65FC0ED016BD4D4300B33345 /* TTTOrdinalNumberFormatter.m */,
+				65FC0ED116BD4D4300B33345 /* TTTTimeIntervalFormatter.h */,
+				65FC0ED216BD4D4300B33345 /* TTTTimeIntervalFormatter.m */,
+				65FC0ED316BD4D4300B33345 /* TTTUnitOfInformationFormatter.h */,
+				65FC0ED416BD4D4300B33345 /* TTTUnitOfInformationFormatter.m */,
+				65FC0ED516BD4D4300B33345 /* TTTURLRequestFormatter.h */,
+				65FC0ED616BD4D4300B33345 /* TTTURLRequestFormatter.m */,
 			);
 			name = FormatterKit;
 			path = ../FormatterKit;
 			sourceTree = "<group>";
 		};
-		F8FBF9D91427A456001409DB = {
+		65FC0EDE16BD4D9E00B33345 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F892375316A4BE43002FCF70 /* Default-568h@2x.png */,
-				F8FBF9EE1427A456001409DB /* FormatterKit Example */,
-				F8FBF9E71427A456001409DB /* Frameworks */,
-				F8FBF9E51427A456001409DB /* Products */,
-				F8FBFA071427A4D2001409DB /* Vendor */,
-			);
-			sourceTree = "<group>";
-		};
-		F8FBF9E51427A456001409DB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F8FBF9E41427A456001409DB /* FormatterKit Example.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F8FBF9E71427A456001409DB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F8A847A5161E982500940F39 /* AddressBook.framework */,
-				F8A8479F161E93D800940F39 /* AddressBookUI.framework */,
-				F8FBFA581428EE31001409DB /* CoreLocation.framework */,
-				F8FBF9E81427A456001409DB /* UIKit.framework */,
-				F8FBF9EA1427A456001409DB /* Foundation.framework */,
-				F8FBF9EC1427A456001409DB /* CoreGraphics.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F8FBF9EE1427A456001409DB /* FormatterKit Example */ = {
-			isa = PBXGroup;
-			children = (
-				F8FBFA321427CEA5001409DB /* Controllers */,
-				F8FBF9F71427A456001409DB /* AppDelegate.h */,
-				F8FBF9F81427A456001409DB /* AppDelegate.m */,
-				F8FBF9EF1427A456001409DB /* Supporting Files */,
-			);
-			path = "FormatterKit Example";
-			sourceTree = "<group>";
-		};
-		F8FBF9EF1427A456001409DB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F8FBF9F01427A456001409DB /* Info.plist */,
-				F8FBF9F11427A456001409DB /* InfoPlist.strings */,
-				F8FBF9F41427A456001409DB /* main.m */,
-				F8FBF9F61427A456001409DB /* Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F8FBFA071427A4D2001409DB /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				F89C9EF3166154AB0040FB03 /* FormatterKit */,
-			);
-			name = Vendor;
-			sourceTree = "<group>";
-		};
-		F8FBFA321427CEA5001409DB /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				F8FBFA331427CEC0001409DB /* RootViewController.h */,
-				F8FBFA341427CEC0001409DB /* RootViewController.m */,
-				F8FBFA361427D159001409DB /* FormatterViewController.h */,
-				F8FBFA371427D159001409DB /* FormatterViewController.m */,
-				F8FBFA3C1427D94D001409DB /* Formatters */,
+				65FC0EE016BD4DC300B33345 /* FormatterViewController.h */,
+				65FC0EE116BD4DC300B33345 /* FormatterViewController.m */,
+				65FC0EE216BD4DC300B33345 /* RootViewController.h */,
+				65FC0EE316BD4DC300B33345 /* RootViewController.m */,
+				65FC0EDF16BD4DA400B33345 /* Formatters */,
 			);
 			name = Controllers;
+			path = ..;
 			sourceTree = "<group>";
 		};
-		F8FBFA3C1427D94D001409DB /* Formatters */ = {
+		65FC0EDF16BD4DA400B33345 /* Formatters */ = {
 			isa = PBXGroup;
 			children = (
-				F8A847A7161E98D800940F39 /* AddressFormatterViewController.h */,
-				F8A847A8161E98D800940F39 /* AddressFormatterViewController.m */,
-				F8FBFA391427D3DA001409DB /* ArrayFormatterViewController.h */,
-				F8FBFA3A1427D3DA001409DB /* ArrayFormatterViewController.m */,
-				F8FBFA401427E1DB001409DB /* LocationFormatterViewController.h */,
-				F8FBFA411427E1DB001409DB /* LocationFormatterViewController.m */,
-				F8FBFA431427E21C001409DB /* OrdinalNumberFormatterViewController.h */,
-				F8FBFA441427E21C001409DB /* OrdinalNumberFormatterViewController.m */,
-				F8FBFA461427E23C001409DB /* TimeIntervalFormatterViewController.h */,
-				F8FBFA471427E23C001409DB /* TimeIntervalFormatterViewController.m */,
-				F872625214FD3BED00800E11 /* UnitOfInformationFormatterViewController.h */,
-				F872625314FD3BED00800E11 /* UnitOfInformationFormatterViewController.m */,
-				F8FBFA491427E260001409DB /* URLRequestFormatterViewController.h */,
-				F8FBFA4A1427E260001409DB /* URLRequestFormatterViewController.m */,
+				65FC0EE616BD4DDF00B33345 /* AddressFormatterViewController.h */,
+				65FC0EE716BD4DDF00B33345 /* AddressFormatterViewController.m */,
+				65FC0EE816BD4DDF00B33345 /* ArrayFormatterViewController.h */,
+				65FC0EE916BD4DDF00B33345 /* ArrayFormatterViewController.m */,
+				65FC0EEA16BD4DDF00B33345 /* LocationFormatterViewController.h */,
+				65FC0EEB16BD4DDF00B33345 /* LocationFormatterViewController.m */,
+				65FC0EEC16BD4DDF00B33345 /* OrdinalNumberFormatterViewController.h */,
+				65FC0EED16BD4DDF00B33345 /* OrdinalNumberFormatterViewController.m */,
+				65FC0EEE16BD4DDF00B33345 /* TimeIntervalFormatterViewController.h */,
+				65FC0EEF16BD4DDF00B33345 /* TimeIntervalFormatterViewController.m */,
+				65FC0EF016BD4DDF00B33345 /* UnitOfInformationFormatterViewController.h */,
+				65FC0EF116BD4DDF00B33345 /* UnitOfInformationFormatterViewController.m */,
+				65FC0EF216BD4DDF00B33345 /* URLRequestFormatterViewController.h */,
+				65FC0EF316BD4DDF00B33345 /* URLRequestFormatterViewController.m */,
 			);
 			name = Formatters;
 			sourceTree = "<group>";
@@ -221,13 +222,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F8FBF9E31427A456001409DB /* FormatterKit Example */ = {
+		65FC0E8C16BD4A5A00B33345 /* FormatterKit Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8FBF9FC1427A456001409DB /* Build configuration list for PBXNativeTarget "FormatterKit Example" */;
+			buildConfigurationList = 65FC0EAA16BD4A5A00B33345 /* Build configuration list for PBXNativeTarget "FormatterKit Example" */;
 			buildPhases = (
-				F8FBF9E01427A456001409DB /* Sources */,
-				F8FBF9E11427A456001409DB /* Frameworks */,
-				F8FBF9E21427A456001409DB /* Resources */,
+				65FC0E8916BD4A5A00B33345 /* Sources */,
+				65FC0E8A16BD4A5A00B33345 /* Frameworks */,
+				65FC0E8B16BD4A5A00B33345 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -235,80 +236,80 @@
 			);
 			name = "FormatterKit Example";
 			productName = "FormatterKit Example";
-			productReference = F8FBF9E41427A456001409DB /* FormatterKit Example.app */;
+			productReference = 65FC0E8D16BD4A5A00B33345 /* FormatterKit Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F8FBF9DB1427A456001409DB /* Project object */ = {
+		65FC0E8516BD4A5900B33345 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = Mattt Thompson;
+				ORGANIZATIONNAME = "Mattt Thompson";
 			};
-			buildConfigurationList = F8FBF9DE1427A456001409DB /* Build configuration list for PBXProject "FormatterKit Example" */;
+			buildConfigurationList = 65FC0E8816BD4A5900B33345 /* Build configuration list for PBXProject "FormatterKit Example" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = F8FBF9D91427A456001409DB;
-			productRefGroup = F8FBF9E51427A456001409DB /* Products */;
+			mainGroup = 65FC0E8416BD4A5900B33345;
+			productRefGroup = 65FC0E8E16BD4A5A00B33345 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F8FBF9E31427A456001409DB /* FormatterKit Example */,
+				65FC0E8C16BD4A5A00B33345 /* FormatterKit Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F8FBF9E21427A456001409DB /* Resources */ = {
+		65FC0E8B16BD4A5A00B33345 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8FBF9F31427A456001409DB /* InfoPlist.strings in Resources */,
-				F892375416A4BE43002FCF70 /* Default-568h@2x.png in Resources */,
+				65FC0E9B16BD4A5A00B33345 /* InfoPlist.strings in Resources */,
+				65FC0EFE16BD4F5D00B33345 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F8FBF9E01427A456001409DB /* Sources */ = {
+		65FC0E8916BD4A5A00B33345 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8FBF9F51427A456001409DB /* main.m in Sources */,
-				F8FBF9F91427A456001409DB /* AppDelegate.m in Sources */,
-				F8FBFA351427CEC0001409DB /* RootViewController.m in Sources */,
-				F8FBFA381427D159001409DB /* FormatterViewController.m in Sources */,
-				F8FBFA3B1427D3DA001409DB /* ArrayFormatterViewController.m in Sources */,
-				F8FBFA421427E1DC001409DB /* LocationFormatterViewController.m in Sources */,
-				F8FBFA451427E21C001409DB /* OrdinalNumberFormatterViewController.m in Sources */,
-				F8FBFA481427E23C001409DB /* TimeIntervalFormatterViewController.m in Sources */,
-				F8FBFA4B1427E260001409DB /* URLRequestFormatterViewController.m in Sources */,
-				F872625414FD3BED00800E11 /* UnitOfInformationFormatterViewController.m in Sources */,
-				F8A847A9161E98D800940F39 /* AddressFormatterViewController.m in Sources */,
-				F89C9F02166154AB0040FB03 /* TTTAddressFormatter.m in Sources */,
-				F89C9F03166154AB0040FB03 /* TTTArrayFormatter.m in Sources */,
-				F89C9F04166154AB0040FB03 /* TTTLocationFormatter.m in Sources */,
-				F89C9F05166154AB0040FB03 /* TTTOrdinalNumberFormatter.m in Sources */,
-				F89C9F06166154AB0040FB03 /* TTTTimeIntervalFormatter.m in Sources */,
-				F89C9F07166154AB0040FB03 /* TTTUnitOfInformationFormatter.m in Sources */,
-				F89C9F08166154AB0040FB03 /* TTTURLRequestFormatter.m in Sources */,
+				65FC0E9D16BD4A5A00B33345 /* main.m in Sources */,
+				65FC0EA116BD4A5A00B33345 /* AppDelegate.m in Sources */,
+				65FC0ED716BD4D4300B33345 /* TTTAddressFormatter.m in Sources */,
+				65FC0ED816BD4D4300B33345 /* TTTArrayFormatter.m in Sources */,
+				65FC0ED916BD4D4300B33345 /* TTTLocationFormatter.m in Sources */,
+				65FC0EDA16BD4D4300B33345 /* TTTOrdinalNumberFormatter.m in Sources */,
+				65FC0EDB16BD4D4300B33345 /* TTTTimeIntervalFormatter.m in Sources */,
+				65FC0EDC16BD4D4300B33345 /* TTTUnitOfInformationFormatter.m in Sources */,
+				65FC0EDD16BD4D4300B33345 /* TTTURLRequestFormatter.m in Sources */,
+				65FC0EE416BD4DC300B33345 /* FormatterViewController.m in Sources */,
+				65FC0EE516BD4DC300B33345 /* RootViewController.m in Sources */,
+				65FC0EF416BD4DDF00B33345 /* AddressFormatterViewController.m in Sources */,
+				65FC0EF516BD4DDF00B33345 /* ArrayFormatterViewController.m in Sources */,
+				65FC0EF616BD4DDF00B33345 /* LocationFormatterViewController.m in Sources */,
+				65FC0EF716BD4DDF00B33345 /* OrdinalNumberFormatterViewController.m in Sources */,
+				65FC0EF816BD4DDF00B33345 /* TimeIntervalFormatterViewController.m in Sources */,
+				65FC0EF916BD4DDF00B33345 /* UnitOfInformationFormatterViewController.m in Sources */,
+				65FC0EFA16BD4DDF00B33345 /* URLRequestFormatterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F8FBF9F11427A456001409DB /* InfoPlist.strings */ = {
+		65FC0E9916BD4A5A00B33345 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F8FBF9F21427A456001409DB /* en */,
+				65FC0E9A16BD4A5A00B33345 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -316,17 +317,17 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F8FBF9FA1427A456001409DB /* Debug */ = {
+		65FC0EA816BD4A5A00B33345 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = NO;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -338,88 +339,57 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_PEDANTIC = NO;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "FormatterKit Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		F8FBF9FB1427A456001409DB /* Release */ = {
+		65FC0EA916BD4A5A00B33345 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = NO;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_PEDANTIC = NO;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "FormatterKit Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		F8FBF9FD1427A456001409DB /* Debug */ = {
+		65FC0EAB16BD4A5A00B33345 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO;
-				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
-				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
-				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FormatterKit Example/Prefix.pch";
-				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
-				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
-				GCC_WARN_PEDANTIC = YES;
-				GCC_WARN_SIGN_COMPARE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				INFOPLIST_FILE = "FormatterKit Example/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FormatterKit Example/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		F8FBF9FE1427A456001409DB /* Release */ = {
+		65FC0EAC16BD4A5A00B33345 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO;
-				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
-				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
-				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FormatterKit Example/Prefix.pch";
-				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
-				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
-				GCC_WARN_PEDANTIC = YES;
-				GCC_WARN_SIGN_COMPARE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				INFOPLIST_FILE = "FormatterKit Example/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FormatterKit Example/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -428,25 +398,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F8FBF9DE1427A456001409DB /* Build configuration list for PBXProject "FormatterKit Example" */ = {
+		65FC0E8816BD4A5900B33345 /* Build configuration list for PBXProject "FormatterKit Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F8FBF9FA1427A456001409DB /* Debug */,
-				F8FBF9FB1427A456001409DB /* Release */,
+				65FC0EA816BD4A5A00B33345 /* Debug */,
+				65FC0EA916BD4A5A00B33345 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8FBF9FC1427A456001409DB /* Build configuration list for PBXNativeTarget "FormatterKit Example" */ = {
+		65FC0EAA16BD4A5A00B33345 /* Build configuration list for PBXNativeTarget "FormatterKit Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F8FBF9FD1427A456001409DB /* Debug */,
-				F8FBF9FE1427A456001409DB /* Release */,
+				65FC0EAB16BD4A5A00B33345 /* Debug */,
+				65FC0EAC16BD4A5A00B33345 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F8FBF9DB1427A456001409DB /* Project object */;
+	rootObject = 65FC0E8516BD4A5900B33345 /* Project object */;
 }
