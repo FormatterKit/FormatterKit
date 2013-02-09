@@ -1,11 +1,12 @@
 Pod::Spec.new do |s|
-  s.name     = 'FormatterKit'
-  s.version  = '1.1.1'
-  s.license  = { :type => 'MIT', :file => 'LICENSE' }
-  s.summary  = '`stringWithFormat:` for the sophisticated hacker set.'
-  s.homepage = 'https://github.com/mattt/FormatterKit'
-  s.author   = { 'Mattt Thompson' => 'm@mattt.me' }
-  s.source   = { :git => 'https://github.com/mattt/FormatterKit.git', :tag => '1.1.1' }
+  s.name      = 'FormatterKit'
+  s.version   = '1.1.1'
+  s.license   = { :type => 'MIT', :file => 'LICENSE' }
+  s.summary   = '`stringWithFormat:` for the sophisticated hacker set.'
+  s.homepage  = 'https://github.com/mattt/FormatterKit'
+  s.author    = { 'Mattt Thompson' => 'm@mattt.me' }
+  s.source    = { :git => 'https://github.com/mattt/FormatterKit.git', :tag => '1.1.1' }
+  s.resources = 'Localizations/*'
 
   s.description = "FormatterKit is a collection of well-crafted NSFormatter subclasses for things like units of information, distance, and relative time intervals. Each formatter abstracts away the complex business logic of their respective domain, so that you can focus on the more important aspects of your application."
 
@@ -40,4 +41,5 @@ Pod::Spec.new do |s|
   s.subspec 'URLRequestFormatter' do |ss|
     ss.source_files = 'FormatterKit/TTTURLRequestFormatter.{h,m}'
   end
+    
 end
