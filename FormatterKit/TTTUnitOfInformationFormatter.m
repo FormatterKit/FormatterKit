@@ -227,7 +227,7 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
 - (NSString *)stringFromNumber:(NSNumber *)number
                         ofUnit:(TTTUnitOfInformation)unit
 {
-    return [self stringFromNumberOfBits:[NSNumber numberWithInteger:(TTTNumberOfBitsInUnit(unit) * [number integerValue])]];
+    return [self stringFromNumberOfBits:[NSNumber numberWithDouble:(TTTNumberOfBitsInUnit(unit) * [number integerValue])]];
 }
 
 - (NSString *)stringFromNumber:(NSNumber *)number
