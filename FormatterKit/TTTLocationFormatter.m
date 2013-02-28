@@ -155,7 +155,7 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
             double meterDistance = distance;
             double kilometerDistance = CLLocationDistanceToKilometers(distance);
 
-            if (kilometerDistance > 1) {
+            if (kilometerDistance >= 1) {
                 distanceString = [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:kilometerDistance]];
                 unitString = NSLocalizedStringFromTable(@"km", @"FormatterKit", @"Kilometer Unit");
             } else {
