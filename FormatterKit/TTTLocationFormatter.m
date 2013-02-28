@@ -115,6 +115,7 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
 @implementation TTTLocationFormatter
 @synthesize coordinateOrder = _coordinateOrder;
 @synthesize bearingStyle = _bearingStyle;
+@synthesize distanceStyle = _distanceStyle;
 @synthesize unitSystem = _unitSystem;
 @synthesize numberFormatter = _numberFormatter;
 
@@ -126,6 +127,7 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
 
     self.coordinateOrder = TTTCoordinateLatLngOrder;
     self.bearingStyle = TTTBearingWordStyle;
+    self.distanceStyle = TTTDistanceAbbreviationWordStyle;
     self.unitSystem = TTTMetricSystem;
 
     _numberFormatter = [[NSNumberFormatter alloc] init];
@@ -157,10 +159,17 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
 
             if (kilometerDistance >= 1) {
                 distanceString = [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:kilometerDistance]];
-                unitString = NSLocalizedStringFromTable(@"km", @"FormatterKit", @"Kilometer Unit");
+                unitString = [self unitForDistance:kilometerDistance
+                                 word:NSLocalizedStringFromTable(@"kilometer", @"FormatterKit", @"Kilometer Unit (Singular)")
+                           wordPlural:NSLocalizedStringFromTable(@"kilometers", @"FormatterKit", @"Kilometer Unit (Plural)")
+                         abbreviation:NSLocalizedStringFromTable(@"km" , @"FormatterKit", @"Kilometer Unit (Abbreviation)")];
+                
             } else {
                 distanceString = [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:meterDistance]];
-                unitString = NSLocalizedStringFromTable(@"m", @"FormatterKit", @"Meter Unit");
+                unitString = [self unitForDistance:meterDistance
+                                 word:NSLocalizedStringFromTable(@"meter", @"FormatterKit", @"Meter Unit (Singular)")
+                           wordPlural:NSLocalizedStringFromTable(@"meters", @"FormatterKit", @"Meter Unit (Plural)")
+                         abbreviation:NSLocalizedStringFromTable(@"m", @"FormatterKit", @"Meter Unit (Abbreviation)")];
             }
             break;
         }
@@ -172,13 +181,23 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
 
             if (feetDistance < 300) {
                 distanceString = [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:feetDistance]];
-                unitString = NSLocalizedStringFromTable(@"ft", @"FormatterKit", @"Feet Unit");
+                unitString = [self unitForDistance:feetDistance
+                                              word:NSLocalizedStringFromTable(@"foot", @"FormatterKit", @"Feet Unit (Singular)")
+                                        wordPlural:NSLocalizedStringFromTable(@"feet", @"FormatterKit", @"Feet Unit (Plural)")
+                                      abbreviation:NSLocalizedStringFromTable(@"ft", @"FormatterKit", @"Feet Unit(Abbreviation)")];
+                
             } else if (yardDistance < 500) {
                 distanceString = [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:yardDistance]];
-                unitString = NSLocalizedStringFromTable(@"yds", @"FormatterKit", @"Yard Unit");
+                unitString =  [self unitForDistance:yardDistance
+                                               word:NSLocalizedStringFromTable(@"yard", @"FormatterKit", @"Yard Unit (Singular)")
+                                         wordPlural:NSLocalizedStringFromTable(@"yards", @"FormatterKit", @"Yard Unit (Plural)")
+                                       abbreviation:NSLocalizedStringFromTable(@"yd", @"FormatterKit", @"Yard Unit (Abbreviation)")];
             } else {
                 distanceString = [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:milesDistance]];
-                unitString = (milesDistance > 1.0 && milesDistance < 1.1) ? NSLocalizedStringFromTable(@"mile", @"FormatterKit", @"Mile Unit (Singular)") : NSLocalizedStringFromTable(@"miles", @"FormatterKit", @"Mile Unit (Plural)");
+                unitString =  [self unitForDistance:milesDistance
+                                               word:NSLocalizedStringFromTable(@"mile", @"FormatterKit", @"Mile Unit (Singular)")
+                                         wordPlural:NSLocalizedStringFromTable(@"miles", @"FormatterKit", @"Mile Unit  (Plural)")
+                                       abbreviation:NSLocalizedStringFromTable(@"mi", @"FormatterKit", @"Mile Unit  (Abbreviation)")];
             }
             break;
         }
@@ -298,6 +317,23 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
     return [NSString stringWithFormat:NSLocalizedStringFromTable(@"%@ %@", @"FormatterKit", @"#{Dimensional Quantity} #{Direction}"), [self stringFromSpeed:speed], [self stringFromBearingFromLocation:originLocation toLocation:destinationLocation]];
 }
 
+#pragma mark -
+
+- (NSString *)unitForDistance:(double)distance
+                         word:(NSString *)word
+                   wordPlural:(NSString *)wordPlural
+                 abbreviation:(NSString *)abbreviation {
+    
+    switch (self.distanceStyle) {
+        case TTTDistanceWordStyle:
+            return (distance >= 1.0 && distance < 1.1) ? word : wordPlural;
+            break;
+        case TTTDistanceAbbreviationWordStyle:
+            return abbreviation;
+            break;
+    }
+}
+
 #pragma mark - NSCoding
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
@@ -305,6 +341,7 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
 
     self.coordinateOrder = [aDecoder decodeIntegerForKey:@"coordinateOrder"];
     self.bearingStyle = [aDecoder decodeIntegerForKey:@"bearingStyle"];
+    self.distanceStyle = [aDecoder decodeIntegerForKey:@"distanceStyle"];
     self.unitSystem = [aDecoder decodeIntegerForKey:@"unitSystem"];
 
     _numberFormatter = [aDecoder decodeObjectForKey:@"numberFormatter"];
@@ -317,6 +354,7 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
 
     [aCoder encodeInteger:self.coordinateOrder forKey:@"coordinateOrder"];
     [aCoder encodeInteger:self.bearingStyle forKey:@"bearingStyle"];
+    [aCoder encodeInteger:self.distanceStyle forKey:@"distanceStyle"];
     [aCoder encodeInteger:self.unitSystem forKey:@"unitSystem"];
 
     [aCoder encodeObject:_numberFormatter forKey:@"numberFormatter"];

@@ -30,6 +30,7 @@ enum {
     DistanceInImperialWithcardinalDirectionAbbreviationsSectionIndex,
     SpeedInImperialWithBearingsInDegreesSectionIndex,
     CoordinatesSectionIndex,
+    DistanceInMetricWithWordStyleSectionIndex,
 } LocationFormatterViewControllerSectionIndexes;
 
 
@@ -60,7 +61,7 @@ enum {
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4;
+    return 5;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -77,6 +78,8 @@ enum {
             return NSLocalizedString(@"Speed in Imperial Units, with Bearing in Degrees", nil);
         case CoordinatesSectionIndex:
             return NSLocalizedString(@"Coordinates", nil);
+        case DistanceInMetricWithWordStyleSectionIndex:
+            return NSLocalizedString(@"Distance in Metric Unit, with unit as Word (not Abbreviations)", nil);
         default:
             return nil;
     }
@@ -117,6 +120,11 @@ enum {
             [_locationFormatter.numberFormatter setUsesSignificantDigits:NO];
             
             cell.textLabel.text = [_locationFormatter stringFromLocation:_austin];
+            break;
+        case DistanceInMetricWithWordStyleSectionIndex:
+            [_locationFormatter setUnitSystem:TTTMetricSystem];
+            [_locationFormatter setDistanceStyle:TTTDistanceWordStyle];
+            cell.textLabel.text = [_locationFormatter stringFromDistance:30];
             break;
     }
 }
