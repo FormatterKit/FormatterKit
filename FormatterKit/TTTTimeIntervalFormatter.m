@@ -50,6 +50,7 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
 
 @implementation TTTTimeIntervalFormatter
 @synthesize locale = _locale;
+@synthesize calendar = _calendar;
 @synthesize pastDeicticExpression = _pastDeicticExpression;
 @synthesize presentDeicticExpression = _presentDeicticExpression;
 @synthesize futureDeicticExpression = _futureDeicticExpression;
@@ -65,6 +66,9 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     if (!self) {
         return nil;
     }
+
+    self.locale = [NSLocale currentLocale];
+    self.calendar = [NSCalendar currentCalendar];
 
     self.pastDeicticExpression = NSLocalizedStringFromTable(@"ago", @"FormatterKit", @"Past Deictic Expression");
     self.presentDeicticExpression = NSLocalizedStringFromTable(@"just now", @"FormatterKit", @"Present Deictic Expression");
@@ -91,9 +95,8 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
         return self.presentDeicticExpression;
     }
 
-    NSCalendar *calendar = [NSCalendar currentCalendar];
     NSUInteger unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSWeekCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
-    NSDateComponents *components = [calendar components:unitFlags fromDate:startingDate toDate:endingDate options:0];
+    NSDateComponents *components = [self.calendar components:unitFlags fromDate:startingDate toDate:endingDate options:0];
 
     if (self.usesIdiomaticDeicticExpressions) {
         NSString *idiomaticDeicticExpression = [self localizedIdiomaticDeicticExpressionForComponents:components];
@@ -181,7 +184,7 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
 #pragma mark -
 
 - (NSString *)localizedIdiomaticDeicticExpressionForComponents:(NSDateComponents *)components {
-    NSString *languageCode = [[self locale] objectForKey:NSLocaleLanguageCode];
+    NSString *languageCode = [self.locale objectForKey:NSLocaleLanguageCode];
     if ([languageCode isEqualToString:@"en"]) {
         return [self enRelativeDateStringForComponents:components];
     }

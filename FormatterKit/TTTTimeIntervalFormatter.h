@@ -35,6 +35,11 @@
 @property (nonatomic, strong) NSLocale *locale;
 
 /**
+ Specifies the calendar used in date calculation. Defaults to the current system calendar.
+ */
+@property (nonatomic, strong) NSCalendar *calendar;
+
+/**
  Specifies the localized string used to express the past deictic expression. "ago" by default.
  */
 @property (nonatomic, strong) NSString *pastDeicticExpression;
