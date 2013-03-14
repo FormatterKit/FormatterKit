@@ -12,6 +12,8 @@ In short, use this library if you're manually formatting any of the following (w
 * __Units of Information__: Humanized representations of quantities of bits and bytes *(e.g. "2.7 MB")*
 * __URL Requests__: Print out `cURL` or `Wget` command equivalents for any `NSURLRequest` *(e.g. `curl -X POST "https://www.example.com/" -H "Accept: text/html"`)*
 
+> FormatterKit, along with [TransformerKit](https://github.com/mattt/TransformerKit) & [InflectorKit](https://github.com/mattt/InflectorKit) provide well-designed APIs for manipulating user-facing content.
+
 ## Demo
 
 Build and run the `FormatterKit Example` project in Xcode to see an inventory of the available `FormatterKit` components.
