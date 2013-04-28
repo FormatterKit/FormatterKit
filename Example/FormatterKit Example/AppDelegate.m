@@ -34,7 +34,8 @@
     RootViewController *viewController = [[RootViewController alloc] init];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     [self.window addSubview:self.navigationController.view];
-    
+
+    self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     
     return YES;
