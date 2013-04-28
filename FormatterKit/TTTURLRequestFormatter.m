@@ -51,9 +51,11 @@
         [command appendCommandLineArgument:@"--compressed"];
     }
 
-    NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[request URL]];
-    for (NSHTTPCookie *cookie in cookies) {
-        [command appendCommandLineArgument:[NSString stringWithFormat:@"--cookie \"%@=%@\"", [cookie name], [cookie value]]];
+    if ([request URL] != nil) {
+        NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[request URL]];
+        for (NSHTTPCookie *cookie in cookies) {
+            [command appendCommandLineArgument:[NSString stringWithFormat:@"--cookie \"%@=%@\"", [cookie name], [cookie value]]];
+        }
     }
 
     for (id field in [request allHTTPHeaderFields]) {
