@@ -41,6 +41,14 @@ typedef enum {
 } TTTLocationFormatterBearingStyle;
 
 /**
+ Specifies the style used when formatting distance into a string.
+ */
+typedef enum {
+    TTTDistanceWordStyle = 0,           // e.g. "kilometers"
+    TTTDistanceAbbreviationWordStyle,   // e.g. "km"
+} TTTLocationFormatterDistanceStyle;
+
+/**
  Specifies the units used to express distance in formatted strings.
  */
 typedef enum {
@@ -88,6 +96,11 @@ extern TTTLocationCardinalDirection TTTLocationCardinalDirectionFromBearing(CLLo
  Specifies the formatting of bearing in strings. `TTTBearingWordStyle` by default.
  */
 @property (nonatomic, assign) TTTLocationFormatterBearingStyle bearingStyle;
+
+/**
+ Specifies the formatting of distance in strings. `TTTDistanceAbbreviationWordStyle` by default.
+ */
+@property (nonatomic, assign) TTTLocationFormatterDistanceStyle distanceStyle;
 
 /**
  Specifies the units used to express distance in formatted strings. `TTTMetricSystem` by default.
