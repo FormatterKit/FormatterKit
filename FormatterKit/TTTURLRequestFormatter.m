@@ -51,7 +51,7 @@
         [command appendCommandLineArgument:@"--compressed"];
     }
 
-    if ([request URL] != nil) {
+    if ([request URL]) {
         NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[request URL]];
         for (NSHTTPCookie *cookie in cookies) {
             [command appendCommandLineArgument:[NSString stringWithFormat:@"--cookie \"%@=%@\"", [cookie name], [cookie value]]];
