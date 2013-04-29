@@ -14,7 +14,7 @@
    #{Distance} #{Unit}
    #{Speed} #{Unit}
    Deictic Expression Format (#{Time} #{Ago/From Now} */
-"%@ %@" = "2$@ %1$@";
+"%@ %@" = "%2$@ %1$@";
 
 /* Approximate Qualifier Format */
 "about %@" = "hace %@";
