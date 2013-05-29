@@ -184,7 +184,7 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
         }
     }
 
-    return [NSString stringWithFormat:NSLocalizedStringFromTable(@"%@ %@", @"FormatterKit", @"#{Distance} #{Unit}"), distanceString, unitString];
+    return [NSString stringWithFormat:NSLocalizedStringWithDefaultValue(@"Distance Format String", @"FormatterKit", [NSBundle mainBundle], @"%@ %@", @"#{Distance} #{Unit}"), distanceString, unitString];
 }
 
 - (NSString *)stringFromBearing:(CLLocationDegrees)bearing {
@@ -270,7 +270,7 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
         }
     }
 
-    return [NSString stringWithFormat:NSLocalizedStringFromTable(@"%@ %@", @"FormatterKit", @"#{Speed} #{Unit}"), speedString, unitString];
+    return [NSString stringWithFormat:NSLocalizedStringWithDefaultValue(@"Speed Format String", @"FormatterKit", [NSBundle mainBundle], @"%@ %@", @"#{Speed} #{Unit}"), speedString, unitString];
 }
 
 - (NSString *)stringFromDistanceFromLocation:(CLLocation *)originLocation
@@ -288,14 +288,14 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
 - (NSString *)stringFromDistanceAndBearingFromLocation:(CLLocation *)originLocation
                                             toLocation:(CLLocation *)destinationLocation
 {
-    return [NSString stringWithFormat:NSLocalizedStringFromTable(@"%@ %@", @"FormatterKit", @"#{Dimensional Quantity} #{Direction}"), [self stringFromDistanceFromLocation:originLocation toLocation:destinationLocation], [self stringFromBearingFromLocation:originLocation toLocation:destinationLocation]];
+    return [NSString stringWithFormat:NSLocalizedStringWithDefaultValue(@"Dimension Format String", @"FormatterKit", [NSBundle mainBundle], @"%@ %@", @"#{Dimensional Quantity} #{Direction}"), [self stringFromDistanceFromLocation:originLocation toLocation:destinationLocation], [self stringFromBearingFromLocation:originLocation toLocation:destinationLocation]];
 }
 
 - (NSString *)stringFromVelocityFromLocation:(CLLocation *)originLocation
                                   toLocation:(CLLocation *)destinationLocation
                                      atSpeed:(CLLocationSpeed)speed
 {
-    return [NSString stringWithFormat:NSLocalizedStringFromTable(@"%@ %@", @"FormatterKit", @"#{Dimensional Quantity} #{Direction}"), [self stringFromSpeed:speed], [self stringFromBearingFromLocation:originLocation toLocation:destinationLocation]];
+    return [NSString stringWithFormat:NSLocalizedStringWithDefaultValue(@"Dimension Format String", @"FormatterKit", [NSBundle mainBundle], @"%@ %@", @"#{Dimensional Quantity} #{Direction}"), [self stringFromSpeed:speed], [self stringFromBearingFromLocation:originLocation toLocation:destinationLocation]];
 }
 
 #pragma mark - NSCoding
