@@ -78,7 +78,7 @@
 @property (nonatomic, assign) NSUInteger numberOfSignificantUnitsToDisplay;
 
 /** Specifies the least significant unit that should be displayed when not approximating. Defaults to `NSCalendarUnitSeconds`. Must be any of year through to second inclusive. */
-@property (nonatomic, assign) NSCalendarUnit leastSignificantUnitToShow;
+@property (nonatomic, assign) NSCalendarUnit leastSignificantUnitToDisplay;
 
 /**
  Specifies whether to use abbreviated calendar units to describe time intervals, for instance "wks" instead of "weeks" in English. Defaults to `NO`.

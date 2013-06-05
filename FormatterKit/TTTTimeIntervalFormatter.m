@@ -61,7 +61,7 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
 @synthesize usesApproximateQualifier = _usesApproximateQualifier;
 @synthesize usesIdiomaticDeicticExpressions = _usesIdiomaticDeicticExpressions;
 @synthesize numberOfSignificantUnitsToDisplay = _numberOfSignificantUnitsToDisplay;
-@synthesize leastSignificantUnitToShow = _leastSignificantUnitToShow;
+@synthesize leastSignificantUnitToDisplay = _leastSignificantUnitToDisplay;
 
 - (id)init {
     self = [super init];
@@ -81,7 +81,7 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
 
     self.presentTimeIntervalMargin = 1;
     
-    self.leastSignificantUnitToShow = NSSecondCalendarUnit;
+    self.leastSignificantUnitToDisplay = NSSecondCalendarUnit;
     self.numberOfSignificantUnitsToDisplay = 1;
 
     return self;
@@ -116,7 +116,7 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     for (NSString *unitName in [[self class]validCalendarUnitNames]) {
         
         NSCalendarUnit unit = NSCalendarUnitFromString(unitName);
-        if(!string || self.leastSignificantUnitToShow >= unit){
+        if(!string || self.leastSignificantUnitToDisplay >= unit){
             
             NSNumber *number = [NSNumber numberWithInteger:abs([[components valueForKey:unitName] integerValue])];
             if ([number integerValue]) {
@@ -174,10 +174,10 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     return self.numberOfSignificantUnitsToDisplay == 0;
 }
 
--(void)setLeastSignificantUnitToShow:(NSCalendarUnit)leastSignificantUnitToShow{
-    NSAssert([[self class]isCalendarUnitValid:leastSignificantUnitToShow], @"Least significant unit must be one of: %@", [[self class] validCalendarUnitNames]);
+-(void)setLeastSignificantUnitToDisplay:(NSCalendarUnit)leastSignificantUnitToDisplay{
+    NSAssert([[self class]isCalendarUnitValid:leastSignificantUnitToDisplay], @"Least significant unit must be one of: %@", [[self class] validCalendarUnitNames]);
     
-    _leastSignificantUnitToShow = leastSignificantUnitToShow;
+    _leastSignificantUnitToDisplay = leastSignificantUnitToDisplay;
 }
 
 - (NSString *)localizedStringForNumber:(NSUInteger)number ofCalendarUnit:(NSCalendarUnit)unit {
