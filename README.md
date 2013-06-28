@@ -94,9 +94,11 @@ NSLog(@"%@", [locationFormatter stringFromDistanceAndBearingFromLocation:pittsbu
 
 #### Speed in Imperial Units with Bearing in Degrees
 
+``` objective-c
 [locationFormatter setBearingStyle:TTTBearingNumericStyle];
 NSLog(@"%@ at %@", [locationFormatter stringFromSpeed:25],[locationFormatter stringFromBearingFromLocation:pittsburgh toLocation:austin]);
 // "25 mph at 310°"
+```
 
 #### Coordinates
 
