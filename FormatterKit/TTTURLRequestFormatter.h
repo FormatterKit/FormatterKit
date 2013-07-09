@@ -29,6 +29,10 @@
  */
 @interface TTTURLRequestFormatter : NSFormatter
 
+///-------------------------
+/// @name Converting Objects
+///-------------------------
+
 /**
  Returns a string representation of a given request.
 
@@ -60,6 +64,10 @@
  For example, a particular response may be formatted as "200 http://example.com/"
  */
 @interface TTTHTTPURLResponseFormatter : NSFormatter
+
+///-------------------------
+/// @name Converting Objects
+///-------------------------
 
 /**
  Returns a string representation of a given HTTP response.

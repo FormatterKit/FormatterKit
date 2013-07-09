@@ -47,6 +47,13 @@
     return self;
 }
 
++ (NSString *)localizedStringFromArray:(NSArray *)anArray arrayStyle:(TTTArrayFormatterStyle)style {
+    TTTArrayFormatter *formatter = [[TTTArrayFormatter alloc] init];
+    [formatter setArrayStyle:style];
+
+    return [formatter stringFromArray:anArray];
+}
+
 - (NSString *)stringFromArray:(NSArray *)anArray {
     return [self stringFromArray:anArray rangesOfComponents:nil];
 }
@@ -102,13 +109,6 @@
     [self getObjectValue:&array forString:aString errorDescription:nil];
 
     return array;
-}
-
-+ (NSString *)localizedStringFromArray:(NSArray *)anArray arrayStyle:(TTTArrayFormatterStyle)style {
-    TTTArrayFormatter *formatter = [[TTTArrayFormatter alloc] init];
-    [formatter setArrayStyle:style];
-
-    return [formatter stringFromArray:anArray];
 }
 
 #pragma mark NSFormatter

@@ -23,7 +23,7 @@
 #import <Foundation/Foundation.h>
 #import <Availability.h>
 
-#if defined(__ABPerson__)
+#ifdef __ABPerson__
 
 /**
  Instances of `TTTAddressFormatter` create address strings formatted according to a given locale.
@@ -49,6 +49,10 @@
  Specifies the locale used to format strings. Defaults to the current system locale.
  */
 @property (nonatomic, strong) NSLocale *locale;
+
+///-------------------------
+/// @name Converting Objects
+///-------------------------
 
 /**
  Returns an address string for the specified components formatted with the receiver's locale.

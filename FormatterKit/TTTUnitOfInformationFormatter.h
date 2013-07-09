@@ -59,10 +59,18 @@ typedef enum {
  */
 @property (nonatomic, readonly) NSNumberFormatter *numberFormatter;
 
+///-------------------------------
+/// @name Configuring Use of Bytes
+///-------------------------------
+
 /**
  Specifies whether to display units of information in terms of bytes, as opposed to bits. `YES` by default.
  */
 @property (nonatomic, assign) BOOL displaysInTermsOfBytes;
+
+///--------------------------------------
+/// @name Configuring IEC Binary Prefixes
+///--------------------------------------
 
 /**
  Specifies whether to use IEC binary prefixes for calculation. `YES` by default.
@@ -73,6 +81,10 @@ typedef enum {
  Specifies whether to use IEC binary prefixes for display. `NO` by default.
  */
 @property (nonatomic, assign) BOOL usesIECBinaryPrefixesForDisplay;
+
+///-------------------------
+/// @name Converting Objects
+///-------------------------
 
 /**
  Returns a string representation of a given number of bits formatted using the receiver’s current settings.

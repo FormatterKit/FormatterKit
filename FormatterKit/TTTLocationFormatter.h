@@ -79,6 +79,10 @@ extern TTTLocationCardinalDirection TTTLocationCardinalDirectionFromBearing(CLLo
  */
 @property (readonly, nonatomic, strong) NSNumberFormatter *numberFormatter;
 
+///--------------------------------------------------
+/// @name Configuring Coordinate & Bearing Formatting
+///--------------------------------------------------
+
 /**
  Specifies the ordering of latitude and longitude values in coordinate pairs. `TTTCoordinateLatLngOrder` by default.
  */
@@ -89,10 +93,18 @@ extern TTTLocationCardinalDirection TTTLocationCardinalDirectionFromBearing(CLLo
  */
 @property (nonatomic, assign) TTTLocationFormatterBearingStyle bearingStyle;
 
+///------------------------------
+/// @name Configuring Unit System
+///------------------------------
+
 /**
  Specifies the units used to express distance in formatted strings. `TTTMetricSystem` by default.
  */
 @property (nonatomic, assign) TTTLocationUnitSystem unitSystem;
+
+///-------------------------
+/// @name Converting Objects
+///-------------------------
 
 /**
  Returns a string representation of a given coordinate formatted using the receiver’s current settings.
