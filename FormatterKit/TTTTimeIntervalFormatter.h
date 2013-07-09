@@ -96,12 +96,12 @@
 /**
  Specifies the number of units that should be displayed before approximating. `0` to show all units. `1` by default. 
  */
-@property (nonatomic, assign) NSUInteger numberOfSignificantUnitsToDisplay;
+@property (nonatomic, assign) NSUInteger numberOfSignificantUnits;
 
 /**
  Specifies the least significant unit that should be displayed when not approximating. Defaults to `NSCalendarUnitSeconds`. Must be any of year through to second inclusive.
  */
-@property (nonatomic, assign) NSCalendarUnit leastSignificantUnitToDisplay;
+@property (nonatomic, assign) NSCalendarUnit leastSignificantUnit;
 
 ///----------------------------------------------
 /// @name Configuring Calendar Unit Abbreviations
