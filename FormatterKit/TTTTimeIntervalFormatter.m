@@ -60,6 +60,8 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
 @synthesize usesAbbreviatedCalendarUnits = _usesAbbreviatedCalendarUnits;
 @synthesize usesApproximateQualifier = _usesApproximateQualifier;
 @synthesize usesIdiomaticDeicticExpressions = _usesIdiomaticDeicticExpressions;
+@synthesize numberOfSignificantUnitsToDisplay = _numberOfSignificantUnitsToDisplay;
+@synthesize leastSignificantUnitToDisplay = _leastSignificantUnitToDisplay;
 
 - (id)init {
     self = [super init];
@@ -78,6 +80,9 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     self.approximateQualifierFormat = NSLocalizedStringFromTable(@"about %@", @"FormatterKit", @"Approximate Qualifier Format");
 
     self.presentTimeIntervalMargin = 1;
+    
+    self.leastSignificantUnitToDisplay = NSSecondCalendarUnit;
+    self.numberOfSignificantUnitsToDisplay = 1;
 
     return self;
 }
@@ -107,13 +112,26 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
 
     NSString *string = nil;
     BOOL isApproximate = NO;
-    for (NSString *unitName in [NSArray arrayWithObjects:@"year", @"month", @"week", @"day", @"hour", @"minute", @"second", nil]) {
-        NSNumber *number = [NSNumber numberWithInteger:abs([[components valueForKey:unitName] integerValue])];
-        if ([number integerValue]) {
-            if (!string) {
-                string = [NSString stringWithFormat:@"%@ %@", number, [self localizedStringForNumber:[number integerValue] ofCalendarUnit:NSCalendarUnitFromString(unitName)]];
-            } else {
-                isApproximate = YES;
+    NSUInteger unitsDisplayed = 0;
+    for (NSString *unitName in [[self class]validCalendarUnitNames]) {
+        
+        NSCalendarUnit unit = NSCalendarUnitFromString(unitName);
+        if(!string || self.leastSignificantUnitToDisplay >= unit){
+            
+            NSNumber *number = [NSNumber numberWithInteger:abs([[components valueForKey:unitName] integerValue])];
+            if ([number integerValue]) {
+                
+                NSString *suffix = [NSString stringWithFormat:@"%@ %@", number, [self localizedStringForNumber:[number integerValue] ofCalendarUnit:unit]];
+                
+                if (!string) {
+                    string = suffix;
+                } else if(self.showAllUnits || unitsDisplayed < self.numberOfSignificantUnitsToDisplay){
+                    string = [string stringByAppendingFormat:@" %@", suffix];
+                }else{
+                    isApproximate = YES;
+                }
+                
+                unitsDisplayed++;
             }
         }
     }
@@ -135,6 +153,31 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     }
     
     return string;
+}
+
++(NSArray*)validCalendarUnitNames{
+    return @[@"year", @"month", @"week", @"day", @"hour", @"minute", @"second"];
+}
+
++(BOOL)isCalendarUnitValid:(NSCalendarUnit)unit{
+    for(NSString *unitName in [[self class]validCalendarUnitNames]){
+        NSCalendarUnit validUnit = NSCalendarUnitFromString(unitName);
+        if(unit == validUnit){
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
+-(BOOL)showAllUnits{
+    return self.numberOfSignificantUnitsToDisplay == 0;
+}
+
+-(void)setLeastSignificantUnitToDisplay:(NSCalendarUnit)leastSignificantUnitToDisplay{
+    NSAssert([[self class]isCalendarUnitValid:leastSignificantUnitToDisplay], @"Least significant unit must be one of: %@", [[self class] validCalendarUnitNames]);
+    
+    _leastSignificantUnitToDisplay = leastSignificantUnitToDisplay;
 }
 
 - (NSString *)localizedStringForNumber:(NSUInteger)number ofCalendarUnit:(NSCalendarUnit)unit {
