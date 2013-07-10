@@ -35,7 +35,7 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
         return NSHourCalendarUnit;
     } else if ([string isEqualToString:@"minute"]) {
         return NSMinuteCalendarUnit;
-    } if ([string isEqualToString:@"second"]) {
+    } else if ([string isEqualToString:@"second"]) {
         return NSSecondCalendarUnit;
     }
 
