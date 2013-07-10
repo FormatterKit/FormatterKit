@@ -199,34 +199,32 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
 
 - (NSString *)localizedIdiomaticDeicticExpressionForComponents:(NSDateComponents *)components {
     NSString *languageCode = [self.locale objectForKey:NSLocaleLanguageCode];
-    if ([languageCode isEqualToString:@"en"]) {
-        return [self enRelativeDateStringForComponents:components];
-    } else if ([languageCode isEqualToString:@"nl"]){
+    if ([languageCode isEqualToString:@"nl"]){
         return [self nlRelativeDateStringForComponents:components];
     }
 
-    return nil;
+    return [self enRelativeDateStringForComponents:components];
 }
 
 - (NSString *)enRelativeDateStringForComponents:(NSDateComponents *)components {
     if ([components year] == -1) {
-        return @"last year";
+        return NSLocalizedStringFromTable(@"last year", @"FormatterKit", @"");
     } else if ([components month] == -1 && [components year] == 0) {
-        return @"last month";
+        return NSLocalizedStringFromTable(@"last month", @"FormatterKit", @"");
     } else if ([components week] == -1 && [components year] == 0 && [components month] == 0) {
-        return @"last week";
+        return NSLocalizedStringFromTable(@"last week", @"FormatterKit", @"");
     } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
-        return @"yesterday";
+        return NSLocalizedStringFromTable(@"yesterday", @"FormatterKit", @"");
     }
 
     if ([components year] == 1) {
-        return @"next year";
+        return NSLocalizedStringFromTable(@"next year", @"FormatterKit", @"");
     } else if ([components month] == 1 && [components year] == 0) {
-        return @"next month";
+        return NSLocalizedStringFromTable(@"next month", @"FormatterKit", @"");
     } else if ([components week] == 1 && [components year] == 0 && [components month] == 0) {
-        return @"next week";
+        return NSLocalizedStringFromTable(@"next week", @"FormatterKit", @"");
     } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
-        return @"tomorrow";
+        return NSLocalizedStringFromTable(@"tomorrow", @"FormatterKit", @"");
     }
 
     return nil;
