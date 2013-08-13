@@ -14,6 +14,24 @@ In short, use this library if you're manually formatting any of the following (w
 
 > FormatterKit, along with [TransformerKit](https://github.com/mattt/TransformerKit) & [InflectorKit](https://github.com/mattt/InflectorKit) provide well-designed APIs for manipulating user-facing content.
 
+## Localizations
+
+FormatterKit comes fully internationalized, with `.strings` files for the following locales:
+
+- Danish (`da`)
+- Dutch (`nl`)
+- English (`en`)
+- German (`de`)
+- Greek (`el`)
+- French (`fr`)
+- Indonesian (`id`)
+- Italian (`it`)
+- Norwegian Bokmål (`nb`)
+- Norwegian Nynorsk (`nn`)
+- Spanish (`es`)
+
+If you'd like to contribue an additional localization, feel free to [open a new pull request](https://github.com/mattt/FormatterKit/pulls).
+
 ## Demo
 
 Build and run the `FormatterKit Example` project in Xcode to see an inventory of the available `FormatterKit` components.
