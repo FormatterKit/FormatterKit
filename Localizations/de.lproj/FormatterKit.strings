@@ -70,7 +70,7 @@
 "minute" = "Minute";
 
 /* Minute Unit (Plural) */
-"minutes" = "Minutes";
+"minutes" = "Minuten";
 
 /* Month Unit (Singular, Abbreviated) */
 "mo" = "M";
@@ -119,7 +119,7 @@
 "second" = "Sekunde";
 
 /* Second Unit (Plural) */
-"seconds" = "Sekundes";
+"seconds" = "Sekunden";
 
 /* South Direction */
 "South" = "Süd";
