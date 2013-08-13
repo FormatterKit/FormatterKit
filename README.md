@@ -32,7 +32,7 @@ FormatterKit comes fully internationalized, with `.strings` files for the follow
 - Spanish (`es`)
 - Swedish (`sv`)
 
-If you'd like to contribue an additional localization, feel free to [open a new pull request](https://github.com/mattt/FormatterKit/pulls).
+If you'd like to contribute an additional localization, feel free to [open a new pull request](https://github.com/mattt/FormatterKit/pulls).
 
 ## Demo
 
