@@ -26,10 +26,11 @@ FormatterKit comes fully internationalized, with `.strings` files for the follow
 - French (`fr`)
 - Indonesian (`id`)
 - Italian (`it`)
-- Portuguese (`pt`)
 - Norwegian Bokmål (`nb`)
 - Norwegian Nynorsk (`nn`)
+- Portuguese (Brazilian) (`pt_BR`)
 - Spanish (`es`)
+- Swedish (`sv`)
 
 If you'd like to contribue an additional localization, feel free to [open a new pull request](https://github.com/mattt/FormatterKit/pulls).
 
@@ -44,19 +45,19 @@ Build and run the `FormatterKit Example` project in Xcode to see an inventory of
 Address formats vary greatly across different regions. `TTTAddressFormatter` ties into the [Address Book frameworks](http://developer.apple.com/library/ios/#documentation/AddressBookUI/Reference/AddressBookUI_Framework/_index.html) to help your users find their place in the world.
 
 For example, addresses in the United States take the form:
-    
+
     Street Address
     City State ZIP
     Country
- 
+
 Whereas addresses in Japan follow a different convention:
- 
+
     Postal Code
     Prefecture Municipality
     Street Address
     Country
 
-> Requires the `AddressBook` and `AddressBookUI` frameworks are included, with `#import` statements in `Prefix.pch`.  
+> Requires the `AddressBook` and `AddressBookUI` frameworks are included, with `#import` statements in `Prefix.pch`.
 > Only available on iOS.
 
 ### Example Usage
