@@ -135,7 +135,13 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     if (string) {
         if (seconds > 0) {
             if ([self.pastDeicticExpression length]) {
-                string = [NSString stringWithFormat:self.deicticExpressionFormat, string, self.pastDeicticExpression];
+                NSString *languageCode = [self.locale objectForKey:NSLocaleLanguageCode];
+                if ([languageCode isEqualToString:@"es"]) {
+                    string = [NSString stringWithFormat:self.deicticExpressionFormat, self.pastDeicticExpression, string];
+                }
+                else {
+                    string = [NSString stringWithFormat:self.deicticExpressionFormat, string, self.pastDeicticExpression];
+                }
             }
         } else {
             if ([self.futureDeicticExpression length]) {
@@ -203,6 +209,8 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
         return [self enRelativeDateStringForComponents:components];
     } else if ([languageCode isEqualToString:@"nl"]){
         return [self nlRelativeDateStringForComponents:components];
+    } else if ([languageCode isEqualToString:@"es"]){
+        return [self esRelativeDateStringForComponents:components];
     }
 
     return nil;
@@ -255,6 +263,30 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
         return @"morgern";
     } else if ([components day] == 2 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
         return @"overmorgern";
+    }
+    
+    return nil;
+}
+
+- (NSString *)esRelativeDateStringForComponents:(NSDateComponents *)components {
+    if ([components year] == -1) {
+        return @"año pasado";
+    } else if ([components month] == -1 && [components year] == 0) {
+        return @"mes pasado";
+    } else if ([components week] == -1 && [components year] == 0 && [components month] == 0) {
+        return @"semana pasada";
+    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"ayer";
+    }
+    
+    if ([components year] == 1) {
+        return @"próximo año";
+    } else if ([components month] == 1 && [components year] == 0) {
+        return @"próximo mes";
+    } else if ([components week] == 1 && [components year] == 0 && [components month] == 0) {
+        return @"próxima semana";
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"mañana";
     }
     
     return nil;
