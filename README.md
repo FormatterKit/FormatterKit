@@ -26,6 +26,7 @@ FormatterKit comes fully internationalized, with `.strings` files for the follow
 - French (`fr`)
 - Indonesian (`id`)
 - Italian (`it`)
+- Korean (`ko`)
 - Norwegian Bokmål (`nb`)
 - Norwegian Nynorsk (`nn`)
 - Portuguese (Brazilian) (`pt_BR`)
