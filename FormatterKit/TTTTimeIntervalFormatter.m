@@ -109,7 +109,7 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
             return idiomaticDeicticExpression;
         }
     }
-
+	NSString *languageCode = [self.locale objectForKey:NSLocaleLanguageCode];
     NSString *string = nil;
     BOOL isApproximate = NO;
     NSUInteger numberOfUnits = 0;
@@ -118,7 +118,22 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
         if (!string || self.leastSignificantUnit >= unit) {
             NSNumber *number = [NSNumber numberWithInteger:abs([[components valueForKey:unitName] integerValue])];
             if ([number integerValue]) {
-                NSString *suffix = [NSString stringWithFormat:@"%@ %@", number, [self localizedStringForNumber:[number integerValue] ofCalendarUnit:unit]];
+				NSString *localizedString = [self localizedStringForNumber:[number integerValue] ofCalendarUnit:unit];
+				if ([languageCode isEqualToString:@"ru"]) { //Magic Russian language section
+					NSInteger lastNumber = [number.stringValue substringFromIndex:number.stringValue.length-1].integerValue;
+					if (lastNumber > 1 && lastNumber < 5) { //Applying special word case according to russian rules
+						if ([localizedString isEqualToString:@"секунд"]) localizedString = @"секунды";
+						if ([localizedString isEqualToString:@"минут"]) localizedString = @"минуты";
+						if ([localizedString isEqualToString:@"часов"]) localizedString = @"часа";
+						if ([localizedString isEqualToString:@"дней"]) localizedString = @"дня";
+						if ([localizedString isEqualToString:@"недель"]) localizedString = @"недели";
+						if ([localizedString isEqualToString:@"месяцев"]) localizedString = @"месяца";
+						if ([localizedString isEqualToString:@"лет"]) localizedString = @"года";
+					} else if (lastNumber == 1) { //Plural ending with 1 always written as single
+						localizedString = [self localizedStringForNumber:lastNumber ofCalendarUnit:unit];
+					}
+				}
+                NSString *suffix = [NSString stringWithFormat:@"%@ %@", number, localizedString];
                 if (!string) {
                     string = suffix;
                 } else if (self.numberOfSignificantUnits == 0 || numberOfUnits < self.numberOfSignificantUnits) {
@@ -135,7 +150,6 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     if (string) {
         if (seconds > 0) {
             if ([self.pastDeicticExpression length]) {
-                NSString *languageCode = [self.locale objectForKey:NSLocaleLanguageCode];
                 if ([languageCode isEqualToString:@"es"]) {
                     string = [NSString stringWithFormat:self.deicticExpressionFormat, self.pastDeicticExpression, string];
                 } else {
