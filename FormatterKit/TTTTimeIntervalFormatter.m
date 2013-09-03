@@ -121,7 +121,7 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
                 NSString *localizedString = [self localizedStringForNumber:[number integerValue] ofCalendarUnit:unit];
                 if ([languageCode isEqualToString:@"ru"]) { //Magic Russian language section
                     NSInteger lastNumber = number.integerValue % 10;
-                    if (lastNumber > 1 && lastNumber < 5) { //Applying special word case according to russian rules
+                    if ((lastNumber > 1 && lastNumber < 5) && (number.integerValue > 20 || number.integerValue < 10)) { //Applying special word case according to russian language rules
                         if ([localizedString isEqualToString:@"секунд"]) localizedString = @"секунды"; else
                         if ([localizedString isEqualToString:@"минут"]) localizedString = @"минуты"; else
                         if ([localizedString isEqualToString:@"часов"]) localizedString = @"часа"; else
