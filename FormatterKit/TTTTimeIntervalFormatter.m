@@ -120,14 +120,14 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
             if ([number integerValue]) {
                 NSString *localizedString = [self localizedStringForNumber:[number integerValue] ofCalendarUnit:unit];
                 if ([languageCode isEqualToString:@"ru"]) { //Magic Russian language section
-                    NSInteger lastNumber = [number.stringValue substringFromIndex:number.stringValue.length-1].integerValue;
+                    NSInteger lastNumber = number.integerValue % 10;
                     if (lastNumber > 1 && lastNumber < 5) { //Applying special word case according to russian rules
-                        if ([localizedString isEqualToString:@"секунд"]) localizedString = @"секунды";
-                        if ([localizedString isEqualToString:@"минут"]) localizedString = @"минуты";
-                        if ([localizedString isEqualToString:@"часов"]) localizedString = @"часа";
-                        if ([localizedString isEqualToString:@"дней"]) localizedString = @"дня";
-                        if ([localizedString isEqualToString:@"недель"]) localizedString = @"недели";
-                        if ([localizedString isEqualToString:@"месяцев"]) localizedString = @"месяца";
+                        if ([localizedString isEqualToString:@"секунд"]) localizedString = @"секунды"; else
+                        if ([localizedString isEqualToString:@"минут"]) localizedString = @"минуты"; else
+                        if ([localizedString isEqualToString:@"часов"]) localizedString = @"часа"; else
+                        if ([localizedString isEqualToString:@"дней"]) localizedString = @"дня"; else
+                        if ([localizedString isEqualToString:@"недель"]) localizedString = @"недели"; else
+                        if ([localizedString isEqualToString:@"месяцев"]) localizedString = @"месяца"; else
                         if ([localizedString isEqualToString:@"лет"]) localizedString = @"года";
                     } else if (lastNumber == 1) { //Plural ending with 1 always written as single
                         localizedString = [self localizedStringForNumber:lastNumber ofCalendarUnit:unit];
