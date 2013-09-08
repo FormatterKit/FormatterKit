@@ -135,12 +135,7 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     if (string) {
         if (seconds > 0) {
             if ([self.pastDeicticExpression length]) {
-                NSString *languageCode = [self.locale objectForKey:NSLocaleLanguageCode];
-                if ([languageCode isEqualToString:@"es"]) {
-                    string = [NSString stringWithFormat:self.deicticExpressionFormat, self.pastDeicticExpression, string];
-                } else {
-                    string = [NSString stringWithFormat:self.deicticExpressionFormat, string, self.pastDeicticExpression];
-                }
+                string = [NSString stringWithFormat:self.deicticExpressionFormat, string, self.pastDeicticExpression];
             }
         } else {
             if ([self.futureDeicticExpression length]) {

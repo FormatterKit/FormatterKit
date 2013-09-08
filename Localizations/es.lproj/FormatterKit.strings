@@ -37,7 +37,7 @@
 "days" = "días";
 
 /* Deictic Expression Format (#{Time} #{Ago/From Now} */
-"Deictic Expression Format String" = "%1$@ %2$@";
+"Deictic Expression Format String" = "%2$@ %1$@";
 
 /* #{Dimensional Quantity} #{Direction} */
 "Dimension Format String" = "%1$@ %2$@";
@@ -58,7 +58,7 @@
 "EiB" = "EiB";
 
 /* Future Deictic Expression */
-"from now" = "desde ahora";
+"from now" = "dentro de";
 
 /* Feet Unit */
 "ft" = "ft";
