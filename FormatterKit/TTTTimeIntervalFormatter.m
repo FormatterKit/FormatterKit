@@ -205,8 +205,38 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
         return [self esRelativeDateStringForComponents:components];
     } else if ([languageCode isEqualToString:@"nl"]){
         return [self nlRelativeDateStringForComponents:components];
+    } else if ([languageCode isEqualToString:@"ca"]){
+        return [self caRelativeDateStringForComponents:components];
     }
 
+    return nil;
+}
+
+- (NSString *)caRelativeDateStringForComponents:(NSDateComponents *)components {
+    if ([components year] == -1) {
+        return @"any passat";
+    } else if ([components month] == -1 && [components year] == 0) {
+        return @"mes passat";
+    } else if ([components week] == -1 && [components year] == 0 && [components month] == 0) {
+        return @"setmana passada";
+    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"ahir";
+    } else if ([components day] == -2 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"abans d'ahir";
+    }
+    
+    if ([components year] == 1) {
+        return @"pròxim any";
+    } else if ([components month] == 1 && [components year] == 0) {
+        return @"pròxim mes";
+    } else if ([components week] == 1 && [components year] == 0 && [components month] == 0) {
+        return @"pròxima setmana";
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"demà";
+    } else if ([components day] == 2 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"passat demà";
+    }
+    
     return nil;
 }
 
