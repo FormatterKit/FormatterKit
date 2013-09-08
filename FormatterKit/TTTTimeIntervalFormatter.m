@@ -243,6 +243,8 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
         return @"semana pasada";
     } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
         return @"ayer";
+    } else if ([components day] == -2 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"antes de ayer";
     }
 
     if ([components year] == 1) {
@@ -253,6 +255,8 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
         return @"próxima semana";
     } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
         return @"mañana";
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"pasado mañana";
     }
 
     return nil;
