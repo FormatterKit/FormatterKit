@@ -169,12 +169,10 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 
 - (NSString *)esOrdinalIndicatorStringFromNumber:(NSNumber *)number {
     switch (self.grammaticalGender) {
-        case TTTOrdinalNumberFormatterMaleGender:
-            return @"\u00BA"; // MASCULINE ORDINAL INDICATOR
         case TTTOrdinalNumberFormatterFemaleGender:
             return @"\u00AA"; // FEMININE ORDINAL INDICATOR
         default:
-            return kTTTOrdinalNumberFormatterDefaultOrdinalIndicator;
+            return @"\u00BA"; // MASCULINE ORDINAL INDICATOR
     }
 }
 
