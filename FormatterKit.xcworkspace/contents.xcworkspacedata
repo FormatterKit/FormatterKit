@@ -17,6 +17,12 @@
          location = "group:TTTArrayFormatter.m">
       </FileRef>
       <FileRef
+         location = "group:TTTColorFormatter.h">
+      </FileRef>
+      <FileRef
+         location = "group:TTTColorFormatter.m">
+      </FileRef>
+      <FileRef
          location = "group:TTTLocationFormatter.h">
       </FileRef>
       <FileRef

@@ -23,6 +23,7 @@
 #import "RootViewController.h"
 #import "AddressFormatterViewController.h"
 #import "ArrayFormatterViewController.h"
+#import "ColorFormatterViewController.h"
 #import "LocationFormatterViewController.h"
 #import "OrdinalNumberFormatterViewController.h"
 #import "TimeIntervalFormatterViewController.h"
@@ -32,6 +33,7 @@
 enum {
     AddressRowIndex,
     ArrayRowIndex,
+    ColorRowIndex,
     LocationRowIndex,
     OrdinalNumberRowIndex,
     TimeIntervalRowIndex,
@@ -102,6 +104,9 @@ enum {
         case ArrayRowIndex:
             cell.textLabel.text = NSLocalizedString(@"Array Formatter", nil);
             break;
+        case ColorRowIndex:
+            cell.textLabel.text = NSLocalizedString(@"Color Formatter", nil);
+            break;
         case LocationRowIndex:
             cell.textLabel.text = NSLocalizedString(@"Location Formatter", nil);
             break;
@@ -133,6 +138,9 @@ enum {
             break;
         case ArrayRowIndex:
             viewController = [[ArrayFormatterViewController alloc] init];
+            break;
+        case ColorRowIndex:
+            viewController = [[ColorFormatterViewController alloc] init];
             break;
         case LocationRowIndex:
             viewController = [[LocationFormatterViewController alloc] init];

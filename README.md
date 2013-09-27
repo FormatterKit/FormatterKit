@@ -6,6 +6,7 @@ In short, use this library if you're manually formatting any of the following (w
 
 * __Addresses__: Create formatted address strings from components *(e.g. 221b Baker St / Paddington / Greater London / NW1 6XE / United Kingdom )*
 * __Arrays__: Display `NSArray` elements in a comma-delimited list *(e.g. "Russell, Spinoza & Rawls")*
+* __Colors__: RGB, CMYK, and HSL your ROY G. BIV in style. *(e.g. `#BADF00D`, `rgb(255, 100, 42)`)*
 * __Location, Distance & Direction__: Show `CLLocationDistance`, `CLLocationDirection`, and `CLLocationSpeed` in metric or imperial units *(eg. "240ft Northwest" / "45 km/h SE")*
 * __Ordinal Numbers__: Convert cardinal `NSNumber` objects to their ordinal in most major languages *(eg. "1st, 2nd, 3rd" / "1ère, 2ème, 3ème")*
 * __Time Intervals__: Show relative time distance between any two `NSDate` objects *(e.g. "3 minutes ago" / "yesterday")*
@@ -73,12 +74,23 @@ Think of this as a production-ready alternative to `NSArray -componentsJoinedByS
 
 ### Example Usage
 
-``` objective-c
+```objective-c
 NSArray *list = [NSArray arrayWithObjects:@"Russel", @"Spinoza", @"Rawls", nil];
 TTTArrayFormatter *arrayFormatter = [[TTTArrayFormatter alloc] init];
 [arrayFormatter setUsesAbbreviatedConjunction:YES]; // Use '&' instead of 'and'
 [arrayFormatter setUsesSerialDelimiter:NO]; // Omit Oxford Comma
 NSLog(@"%@", [arrayFormatter stringFromArray:list]); // # => "Russell, Spinoza & Rawls"
+```
+
+## TTTColorFormatter
+
+RGB, CMYK, and HSL your ROY G. BIV in style. `TTTColorFormatter` provides string representations of colors.
+
+### Example Usage
+
+```objective-c
+TTTColorFormatter *colorFormatter = [[TTTColorFormatter alloc] init];
+NSString *RGB = [colorFormatter RGBStringFromColor:[UIColor orangeColor]];
 ```
 
 ## TTTLocationFormatter
@@ -89,7 +101,7 @@ When working with `CoreLocation`, you can use your favorite unit for distance...
 
 ### Example Usage
 
-``` objective-c
+```objective-c
 TTTLocationFormatter *locationFormatter = [[TTTLocationFormatter alloc] init];
 CLLocation *austin = [[CLLocation alloc] initWithLatitude:30.2669444 longitude:-97.7427778];
 CLLocation *pittsburgh = [[CLLocation alloc] initWithLatitude:40.4405556 longitude:-79.9961111];
@@ -97,14 +109,14 @@ CLLocation *pittsburgh = [[CLLocation alloc] initWithLatitude:40.4405556 longitu
 
 #### Distance in Metric Units with Cardinal Directions
 
-``` objective-c
+```objective-c
 NSLog(@"%@", [locationFormatter stringFromDistanceAndBearingFromLocation:pittsburgh toLocation:austin]);
 // "2,000 km Southwest"
 ```
 
 #### Distance in Imperial Units with Cardinal Direction Abbreviations
 
-``` objective-c
+```objective-c
 [locationFormatter.numberFormatter setMaximumSignificantDigits:4];
 [locationFormatter setBearingStyle:TTTBearingAbbreviationWordStyle];
 [locationFormatter setUnitSystem:TTTImperialSystem];
@@ -114,7 +126,7 @@ NSLog(@"%@", [locationFormatter stringFromDistanceAndBearingFromLocation:pittsbu
 
 #### Speed in Imperial Units with Bearing in Degrees
 
-``` objective-c
+```objective-c
 [locationFormatter setBearingStyle:TTTBearingNumericStyle];
 NSLog(@"%@ at %@", [locationFormatter stringFromSpeed:25],[locationFormatter stringFromBearingFromLocation:pittsburgh toLocation:austin]);
 // "25 mph at 310°"
@@ -122,7 +134,7 @@ NSLog(@"%@ at %@", [locationFormatter stringFromSpeed:25],[locationFormatter str
 
 #### Coordinates
 
-``` objective-c
+```objective-c
 [locationFormatter.numberFormatter setUsesSignificantDigits:NO];
 NSLog(@"%@", [locationFormatter stringFromLocation:austin]);
 // (30.2669444, -97.7427778)
@@ -138,7 +150,7 @@ A naïve implementation might be as simple as throwing the one's place in a swit
 
 ### Example Usage
 
-``` objective-c
+```objective-c
 TTTOrdinalNumberFormatter *ordinalNumberFormatter = [[TTTOrdinalNumberFormatter alloc] init];
 [ordinalNumberFormatter setLocale:[NSLocale currentLocale]];
 [ordinalNumberFormatter setGrammaticalGender:TTTOrdinalNumberFormatterMaleGender];
@@ -160,7 +172,7 @@ iOS 4 introduced a `-doesRelativeDateFormatting` property for `NSDateFormatter`,
 
 ### Example Usage
 
-``` objective-c
+```objective-c
 TTTTimeIntervalFormatter *timeIntervalFormatter = [[TTTTimeIntervalFormatter alloc] init];
 [timeIntervalFormatter stringForTimeInterval:0]; // "just now"
 [timeIntervalFormatter stringForTimeInterval:100]; // "1 minute ago"
@@ -189,7 +201,7 @@ No matter how far abstracted from its underlying hardware an application may be,
 
 ### Example Usage
 
-``` objective-c
+```objective-c
 TTTUnitOfInformationFormatter *unitOfInformationFormatter = [[TTTUnitOfInformationFormatter alloc] init];
 [unitOfInformationFormatter stringFromNumberOfBits:[NSNumber numberWithInteger:416]]; // "56 bytes"
 
@@ -214,7 +226,7 @@ Enter `TTTURLRequestFormatter`. In addition to formatting requests simply as `PO
 
 ### Example Usage
 
-``` objective-c
+```objective-c
 NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://www.example.com/"]];
 [request setHTTPMethod:@"POST"];
 [request addValue:@"text/html" forHTTPHeaderField:@"Accept"];

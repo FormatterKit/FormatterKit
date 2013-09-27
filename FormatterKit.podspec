@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name      = 'FormatterKit'
-  s.version   = '1.2.1'
-  s.license   = { :type => 'MIT', :file => 'LICENSE' }
+  s.version   = '1.3.0'
+  s.license   = { :type => 'MIT' }
   s.summary   = '`stringWithFormat:` for the sophisticated hacker set.'
   s.homepage  = 'https://github.com/mattt/FormatterKit'
   s.author    = { 'Mattt Thompson' => 'm@mattt.me' }
-  s.source    = { :git => 'https://github.com/mattt/FormatterKit.git', :tag => '1.2.1' }
+  s.source    = { :git => 'https://github.com/mattt/FormatterKit.git', :tag => '1.3.0' }
 
   s.description = "FormatterKit is a collection of well-crafted NSFormatter subclasses for things like units of information, distance, and relative time intervals. Each formatter abstracts away the complex business logic of their respective domain, so that you can focus on the more important aspects of your application."
 
@@ -19,6 +19,11 @@ Pod::Spec.new do |s|
 
   s.subspec 'ArrayFormatter' do |ss|
     ss.source_files = 'FormatterKit/TTTArrayFormatter.{h,m}'
+    ss.resources = 'Localizations/**'
+  end
+
+  s.subspec 'ColorFormatter' do |ss|
+    ss.source_files = 'FormatterKit/TTTColorFormatter.{h,m}'
     ss.resources = 'Localizations/**'
   end
 
