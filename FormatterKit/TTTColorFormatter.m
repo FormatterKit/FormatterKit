@@ -153,7 +153,24 @@ static void TTTGetHSLComponentsFromColor(UIColor *color, CGFloat *hue, CGFloat *
 }
 
 - (UIColor *)colorFromCMYKString:(NSString *)string {
-    return nil;
+    NSScanner *scanner = [NSScanner scannerWithString:string];
+    scanner.charactersToBeSkipped = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+    
+    CGFloat c, m, y, k;
+    
+    [scanner scanFloat:&c];
+    [scanner scanFloat:&m];
+    [scanner scanFloat:&y];
+    [scanner scanFloat:&k];
+    
+    c *= 0.01f;
+    m *= 0.01f;
+    y *= 0.01f;
+    k *= 0.01f;
+    
+    CGFloat dk = 1.0f - k;
+    
+    return [UIColor colorWithRed:(1.0f - c) * dk green:(1.0f - m) * dk blue:(1.0f - y) * dk alpha:1.0f];
 }
 
 #pragma mark -
