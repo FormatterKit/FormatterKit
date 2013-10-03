@@ -100,8 +100,48 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
         return [self jaOrdinalIndicatorStringFromNumber:number];
     } else if ([languageCode isEqualToString:@"zh"]) {
         return [self zhHansOrdinalIndicatorStringFromNumber:number];
+    } else if ([languageCode isEqualToString:@"ca"]) {
+        return [self caOrdinalIndicatorStringFromNumber:number];
     } else {
         return kTTTOrdinalNumberFormatterDefaultOrdinalIndicator;
+    }
+}
+
+- (NSString *)caOrdinalIndicatorStringFromNumber:(NSNumber *)number {
+    if (self.grammaticalNumber == TTTOrdinalNumberFormatterPlural) {
+        if (self.grammaticalGender == TTTOrdinalNumberFormatterFemaleGender) {
+            return @"es";
+        } else {
+            switch ([number integerValue]) {
+                case 1:
+                    return @"rs";
+                case 2:
+                    return @"ns";
+                case 3:
+                    return @"rs";
+                case 4:
+                    return @"ts";
+                default:
+                    return @"ns";
+            }
+        }
+    } else {
+        if (self.grammaticalGender == TTTOrdinalNumberFormatterFemaleGender) {
+            return @"a";
+        } else {
+            switch ([number integerValue]) {
+                case 1:
+                    return @"r";
+                case 2:
+                    return @"n";
+                case 3:
+                    return @"r";
+                case 4:
+                    return @"t";
+                default:
+                    return @"è";
+            }
+        }
     }
 }
 
@@ -129,12 +169,10 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 
 - (NSString *)esOrdinalIndicatorStringFromNumber:(NSNumber *)number {
     switch (self.grammaticalGender) {
-        case TTTOrdinalNumberFormatterMaleGender:
-            return @"\u00BA"; // MASCULINE ORDINAL INDICATOR
         case TTTOrdinalNumberFormatterFemaleGender:
             return @"\u00AA"; // FEMININE ORDINAL INDICATOR
         default:
-            return kTTTOrdinalNumberFormatterDefaultOrdinalIndicator;
+            return @"\u00BA"; // MASCULINE ORDINAL INDICATOR
     }
 }
 

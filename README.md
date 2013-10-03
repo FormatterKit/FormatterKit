@@ -33,6 +33,7 @@ FormatterKit comes fully internationalized, with `.strings` files for the follow
 - Portuguese (Brazilian) (`pt_BR`)
 - Spanish (`es`)
 - Swedish (`sv`)
+- Catalan (`ca`)
 
 If you'd like to contribute an additional localization, feel free to [open a new pull request](https://github.com/mattt/FormatterKit/pulls).
 

@@ -11,13 +11,13 @@
 "," = ",";
 
 /* Approximate Qualifier Format */
-"about %@" = "hace %@";
+"about %@" = "fa %@";
 
 /* Past Deictic Expression */
-"ago" = "hace";
+"ago" = "fa";
 
 /* List conjunction */
-"and" = "y";
+"and" = "i";
 
 /* Bit Unit */
 "bits" = "bits";
@@ -26,15 +26,15 @@
 "bytes" = "bytes";
 
 /* Error converting to NSArray */
-"Couldn’t convert to NSArray" = "No se puede convertir a NSArray";
+"Couldn’t convert to NSArray" = "No es pot convertir a NSArray";
 
 /* Day Unit (Singular)
    Day Unit (Singular, Abbreviated) */
-"day" = "día";
+"day" = "dia";
 
 /* Day Unit (Plural)
    Day Unit (Plural, Abbreviated) */
-"days" = "días";
+"days" = "dies";
 
 /* Deictic Expression Format (#{Time} #{Ago/From Now} */
 "Deictic Expression Format String" = "%2$@ %1$@";
@@ -49,7 +49,7 @@
 "E" = "E";
 
 /* East Direction */
-"East" = "Este";
+"East" = "Est";
 
 /* Exabyte Unit */
 "EB" = "EB";
@@ -58,7 +58,7 @@
 "EiB" = "EiB";
 
 /* Future Deictic Expression */
-"from now" = "dentro de";
+"from now" = "d'aquí";
 
 /* Feet Unit */
 "ft" = "ft";
@@ -82,7 +82,7 @@
 "hour" = "hora";
 
 /* Hour Unit (Plural) */
-"hours" = "horas";
+"hours" = "hores";
 
 /* Hour Unit (Singular, Abbreviated) */
 "hr" = "h";
@@ -91,7 +91,7 @@
 "hrs" = "h";
 
 /* Present Deictic Expression */
-"just now" = "ahora";
+"just now" = "ara";
 
 /* Kilobyte Unit */
 "KB" = "KB";
@@ -112,13 +112,13 @@
 "km/h" = "km/h";
 
 /* No comment provided by engineer. */
-"last month" = "mes pasado";
+"last month" = "mes passat";
 
 /* No comment provided by engineer. */
-"last week" = "semana pasada";
+"last week" = "setmana passada";
 
 /* No comment provided by engineer. */
-"last year" = "año pasado";
+"last year" = "any passat";
 
 /* Meter Unit */
 "m" = "m";
@@ -133,7 +133,7 @@
 "Mbit" = "Mb";
 
 /* No comment provided by engineer. */
-"Method Not Implemented" = "Método no implementado";
+"Method Not Implemented" = "Mètode no implementat";
 
 /* Mebibyte Unit */
 "MiB" = "MiB";
@@ -145,7 +145,7 @@
 "mile" = "milla";
 
 /* Mile Unit (Plural) */
-"miles" = "millas";
+"miles" = "milles";
 
 /* Minute Unit (Singular, Abbreviated) */
 "min" = "min.";
@@ -154,10 +154,10 @@
 "mins" = "min.";
 
 /* Minute Unit (Singular) */
-"minute" = "minuto";
+"minute" = "minut";
 
 /* Minute Unit (Plural) */
-"minutes" = "minutos";
+"minutes" = "minuts";
 
 /* Month Unit (Singular, Abbreviated) */
 "mo" = "mes";
@@ -166,10 +166,10 @@
 "month" = "mes";
 
 /* Month Unit (Plural) */
-"months" = "meses";
+"months" = "mesos";
 
 /* Month Unit (Plural, Abbreviated) */
-"mos" = "meses";
+"mos" = "mesos";
 
 /* Miles Per Hour Unit */
 "mph" = "mph";
@@ -184,22 +184,22 @@
 "NE" = "NE";
 
 /* No comment provided by engineer. */
-"next month" = "próximo mes";
+"next month" = "pròxim mes";
 
 /* No comment provided by engineer. */
-"next week" = "próxima semana";
+"next week" = "pròxima setmana";
 
 /* No comment provided by engineer. */
-"next year" = "próximo año";
+"next year" = "pròxim any";
 
 /* North Direction */
-"North" = "Norte";
+"North" = "Nord";
 
 /* Northeast Direction */
-"Northeast" = "Noreste";
+"Northeast" = "Nord-est";
 
 /* Northwest Direction */
-"Northwest" = "Noroeste";
+"Northwest" = "Nord-oest";
 
 /* Northwest Direction Abbreviation */
 "NW" = "NO";
@@ -227,19 +227,19 @@
 "SE" = "SE";
 
 /* Second Unit (Singular) */
-"second" = "segundo";
+"second" = "segon";
 
 /* Second Unit (Plural) */
-"seconds" = "segundos";
+"seconds" = "segons";
 
 /* South Direction */
-"South" = "Sur";
+"South" = "Sud";
 
 /* Southeast Direction */
-"Southeast" = "Sureste";
+"Southeast" = "Sud-est";
 
 /* Southwest Direction */
-"Southwest" = "Suroeste";
+"Southwest" = "Sud-oest";
 
 /* #{Speed} #{Unit} */
 "Speed Format String" = "%1$@ %2$@";
@@ -260,7 +260,7 @@
 "Tibit" = "Tibit";
 
 /* No comment provided by engineer. */
-"tomorrow" = "mañana";
+"tomorrow" = "demà";
 
 /* #{Value} #{Unit} */
 "Unit of Information Format String" = "%1$@ %2$@";
@@ -269,34 +269,34 @@
 "W" = "O";
 
 /* Week Unit (Singular) */
-"week" = "semana";
+"week" = "setmana";
 
 /* Week Unit (Plural) */
-"weeks" = "semanas";
+"weeks" = "setmanes";
 
 /* West Direction */
-"West" = "Oeste";
+"West" = "Oest";
 
 /* Week Unit (Singular, Abbreviated) */
-"wk" = "semana";
+"wk" = "setmana";
 
 /* Week Unit (Plural, Abbreviated) */
-"wks" = "semanas";
+"wks" = "setmanes";
 
 /* Yard Unit */
 "yds" = "yds";
 
 /* Year Unit (Singular) */
-"year" = "año";
+"year" = "any";
 
 /* Year Unit (Plural) */
-"years" = "años";
+"years" = "anys";
 
 /* No comment provided by engineer. */
-"yesterday" = "ayer";
+"yesterday" = "ahir";
 
 /* Year Unit (Singular, Abbreviated) */
-"yr" = "año";
+"yr" = "any";
 
 /* Year Unit (Plural, Abbreviated) */
-"yrs" = "años";
+"yrs" = "anys";
