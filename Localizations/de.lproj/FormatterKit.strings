@@ -22,6 +22,9 @@
 /* Past Deictic Expression */
 "ago" = "vor";
 
+/* Deictic Expression Format (#{Time} #{Ago/From Now} */
+"Deictic Expression Format String" = "%2$@ %1$@";
+
 /* List conjunction */
 "and" = "und";
 
