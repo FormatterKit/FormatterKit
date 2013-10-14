@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import "TTTAddressFormatter.h"
+#import "TTTLocalization.h"
 
 #if defined(__ABPerson__)
 
@@ -91,7 +92,7 @@
              forString:(NSString *)string
       errorDescription:(NSString **)error
 {
-    *error = NSLocalizedStringFromTable(@"Method Not Implemented", @"FormatterKit", nil);
+    *error = TTTLocalizedString(@"Method Not Implemented", nil);
     
     return NO;
 }
