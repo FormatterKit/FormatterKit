@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import "TTTUnitOfInformationFormatter.h"
+#import "TTTLocalization.h"
 
 static inline NSUInteger TTTNumberOfBitsInUnit(TTTUnitOfInformation unit) {
     switch (unit) {
@@ -55,36 +56,39 @@ static inline double TTTScaleFactorForIECPrefix(TTTUnitPrefix prefix) {
 }
 
 static inline NSString * TTTBitUnitStringForIECPrefix(TTTUnitPrefix prefix) {
+    NSBundle *bundle = TTTFormatterKitResourceBundleInBundle([NSBundle bundleForClass:[TTTUnitOfInformationFormatter class]]);
+
     switch (prefix) {
         case TTTKilo:
-            return NSLocalizedStringFromTable(@"Kibit", @"FormatterKit", @"Kibibit Unit");
+            return TTTLocalizedStringInBundle(@"Kibit", bundle, @"Kibibit Unit");
         case TTTMega:
-            return NSLocalizedStringFromTable(@"Mibit", @"FormatterKit", @"Mebibit Unit");
+            return TTTLocalizedStringInBundle(@"Mibit", bundle, @"Mebibit Unit");
         case TTTGiga:
-            return NSLocalizedStringFromTable(@"Gibit", @"FormatterKit", @"Gibibit Unit");
+            return TTTLocalizedStringInBundle(@"Gibit", bundle, @"Gibibit Unit");
         case TTTTera:
-            return NSLocalizedStringFromTable(@"Tibit", @"FormatterKit", @"Tebibit Unit");
+            return TTTLocalizedStringInBundle(@"Tibit", bundle, @"Tebibit Unit");
         case TTTPeta:
-            return NSLocalizedStringFromTable(@"Pibit", @"FormatterKit", @"Pebibit Unit");
+            return TTTLocalizedStringInBundle(@"Pibit", bundle, @"Pebibit Unit");
         case TTTExa:
             return nil;
     }
 }
 
 static inline NSString * TTTByteUnitStringForIECPrefix(TTTUnitPrefix prefix) {
+    NSBundle *bundle = TTTFormatterKitResourceBundleInBundle([NSBundle bundleForClass:[TTTUnitOfInformationFormatter class]]);
     switch (prefix) {
         case TTTKilo:
-            return NSLocalizedStringFromTable(@"KiB", @"FormatterKit", @"Kibibyte Unit");
+            return TTTLocalizedStringInBundle(@"KiB", bundle, @"Kibibyte Unit");
         case TTTMega:
-            return NSLocalizedStringFromTable(@"MiB", @"FormatterKit", @"Mebibyte Unit");
+            return TTTLocalizedStringInBundle(@"MiB", bundle, @"Mebibyte Unit");
         case TTTGiga:
-            return NSLocalizedStringFromTable(@"GiB", @"FormatterKit", @"Gibibyte Unit");
+            return TTTLocalizedStringInBundle(@"GiB", bundle, @"Gibibyte Unit");
         case TTTTera:
-            return NSLocalizedStringFromTable(@"TiB", @"FormatterKit", @"Tebibyte Unit");
+            return TTTLocalizedStringInBundle(@"TiB", bundle, @"Tebibyte Unit");
         case TTTPeta:
-            return NSLocalizedStringFromTable(@"PiB", @"FormatterKit", @"Pebibyte Unit");
+            return TTTLocalizedStringInBundle(@"PiB", bundle, @"Pebibyte Unit");
         case TTTExa:
-            return NSLocalizedStringFromTable(@"EiB", @"FormatterKit", @"Exbibyte Unit");
+            return TTTLocalizedStringInBundle(@"EiB", bundle, @"Exbibyte Unit");
     }
 }
 
@@ -106,36 +110,38 @@ static inline double TTTScaleFactorForSIPrefix(TTTUnitPrefix prefix) {
 }
 
 static inline NSString * TTTBitUnitStringForSIPrefix(TTTUnitPrefix prefix) {
+    NSBundle *bundle = TTTFormatterKitResourceBundleInBundle([NSBundle bundleForClass:[TTTUnitOfInformationFormatter class]]);
     switch (prefix) {
         case TTTKilo:
-            return NSLocalizedStringFromTable(@"kbit", @"FormatterKit", @"Kilobit Unit");
+            return TTTLocalizedStringInBundle(@"kbit", bundle, @"Kilobit Unit");
         case TTTMega:
-            return NSLocalizedStringFromTable(@"Mbit", @"FormatterKit", @"Megabit Unit");
+            return TTTLocalizedStringInBundle(@"Mbit", bundle, @"Megabit Unit");
         case TTTGiga:
-            return NSLocalizedStringFromTable(@"Gbit", @"FormatterKit", @"Gigabit Unit");
+            return TTTLocalizedStringInBundle(@"Gbit", bundle, @"Gigabit Unit");
         case TTTTera:
-            return NSLocalizedStringFromTable(@"Tbit", @"FormatterKit", @"Terabit Unit");
+            return TTTLocalizedStringInBundle(@"Tbit", bundle, @"Terabit Unit");
         case TTTPeta:
-            return NSLocalizedStringFromTable(@"Pbit", @"FormatterKit", @"Petabit Unit");
+            return TTTLocalizedStringInBundle(@"Pbit", bundle, @"Petabit Unit");
         case TTTExa:
             return nil;
     }
 }
 
 static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
+    NSBundle *bundle = TTTFormatterKitResourceBundleInBundle([NSBundle bundleForClass:[TTTUnitOfInformationFormatter class]]);
     switch (prefix) {
         case TTTKilo:
-            return NSLocalizedStringFromTable(@"KB", @"FormatterKit", @"Kilobyte Unit");
+            return TTTLocalizedStringInBundle(@"KB", bundle, @"Kilobyte Unit");
         case TTTMega:
-            return NSLocalizedStringFromTable(@"MB", @"FormatterKit", @"Megabyte Unit");
+            return TTTLocalizedStringInBundle(@"MB", bundle, @"Megabyte Unit");
         case TTTGiga:
-            return NSLocalizedStringFromTable(@"GB", @"FormatterKit", @"Gigabyte Unit");
+            return TTTLocalizedStringInBundle(@"GB", bundle, @"Gigabyte Unit");
         case TTTTera:
-            return NSLocalizedStringFromTable(@"TB", @"FormatterKit", @"Terabyte Unit");
+            return TTTLocalizedStringInBundle(@"TB", bundle, @"Terabyte Unit");
         case TTTPeta:
-            return NSLocalizedStringFromTable(@"PB", @"FormatterKit", @"Petabyte Unit");
+            return TTTLocalizedStringInBundle(@"PB", bundle, @"Petabyte Unit");
         case TTTExa:
-            return NSLocalizedStringFromTable(@"EB", @"FormatterKit", @"Exabyte Unit");
+            return TTTLocalizedStringInBundle(@"EB", bundle, @"Exabyte Unit");
     }
 }
 
@@ -209,7 +215,7 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
     }
 
     if (doubleValue < [self scaleFactorForPrefix:TTTKilo]) {
-        unitString = self.displaysInTermsOfBytes ? NSLocalizedStringFromTable(@"bytes", @"FormatterKit", @"Byte Unit") : NSLocalizedStringFromTable(@"bits", @"FormatterKit", @"Bit Unit");
+        unitString = self.displaysInTermsOfBytes ? TTTLocalizedString(@"bytes", @"Byte Unit") : TTTLocalizedString(@"bits", @"Bit Unit");
     } else {
         TTTUnitPrefix prefix = [self prefixForInteger:[number integerValue]];
         if (self.displaysInTermsOfBytes) {
@@ -221,7 +227,7 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
         doubleValue /= [self scaleFactorForPrefix:prefix];
     }
 
-    return [NSString stringWithFormat:NSLocalizedStringWithDefaultValue(@"Unit of Information Format String", @"FormatterKit", [NSBundle mainBundle], @"%@ %@", @"#{Value} #{Unit}"), [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:doubleValue]], unitString];
+    return [NSString stringWithFormat:TTTLocalizedStringWithDefaultValue(@"Unit of Information Format String", @"%@ %@", @"#{Value} #{Unit}"), [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:doubleValue]], unitString];
 }
 
 - (NSString *)stringFromNumber:(NSNumber *)number
