@@ -35,6 +35,7 @@
 		F8FBFA481427E23C001409DB /* TimeIntervalFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA471427E23C001409DB /* TimeIntervalFormatterViewController.m */; };
 		F8FBFA4B1427E260001409DB /* URLRequestFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA4A1427E260001409DB /* URLRequestFormatterViewController.m */; };
 		F8FBFA591428EE32001409DB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBFA581428EE31001409DB /* CoreLocation.framework */; };
+		FAC72F34180C9F56004ADFEE /* FormatterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FAC72F33180C9F55004ADFEE /* FormatterKitResources.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		F8FBFA491427E260001409DB /* URLRequestFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLRequestFormatterViewController.h; sourceTree = "<group>"; };
 		F8FBFA4A1427E260001409DB /* URLRequestFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLRequestFormatterViewController.m; sourceTree = "<group>"; };
 		F8FBFA581428EE31001409DB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FAC72F33180C9F55004ADFEE /* FormatterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FormatterKitResources.bundle; path = /Users/alex/Documents/strava/FormatterKit/FormatterKit/../FormatterKitResources.bundle; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +226,7 @@
 				F872625314FD3BED00800E11 /* UnitOfInformationFormatterViewController.m */,
 				F8FBFA491427E260001409DB /* URLRequestFormatterViewController.h */,
 				F8FBFA4A1427E260001409DB /* URLRequestFormatterViewController.m */,
+				FAC72F33180C9F55004ADFEE /* FormatterKitResources.bundle */,
 			);
 			name = Formatters;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8FBF9F31427A456001409DB /* InfoPlist.strings in Resources */,
+				FAC72F34180C9F56004ADFEE /* FormatterKitResources.bundle in Resources */,
 				F892375416A4BE43002FCF70 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

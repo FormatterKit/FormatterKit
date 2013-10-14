@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import "TTTArrayFormatter.h"
+#import "TTTLocalization.h"
 
 @implementation TTTArrayFormatter
 @synthesize arrayStyle = _arrayStyle;
@@ -37,10 +38,10 @@
         return nil;
     }
 
-    self.delimiter = NSLocalizedStringFromTable(@",", @"FormatterKit", @"List delimiter");
-    self.separator = NSLocalizedStringFromTable(@" ", @"FormatterKit", @"List separator");
-    self.conjunction = NSLocalizedStringFromTable(@"and", @"FormatterKit", @"List conjunction");
-    self.abbreviatedConjunction = NSLocalizedStringFromTable(@"&", @"FormatterKit", nil);
+    self.delimiter = TTTLocalizedString(@",", @"List delimiter");
+    self.separator = TTTLocalizedString(@" ", @"List separator");
+    self.conjunction = TTTLocalizedString(@"and", @"List conjunction");
+    self.abbreviatedConjunction = TTTLocalizedString(@"&", nil);
     self.usesAbbreviatedConjunction = NO;
     self.usesSerialDelimiter = YES;
 
@@ -142,7 +143,7 @@
             *obj = [NSArray arrayWithArray:components];
         } else {
             if (error) {
-                *error = NSLocalizedStringFromTable(@"Couldn’t convert to NSArray", @"FormatterKit", @"Error converting to NSArray");
+                *error = TTTLocalizedString(@"Couldn’t convert to NSArray", @"Error converting to NSArray");
             }
         }
     }
