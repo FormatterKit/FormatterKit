@@ -5,6 +5,9 @@
       location = "group:FormatterKit"
       name = "FormatterKit">
       <FileRef
+         location = "group:TTTLocalization.h">
+      </FileRef>
+      <FileRef
          location = "group:TTTAddressFormatter.h">
       </FileRef>
       <FileRef
@@ -51,6 +54,12 @@
       </FileRef>
       <FileRef
          location = "group:TTTURLRequestFormatter.m">
+      </FileRef>
+      <FileRef
+         location = "container:FormatterKitResources.bundle">
+      </FileRef>
+      <FileRef
+         location = "container:FormatterKit.podspec">
       </FileRef>
    </Group>
    <FileRef
