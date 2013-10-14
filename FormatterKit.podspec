@@ -12,44 +12,44 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.subspec 'AddressFormatter' do |ss|
-    ss.source_files = 'FormatterKit/TTTAddressFormatter.{h,m}'
+    ss.source_files = 'FormatterKit/TTTAddressFormatter.{h,m}', 'FormatterKit/TTTLocalization.h'
     ss.resources = 'FormatterKitResources.bundle'
     ss.frameworks = 'AddressBook'
   end
 
   s.subspec 'ArrayFormatter' do |ss|
-    ss.source_files = 'FormatterKit/TTTArrayFormatter.{h,m}'
+    ss.source_files = 'FormatterKit/TTTArrayFormatter.{h,m}', 'FormatterKit/TTTLocalization.h'
     ss.resources = 'FormatterKitResources.bundle'
   end
 
   s.subspec 'ColorFormatter' do |ss|
-    ss.source_files = 'FormatterKit/TTTColorFormatter.{h,m}'
+    ss.source_files = 'FormatterKit/TTTColorFormatter.{h,m}', 'FormatterKit/TTTLocalization.h'
     ss.resources = 'FormatterKitResources.bundle'
   end
 
   s.subspec 'LocationFormatter' do |ss|
-    ss.source_files = 'FormatterKit/TTTLocationFormatter.{h,m}'
+    ss.source_files = 'FormatterKit/TTTLocationFormatter.{h,m}', 'FormatterKit/TTTLocalization.h'
     ss.resources = 'FormatterKitResources.bundle'
     ss.frameworks = 'CoreLocation'
   end
 
   s.subspec 'OrdinalNumberFormatter' do |ss|
-    ss.source_files = 'FormatterKit/TTTOrdinalNumberFormatter.{h,m}'
+    ss.source_files = 'FormatterKit/TTTOrdinalNumberFormatter.{h,m}', 'FormatterKit/TTTLocalization.h'
     ss.resources = 'FormatterKitResources.bundle'
   end
 
   s.subspec 'TimeIntervalFormatter' do |ss|
-    ss.source_files = 'FormatterKit/TTTTimeIntervalFormatter.{h,m}'
+    ss.source_files = 'FormatterKit/TTTTimeIntervalFormatter.{h,m}', 'FormatterKit/TTTLocalization.h'
     ss.resources = 'FormatterKitResources.bundle'
   end
 
   s.subspec 'UnitOfInformationFormatter' do |ss|
-    ss.source_files = 'FormatterKit/TTTUnitOfInformationFormatter.{h,m}'
+    ss.source_files = 'FormatterKit/TTTUnitOfInformationFormatter.{h,m}', 'FormatterKit/TTTLocalization.h'
     ss.resources = 'FormatterKitResources.bundle'
   end
 
   s.subspec 'URLRequestFormatter' do |ss|
-    ss.source_files = 'FormatterKit/TTTURLRequestFormatter.{h,m}'
+    ss.source_files = 'FormatterKit/TTTURLRequestFormatter.{h,m}', 'FormatterKit/TTTLocalization.h'
     ss.resources = 'FormatterKitResources.bundle'
   end
 end
