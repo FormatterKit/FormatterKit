@@ -283,9 +283,9 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     } else if ([components week] == 1 && [components year] == 0 && [components month] == 0) {
         return @"volgende week";
     } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
-        return @"morgern";
+        return @"morgen";
     } else if ([components day] == 2 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
-        return @"overmorgern";
+        return @"overmorgen";
     }
     
     return nil;
