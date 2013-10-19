@@ -78,7 +78,6 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
         return nil;
     }
 
-    self.locale = [NSLocale currentLocale];
     self.calendar = [NSCalendar currentCalendar];
 
     self.pastDeicticExpression = NSLocalizedStringFromTable(@"ago", @"FormatterKit", @"Past Deictic Expression");
