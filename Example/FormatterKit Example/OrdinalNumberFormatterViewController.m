@@ -47,6 +47,7 @@
     [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"fr_FR"]];
     [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"de_DE"]];
     [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"ga_IE"]];
+    [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"ru_RU"]];
     [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"it_IT"]];
     [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"]];
     [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"nl_NL"]];

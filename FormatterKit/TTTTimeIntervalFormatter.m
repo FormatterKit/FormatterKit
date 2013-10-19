@@ -22,6 +22,15 @@
 
 #import "TTTTimeIntervalFormatter.h"
 
+typedef enum {
+	kWordCaseZero,
+	kWordCaseOne,
+	kWordCaseTwo,
+	kWordCaseFew,
+	kWordCaseMany,
+	kWordCaseOther
+} kWordCase;
+
 static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     if ([string isEqualToString:@"year"]) {
         return NSYearCalendarUnit;
@@ -69,7 +78,6 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
         return nil;
     }
 
-    self.locale = [NSLocale currentLocale];
     self.calendar = [NSCalendar currentCalendar];
 
     self.pastDeicticExpression = NSLocalizedStringFromTable(@"ago", @"FormatterKit", @"Past Deictic Expression");
@@ -109,7 +117,7 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
             return idiomaticDeicticExpression;
         }
     }
-
+    NSString *languageCode = [self.locale objectForKey:NSLocaleLanguageCode];
     NSString *string = nil;
     BOOL isApproximate = NO;
     NSUInteger numberOfUnits = 0;
@@ -118,7 +126,33 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
         if (!string || self.leastSignificantUnit >= unit) {
             NSNumber *number = [NSNumber numberWithInteger:abs([[components valueForKey:unitName] integerValue])];
             if ([number integerValue]) {
-                NSString *suffix = [NSString stringWithFormat:@"%@ %@", number, [self localizedStringForNumber:[number integerValue] ofCalendarUnit:unit]];
+                NSString *localizedString = [self localizedStringForNumber:[number integerValue] ofCalendarUnit:unit];
+                if ([languageCode isEqualToString:@"ru"]) { //Magic Russian language section
+                    NSInteger n = number.integerValue;
+					switch ([self wordCaseForNumber:n inLocale:self.locale]) {
+						case kWordCaseOne:
+						{
+							localizedString = [self localizedStringForNumber:1 ofCalendarUnit:unit];
+						}
+							break;
+						case kWordCaseFew:
+						{
+							if ([localizedString isEqualToString:@"секунд"]) localizedString = @"секунды";
+							if ([localizedString isEqualToString:@"минут"]) localizedString = @"минуты";
+							if ([localizedString isEqualToString:@"часов"]) localizedString = @"часа";
+							if ([localizedString isEqualToString:@"дней"]) localizedString = @"дня";
+							if ([localizedString isEqualToString:@"недель"]) localizedString = @"недели";
+							if ([localizedString isEqualToString:@"месяцев"]) localizedString = @"месяца";
+							if ([localizedString isEqualToString:@"лет"]) localizedString = @"года";
+						}
+							break;
+						case kWordCaseMany:
+							break;
+						default:
+							break;
+					}
+                }
+                NSString *suffix = [NSString stringWithFormat:@"%@ %@", number, localizedString];
                 if (!string) {
                     string = suffix;
                 } else if (self.numberOfSignificantUnits == 0 || numberOfUnits < self.numberOfSignificantUnits) {
@@ -135,7 +169,6 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     if (string) {
         if (seconds > 0) {
             if ([self.pastDeicticExpression length]) {
-                NSString *languageCode = [self.locale objectForKey:NSLocaleLanguageCode];
                 if ([languageCode isEqualToString:@"es"]) {
                     string = [NSString stringWithFormat:self.deicticExpressionFormat, self.pastDeicticExpression, string];
                 } else {
@@ -202,6 +235,33 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
 
 #pragma mark -
 
+- (kWordCase)wordCaseForNumber:(NSInteger)n inLocale:(NSLocale*)locale {
+	// be bs hr ru sh sr uk
+	if ([self isLocale:locale includeAnyCodes:@[@"be",@"bs",@"hr",@"ru",@"sh",@"sr",@"uk"]]) {
+		if (((n % 10) == 1) && ((n % 100) != 11)) // n mod 10 is 1 and n mod 100 is not 11
+		{ // {One}
+			return kWordCaseOne;
+		}
+		else if ((((n % 10) >= 2 && (n % 10) <= 4)) && !((n % 100) >= 12 && (n % 100) <= 14))
+		{ // {Few}
+			return kWordCaseFew;
+		}
+		else if (((n % 10) == 0) || (((n % 10) >= 5 && (n % 10) <= 9)) || (((n % 100) >= 11 && (n % 100) <= 14)))
+		{ // {Many}
+			return kWordCaseMany;
+		}
+	}
+	return 0;
+}
+
+- (BOOL)isLocale:(NSLocale*)locale includeAnyCodes:(NSArray*)codes {
+	NSString *languageCode = [locale objectForKey:NSLocaleLanguageCode];
+	for (NSString *code in codes) {
+		if ([languageCode isEqualToString:code]) return YES;
+	}
+	return NO;
+}
+
 - (NSString *)localizedIdiomaticDeicticExpressionForComponents:(NSDateComponents *)components {
     NSString *languageCode = [self.locale objectForKey:NSLocaleLanguageCode];
     if ([languageCode isEqualToString:@"en"]) {
@@ -211,7 +271,6 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     } else if ([languageCode isEqualToString:@"nl"]){
         return [self nlRelativeDateStringForComponents:components];
     }
-
     return nil;
 }
 

@@ -31,6 +31,7 @@ FormatterKit comes fully internationalized, with `.strings` files for the follow
 - Norwegian Bokmål (`nb`)
 - Norwegian Nynorsk (`nn`)
 - Portuguese (Brazilian) (`pt_BR`)
+- Russian (`ru`)
 - Spanish (`es`)
 - Swedish (`sv`)
 
