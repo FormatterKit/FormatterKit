@@ -22,6 +22,12 @@
 
 #import "TTTTimeIntervalFormatter.h"
 
+typedef enum {
+    RuLocalizationCaseOne,
+    RuLocalizationCaseFew,
+    RuLocalizationCaseMany
+} RuLocalizationCase;
+
 static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     if ([string isEqualToString:@"year"]) {
         return NSYearCalendarUnit;
@@ -133,9 +139,9 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     }
     
     if (string) {
+        NSString *languageCode = [self.locale objectForKey:NSLocaleLanguageCode];
         if (seconds > 0) {
             if ([self.pastDeicticExpression length]) {
-                NSString *languageCode = [self.locale objectForKey:NSLocaleLanguageCode];
                 if ([languageCode isEqualToString:@"es"]) {
                     string = [NSString stringWithFormat:self.deicticExpressionFormat, self.pastDeicticExpression, string];
                 } else {
@@ -144,7 +150,11 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
             }
         } else {
             if ([self.futureDeicticExpression length]) {
-                string = [NSString stringWithFormat:self.deicticExpressionFormat, string, self.futureDeicticExpression];
+                if ([languageCode isEqualToString:@"ru"]) {
+                    string = [NSString stringWithFormat:self.deicticExpressionFormat, self.futureDeicticExpression, string];
+                } else {
+                    string = [NSString stringWithFormat:self.deicticExpressionFormat, string, self.futureDeicticExpression];
+                }
             }
         }
 
@@ -157,6 +167,10 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
 }
 
 - (NSString *)localizedStringForNumber:(NSUInteger)number ofCalendarUnit:(NSCalendarUnit)unit {
+    if ([[self.locale objectForKey:NSLocaleLanguageCode] isEqualToString:@"ru"] && (!self.usesAbbreviatedCalendarUnits || unit == NSCalendarUnitDay)) {
+        return [self ruLocalizedStringForNumber:number ofCalendarUnit:unit];
+    }
+
     BOOL singular = (number == 1);
 
     if (self.usesAbbreviatedCalendarUnits) {
@@ -200,6 +214,136 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     }
 }
 
+#pragma mark - Russian localization
+
+- (NSString *)ruLocalizedStringForNumber:(NSUInteger)number ofCalendarUnit:(NSCalendarUnit)unit {
+    NSUInteger lastDigit = number % 10;
+    NSMutableIndexSet *manyCaseIndexes = [[NSMutableIndexSet alloc] initWithIndex:0];
+    [manyCaseIndexes addIndexesInRange:NSMakeRange(5, 9)];
+
+    if ([manyCaseIndexes containsIndex:number % 100]) {
+        return [self ruTimeIntervalStringForCase:RuLocalizationCaseMany ofCalendarUnit:unit];
+    } else if (NSLocationInRange(lastDigit, NSMakeRange(2, 2))) {
+        return [self ruTimeIntervalStringForCase:RuLocalizationCaseFew ofCalendarUnit:unit];
+    } else if (lastDigit == 1) {
+        return [self ruTimeIntervalStringForCase:RuLocalizationCaseOne ofCalendarUnit:unit];
+    }
+
+    return [self ruTimeIntervalStringForCase:RuLocalizationCaseMany ofCalendarUnit:unit];
+}
+
+- (NSString *)ruTimeIntervalStringForCase:(RuLocalizationCase)ruCase ofCalendarUnit:(NSCalendarUnit)unit {
+    switch (unit) {
+        case NSYearCalendarUnit:
+            return [self ruYearStringForCase:ruCase];
+        case NSMonthCalendarUnit:
+            return [self ruMonthStringForCase:ruCase];
+        case NSWeekCalendarUnit:
+            return [self ruWeekStringForCase:ruCase];
+        case NSDayCalendarUnit:
+            return [self ruDayStringForCase:ruCase];
+        case NSHourCalendarUnit:
+            return [self ruHourStringForCase:ruCase];
+        case NSMinuteCalendarUnit:
+            return [self ruMinuteStringForCase:ruCase];
+        case NSSecondCalendarUnit:
+            return [self ruSecondStringForCase:ruCase];
+        default:
+            return nil;
+    }
+}
+
+- (NSString *)ruYearStringForCase:(RuLocalizationCase)ruCase {
+    switch (ruCase) {
+        case RuLocalizationCaseOne:
+            return @"год";
+        case RuLocalizationCaseFew:
+            return @"года";
+        case RuLocalizationCaseMany:
+            return @"лет";
+        default:
+            return nil;
+    }
+}
+
+- (NSString *)ruMonthStringForCase:(RuLocalizationCase)ruCase {
+    switch (ruCase) {
+        case RuLocalizationCaseOne:
+            return @"месяц";
+        case RuLocalizationCaseFew:
+            return @"месяца";
+        case RuLocalizationCaseMany:
+            return @"месяцев";
+        default:
+            return nil;
+    }
+}
+
+- (NSString *)ruWeekStringForCase:(RuLocalizationCase)ruCase {
+    switch (ruCase) {
+        case RuLocalizationCaseOne:
+            return @"неделю";
+        case RuLocalizationCaseFew:
+            return @"недели";
+        case RuLocalizationCaseMany:
+            return @"недель";
+        default:
+            return nil;
+    }
+}
+
+- (NSString *)ruDayStringForCase:(RuLocalizationCase)ruCase {
+    switch (ruCase) {
+        case RuLocalizationCaseOne:
+            return @"день";
+        case RuLocalizationCaseFew:
+            return @"дня";
+        case RuLocalizationCaseMany:
+            return @"дней";
+        default:
+            return nil;
+    }
+}
+
+- (NSString *)ruHourStringForCase:(RuLocalizationCase)ruCase {
+    switch (ruCase) {
+        case RuLocalizationCaseOne:
+            return @"час";
+        case RuLocalizationCaseFew:
+            return @"часа";
+        case RuLocalizationCaseMany:
+            return @"часов";
+        default:
+            return nil;
+    }
+}
+
+- (NSString *)ruMinuteStringForCase:(RuLocalizationCase)ruCase {
+    switch (ruCase) {
+        case RuLocalizationCaseOne:
+            return @"минуту";
+        case RuLocalizationCaseFew:
+            return @"минуты";
+        case RuLocalizationCaseMany:
+            return @"минут";
+        default:
+            return nil;
+    }
+}
+
+- (NSString *)ruSecondStringForCase:(RuLocalizationCase)ruCase {
+    switch (ruCase) {
+        case RuLocalizationCaseOne:
+            return @"секунду";
+        case RuLocalizationCaseFew:
+            return @"секунды";
+        case RuLocalizationCaseMany:
+            return @"секунд";
+        default:
+            return nil;
+    }
+}
+
 #pragma mark -
 
 - (NSString *)localizedIdiomaticDeicticExpressionForComponents:(NSDateComponents *)components {
@@ -210,6 +354,8 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
         return [self esRelativeDateStringForComponents:components];
     } else if ([languageCode isEqualToString:@"nl"]){
         return [self nlRelativeDateStringForComponents:components];
+    } else if ([languageCode isEqualToString:@"ru"]) {
+        return [self ruRelativeDateStringForComponents:components];
     }
 
     return nil;
@@ -288,6 +434,34 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
         return @"overmorgen";
     }
     
+    return nil;
+}
+
+- (NSString *)ruRelativeDateStringForComponents:(NSDateComponents *)components {
+    if ([components year] == -1) {
+        return @"в прошлом году";
+    } else if ([components month] == -1 && [components year] == 0) {
+        return @"в прошлом месяце";
+    } else if ([components week] == -1 && [components year] == 0 && [components month] == 0) {
+        return @"на прошлой неделе";
+    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"вчера";
+    } else if ([components day] == -2 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"позавчера";
+    }
+
+    if ([components year] == 1) {
+        return @"в следующем году";
+    } else if ([components month] == 1 && [components year] == 0) {
+        return @"в следующем месяце";
+    } else if ([components week] == 1 && [components year] == 0 && [components month] == 0) {
+        return @"на следующей неделе";
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"завтра";
+    } else if ([components day] == 2 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"послезавтра";
+    }
+
     return nil;
 }
 
