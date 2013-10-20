@@ -229,7 +229,7 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
         return [self ruTimeIntervalStringForCase:RuLocalizationCaseOne ofCalendarUnit:unit];
     }
 
-    return nil;
+    return [self ruTimeIntervalStringForCase:RuLocalizationCaseMany ofCalendarUnit:unit];
 }
 
 - (NSString *)ruTimeIntervalStringForCase:(RuLocalizationCase)ruCase ofCalendarUnit:(NSCalendarUnit)unit {
