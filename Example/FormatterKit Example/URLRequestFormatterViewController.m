@@ -91,8 +91,12 @@ enum {
             return tableView.rowHeight;
     }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+#pragma clang diagnostic ignored "-Wconversion"
     CGSize size = [command sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:CGSizeMake(280.0f, tableView.frame.size.height) lineBreakMode:UILineBreakModeWordWrap];
-    
+#pragma clang diagnostic pop
+
     return fmaxf(size.height + 16.0f, self.tableView.rowHeight);
 }
 

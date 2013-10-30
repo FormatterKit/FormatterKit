@@ -36,7 +36,10 @@
 
 - (void)loadView {
     [super loadView];
-    
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+#pragma clang diagnostic ignored "-Wconversion"
     UILabel *descriptionLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     descriptionLabel.numberOfLines = 0;
     descriptionLabel.lineBreakMode = UILineBreakModeWordWrap;
@@ -49,7 +52,8 @@
     
     CGSize descriptionSize = [descriptionLabel.text sizeWithFont:descriptionLabel.font constrainedToSize:CGRectInset(self.tableView.frame, 20.0f, 0.0f).size lineBreakMode:UILineBreakModeWordWrap];    
     descriptionLabel.frame = CGRectMake(20.0f, 10.0f, descriptionSize.width, descriptionSize.height);
-    
+#pragma clang diagnostic pop
+
     UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectInset(descriptionLabel.frame, -20.0f, -10.0f)];
     [tableHeaderView addSubview:descriptionLabel];
     
