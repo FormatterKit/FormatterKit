@@ -26,6 +26,16 @@
 - (void)appendCommandLineArgument:(NSString *)arg;
 @end
 
+@implementation NSMutableString (TTTURLRequestFormatter)
+
+- (void)appendCommandLineArgument:(NSString *)arg {
+    [self appendFormat:@" %@", [arg stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
+}
+
+@end
+
+#pragma mark -
+
 @implementation TTTURLRequestFormatter
 
 - (NSString *)stringFromURLRequest:(NSURLRequest *)request {
@@ -115,16 +125,6 @@
     *error = NSLocalizedStringFromTable(@"Method Not Implemented", @"FormatterKit", nil);
 
     return NO;
-}
-
-@end
-
-#pragma mark -
-
-@implementation NSMutableString (TTTURLRequestFormatter)
-
-- (void)appendCommandLineArgument:(NSString *)arg {
-    [self appendFormat:@" %@", [arg stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
 }
 
 @end
