@@ -98,6 +98,25 @@
     return [NSString stringWithFormat:@"%d '%@'", [response statusCode], [[response URL] absoluteString]];
 }
 
+#pragma mark - NSFormatter
+
+- (NSString *)stringForObjectValue:(id)obj {
+    if ([obj isKindOfClass:[NSHTTPURLResponse class]]) {
+        return [self stringFromHTTPURLResponse:(NSHTTPURLResponse *)obj];
+    } else {
+        return nil;
+    }
+}
+
+- (BOOL)getObjectValue:(out __autoreleasing id *)obj
+             forString:(NSString *)string
+      errorDescription:(out NSString *__autoreleasing *)error
+{
+    *error = NSLocalizedStringFromTable(@"Method Not Implemented", @"FormatterKit", nil);
+
+    return NO;
+}
+
 @end
 
 #pragma mark -

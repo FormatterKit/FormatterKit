@@ -190,15 +190,7 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
     }
 }
 
-#pragma mark - NSFormatter
-
-- (NSString *)stringForObjectValue:(id)obj {
-    if ([obj isKindOfClass:[NSNumber class]]) {
-        return [self stringFromNumberOfBits:(NSNumber *)obj];
-    } else {
-        return nil;
-    }
-}
+#pragma mark -
 
 - (NSString *)stringFromNumberOfBits:(NSNumber *)number {
     NSString *unitString = nil;
@@ -235,6 +227,25 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
                     withPrefix:(TTTUnitPrefix)prefix
 {
     return [self stringFromNumber:[NSNumber numberWithDouble:([self scaleFactorForPrefix:prefix] * [number integerValue])] ofUnit:unit];
+}
+
+#pragma mark - NSFormatter
+
+- (NSString *)stringForObjectValue:(id)obj {
+    if ([obj isKindOfClass:[NSNumber class]]) {
+        return [self stringFromNumberOfBits:(NSNumber *)obj];
+    } else {
+        return nil;
+    }
+}
+
+- (BOOL)getObjectValue:(out __autoreleasing id *)obj
+             forString:(NSString *)string
+      errorDescription:(out NSString *__autoreleasing *)error
+{
+    *error = NSLocalizedStringFromTable(@"Method Not Implemented", @"FormatterKit", nil);
+
+    return NO;
 }
 
 #pragma mark - NSCoding

@@ -202,6 +202,35 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     return @"\u7b2c";
 }
 
+#pragma mark - NSFormatter
+
+- (NSString *)stringForObjectValue:(id)anObject {
+    if (![anObject isKindOfClass:[NSNumber class]]) {
+        return nil;
+    }
+
+    return [self stringFromNumber:(NSNumber *)anObject];
+}
+
+- (BOOL)getObjectValue:(out __autoreleasing id *)obj
+             forString:(NSString *)string
+      errorDescription:(out NSString *__autoreleasing *)error
+{
+    NSInteger integer = NSNotFound;
+    NSScanner *scanner = [NSScanner scannerWithString:string];
+    [scanner scanInteger:&integer];
+
+    if (integer != NSNotFound) {
+        *obj = [NSNumber numberWithInteger:integer];
+
+        return YES;
+    }
+
+    *error = NSLocalizedStringFromTable(@"String did not contain a valid ordinal number", @"FormatterKit", nil);
+
+    return NO;
+}
+
 #pragma mark - NSCoding
 
 - (id)initWithCoder:(NSCoder *)aDecoder {

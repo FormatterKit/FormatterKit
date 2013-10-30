@@ -77,19 +77,19 @@
 #endif
 }
 
-#pragma mark NSFormatter
+#pragma mark - NSFormatter
 
 - (NSString *)stringForObjectValue:(id)anObject {
     if (![anObject isKindOfClass:[NSDictionary class]]) {
         return nil;
     }
     
-    return ABCreateStringWithAddressDictionary(anObject, YES);
+    return ABCreateStringWithAddressDictionary((NSDictionary *)anObject, YES);
 }
 
-- (BOOL)getObjectValue:(id *)obj
+- (BOOL)getObjectValue:(out __autoreleasing id *)obj
              forString:(NSString *)string
-      errorDescription:(NSString **)error
+      errorDescription:(out NSString *__autoreleasing *)error
 {
     *error = NSLocalizedStringFromTable(@"Method Not Implemented", @"FormatterKit", nil);
     

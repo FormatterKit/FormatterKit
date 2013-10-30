@@ -186,4 +186,42 @@ static void TTTGetHSLComponentsFromColor(UIColor *color, CGFloat *hue, CGFloat *
     return [NSString stringWithFormat:@"[UIColor colorWithRed:%g green:%g blue:%g alpha:%g]", r, g, b, a];
 }
 
+#pragma mark - NSFormatter
+
+- (NSString *)stringForObjectValue:(id)anObject {
+    if (![anObject isKindOfClass:[UIColor class]]) {
+        return nil;
+    }
+
+    return [self hexadecimalStringFromColor:(UIColor *)anObject];
+}
+
+- (BOOL)getObjectValue:(out __autoreleasing id *)obj
+             forString:(NSString *)string
+      errorDescription:(out NSString *__autoreleasing *)error
+{
+    UIColor *color = nil;
+    if ([string hasPrefix:@"#"]) {
+        color = [self colorFromHexadecimalString:string];
+    } else if ([string hasPrefix:@"rgb("]) {
+        color = [self colorFromRGBString:string];
+    } else if ([string hasPrefix:@"rgba("]) {
+        color = [self colorFromRGBAString:string];
+    } else if ([string hasPrefix:@"cmyk("]) {
+        color = [self colorFromCMYKString:string];
+    } else if ([string hasPrefix:@"hsl("]) {
+        color = [self colorFromHSLString:string];
+    }
+
+    if (color) {
+        *obj = color;
+
+        return YES;
+    }
+
+    *error = NSLocalizedStringFromTable(@"Color format not recognized", @"FormatterKit", nil);
+
+    return NO;
+}
+
 @end

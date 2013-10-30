@@ -137,6 +137,7 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
     return self;
 }
 
+#pragma mark -
 
 - (NSString *)stringFromCoordinate:(CLLocationCoordinate2D)coordinate {
     return [NSString stringWithFormat:NSLocalizedStringFromTable(@"(%@, %@)", @"FormatterKit", @"Coordinate format"), [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:coordinate.latitude]], [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:coordinate.longitude]], nil];
@@ -296,6 +297,25 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
                                      atSpeed:(CLLocationSpeed)speed
 {
     return [NSString stringWithFormat:NSLocalizedStringWithDefaultValue(@"Dimension Format String", @"FormatterKit", [NSBundle mainBundle], @"%@ %@", @"#{Dimensional Quantity} #{Direction}"), [self stringFromSpeed:speed], [self stringFromBearingFromLocation:originLocation toLocation:destinationLocation]];
+}
+
+#pragma mark - NSFormatter
+
+- (NSString *)stringForObjectValue:(id)anObject {
+    if (![anObject isKindOfClass:[CLLocation class]]) {
+        return nil;
+    }
+
+    return [self stringFromLocation:(CLLocation *)anObject];
+}
+
+- (BOOL)getObjectValue:(out __autoreleasing id *)obj
+             forString:(NSString *)string
+      errorDescription:(out NSString *__autoreleasing *)error
+{
+    *error = NSLocalizedStringFromTable(@"Method Not Implemented", @"FormatterKit", nil);
+
+    return NO;
 }
 
 #pragma mark - NSCoding

@@ -111,19 +111,19 @@
     return array;
 }
 
-#pragma mark NSFormatter
+#pragma mark - NSFormatter
 
 - (NSString *)stringForObjectValue:(id)anObject {
     if (![anObject isKindOfClass:[NSArray class]]) {
         return nil;
     }
 
-    return [self stringFromArray:anObject rangesOfComponents:nil];
+    return [self stringFromArray:(NSArray *)anObject rangesOfComponents:nil];
 }
 
-- (BOOL)getObjectValue:(id *)obj
+- (BOOL)getObjectValue:(out __autoreleasing id *)obj
              forString:(NSString *)string
-      errorDescription:(NSString **)error
+      errorDescription:(out NSString *__autoreleasing *)error
 {
     BOOL returnValue = NO;
     NSMutableArray *components = nil;

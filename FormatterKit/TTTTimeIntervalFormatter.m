@@ -291,6 +291,25 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     return nil;
 }
 
+#pragma mark - NSFormatter
+
+- (NSString *)stringForObjectValue:(id)anObject {
+    if (![anObject isKindOfClass:[NSNumber class]]) {
+        return nil;
+    }
+
+    return [self stringForTimeInterval:[(NSNumber *)anObject doubleValue]];
+}
+
+- (BOOL)getObjectValue:(out __autoreleasing id *)obj
+             forString:(NSString *)string
+      errorDescription:(out NSString *__autoreleasing *)error
+{
+    *error = NSLocalizedStringFromTable(@"Method Not Implemented", @"FormatterKit", nil);
+
+    return NO;
+}
+
 #pragma mark - NSCoding
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
