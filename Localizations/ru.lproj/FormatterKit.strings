@@ -218,7 +218,7 @@
 
 /* Second Unit (Plural, Abbreviated)
    Second Unit (Singular, Abbreviated) */
-"s" = "cек.";
+"s" = "c";
 
 /* Southeast Direction Abbreviation */
 "SE" = "Юго-восток";
@@ -296,5 +296,5 @@
 "yr" = "г.";
 
 /* Year Unit (Plural, Abbreviated) */
-"yrs" = "г.";
+"yrs" = "гг.";
 
