@@ -116,7 +116,7 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     for (NSString *unitName in [NSArray arrayWithObjects:@"year", @"month", @"week", @"day", @"hour", @"minute", @"second", nil]) {
         NSCalendarUnit unit = NSCalendarUnitFromString(unitName);
         if (!string || self.leastSignificantUnit >= unit) {
-            NSNumber *number = [NSNumber numberWithInteger:abs([[components valueForKey:unitName] integerValue])];
+            NSNumber *number = [NSNumber numberWithInteger:abs((int)[[components valueForKey:unitName] integerValue])];
             if ([number integerValue]) {
                 NSString *suffix = [NSString stringWithFormat:@"%@ %@", number, [self localizedStringForNumber:[number integerValue] ofCalendarUnit:unit]];
                 if (!string) {
