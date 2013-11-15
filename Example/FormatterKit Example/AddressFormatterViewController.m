@@ -24,21 +24,20 @@
 
 #import "TTTAddressFormatter.h"
 
-enum {
+NS_ENUM(NSUInteger, AddressFormatterViewControllerFormatterViewControllerSectionIndexes) {
     UnitedStatesSectionIndex,
     UnitedKingdomSectionIndex,
     JapanSectionIndex,
-} AddressFormatterViewControllerFormatterViewControllerSectionIndexes;
+};
 
-enum {
+NS_ENUM(NSUInteger, AddressFormatterViewControllerFormatterViewControllerRowIndexes) {
     ComponentsRowIndex,
     CurrentLocaleFormattedRowIndex,
     NativeLocaleFormattedRowIndex,
-} AddressFormatterViewControllerFormatterViewControllerRowIndexes;
-
+};
 
 @interface AddressFormatterViewController ()
-@property (readwrite, nonatomic) NSArray *examples;
+@property (readwrite, nonatomic, strong) NSArray *examples;
 @end
 
 @implementation AddressFormatterViewController
@@ -67,15 +66,19 @@ enum {
 
 #pragma mark - UITableViewDataSource
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(__unused UITableView *)tableView {
     return 3;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(__unused UITableView *)tableView
+ numberOfRowsInSection:(__unused NSInteger)section
+{
     return 3;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+- (NSString *)tableView:(__unused UITableView *)tableView
+titleForHeaderInSection:(NSInteger)section
+{
     switch (section) {
         case UnitedStatesSectionIndex:            
             return NSLocalizedString(@"United States", nil);
@@ -88,7 +91,9 @@ enum {
     }
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+- (void)configureCell:(UITableViewCell *)cell
+    forRowAtIndexPath:(NSIndexPath *)indexPath
+{
     static TTTAddressFormatter *_addressFormatter = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -156,7 +161,9 @@ enum {
 
 #pragma mark - UITableViewDelegate
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(__unused UITableView *)tableView
+heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     switch (indexPath.row) {
         case ComponentsRowIndex:
             return 80.0f;

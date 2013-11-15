@@ -24,15 +24,15 @@
 
 #import "TTTArrayFormatter.h"
 
-enum {
+NS_ENUM(NSUInteger, ArrayFormatterViewControllerSectionIndexes) {
     StandardSectionIndex,
     AbbreviatedConjunctionSectionIndex,
     NoSerialDelimeterSectionIndex,
     DataStyleSectionIndex,
-} ArrayFormatterViewControllerSectionIndexes;
+};
 
 @interface ArrayFormatterViewController ()
-@property (readwrite, nonatomic) NSArray *examples;
+@property (readwrite, nonatomic, strong) NSArray *examples;
 @end
 
 @implementation ArrayFormatterViewController
@@ -62,15 +62,19 @@ enum {
 
 #pragma mark - UITableViewDataSource
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(__unused UITableView *)tableView {
     return 4;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(__unused UITableView *)tableView
+ numberOfRowsInSection:(__unused NSInteger)section
+{
     return [self.examples count];
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+- (NSString *)tableView:(__unused UITableView *)tableView
+titleForHeaderInSection:(NSInteger)section
+{
     switch (section) {
         case AbbreviatedConjunctionSectionIndex:
             return NSLocalizedString(@"Abbreviated Conjunction", nil);
@@ -83,7 +87,9 @@ enum {
     }
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+- (void)configureCell:(UITableViewCell *)cell
+    forRowAtIndexPath:(NSIndexPath *)indexPath
+{
     static TTTArrayFormatter *_arrayFormatter = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

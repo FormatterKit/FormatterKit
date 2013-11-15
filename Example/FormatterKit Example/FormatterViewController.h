@@ -24,8 +24,12 @@
 
 @protocol FormatterViewController <NSObject>
 + (NSString *)formatterDescription;
+@optional
+- (void)configureCell:(UITableViewCell *)cell
+    forRowAtIndexPath:(NSIndexPath *)indexPath;
 @end
 
-@interface FormatterViewController : UITableViewController <FormatterViewController>
+#pragma mark -
 
+@interface FormatterViewController : UITableViewController <FormatterViewController>
 @end

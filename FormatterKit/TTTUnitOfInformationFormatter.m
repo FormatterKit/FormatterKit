@@ -239,8 +239,8 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
     }
 }
 
-- (BOOL)getObjectValue:(out __autoreleasing id *)obj
-             forString:(NSString *)string
+- (BOOL)getObjectValue:(out __unused __autoreleasing id *)obj
+             forString:(__unused NSString *)string
       errorDescription:(out NSString *__autoreleasing *)error
 {
     *error = NSLocalizedStringFromTable(@"Method Not Implemented", @"FormatterKit", nil);

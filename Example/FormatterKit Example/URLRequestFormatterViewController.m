@@ -24,14 +24,14 @@
 
 #import "TTTURLRequestFormatter.h"
 
-enum {
+NS_ENUM(NSUInteger, URLRequestFormatterViewControllerSectionIndexes) {
     StandardSectionIndex,
     cURLSectionIndex,
     WgetSectionIndex,
-} URLRequestFormatterViewControllerSectionIndexes;
+};
 
 @interface URLRequestFormatterViewController ()
-@property (readwrite, nonatomic) NSURLRequest *request;
+@property (readwrite, nonatomic, strong) NSURLRequest *request;
 @end
 
 @implementation URLRequestFormatterViewController
@@ -59,15 +59,19 @@ enum {
 
 #pragma mark - UITableViewDataSource
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(__unused UITableView *)tableView {
     return 3;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(__unused UITableView *)tableView
+ numberOfRowsInSection:(__unused NSInteger)section
+{
     return 1;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+- (NSString *)tableView:(__unused UITableView *)tableView
+titleForHeaderInSection:(NSInteger)section
+{
     switch (section) {
         case cURLSectionIndex:
             return NSLocalizedString(@"cURL Command", nil);
@@ -78,7 +82,9 @@ enum {
     }
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView
+heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     NSString *command = nil;
     switch (indexPath.section) {
         case cURLSectionIndex:
@@ -100,7 +106,7 @@ enum {
     return fmaxf(size.height + 16.0f, self.tableView.rowHeight);
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+- (void)configureCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     cell.textLabel.font = [UIFont systemFontOfSize:14];
     cell.textLabel.numberOfLines = 0;
     

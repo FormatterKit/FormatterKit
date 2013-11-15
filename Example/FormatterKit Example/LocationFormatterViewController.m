@@ -25,18 +25,14 @@
 
 #import "TTTLocationFormatter.h"
 
-enum {
+NS_ENUM(NSUInteger, LocationFormatterViewControllerSectionIndexes) {
     DistanceInMetricWithCardinalDirectionsSectionIndex,
     DistanceInImperialWithcardinalDirectionAbbreviationsSectionIndex,
     SpeedInImperialWithBearingsInDegreesSectionIndex,
     CoordinatesSectionIndex,
-} LocationFormatterViewControllerSectionIndexes;
+};
 
-
-@implementation LocationFormatterViewController {
-    __strong CLLocation *_austin;
-    __strong CLLocation *_pittsburgh;
-}
+@implementation LocationFormatterViewController
 
 - (id)init {
     self = [super initWithStyle:UITableViewStyleGrouped];
@@ -46,12 +42,8 @@ enum {
     
     self.title = NSLocalizedString(@"Location Formatter", nil);
     
-    _austin = [[CLLocation alloc] initWithLatitude:30.2669444 longitude:-97.7427778];
-    _pittsburgh = [[CLLocation alloc] initWithLatitude:40.4405556 longitude:-79.9961111];
-    
     return self;
 }
-
 
 + (NSString *)formatterDescription {
     return NSLocalizedString(@"TTTLocationFormatter gives you a lot of flexibility in the display of coordinates, distances, direction, speed, and velocity. Choose Metric or Imperial, cardinal directions, abbreviations, or degrees, and configure everything else (number of significant digits, etc.), with the associated NSNumberFormatter.", nil);
@@ -59,15 +51,19 @@ enum {
 
 #pragma mark - UITableViewDataSource
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(__unused UITableView *)tableView {
     return 4;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(__unused UITableView *)tableView
+ numberOfRowsInSection:(__unused NSInteger)section
+{
     return 1;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+- (NSString *)tableView:(__unused UITableView *)tableView
+titleForHeaderInSection:(NSInteger)section
+{
     switch (section) {
         case DistanceInMetricWithCardinalDirectionsSectionIndex:
             return NSLocalizedString(@"Distance in Metric Units, with Cardinal Directions", nil);
@@ -82,16 +78,21 @@ enum {
     }
 }
 
-
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+- (void)configureCell:(UITableViewCell *)cell
+    forRowAtIndexPath:(NSIndexPath *)indexPath
+{
     static TTTLocationFormatter *_locationFormatter = nil;
+    static CLLocation *_austin = nil;
+    static CLLocation *_pittsburgh = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _locationFormatter = [[TTTLocationFormatter alloc] init];
         [_locationFormatter.numberFormatter setMaximumSignificantDigits:4];
+        [_locationFormatter.numberFormatter setUsesSignificantDigits:YES];
+        
+        _austin = [[CLLocation alloc] initWithLatitude:30.2669444 longitude:-97.7427778];
+        _pittsburgh = [[CLLocation alloc] initWithLatitude:40.4405556 longitude:-79.9961111];
     });
-
-    [_locationFormatter.numberFormatter setUsesSignificantDigits:YES];
     
     cell.textLabel.font = [UIFont systemFontOfSize:16];
     switch (indexPath.section) {

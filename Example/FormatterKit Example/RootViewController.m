@@ -30,7 +30,7 @@
 #import "UnitOfInformationFormatterViewController.h"
 #import "URLRequestFormatterViewController.h"
 
-enum {
+NS_ENUM(NSUInteger, RootViewControllerRowIndexes) {
     AddressRowIndex,
     ArrayRowIndex,
     ColorRowIndex,
@@ -39,11 +39,7 @@ enum {
     TimeIntervalRowIndex,
     UnitOfInformationRowIndex,
     URLRequestRowIndex
-} RootViewControllerRowIndexes;
-
-@interface RootViewController ()
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
-@end
+};
 
 @implementation RootViewController
 
@@ -75,15 +71,19 @@ enum {
 
 #pragma mark - UITableViewDataSource
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(__unused UITableView *)tableView {
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(__unused UITableView *)tableView
+ numberOfRowsInSection:(__unused NSInteger)section
+{
     return 7;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -91,12 +91,6 @@ enum {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    [self configureCell:cell atIndexPath:indexPath];
-    
-    return cell;
-}
-
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.row) {
         case AddressRowIndex:
             cell.textLabel.text = NSLocalizedString(@"Address Formatter", nil);
@@ -125,13 +119,16 @@ enum {
         default:
             break;
     }
+    
+    return cell;
 }
 
 #pragma mark - UITableViewDelegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(__unused UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     UIViewController *viewController = nil;
-    
     switch (indexPath.row) {
         case AddressRowIndex:
             viewController = [[AddressFormatterViewController alloc] init];

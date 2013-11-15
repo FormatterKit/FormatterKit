@@ -25,13 +25,11 @@
 #import "TTTOrdinalNumberFormatter.h"
 
 @interface OrdinalNumberFormatterViewController ()
-@property (readwrite, nonatomic) NSArray *locales;
-@property (readwrite, nonatomic) NSArray *numbers;
+@property (readwrite, nonatomic, strong) NSArray *locales;
 @end
 
 @implementation OrdinalNumberFormatterViewController
 @synthesize locales = _locales;
-@synthesize numbers = _numbers;
 
 - (id)init {
     self = [super initWithStyle:UITableViewStyleGrouped];
@@ -54,13 +52,6 @@
     [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"zh-Hant_CN"]];
     self.locales = [NSArray arrayWithArray:mutableLocales];
     
-    NSMutableArray *mutableNumbers = [NSMutableArray array];
-    [mutableNumbers addObject:[NSNumber numberWithInteger:1]];
-    [mutableNumbers addObject:[NSNumber numberWithInteger:2]];
-    [mutableNumbers addObject:[NSNumber numberWithInteger:3]];
-    [mutableNumbers addObject:[NSNumber numberWithInteger:4]];
-    self.numbers = [NSArray arrayWithArray:mutableNumbers];
-    
     return self;
 }
 
@@ -71,20 +62,26 @@
 
 #pragma mark - UITableViewDataSource
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(__unused UITableView *)tableView {
     return [self.locales count];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.numbers count];
+- (NSInteger)tableView:(__unused UITableView *)tableView
+ numberOfRowsInSection:(__unused NSInteger)section
+{
+    return 4;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+- (NSString *)tableView:(__unused UITableView *)tableView
+titleForHeaderInSection:(NSInteger)section
+{
     NSLocale *locale = [self.locales objectAtIndex:section];
     return [[NSLocale currentLocale] displayNameForKey:NSLocaleIdentifier value:[locale localeIdentifier]];
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+- (void)configureCell:(__unused UITableViewCell *)cell
+    forRowAtIndexPath:(NSIndexPath *)indexPath
+{
     static TTTOrdinalNumberFormatter *_ordinalNumberFormatter = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -94,10 +91,9 @@
     cell.textLabel.font = [UIFont systemFontOfSize:16];
     
     NSLocale *locale = [self.locales objectAtIndex:indexPath.section];
-    NSNumber *number = [self.numbers objectAtIndex:indexPath.row];
     
     [_ordinalNumberFormatter setLocale:locale];
-    cell.textLabel.text = [_ordinalNumberFormatter stringFromNumber:number];
+    cell.textLabel.text = [_ordinalNumberFormatter stringFromNumber:@(indexPath.row + 1)];
 }
 
 @end

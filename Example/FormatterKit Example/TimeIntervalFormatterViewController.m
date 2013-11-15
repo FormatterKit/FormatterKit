@@ -24,13 +24,13 @@
 
 #import "TTTTimeIntervalFormatter.h"
 
-enum {
+NS_ENUM(NSUInteger, TimeIntervalFormatterViewControllerSectionIndexes) {
     StandardPastSectionIndex,
     StandardFutureSectionIndex,
     IdiomaticDeicticExpressionsSectionIndex,
-} TimeIntervalFormatterViewControllerSectionIndexes;
+};
 
-enum {
+NS_ENUM(NSUInteger, TimeIntervalFormatterViewControllerRowIndexes) {
     SecondsRowIndex,
     MinutesRowIndex,
     HoursRowIndex,
@@ -38,7 +38,7 @@ enum {
     TwoDaysRowIndex,
     WeeksRowIndex,
     MonthRowIndex,
-} TimeIntervalFormatterViewControllerRowIndexes;
+};
 
 @implementation TimeIntervalFormatterViewController
 
@@ -59,15 +59,19 @@ enum {
 
 #pragma mark - UITableViewDataSource
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(__unused UITableView *)tableView {
     return 3;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(__unused UITableView *)tableView
+ numberOfRowsInSection:(__unused NSInteger)section
+{
     return 7;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+- (NSString *)tableView:(__unused UITableView *)tableView
+titleForHeaderInSection:(NSInteger)section
+{
     switch (section) {
         case StandardPastSectionIndex:
             return NSLocalizedString(@"Standard Past", nil);
@@ -80,9 +84,9 @@ enum {
     }
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    cell.textLabel.font = [UIFont systemFontOfSize:14];
-    
+- (void)configureCell:(__unused UITableViewCell *)cell
+    forRowAtIndexPath:(NSIndexPath *)indexPath
+{
     static TTTTimeIntervalFormatter *_timeIntervalFormatter = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -129,6 +133,7 @@ enum {
         timeInterval = -timeInterval;
     }
     
+    cell.textLabel.font = [UIFont systemFontOfSize:14];
     cell.textLabel.text = [_timeIntervalFormatter stringForTimeInterval:timeInterval];
 }
 

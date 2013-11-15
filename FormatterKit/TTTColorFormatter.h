@@ -55,7 +55,7 @@
 /**
  Returns the color represented by the specified hexadecimal string.
  
- @param The hexadecimal string representation.
+ @param string The hexadecimal string representation.
  
  @return The color.
  */
@@ -77,7 +77,7 @@
 /**
  Returns the color represented by the specified RGB string.
 
- @param The RGB string representation.
+ @param string The RGB string representation.
 
  @return The color.
  */
@@ -99,7 +99,7 @@
 /**
  Returns the color represented by the specified RGBA string.
 
- @param The RGBA string representation.
+ @param string The RGBA string representation.
 
  @return The color.
  */
@@ -143,7 +143,7 @@
 /**
  Returns the color represented by the specified HSL string.
 
- @param The HSL string representation.
+ @param string The HSL string representation.
 
  @return The color.
  */

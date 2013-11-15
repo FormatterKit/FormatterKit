@@ -154,7 +154,7 @@ static void TTTGetHSLComponentsFromColor(UIColor *color, CGFloat *hue, CGFloat *
     return [NSString stringWithFormat:@"cmyk(%g%%, %g%%, %g%%, %g%%)", c * 100.0f, m * 100.0f, y * 100.0f, k * 100.0f];
 }
 
-- (UIColor *)colorFromCMYKString:(NSString *)string {
+- (UIColor *)colorFromCMYKString:(__unused NSString *)string {
     return nil;
 }
 

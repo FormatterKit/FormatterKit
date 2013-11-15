@@ -23,5 +23,4 @@
 #import "FormatterViewController.h"
 
 @interface URLRequestFormatterViewController : FormatterViewController
-
 @end

@@ -43,16 +43,16 @@ static UIImage * UIImageForSwatchOfColorWithSize(UIColor *color, CGSize size) {
     return image;
 }
 
-enum {
+NS_ENUM(NSUInteger, ColorFormatterViewControllerSectionIndexes) {
     HexadecimalSectionIndex,
     RGBSectionIndex,
     CMYKSectionIndex,
     HSLSectionIndex,
     UIColorSectionIndex,
-} ColorFormatterViewControllerSectionIndexes;
+};
 
 @interface ColorFormatterViewController ()
-@property (readwrite, nonatomic) NSArray *examples;
+@property (readwrite, nonatomic, strong) NSArray *examples;
 @end
 
 @implementation ColorFormatterViewController
@@ -74,7 +74,6 @@ enum {
     [mutableExamples addObject:[UIColor cyanColor]];
     [mutableExamples addObject:[UIColor blueColor]];
     [mutableExamples addObject:[UIColor purpleColor]];
-
     self.examples = [NSArray arrayWithArray:mutableExamples];
 
     return self;
@@ -86,15 +85,19 @@ enum {
 
 #pragma mark - UITableViewDataSource
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(__unused UITableView *)tableView {
     return 5;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(__unused UITableView *)tableView
+ numberOfRowsInSection:(__unused NSInteger)section
+{
     return [self.examples count];
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+- (NSString *)tableView:(__unused UITableView *)tableView
+titleForHeaderInSection:(NSInteger)section
+{
     switch (section) {
         case HexadecimalSectionIndex:
             return NSLocalizedString(@"Hexadecimal", nil);
@@ -111,7 +114,9 @@ enum {
     }
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+- (void)configureCell:(UITableViewCell *)cell
+    forRowAtIndexPath:(NSIndexPath *)indexPath
+{
     static TTTColorFormatter *_colorFormatter = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

@@ -24,18 +24,18 @@
 
 #import "TTTUnitOfInformationFormatter.h"
 
-enum {
+NS_ENUM(NSUInteger, UnitOfInformationFormatterViewControllerSectionIndexes) {
     SIPrefixByteSectionIndex,
     SIPrefixBitSectionIndex,
     IECPrefixBitSectionIndex,
-} UnitOfInformationFormatterViewControllerSectionIndexes;
+};
 
-enum {
+NS_ENUM(NSUInteger, UnitOfInformationFormatterViewControllerRowIndexes) {
     BytesRowIndex,
     KiloBytesRowIndex,
     MegaBytesRowIndex,
     GigaBytesRowIndex,
-} UnitOfInformationFormatterViewControllerRowIndexes;
+};
 
 @implementation UnitOfInformationFormatterViewController
 
@@ -56,15 +56,19 @@ enum {
 
 #pragma mark - UITableViewDataSource
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(__unused UITableView *)tableView {
     return 3;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(__unused UITableView *)tableView
+ numberOfRowsInSection:(__unused NSInteger)section
+{
     return 4;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+- (NSString *)tableView:(__unused UITableView *)tableView
+titleForHeaderInSection:(NSInteger)section
+{
     switch (section) {
         case SIPrefixByteSectionIndex:
             return NSLocalizedString(@"SI Prefix Bytes", nil);
@@ -77,7 +81,9 @@ enum {
     }
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {    
+- (void)configureCell:(UITableViewCell *)cell
+    forRowAtIndexPath:(NSIndexPath *)indexPath
+{
     static TTTUnitOfInformationFormatter *_unitOfInformationFormatter = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

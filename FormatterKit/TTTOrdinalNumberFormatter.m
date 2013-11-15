@@ -59,25 +59,6 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     return self;
 }
 
-- (NSString *)stringFromNumber:(NSNumber *)number {
-    NSString *indicator = self.ordinalIndicator;
-    if (!indicator) {
-        indicator = [self localizedOrdinalIndicatorStringFromNumber:number];
-    }
-
-    [self setPositivePrefix:nil];
-    [self setPositiveSuffix:nil];
-
-    NSString *languageCode = [[self locale] objectForKey:NSLocaleLanguageCode];
-    if ([languageCode isEqualToString:@"zh"]) {
-        [self setPositivePrefix:indicator];
-    } else {
-        [self setPositiveSuffix:indicator];
-    }
-
-    return [super stringFromNumber:number];
-}
-
 #pragma mark -
 
 - (NSString *)localizedOrdinalIndicatorStringFromNumber:(NSNumber *)number {
@@ -105,7 +86,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     }
 }
 
-- (NSString *)deOrdinalIndicatorStringFromNumber:(NSNumber *)number {
+- (NSString *)deOrdinalIndicatorStringFromNumber:(__unused NSNumber *)number {
 	return @".";
 }
 
@@ -127,7 +108,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     }
 }
 
-- (NSString *)esOrdinalIndicatorStringFromNumber:(NSNumber *)number {
+- (NSString *)esOrdinalIndicatorStringFromNumber:(__unused NSNumber *)number {
     switch (self.grammaticalGender) {
         case TTTOrdinalNumberFormatterMaleGender:
             return @"\u00BA"; // MASCULINE ORDINAL INDICATOR
@@ -138,7 +119,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     }
 }
 
-- (NSString *)frOrdinalIndicatorStringFromNumber:(NSNumber *)number {
+- (NSString *)frOrdinalIndicatorStringFromNumber:(__unused NSNumber *)number {
     NSString *ordinalIndicator = nil;
     if ([number integerValue] == 1) {
         switch (self.grammaticalGender) {
@@ -164,11 +145,11 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     return ordinalIndicator;
 }
 
-- (NSString *)gaOrdinalIndicatorStringFromNumber:(NSNumber *)number {
+- (NSString *)gaOrdinalIndicatorStringFromNumber:(__unused NSNumber *)number {
     return @"\u00fa"; // LATIN SMALL LETTER U WITH ACUTE
 }
 
-- (NSString *)itOrdinalIndicatorStringFromNumber:(NSNumber *)number {
+- (NSString *)itOrdinalIndicatorStringFromNumber:(__unused NSNumber *)number {
     switch (self.grammaticalGender) {
         case TTTOrdinalNumberFormatterMaleGender:
             return @"\u00BA"; // MASCULINE ORDINAL INDICATOR
@@ -179,15 +160,15 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     }
 }
 
-- (NSString *)jaOrdinalIndicatorStringFromNumber:(NSNumber *)number {
+- (NSString *)jaOrdinalIndicatorStringFromNumber:(__unused NSNumber *)number {
     return @"\u756a";
 }
 
-- (NSString *)nlOrdinalIndicatorStringFromNumber:(NSNumber *)number {
+- (NSString *)nlOrdinalIndicatorStringFromNumber:(__unused NSNumber *)number {
     return @"e";
 }
 
-- (NSString *)ptOrdinalIndicatorStringFromNumber:(NSNumber *)number {
+- (NSString *)ptOrdinalIndicatorStringFromNumber:(__unused NSNumber *)number {
     switch (self.grammaticalGender) {
         case TTTOrdinalNumberFormatterMaleGender:
             return @"\u00BA"; // MASCULINE ORDINAL INDICATOR
@@ -198,7 +179,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     }
 }
 
-- (NSString *)zhHansOrdinalIndicatorStringFromNumber:(NSNumber *)number {
+- (NSString *)zhHansOrdinalIndicatorStringFromNumber:(__unused NSNumber *)number {
     return @"\u7b2c";
 }
 
@@ -208,8 +189,28 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     if (![anObject isKindOfClass:[NSNumber class]]) {
         return nil;
     }
-
-    return [self stringFromNumber:(NSNumber *)anObject];
+    
+    NSString *indicator = self.ordinalIndicator;
+    if (!indicator) {
+        indicator = [self localizedOrdinalIndicatorStringFromNumber:(NSNumber *)anObject];
+    }
+    
+    NSString *string = nil;
+    @synchronized(self) {
+        [self setPositivePrefix:nil];
+        [self setPositiveSuffix:nil];
+        
+        NSString *languageCode = [[self locale] objectForKey:NSLocaleLanguageCode];
+        if ([languageCode isEqualToString:@"zh"]) {
+            [self setPositivePrefix:indicator];
+        } else {
+            [self setPositiveSuffix:indicator];
+        }
+        
+        string = [super stringForObjectValue:anObject];
+    }
+    
+    return string;
 }
 
 - (BOOL)getObjectValue:(out __autoreleasing id *)obj

@@ -23,5 +23,4 @@
 #import "FormatterViewController.h"
 
 @interface UnitOfInformationFormatterViewController : FormatterViewController
-
 @end
