@@ -125,7 +125,7 @@
 
  @return The color.
  */
-//- (UIColor *)colorFromCMYKString:(NSString *)string;
+- (UIColor *)colorFromCMYKString:(NSString *)string;
 
 ///----------
 /// @name HSL
