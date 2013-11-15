@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73FC74961833C09500DD08B4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73FC74951833C09500DD08B4 /* Cocoa.framework */; };
+		73FC74C81833C12500DD08B4 /* TTTAddressFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EF5166154AB0040FB03 /* TTTAddressFormatter.m */; };
+		73FC74CA1833C12500DD08B4 /* TTTArrayFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EF7166154AB0040FB03 /* TTTArrayFormatter.m */; };
+		73FC74CC1833C12500DD08B4 /* TTTColorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8202D0817F4FAAE006C5810 /* TTTColorFormatter.m */; };
+		73FC74CE1833C12500DD08B4 /* TTTLocationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EF9166154AB0040FB03 /* TTTLocationFormatter.m */; };
+		73FC74D01833C12500DD08B4 /* TTTOrdinalNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EFB166154AB0040FB03 /* TTTOrdinalNumberFormatter.m */; };
+		73FC74D21833C12500DD08B4 /* TTTTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EFD166154AB0040FB03 /* TTTTimeIntervalFormatter.m */; };
+		73FC74D41833C12500DD08B4 /* TTTUnitOfInformationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EFF166154AB0040FB03 /* TTTUnitOfInformationFormatter.m */; };
+		73FC74D61833C12500DD08B4 /* TTTURLRequestFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9F01166154AB0040FB03 /* TTTURLRequestFormatter.m */; };
+		73FC74D81833C19500DD08B4 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73FC74D71833C19400DD08B4 /* AddressBook.framework */; };
+		73FC74DA1833C19F00DD08B4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73FC74D91833C19F00DD08B4 /* CoreLocation.framework */; };
+		73FC74DD1833C1E600DD08B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73FC74DC1833C1E600DD08B4 /* AppDelegate.m */; };
+		73FC74E01833C1F600DD08B4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73FC74DE1833C1F600DD08B4 /* MainMenu.xib */; };
+		73FC74ED1833C2AC00DD08B4 /* FormatterKit OS X Example-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73FC74EA1833C2AC00DD08B4 /* FormatterKit OS X Example-Info.plist */; };
+		73FC74EE1833C2AC00DD08B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73FC74EC1833C2AC00DD08B4 /* main.m */; };
 		F8202D0917F4FAAE006C5810 /* TTTColorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8202D0817F4FAAE006C5810 /* TTTColorFormatter.m */; };
 		F8202D0C17F50AF5006C5810 /* ColorFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8202D0B17F50AF5006C5810 /* ColorFormatterViewController.m */; };
 		F872625414FD3BED00800E11 /* UnitOfInformationFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F872625314FD3BED00800E11 /* UnitOfInformationFormatterViewController.m */; };
@@ -38,6 +53,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73FC74941833C09500DD08B4 /* FormatterKit OS X Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FormatterKit OS X Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		73FC74951833C09500DD08B4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		73FC74981833C09500DD08B4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		73FC74991833C09500DD08B4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		73FC749A1833C09500DD08B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		73FC74B41833C09500DD08B4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		73FC74D71833C19400DD08B4 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AddressBook.framework; sourceTree = DEVELOPER_DIR; };
+		73FC74D91833C19F00DD08B4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		73FC74DB1833C1E600DD08B4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		73FC74DC1833C1E600DD08B4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		73FC74DF1833C1F600DD08B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		73FC74EA1833C2AC00DD08B4 /* FormatterKit OS X Example-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FormatterKit OS X Example-Info.plist"; sourceTree = "<group>"; };
+		73FC74EB1833C2AC00DD08B4 /* FormatterKit OS X Example-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FormatterKit OS X Example-Prefix.pch"; sourceTree = "<group>"; };
+		73FC74EC1833C2AC00DD08B4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8202D0717F4FAAE006C5810 /* TTTColorFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTColorFormatter.h; sourceTree = "<group>"; };
 		F8202D0817F4FAAE006C5810 /* TTTColorFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTColorFormatter.m; sourceTree = "<group>"; };
 		F8202D0A17F50AF5006C5810 /* ColorFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorFormatterViewController.h; sourceTree = "<group>"; };
@@ -91,6 +120,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		73FC74911833C09500DD08B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73FC74DA1833C19F00DD08B4 /* CoreLocation.framework in Frameworks */,
+				73FC74D81833C19500DD08B4 /* AddressBook.framework in Frameworks */,
+				73FC74961833C09500DD08B4 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8FBF9E11427A456001409DB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -107,6 +146,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73FC74971833C09500DD08B4 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73FC74981833C09500DD08B4 /* AppKit.framework */,
+				73FC74991833C09500DD08B4 /* CoreData.framework */,
+				73FC749A1833C09500DD08B4 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		73FC749B1833C09500DD08B4 /* FormatterKit OS X Example */ = {
+			isa = PBXGroup;
+			children = (
+				73FC74DB1833C1E600DD08B4 /* AppDelegate.h */,
+				73FC74DC1833C1E600DD08B4 /* AppDelegate.m */,
+				73FC74DE1833C1F600DD08B4 /* MainMenu.xib */,
+				73FC749C1833C09500DD08B4 /* Supporting Files */,
+			);
+			path = "FormatterKit OS X Example";
+			sourceTree = "<group>";
+		};
+		73FC749C1833C09500DD08B4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				73FC74EA1833C2AC00DD08B4 /* FormatterKit OS X Example-Info.plist */,
+				73FC74EB1833C2AC00DD08B4 /* FormatterKit OS X Example-Prefix.pch */,
+				73FC74EC1833C2AC00DD08B4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		F89C9EF3166154AB0040FB03 /* FormatterKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +206,7 @@
 			children = (
 				F892375316A4BE43002FCF70 /* Default-568h@2x.png */,
 				F8FBF9EE1427A456001409DB /* FormatterKit Example */,
+				73FC749B1833C09500DD08B4 /* FormatterKit OS X Example */,
 				F8FBF9E71427A456001409DB /* Frameworks */,
 				F8FBF9E51427A456001409DB /* Products */,
 				F8FBFA071427A4D2001409DB /* Vendor */,
@@ -146,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				F8FBF9E41427A456001409DB /* FormatterKit Example.app */,
+				73FC74941833C09500DD08B4 /* FormatterKit OS X Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,12 +225,17 @@
 		F8FBF9E71427A456001409DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73FC74D91833C19F00DD08B4 /* CoreLocation.framework */,
+				73FC74D71833C19400DD08B4 /* AddressBook.framework */,
 				F8A847A5161E982500940F39 /* AddressBook.framework */,
 				F8A8479F161E93D800940F39 /* AddressBookUI.framework */,
 				F8FBFA581428EE31001409DB /* CoreLocation.framework */,
 				F8FBF9E81427A456001409DB /* UIKit.framework */,
 				F8FBF9EA1427A456001409DB /* Foundation.framework */,
 				F8FBF9EC1427A456001409DB /* CoreGraphics.framework */,
+				73FC74951833C09500DD08B4 /* Cocoa.framework */,
+				73FC74B41833C09500DD08B4 /* XCTest.framework */,
+				73FC74971833C09500DD08B4 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -231,6 +308,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		73FC74931833C09500DD08B4 /* FormatterKit OS X Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73FC74C51833C09500DD08B4 /* Build configuration list for PBXNativeTarget "FormatterKit OS X Example" */;
+			buildPhases = (
+				73FC74901833C09500DD08B4 /* Sources */,
+				73FC74911833C09500DD08B4 /* Frameworks */,
+				73FC74921833C09500DD08B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FormatterKit OS X Example";
+			productName = "FormatterKit OS X Example";
+			productReference = 73FC74941833C09500DD08B4 /* FormatterKit OS X Example.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F8FBF9E31427A456001409DB /* FormatterKit Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8FBF9FC1427A456001409DB /* Build configuration list for PBXNativeTarget "FormatterKit Example" */;
@@ -263,6 +357,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = F8FBF9D91427A456001409DB;
 			productRefGroup = F8FBF9E51427A456001409DB /* Products */;
@@ -270,11 +365,21 @@
 			projectRoot = "";
 			targets = (
 				F8FBF9E31427A456001409DB /* FormatterKit Example */,
+				73FC74931833C09500DD08B4 /* FormatterKit OS X Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		73FC74921833C09500DD08B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73FC74E01833C1F600DD08B4 /* MainMenu.xib in Resources */,
+				73FC74ED1833C2AC00DD08B4 /* FormatterKit OS X Example-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8FBF9E21427A456001409DB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -287,6 +392,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		73FC74901833C09500DD08B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73FC74EE1833C2AC00DD08B4 /* main.m in Sources */,
+				73FC74C81833C12500DD08B4 /* TTTAddressFormatter.m in Sources */,
+				73FC74CA1833C12500DD08B4 /* TTTArrayFormatter.m in Sources */,
+				73FC74CC1833C12500DD08B4 /* TTTColorFormatter.m in Sources */,
+				73FC74CE1833C12500DD08B4 /* TTTLocationFormatter.m in Sources */,
+				73FC74DD1833C1E600DD08B4 /* AppDelegate.m in Sources */,
+				73FC74D01833C12500DD08B4 /* TTTOrdinalNumberFormatter.m in Sources */,
+				73FC74D21833C12500DD08B4 /* TTTTimeIntervalFormatter.m in Sources */,
+				73FC74D41833C12500DD08B4 /* TTTUnitOfInformationFormatter.m in Sources */,
+				73FC74D61833C12500DD08B4 /* TTTURLRequestFormatter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8FBF9E01427A456001409DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,6 +439,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		73FC74DE1833C1F600DD08B4 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73FC74DF1833C1F600DD08B4 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 		F8FBF9F11427A456001409DB /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -328,6 +458,64 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		73FC74C11833C09500DD08B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FormatterKit OS X Example/FormatterKit OS X Example-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				INFOPLIST_FILE = "FormatterKit OS X Example/FormatterKit OS X Example-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		73FC74C21833C09500DD08B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FormatterKit OS X Example/FormatterKit OS X Example-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				INFOPLIST_FILE = "FormatterKit OS X Example/FormatterKit OS X Example-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		F8FBF9FA1427A456001409DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -473,6 +661,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		73FC74C51833C09500DD08B4 /* Build configuration list for PBXNativeTarget "FormatterKit OS X Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73FC74C11833C09500DD08B4 /* Debug */,
+				73FC74C21833C09500DD08B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F8FBF9DE1427A456001409DB /* Build configuration list for PBXProject "FormatterKit Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
