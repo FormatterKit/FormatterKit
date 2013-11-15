@@ -121,7 +121,7 @@
 /**
  Returns the color represented by the specified CMYK string.
 
- @param The CMYK string representation.
+ @param string The CMYK string representation.
 
  @return The color.
  */
