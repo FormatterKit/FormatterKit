@@ -50,6 +50,7 @@
     [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"nl_NL"]];
     [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"pt_PT"]];
     [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"zh-Hant_CN"]];
+    [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"ca_ES"]];
     self.locales = [NSArray arrayWithArray:mutableLocales];
     
     return self;

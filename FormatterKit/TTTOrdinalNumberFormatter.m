@@ -24,20 +24,6 @@
 
 static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @".";
 
-@interface TTTOrdinalNumberFormatter ()
-- (NSString *)localizedOrdinalIndicatorStringFromNumber:(NSNumber *)number;
-- (NSString *)deOrdinalIndicatorStringFromNumber:(NSNumber *)number;
-- (NSString *)enOrdinalIndicatorStringFromNumber:(NSNumber *)number;
-- (NSString *)esOrdinalIndicatorStringFromNumber:(NSNumber *)number;
-- (NSString *)frOrdinalIndicatorStringFromNumber:(NSNumber *)number;
-- (NSString *)gaOrdinalIndicatorStringFromNumber:(NSNumber *)number;
-- (NSString *)itOrdinalIndicatorStringFromNumber:(NSNumber *)number;
-- (NSString *)jaOrdinalIndicatorStringFromNumber:(NSNumber *)number;
-- (NSString *)nlOrdinalIndicatorStringFromNumber:(NSNumber *)number;
-- (NSString *)ptOrdinalIndicatorStringFromNumber:(NSNumber *)number;
-- (NSString *)zhHansOrdinalIndicatorStringFromNumber:(NSNumber *)number;
-@end
-
 @implementation TTTOrdinalNumberFormatter
 @synthesize ordinalIndicator = _ordinalIndicator;
 @synthesize grammaticalGender = _grammaticalGender;
@@ -81,8 +67,48 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
         return [self jaOrdinalIndicatorStringFromNumber:number];
     } else if ([languageCode isEqualToString:@"zh"]) {
         return [self zhHansOrdinalIndicatorStringFromNumber:number];
+    } else if ([languageCode isEqualToString:@"ca"]) {
+        return [self caOrdinalIndicatorStringFromNumber:number];
     } else {
         return kTTTOrdinalNumberFormatterDefaultOrdinalIndicator;
+    }
+}
+
+- (NSString *)caOrdinalIndicatorStringFromNumber:(NSNumber *)number {
+    if (self.grammaticalNumber == TTTOrdinalNumberFormatterPlural) {
+        if (self.grammaticalGender == TTTOrdinalNumberFormatterFemaleGender) {
+            return @"es";
+        } else {
+            switch ([number integerValue]) {
+                case 1:
+                    return @"rs";
+                case 2:
+                    return @"ns";
+                case 3:
+                    return @"rs";
+                case 4:
+                    return @"ts";
+                default:
+                    return @"ns";
+            }
+        }
+    } else {
+        if (self.grammaticalGender == TTTOrdinalNumberFormatterFemaleGender) {
+            return @"a";
+        } else {
+            switch ([number integerValue]) {
+                case 1:
+                    return @"r";
+                case 2:
+                    return @"n";
+                case 3:
+                    return @"r";
+                case 4:
+                    return @"t";
+                default:
+                    return @"è";
+            }
+        }
     }
 }
 
@@ -110,12 +136,10 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 
 - (NSString *)esOrdinalIndicatorStringFromNumber:(__unused NSNumber *)number {
     switch (self.grammaticalGender) {
-        case TTTOrdinalNumberFormatterMaleGender:
-            return @"\u00BA"; // MASCULINE ORDINAL INDICATOR
         case TTTOrdinalNumberFormatterFemaleGender:
             return @"\u00AA"; // FEMININE ORDINAL INDICATOR
         default:
-            return kTTTOrdinalNumberFormatterDefaultOrdinalIndicator;
+            return @"\u00BA"; // MASCULINE ORDINAL INDICATOR
     }
 }
 
@@ -133,13 +157,19 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
                 ordinalIndicator = @"er";
                 break;
         }
-    }
-    else {
+    } else {
         ordinalIndicator = @"e";
     }
-
-    if (self.grammaticalNumber == TTTOrdinalNumberFormatterDual || self.grammaticalNumber == TTTOrdinalNumberFormatterTrial || self.grammaticalNumber == TTTOrdinalNumberFormatterQuadral || self.grammaticalNumber == TTTOrdinalNumberFormatterPlural) {
-        ordinalIndicator = [ordinalIndicator stringByAppendingString:@"s"];
+    
+    switch (self.grammaticalNumber) {
+        case TTTOrdinalNumberFormatterDual:
+        case TTTOrdinalNumberFormatterTrial:
+        case TTTOrdinalNumberFormatterQuadral:
+        case TTTOrdinalNumberFormatterPlural:
+            ordinalIndicator = [ordinalIndicator stringByAppendingString:@"s"];
+            break;
+        default:
+            break;
     }
 
     return ordinalIndicator;

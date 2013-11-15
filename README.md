@@ -19,6 +19,7 @@ In short, use this library if you're manually formatting any of the following (w
 
 FormatterKit comes fully internationalized, with `.strings` files for the following locales:
 
+- Catalan (`ca`)
 - Danish (`da`)
 - Dutch (`nl`)
 - English (`en`)
