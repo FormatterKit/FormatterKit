@@ -21,8 +21,8 @@
 // THE SOFTWARE.
 
 #import "URLRequestFormatterViewController.h"
-
 #import "TTTURLRequestFormatter.h"
+#import <tgmath.h>
 
 NS_ENUM(NSUInteger, URLRequestFormatterViewControllerSectionIndexes) {
     StandardSectionIndex,
@@ -97,13 +97,16 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
             return tableView.rowHeight;
     }
 
+    CGSize constrainedSize = CGSizeMake(280.f, tableView.frame.size.height);
+    UIFont *constrintFont = [UIFont systemFontOfSize:14.f];
+
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 #pragma clang diagnostic ignored "-Wconversion"
-    CGSize size = [command sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:CGSizeMake(280.0f, tableView.frame.size.height) lineBreakMode:UILineBreakModeWordWrap];
+    CGSize size = [command sizeWithFont:constrintFont constrainedToSize:constrainedSize lineBreakMode:UILineBreakModeWordWrap];
 #pragma clang diagnostic pop
 
-    return fmaxf(size.height + 16.0f, self.tableView.rowHeight);
+    return fmax(size.height + 16.0f, self.tableView.rowHeight);
 }
 
 - (void)configureCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
