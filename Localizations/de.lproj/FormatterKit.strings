@@ -20,7 +20,7 @@
 "about %@" = "%@";
 
 /* Past Deictic Expression */
-"ago" = "vor";
+"ago" = "alt";
 
 /* Deictic Expression Format (#{Time} #{Ago/From Now} */
 "Deictic Expression Format String" = "%2$@ %1$@";
