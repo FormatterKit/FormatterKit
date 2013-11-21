@@ -69,7 +69,7 @@ NS_ENUM(NSUInteger, ArrayFormatterViewControllerSectionIndexes) {
 - (NSInteger)tableView:(__unused UITableView *)tableView
  numberOfRowsInSection:(__unused NSInteger)section
 {
-    return [self.examples count];
+    return (NSInteger)[self.examples count];
 }
 
 - (NSString *)tableView:(__unused UITableView *)tableView
@@ -117,7 +117,7 @@ titleForHeaderInSection:(NSInteger)section
     cell.textLabel.font = [UIFont systemFontOfSize:14];
     cell.textLabel.numberOfLines = 3;
     
-    NSArray *example = [self.examples objectAtIndex:indexPath.row];
+    NSArray *example = [self.examples objectAtIndex:(NSUInteger)indexPath.row];
     cell.textLabel.text = [_arrayFormatter stringFromArray:example];
 }
 
