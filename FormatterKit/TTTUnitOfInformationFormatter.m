@@ -203,7 +203,7 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
     if (doubleValue < [self scaleFactorForPrefix:TTTKilo]) {
         unitString = self.displaysInTermsOfBytes ? NSLocalizedStringFromTable(@"bytes", @"FormatterKit", @"Byte Unit") : NSLocalizedStringFromTable(@"bits", @"FormatterKit", @"Bit Unit");
     } else {
-        TTTUnitPrefix prefix = [self prefixForInteger:[number integerValue]];
+        TTTUnitPrefix prefix = [self prefixForInteger:[number unsignedIntegerValue]];
         if (self.displaysInTermsOfBytes) {
             unitString = self.usesIECBinaryPrefixesForDisplay ? TTTByteUnitStringForIECPrefix(prefix) : TTTByteUnitStringForSIPrefix(prefix);
         } else {
@@ -219,14 +219,14 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
 - (NSString *)stringFromNumber:(NSNumber *)number
                         ofUnit:(TTTUnitOfInformation)unit
 {
-    return [self stringFromNumberOfBits:[NSNumber numberWithLongLong:(TTTNumberOfBitsInUnit(unit) * [number integerValue])]];
+    return [self stringFromNumberOfBits:[NSNumber numberWithLongLong:(TTTNumberOfBitsInUnit(unit) * [number unsignedIntegerValue])]];
 }
 
 - (NSString *)stringFromNumber:(NSNumber *)number
                         ofUnit:(TTTUnitOfInformation)unit
                     withPrefix:(TTTUnitPrefix)prefix
 {
-    return [self stringFromNumber:[NSNumber numberWithDouble:([self scaleFactorForPrefix:prefix] * [number integerValue])] ofUnit:unit];
+    return [self stringFromNumber:[NSNumber numberWithDouble:([self scaleFactorForPrefix:prefix] * [number unsignedIntegerValue])] ofUnit:unit];
 }
 
 #pragma mark - NSFormatter

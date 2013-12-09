@@ -64,7 +64,7 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(__unused UITableView *)tableView {
-    return [self.locales count];
+    return (NSInteger)[self.locales count];
 }
 
 - (NSInteger)tableView:(__unused UITableView *)tableView
@@ -76,7 +76,7 @@
 - (NSString *)tableView:(__unused UITableView *)tableView
 titleForHeaderInSection:(NSInteger)section
 {
-    NSLocale *locale = [self.locales objectAtIndex:section];
+    NSLocale *locale = [self.locales objectAtIndex:(NSUInteger)section];
     return [[NSLocale currentLocale] displayNameForKey:NSLocaleIdentifier value:[locale localeIdentifier]];
 }
 
@@ -91,7 +91,7 @@ titleForHeaderInSection:(NSInteger)section
     
     cell.textLabel.font = [UIFont systemFontOfSize:16];
     
-    NSLocale *locale = [self.locales objectAtIndex:indexPath.section];
+    NSLocale *locale = [self.locales objectAtIndex:(NSUInteger)indexPath.section];
     
     [_ordinalNumberFormatter setLocale:locale];
     cell.textLabel.text = [_ordinalNumberFormatter stringFromNumber:@(indexPath.row + 1)];
