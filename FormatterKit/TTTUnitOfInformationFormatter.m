@@ -203,7 +203,7 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
     if (doubleValue < [self scaleFactorForPrefix:TTTKilo]) {
         unitString = self.displaysInTermsOfBytes ? NSLocalizedStringFromTable(@"bytes", @"FormatterKit", @"Byte Unit") : NSLocalizedStringFromTable(@"bits", @"FormatterKit", @"Bit Unit");
     } else {
-        TTTUnitPrefix prefix = [self prefixForInteger:[number integerValue]];
+        TTTUnitPrefix prefix = [self prefixForInteger:(NSUInteger)round(doubleValue)];
         if (self.displaysInTermsOfBytes) {
             unitString = self.usesIECBinaryPrefixesForDisplay ? TTTByteUnitStringForIECPrefix(prefix) : TTTByteUnitStringForSIPrefix(prefix);
         } else {
@@ -212,6 +212,8 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
 
         doubleValue /= [self scaleFactorForPrefix:prefix];
     }
+
+
 
     return [NSString stringWithFormat:NSLocalizedStringWithDefaultValue(@"Unit of Information Format String", @"FormatterKit", [NSBundle mainBundle], @"%@ %@", @"#{Value} #{Unit}"), [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:doubleValue]], unitString];
 }
