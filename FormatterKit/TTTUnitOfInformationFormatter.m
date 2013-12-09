@@ -167,7 +167,6 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
     return self;
 }
 
-
 #pragma mark -
 
 - (double)scaleFactorForPrefix:(TTTUnitPrefix)prefix {
@@ -213,15 +212,13 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
         doubleValue /= [self scaleFactorForPrefix:prefix];
     }
 
-
-
     return [NSString stringWithFormat:NSLocalizedStringWithDefaultValue(@"Unit of Information Format String", @"FormatterKit", [NSBundle mainBundle], @"%@ %@", @"#{Value} #{Unit}"), [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:doubleValue]], unitString];
 }
 
 - (NSString *)stringFromNumber:(NSNumber *)number
                         ofUnit:(TTTUnitOfInformation)unit
 {
-    return [self stringFromNumberOfBits:[NSNumber numberWithLongLong:(TTTNumberOfBitsInUnit(unit) * [number unsignedIntegerValue])]];
+    return [self stringFromNumberOfBits:[NSNumber numberWithUnsignedLongLong:(TTTNumberOfBitsInUnit(unit) * [number unsignedLongLongValue])]];
 }
 
 - (NSString *)stringFromNumber:(NSNumber *)number
