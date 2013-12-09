@@ -132,7 +132,7 @@ titleForHeaderInSection:(NSInteger)section
     cell.detailTextLabel.textColor = [UIColor darkGrayColor];
     cell.detailTextLabel.numberOfLines = 5;
   
-    NSArray *addressComponents = [self.examples objectAtIndex:indexPath.section];
+    NSArray *addressComponents = [self.examples objectAtIndex:(NSUInteger)indexPath.section];
     NSString *street = [addressComponents objectAtIndex:0];
     NSString *locality = [addressComponents objectAtIndex:1];
     NSString *region = [addressComponents objectAtIndex:2];

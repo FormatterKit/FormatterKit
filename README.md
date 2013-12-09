@@ -35,6 +35,8 @@ FormatterKit comes fully internationalized, with `.strings` files for the follow
 - Russian (`ru`)
 - Spanish (`es`)
 - Swedish (`sv`)
+- Turkish (`tr`)
+- Vietnamese (`vi`) 
 
 If you'd like to contribute an additional localization, feel free to [open a new pull request](https://github.com/mattt/FormatterKit/pulls).
 

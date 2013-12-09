@@ -92,7 +92,7 @@ NS_ENUM(NSUInteger, ColorFormatterViewControllerSectionIndexes) {
 - (NSInteger)tableView:(__unused UITableView *)tableView
  numberOfRowsInSection:(__unused NSInteger)section
 {
-    return [self.examples count];
+    return (NSInteger)[self.examples count];
 }
 
 - (NSString *)tableView:(__unused UITableView *)tableView
@@ -123,7 +123,7 @@ titleForHeaderInSection:(NSInteger)section
         _colorFormatter = [[TTTColorFormatter alloc] init];
     });
 
-    UIColor *color = [self.examples objectAtIndex:indexPath.row];
+    UIColor *color = [self.examples objectAtIndex:(NSUInteger)indexPath.row];
 
     cell.imageView.image = UIImageForSwatchOfColorWithSize(color, CGSizeMake(30.0f, 30.0f));
 
