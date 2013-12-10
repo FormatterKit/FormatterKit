@@ -112,11 +112,15 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
     return speed * kTTTMetersPerSecondToMilesPerHourCoefficient;
 }
 
+@interface TTTLocationFormatter ()
+@property (readwrite, nonatomic, strong) NSNumberFormatter *numberFormatter;
+@end
+
 @implementation TTTLocationFormatter
+@synthesize numberFormatter = _numberFormatter;
 @synthesize coordinateOrder = _coordinateOrder;
 @synthesize bearingStyle = _bearingStyle;
 @synthesize unitSystem = _unitSystem;
-@synthesize numberFormatter = _numberFormatter;
 
 - (id)init {
     self = [super init];
@@ -323,11 +327,10 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
 
-    self.coordinateOrder = [aDecoder decodeIntegerForKey:@"coordinateOrder"];
-    self.bearingStyle = [aDecoder decodeIntegerForKey:@"bearingStyle"];
-    self.unitSystem = [aDecoder decodeIntegerForKey:@"unitSystem"];
-
-    _numberFormatter = [aDecoder decodeObjectForKey:@"numberFormatter"];
+    self.numberFormatter = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(numberFormatter))];
+    self.coordinateOrder = [aDecoder decodeIntegerForKey:NSStringFromSelector(@selector(coordinateOrder))];
+    self.bearingStyle = [aDecoder decodeIntegerForKey:NSStringFromSelector(@selector(bearingStyle))];
+    self.unitSystem = [aDecoder decodeIntegerForKey:NSStringFromSelector(@selector(unitSystem))];
 
     return self;
 }
@@ -335,11 +338,10 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [super encodeWithCoder:aCoder];
 
-    [aCoder encodeInteger:self.coordinateOrder forKey:@"coordinateOrder"];
-    [aCoder encodeInteger:self.bearingStyle forKey:@"bearingStyle"];
-    [aCoder encodeInteger:self.unitSystem forKey:@"unitSystem"];
-
-    [aCoder encodeObject:_numberFormatter forKey:@"numberFormatter"];
+    [aCoder encodeObject:self.numberFormatter forKey:NSStringFromSelector(@selector(numberFormatter))];
+    [aCoder encodeInteger:self.coordinateOrder forKey:NSStringFromSelector(@selector(coordinateOrder))];
+    [aCoder encodeInteger:self.bearingStyle forKey:NSStringFromSelector(@selector(bearingStyle))];
+    [aCoder encodeInteger:self.unitSystem forKey:NSStringFromSelector(@selector(unitSystem))];
 }
 
 @end

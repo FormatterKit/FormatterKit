@@ -391,16 +391,16 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
 
-    self.locale = [aDecoder decodeObjectForKey:@"locale"];
-    self.pastDeicticExpression = [aDecoder decodeObjectForKey:@"pastDeicticExpression"];
-    self.presentDeicticExpression = [aDecoder decodeObjectForKey:@"presentDeicticExpression"];
-    self.futureDeicticExpression = [aDecoder decodeObjectForKey:@"futureDeicticExpression"];
-    self.deicticExpressionFormat = [aDecoder decodeObjectForKey:@"deicticExpressionFormat"];
-    self.approximateQualifierFormat = [aDecoder decodeObjectForKey:@"approximateQualifierFormat"];
-    self.presentTimeIntervalMargin = [aDecoder decodeDoubleForKey:@"presentTimeIntervalMargin"];
-    self.usesAbbreviatedCalendarUnits = [aDecoder decodeBoolForKey:@"usesAbbreviatedCalendarUnits"];
-    self.usesApproximateQualifier = [aDecoder decodeBoolForKey:@"usesApproximateQualifier"];
-    self.usesIdiomaticDeicticExpressions = [aDecoder decodeBoolForKey:@"usesIdiomaticDeicticExpressions"];
+    self.locale = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(locale))];
+    self.pastDeicticExpression = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(pastDeicticExpression))];
+    self.presentDeicticExpression = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(presentDeicticExpression))];
+    self.futureDeicticExpression = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(futureDeicticExpression))];
+    self.deicticExpressionFormat = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(deicticExpressionFormat))];
+    self.approximateQualifierFormat = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(approximateQualifierFormat))];
+    self.presentTimeIntervalMargin = [aDecoder decodeDoubleForKey:NSStringFromSelector(@selector(presentTimeIntervalMargin))];
+    self.usesAbbreviatedCalendarUnits = [aDecoder decodeBoolForKey:NSStringFromSelector(@selector(usesAbbreviatedCalendarUnits))];
+    self.usesApproximateQualifier = [aDecoder decodeBoolForKey:NSStringFromSelector(@selector(usesApproximateQualifier))];
+    self.usesIdiomaticDeicticExpressions = [aDecoder decodeBoolForKey:NSStringFromSelector(@selector(usesIdiomaticDeicticExpressions))];
 
     return self;
 }
@@ -409,15 +409,15 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     [super encodeWithCoder:aCoder];
 
     [aCoder encodeObject:self.locale forKey:@"locale"];
-    [aCoder encodeObject:self.pastDeicticExpression forKey:@"pastDeicticExpression"];
-    [aCoder encodeObject:self.presentDeicticExpression forKey:@"presentDeicticExpression"];
-    [aCoder encodeObject:self.futureDeicticExpression forKey:@"futureDeicticExpression"];
-    [aCoder encodeObject:self.deicticExpressionFormat forKey:@"deicticExpressionFormat"];
-    [aCoder encodeObject:self.approximateQualifierFormat forKey:@"approximateQualifierFormat"];
-    [aCoder encodeDouble:self.presentTimeIntervalMargin forKey:@"presentTimeIntervalMargin"];
-    [aCoder encodeBool:self.usesAbbreviatedCalendarUnits forKey:@"usesAbbreviatedCalendarUnits"];
-    [aCoder encodeBool:self.usesApproximateQualifier forKey:@"usesApproximateQualifier"];
-    [aCoder encodeBool:self.usesIdiomaticDeicticExpressions forKey:@"usesIdiomaticDeicticExpressions"];
+    [aCoder encodeObject:self.pastDeicticExpression forKey:NSStringFromSelector(@selector(pastDeicticExpression))];
+    [aCoder encodeObject:self.presentDeicticExpression forKey:NSStringFromSelector(@selector(presentDeicticExpression))];
+    [aCoder encodeObject:self.futureDeicticExpression forKey:NSStringFromSelector(@selector(futureDeicticExpression))];
+    [aCoder encodeObject:self.deicticExpressionFormat forKey:NSStringFromSelector(@selector(deicticExpressionFormat))];
+    [aCoder encodeObject:self.approximateQualifierFormat forKey:NSStringFromSelector(@selector(approximateQualifierFormat))];
+    [aCoder encodeDouble:self.presentTimeIntervalMargin forKey:NSStringFromSelector(@selector(presentTimeIntervalMargin))];
+    [aCoder encodeBool:self.usesAbbreviatedCalendarUnits forKey:NSStringFromSelector(@selector(usesAbbreviatedCalendarUnits))];
+    [aCoder encodeBool:self.usesApproximateQualifier forKey:NSStringFromSelector(@selector(usesApproximateQualifier))];
+    [aCoder encodeBool:self.usesIdiomaticDeicticExpressions forKey:NSStringFromSelector(@selector(usesIdiomaticDeicticExpressions))];
 }
 
 @end

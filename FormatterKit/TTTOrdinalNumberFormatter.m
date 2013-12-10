@@ -267,9 +267,9 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
 
-    self.ordinalIndicator = [aDecoder decodeObjectForKey:@"ordinalIndicator"];
-    self.grammaticalGender = [aDecoder decodeIntegerForKey:@"grammaticalGender"];
-    self.grammaticalNumber = [aDecoder decodeIntegerForKey:@"grammaticalNumber"];
+    self.ordinalIndicator = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(ordinalIndicator))];
+    self.grammaticalGender = [aDecoder decodeIntegerForKey:NSStringFromSelector(@selector(grammaticalGender))];
+    self.grammaticalNumber = [aDecoder decodeIntegerForKey:NSStringFromSelector(@selector(grammaticalNumber))];
 
     return self;
 }
@@ -277,9 +277,9 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [super encodeWithCoder:aCoder];
 
-    [aCoder encodeObject:self.ordinalIndicator forKey:@"ordinalIndicator"];
-    [aCoder encodeInteger:self.grammaticalGender forKey:@"grammaticalGender"];
-    [aCoder encodeInteger:self.grammaticalNumber forKey:@"grammaticalNumber"];
+    [aCoder encodeObject:self.ordinalIndicator forKey:NSStringFromSelector(@selector(ordinalIndicator))];
+    [aCoder encodeInteger:self.grammaticalGender forKey:NSStringFromSelector(@selector(grammaticalGender))];
+    [aCoder encodeInteger:self.grammaticalNumber forKey:NSStringFromSelector(@selector(grammaticalNumber))];
 }
 
 @end

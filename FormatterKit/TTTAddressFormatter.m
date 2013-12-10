@@ -101,7 +101,7 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     
-    self.locale = [aDecoder decodeObjectForKey:@"locale"];
+    self.locale = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(locale))];
     
     return self;
 }
@@ -109,7 +109,7 @@
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [super encodeWithCoder:aCoder];
     
-    [aCoder encodeObject:self.locale forKey:@"locale"];
+    [aCoder encodeObject:self.locale forKey:NSStringFromSelector(@selector(locale))];
 }
 
 @end

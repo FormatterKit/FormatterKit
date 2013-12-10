@@ -159,13 +159,13 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
 
-    self.arrayStyle = (TTTArrayFormatterStyle)[aDecoder decodeIntegerForKey:@"arrayStyle"];
-    self.delimiter = [aDecoder decodeObjectForKey:@"delimiter"];
-    self.separator = [aDecoder decodeObjectForKey:@"separator"];
-    self.conjunction = [aDecoder decodeObjectForKey:@"conjunction"];
-    self.abbreviatedConjunction = [aDecoder decodeObjectForKey:@"abbreviatedConjunction"];
-    self.usesAbbreviatedConjunction = [aDecoder decodeBoolForKey:@"usesAbbreviatedConjunction"];
-    self.usesSerialDelimiter = [aDecoder decodeBoolForKey:@"usesSerialDelimiter"];
+    self.arrayStyle = (TTTArrayFormatterStyle)[aDecoder decodeIntegerForKey:NSStringFromSelector(@selector(arrayStyle))];
+    self.delimiter = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(delimiter))];
+    self.separator = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(separator))];
+    self.conjunction = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(conjunction))];
+    self.abbreviatedConjunction = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(abbreviatedConjunction))];
+    self.usesAbbreviatedConjunction = [aDecoder decodeBoolForKey:NSStringFromSelector(@selector(usesAbbreviatedConjunction))];
+    self.usesSerialDelimiter = [aDecoder decodeBoolForKey:NSStringFromSelector(@selector(usesSerialDelimiter))];
 
     return self;
 }
@@ -173,13 +173,13 @@
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [super encodeWithCoder:aCoder];
 
-    [aCoder encodeInteger:self.arrayStyle forKey:@"arrayStyle"];
-    [aCoder encodeObject:self.delimiter forKey:@"delimiter"];
-    [aCoder encodeObject:self.separator forKey:@"separator"];
-    [aCoder encodeObject:self.conjunction forKey:@"conjunction"];
-    [aCoder encodeObject:self.abbreviatedConjunction forKey:@"abbreviatedConjunction"];
-    [aCoder encodeBool:self.usesAbbreviatedConjunction forKey:@"usesAbbreviatedConjunction"];
-    [aCoder encodeBool:self.usesSerialDelimiter forKey:@"usesSerialDelimiter"];
+    [aCoder encodeInteger:self.arrayStyle forKey:NSStringFromSelector(@selector(arrayStyle))];
+    [aCoder encodeObject:self.delimiter forKey:NSStringFromSelector(@selector(delimiter))];
+    [aCoder encodeObject:self.separator forKey:NSStringFromSelector(@selector(separator))];
+    [aCoder encodeObject:self.conjunction forKey:NSStringFromSelector(@selector(conjunction))];
+    [aCoder encodeObject:self.abbreviatedConjunction forKey:NSStringFromSelector(@selector(abbreviatedConjunction))];
+    [aCoder encodeBool:self.usesAbbreviatedConjunction forKey:NSStringFromSelector(@selector(usesAbbreviatedConjunction))];
+    [aCoder encodeBool:self.usesSerialDelimiter forKey:NSStringFromSelector(@selector(usesSerialDelimiter))];
 }
 
 @end
