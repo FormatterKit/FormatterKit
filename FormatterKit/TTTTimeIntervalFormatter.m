@@ -88,12 +88,6 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     }
 }
 
-@interface TTTTimeIntervalFormatter ()
-- (NSString *)localizedStringForNumber:(NSUInteger)number ofCalendarUnit:(NSCalendarUnit)unit;
-- (NSString *)localizedIdiomaticDeicticExpressionForComponents:(NSDateComponents *)componenets;
-- (NSString *)enRelativeDateStringForComponents:(NSDateComponents *)components;
-@end
-
 @implementation TTTTimeIntervalFormatter
 @synthesize locale = _locale;
 @synthesize calendar = _calendar;
