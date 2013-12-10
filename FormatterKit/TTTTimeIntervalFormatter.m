@@ -108,6 +108,7 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
 @synthesize usesIdiomaticDeicticExpressions = _usesIdiomaticDeicticExpressions;
 @synthesize numberOfSignificantUnits = _numberOfSignificantUnits;
 @synthesize leastSignificantUnit = _leastSignificantUnit;
+@synthesize significantUnits = _significantUnits;
 
 - (id)init {
     self = [super init];
@@ -126,9 +127,10 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     self.approximateQualifierFormat = NSLocalizedStringFromTable(@"about %@", @"FormatterKit", @"Approximate Qualifier Format");
 
     self.presentTimeIntervalMargin = 1;
-    
-    self.leastSignificantUnit = NSSecondCalendarUnit;
+
+    self.significantUnits = NSYearCalendarUnit | NSMonthCalendarUnit | NSWeekCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
     self.numberOfSignificantUnits = 1;
+    self.leastSignificantUnit = NSSecondCalendarUnit;
 
     return self;
 }
@@ -146,8 +148,7 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return self.presentDeicticExpression;
     }
 
-    NSUInteger unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSWeekCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
-    NSDateComponents *components = [self.calendar components:unitFlags fromDate:startingDate toDate:endingDate options:0];
+    NSDateComponents *components = [self.calendar components:self.significantUnits fromDate:startingDate toDate:endingDate options:0];
 
     if (self.usesIdiomaticDeicticExpressions) {
         NSString *idiomaticDeicticExpression = [self localizedIdiomaticDeicticExpressionForComponents:components];
@@ -161,7 +162,7 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     NSUInteger numberOfUnits = 0;
     for (NSString *unitName in [NSArray arrayWithObjects:@"year", @"month", @"week", @"day", @"hour", @"minute", @"second", nil]) {
         NSCalendarUnit unit = NSCalendarUnitFromString(unitName);
-        if (!string || NSCalendarUnitCompareSignificance(self.leastSignificantUnit, unit) != NSOrderedDescending) {
+        if ((self.significantUnits & unit) && NSCalendarUnitCompareSignificance(self.leastSignificantUnit, unit) != NSOrderedDescending) {
             NSNumber *number = [NSNumber numberWithInteger:abs((int)[[components valueForKey:unitName] integerValue])];
             if ([number integerValue]) {
                 NSString *suffix = [NSString stringWithFormat:@"%@ %@", number, [self localizedStringForNumber:[number unsignedIntegerValue] ofCalendarUnit:unit]];
