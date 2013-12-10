@@ -55,7 +55,7 @@ typedef enum {
 /**
  When specified, this overrides the indicator determined by the formatter. `nil` by default.
  */
-@property (nonatomic, strong) NSString *ordinalIndicator;
+@property (nonatomic, copy) NSString *ordinalIndicator;
 
 /**
  Specifies the grammatical gender of the word conjugatd by the ordinal number.

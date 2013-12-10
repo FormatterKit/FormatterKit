@@ -49,14 +49,14 @@ typedef enum {
 /**
  Specifies the string used to separate delimiters from the next component. " " by default.
  */
-@property (nonatomic, strong) NSString *separator;
+@property (nonatomic, copy) NSString *separator;
 
 /**
  Specifies the string used to delimit the components in the array. "," by default.
 
  @discussion Delimiters are added immediately after each component, before the `separator`.
  */
-@property (nonatomic, strong) NSString *delimiter;
+@property (nonatomic, copy) NSString *delimiter;
 
 /**
  Specifies whether to use a delimiter between the conjunction when applied with the `TTTArrayFormatterSentenceStyle`. `YES` by default.
@@ -74,14 +74,14 @@ typedef enum {
 
  @see usesAbbreviatedConjunction
  */
-@property (nonatomic, strong) NSString *conjunction;
+@property (nonatomic, copy) NSString *conjunction;
 
 /**
  Specifies the abbreviated localized string used to join the penultimate and last components together when applied with the `TTTArrayFormatterSentenceStyle`. "&" by default.
 
  @see usesAbbreviatedConjunction
  */
-@property (nonatomic, strong) NSString *abbreviatedConjunction;
+@property (nonatomic, copy) NSString *abbreviatedConjunction;
 
 /**
  Specifies whether to use the standard or abbreviated conjunction when applied with the `TTTArrayFormatterSentenceStyle`. `NO` by default.

@@ -46,22 +46,22 @@
 /**
  Specifies the localized string used to express the past deictic expression. "ago" by default.
  */
-@property (nonatomic, strong) NSString *pastDeicticExpression;
+@property (nonatomic, copy) NSString *pastDeicticExpression;
 
 /**
  Specifies the localized string used to express the present deictic expression. "just now" by default.
  */
-@property (nonatomic, strong) NSString *presentDeicticExpression;
+@property (nonatomic, copy) NSString *presentDeicticExpression;
 
 /**
  Specifies the localized string used to express the future deictic expression. "from now" by default.
  */
-@property (nonatomic, strong) NSString *futureDeicticExpression;
+@property (nonatomic, copy) NSString *futureDeicticExpression;
 
 /**
  Specifies the localized string used to format the time interval string and deictic expression. Defaults to a format with the deictic expression following the time interval
  */
-@property (nonatomic, strong) NSString *deicticExpressionFormat;
+@property (nonatomic, copy) NSString *deicticExpressionFormat;
 
 /**
  Specifies the time interval before and after the present moment that is described as still being in the present, rather than the past or future. Defaults to 1 second.
@@ -82,7 +82,7 @@
 /**
  Specifies the localized string used to qualify a time interval as being an approximate time. "about" by default.
  */
-@property (nonatomic, strong) NSString *approximateQualifierFormat;
+@property (nonatomic, copy) NSString *approximateQualifierFormat;
 
 /**
  Specifies whether to use an approximate qualifier when the described interval is not exact. `NO` by default.
