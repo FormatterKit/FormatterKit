@@ -158,7 +158,7 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
 
     _numberFormatter = [[NSNumberFormatter alloc] init];
     [_numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
-    [_numberFormatter setRoundingIncrement:[NSNumber numberWithFloat:0.01f]];
+    [_numberFormatter setRoundingIncrement:@(0.01f)];
 
     self.displaysInTermsOfBytes = YES;
     self.usesIECBinaryPrefixesForCalculation = YES;
@@ -212,20 +212,20 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
         doubleValue /= [self scaleFactorForPrefix:prefix];
     }
 
-    return [NSString stringWithFormat:NSLocalizedStringWithDefaultValue(@"Unit of Information Format String", @"FormatterKit", [NSBundle mainBundle], @"%@ %@", @"#{Value} #{Unit}"), [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:doubleValue]], unitString];
+    return [NSString stringWithFormat:NSLocalizedStringWithDefaultValue(@"Unit of Information Format String", @"FormatterKit", [NSBundle mainBundle], @"%@ %@", @"#{Value} #{Unit}"), [_numberFormatter stringFromNumber:@(doubleValue)], unitString];
 }
 
 - (NSString *)stringFromNumber:(NSNumber *)number
                         ofUnit:(TTTUnitOfInformation)unit
 {
-    return [self stringFromNumberOfBits:[NSNumber numberWithUnsignedLongLong:(TTTNumberOfBitsInUnit(unit) * [number unsignedLongLongValue])]];
+    return [self stringFromNumberOfBits:@([number unsignedLongLongValue] * TTTNumberOfBitsInUnit(unit))];
 }
 
 - (NSString *)stringFromNumber:(NSNumber *)number
                         ofUnit:(TTTUnitOfInformation)unit
                     withPrefix:(TTTUnitPrefix)prefix
 {
-    return [self stringFromNumber:[NSNumber numberWithDouble:([self scaleFactorForPrefix:prefix] * [number unsignedIntegerValue])] ofUnit:unit];
+    return [self stringFromNumber:@([self scaleFactorForPrefix:prefix] * [number unsignedIntegerValue]) ofUnit:unit];
 }
 
 #pragma mark - NSFormatter

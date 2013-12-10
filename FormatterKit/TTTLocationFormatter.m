@@ -140,7 +140,7 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
 #pragma mark -
 
 - (NSString *)stringFromCoordinate:(CLLocationCoordinate2D)coordinate {
-    return [NSString stringWithFormat:NSLocalizedStringFromTable(@"(%@, %@)", @"FormatterKit", @"Coordinate format"), [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:coordinate.latitude]], [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:coordinate.longitude]], nil];
+    return [NSString stringWithFormat:NSLocalizedStringFromTable(@"(%@, %@)", @"FormatterKit", @"Coordinate format"), [_numberFormatter stringFromNumber:@(coordinate.latitude)], [_numberFormatter stringFromNumber:@(coordinate.longitude)], nil];
 }
 
 - (NSString *)stringFromLocation:(CLLocation *)location {
@@ -157,10 +157,10 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
             double kilometerDistance = CLLocationDistanceToKilometers(distance);
 
             if (kilometerDistance >= 1) {
-                distanceString = [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:kilometerDistance]];
+                distanceString = [_numberFormatter stringFromNumber:@(kilometerDistance)];
                 unitString = NSLocalizedStringFromTable(@"km", @"FormatterKit", @"Kilometer Unit");
             } else {
-                distanceString = [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:meterDistance]];
+                distanceString = [_numberFormatter stringFromNumber:@(meterDistance)];
                 unitString = NSLocalizedStringFromTable(@"m", @"FormatterKit", @"Meter Unit");
             }
             break;
@@ -172,13 +172,13 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
             double milesDistance = CLLocationDistanceToMiles(distance);
 
             if (feetDistance < 300) {
-                distanceString = [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:feetDistance]];
+                distanceString = [_numberFormatter stringFromNumber:@(feetDistance)];
                 unitString = NSLocalizedStringFromTable(@"ft", @"FormatterKit", @"Feet Unit");
             } else if (yardDistance < 500) {
-                distanceString = [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:yardDistance]];
+                distanceString = [_numberFormatter stringFromNumber:@(yardDistance)];
                 unitString = NSLocalizedStringFromTable(@"yds", @"FormatterKit", @"Yard Unit");
             } else {
-                distanceString = [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:milesDistance]];
+                distanceString = [_numberFormatter stringFromNumber:@(milesDistance)];
                 unitString = (milesDistance > 1.0 && milesDistance < 1.1) ? NSLocalizedStringFromTable(@"mile", @"FormatterKit", @"Mile Unit (Singular)") : NSLocalizedStringFromTable(@"miles", @"FormatterKit", @"Mile Unit (Plural)");
             }
             break;
@@ -231,7 +231,7 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
             }
             break;
         case TTTBearingNumericStyle:
-            return [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:bearing]];
+            return [_numberFormatter stringFromNumber:@(bearing)];
     }
 
     return nil;
@@ -247,10 +247,10 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
             double kilometersPerHourSpeed = CLLocationSpeedToKilometersPerHour(speed);
 
             if (kilometersPerHourSpeed > 1) {
-                speedString = [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:kilometersPerHourSpeed]];
+                speedString = [_numberFormatter stringFromNumber:@(kilometersPerHourSpeed)];
                 unitString = NSLocalizedStringFromTable(@"km/h", @"FormatterKit", @"Kilometers Per Hour Unit");
             } else {
-                speedString = [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:metersPerSecondSpeed]];
+                speedString = [_numberFormatter stringFromNumber:@(metersPerSecondSpeed)];
                 unitString = NSLocalizedStringFromTable(@"m/s", @"FormatterKit", @"Meters Per Second Unit");
             }
             break;
@@ -261,10 +261,10 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
             double milesPerHourSpeed = CLLocationSpeedToMilesPerHour(speed);
 
             if (milesPerHourSpeed > 1) {
-                speedString = [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:milesPerHourSpeed]];
+                speedString = [_numberFormatter stringFromNumber:@(milesPerHourSpeed)];
                 unitString = NSLocalizedStringFromTable(@"mph", @"FormatterKit", @"Miles Per Hour Unit");
             } else {
-                speedString = [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:feetPerSecondSpeed]];
+                speedString = [_numberFormatter stringFromNumber:@(feetPerSecondSpeed)];
                 unitString = NSLocalizedStringFromTable(@"ft/s", @"FormatterKit", @"Feet Per Second Unit");
             }
             break;

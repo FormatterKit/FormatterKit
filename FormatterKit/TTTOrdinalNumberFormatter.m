@@ -39,7 +39,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     [self setAllowsFloats:NO];
     [self setGeneratesDecimalNumbers:NO];
     [self setRoundingMode:NSNumberFormatterRoundFloor];
-    [self setMinimum:[NSNumber numberWithInteger:0]];
+    [self setMinimum:@(0)];
     [self setLenient:YES];
 
     return self;
@@ -252,7 +252,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     [scanner scanInteger:&integer];
 
     if (integer != NSNotFound) {
-        *obj = [NSNumber numberWithInteger:integer];
+        *obj = @(integer);
 
         return YES;
     }

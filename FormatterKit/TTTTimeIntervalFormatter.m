@@ -163,7 +163,7 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     for (NSString *unitName in @[@"year", @"month", @"week", @"day", @"hour", @"minute", @"second"]) {
         NSCalendarUnit unit = NSCalendarUnitFromString(unitName);
         if ((self.significantUnits & unit) && NSCalendarUnitCompareSignificance(self.leastSignificantUnit, unit) != NSOrderedDescending) {
-            NSNumber *number = [NSNumber numberWithInteger:abs((int)[[components valueForKey:unitName] integerValue])];
+            NSNumber *number = @(abs((int)[[components valueForKey:unitName] integerValue]));
             if ([number integerValue]) {
                 NSString *suffix = [NSString stringWithFormat:@"%@ %@", number, [self localizedStringForNumber:[number unsignedIntegerValue] ofCalendarUnit:unit]];
                 if (!string) {

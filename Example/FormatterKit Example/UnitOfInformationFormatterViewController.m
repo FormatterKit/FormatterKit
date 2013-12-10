@@ -125,7 +125,7 @@ titleForHeaderInSection:(NSInteger)section
     }
 
     cell.textLabel.font = [UIFont systemFontOfSize:14];
-    cell.textLabel.text = [_unitOfInformationFormatter stringFromNumberOfBits:[NSNumber numberWithInteger:numberOfBits]];
+    cell.textLabel.text = [_unitOfInformationFormatter stringFromNumberOfBits:@(numberOfBits)];
 }
 
 @end
