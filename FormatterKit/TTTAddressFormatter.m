@@ -47,26 +47,26 @@
     NSMutableDictionary *mutableAddressComponents = [NSMutableDictionary dictionary];
     
     if (street) {
-        [mutableAddressComponents setValue:street forKey:(__bridge NSString *)kABPersonAddressStreetKey];
+        mutableAddressComponents[(__bridge NSString *)kABPersonAddressStreetKey] = street;
     }
     
     if (locality) {
-        [mutableAddressComponents setValue:locality forKey:(__bridge NSString *)kABPersonAddressCityKey];
+        mutableAddressComponents[(__bridge NSString *)kABPersonAddressCityKey] = locality;
     }
     
     if (region) {
-        [mutableAddressComponents setValue:region forKey:(__bridge NSString *)kABPersonAddressStateKey];
+        mutableAddressComponents[(__bridge NSString *)kABPersonAddressStateKey] = region;
     }
     
     if (postalCode) {
-        [mutableAddressComponents setValue:postalCode forKey:(__bridge NSString *)kABPersonAddressZIPKey];
+        mutableAddressComponents[(__bridge NSString *)kABPersonAddressZIPKey] = postalCode;
     }
     
     if (country) {
-        [mutableAddressComponents setValue:country forKey:(__bridge NSString *)kABPersonAddressCountryKey];
+        mutableAddressComponents[(__bridge NSString *)kABPersonAddressCountryKey] = country;
     }
     
-    [mutableAddressComponents setValue:[self.locale objectForKey:NSLocaleCountryCode] forKey:(__bridge NSString *)kABPersonAddressCountryCodeKey];
+    mutableAddressComponents[(__bridge NSString *)kABPersonAddressCountryCodeKey] = [self.locale objectForKey:NSLocaleCountryCode];
     
 #if __IPHONE_OS_VERSION_MIN_REQUIRED
     return ABCreateStringWithAddressDictionary(mutableAddressComponents, !!country);

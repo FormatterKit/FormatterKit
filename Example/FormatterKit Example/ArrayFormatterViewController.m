@@ -117,7 +117,7 @@ titleForHeaderInSection:(NSInteger)section
     cell.textLabel.font = [UIFont systemFontOfSize:14];
     cell.textLabel.numberOfLines = 3;
     
-    NSArray *example = [self.examples objectAtIndex:(NSUInteger)indexPath.row];
+    NSArray *example = self.examples[(NSUInteger)indexPath.row];
     cell.textLabel.text = [_arrayFormatter stringFromArray:example];
 }
 

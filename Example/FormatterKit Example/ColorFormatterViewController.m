@@ -123,7 +123,7 @@ titleForHeaderInSection:(NSInteger)section
         _colorFormatter = [[TTTColorFormatter alloc] init];
     });
 
-    UIColor *color = [self.examples objectAtIndex:(NSUInteger)indexPath.row];
+    UIColor *color = self.examples[(NSUInteger)indexPath.row];
 
     cell.imageView.image = UIImageForSwatchOfColorWithSize(color, CGSizeMake(30.0f, 30.0f));
 

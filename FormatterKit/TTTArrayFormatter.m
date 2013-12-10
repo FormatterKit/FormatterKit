@@ -47,7 +47,9 @@
     return self;
 }
 
-+ (NSString *)localizedStringFromArray:(NSArray *)anArray arrayStyle:(TTTArrayFormatterStyle)style {
++ (NSString *)localizedStringFromArray:(NSArray *)anArray
+                            arrayStyle:(TTTArrayFormatterStyle)style
+{
     TTTArrayFormatter *formatter = [[TTTArrayFormatter alloc] init];
     [formatter setArrayStyle:style];
 
@@ -58,11 +60,13 @@
     return [self stringFromArray:anArray rangesOfComponents:nil];
 }
 
-- (NSString *)stringFromArray:(NSArray *)anArray rangesOfComponents:(NSArray **)rangeValues {
+- (NSString *)stringFromArray:(NSArray *)anArray
+           rangesOfComponents:(NSArray **)rangeValues
+{
     NSMutableString *mutableString = [NSMutableString string];
     NSMutableArray *componentRanges = [NSMutableArray arrayWithCapacity:[anArray count]];
     for (NSUInteger idx = 0; idx < [anArray count]; idx++) {
-        NSString *component = [[anArray objectAtIndex:idx] description];
+        NSString *component = [anArray[idx] description];
         if (!component) {
             continue;
         }
