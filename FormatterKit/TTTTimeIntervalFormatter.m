@@ -42,6 +42,52 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     return NSUndefinedDateComponent;
 }
 
+static inline NSCalendarUnit NSNormalizedCalendarUnit(NSCalendarUnit unit) {
+    switch (unit) {
+        case NSCalendarUnitWeekOfMonth:
+        case NSCalendarUnitWeekOfYear:
+            return NSWeekCalendarUnit;
+        case NSCalendarUnitWeekday:
+        case NSCalendarUnitWeekdayOrdinal:
+            return NSDayCalendarUnit;
+        default:
+            return unit;
+    }
+}
+
+static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUnit a, NSCalendarUnit b) {
+    a = NSNormalizedCalendarUnit(a);
+    b = NSNormalizedCalendarUnit(b);
+
+    if ((a == NSWeekCalendarUnit) ^ (b == NSWeekCalendarUnit)) {
+        if (a == NSWeekCalendarUnit) {
+            switch (a) {
+                case NSYearCalendarUnit:
+                case NSMonthCalendarUnit:
+                    return NSOrderedAscending;
+                default:
+                    return NSOrderedDescending;
+            }
+        } else {
+            switch (b) {
+                case NSYearCalendarUnit:
+                case NSMonthCalendarUnit:
+                    return NSOrderedDescending;
+                default:
+                    return NSOrderedAscending;
+            }
+        }
+    } else {
+        if (a > b) {
+            return NSOrderedAscending;
+        } else if (a < b) {
+            return NSOrderedDescending;
+        } else {
+            return NSOrderedSame;
+        }
+    }
+}
+
 @interface TTTTimeIntervalFormatter ()
 - (NSString *)localizedStringForNumber:(NSUInteger)number ofCalendarUnit:(NSCalendarUnit)unit;
 - (NSString *)localizedIdiomaticDeicticExpressionForComponents:(NSDateComponents *)componenets;
@@ -115,7 +161,7 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     NSUInteger numberOfUnits = 0;
     for (NSString *unitName in [NSArray arrayWithObjects:@"year", @"month", @"week", @"day", @"hour", @"minute", @"second", nil]) {
         NSCalendarUnit unit = NSCalendarUnitFromString(unitName);
-        if (!string || self.leastSignificantUnit >= unit) {
+        if (!string || NSCalendarUnitCompareSignificance(self.leastSignificantUnit, unit) != NSOrderedDescending) {
             NSNumber *number = [NSNumber numberWithInteger:abs((int)[[components valueForKey:unitName] integerValue])];
             if ([number integerValue]) {
                 NSString *suffix = [NSString stringWithFormat:@"%@ %@", number, [self localizedStringForNumber:[number unsignedIntegerValue] ofCalendarUnit:unit]];
