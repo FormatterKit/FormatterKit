@@ -52,9 +52,9 @@ NS_ENUM(NSUInteger, AddressFormatterViewControllerFormatterViewControllerRowInde
     self.title = NSLocalizedString(@"Address Formatter", nil);
     
     NSMutableArray *mutableExamples = [NSMutableArray array];
-    [mutableExamples addObject:[NSArray arrayWithObjects:@"633 Stag Trail Rd", @"North Caldwell", @"NJ", @"07006", @"United States", nil]];
-    [mutableExamples addObject:[NSArray arrayWithObjects:@"221b Baker St", @"Paddington", @"Greater London", @"NW1 6XE", @"United Kingdom", nil]];
-    [mutableExamples addObject:[NSArray arrayWithObjects:@"渋谷１−１２−２３", @"渋谷区", @"東京都", @"〒１５０−０００２", @"日本", nil]];
+    [mutableExamples addObject:@[@"633 Stag Trail Rd", @"North Caldwell", @"NJ", @"07006", @"United States"]];
+    [mutableExamples addObject:@[@"221b Baker St", @"Paddington", @"Greater London", @"NW1 6XE", @"United Kingdom"]];
+    [mutableExamples addObject:@[@"渋谷１−１２−２３", @"渋谷区", @"東京都", @"〒１５０−０００２", @"日本"]];
     self.examples = [NSArray arrayWithArray:mutableExamples];
 
     return self;

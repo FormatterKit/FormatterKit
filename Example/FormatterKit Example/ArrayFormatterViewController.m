@@ -47,10 +47,10 @@ NS_ENUM(NSUInteger, ArrayFormatterViewControllerSectionIndexes) {
     self.title = NSLocalizedString(@"Array Formatter", nil);
     
     NSMutableArray *mutableExamples = [NSMutableArray array];
-    [mutableExamples addObject:[NSArray arrayWithObjects:@"John Lennon", @"Paul McCartney", @"George Harrison", @"Ringo Starr", nil]];
-    [mutableExamples addObject:[NSArray arrayWithObjects:@"Bertrand Russel", @"Baruch de Spinoza", @"John Rawls", nil]];
-    [mutableExamples addObject:[NSArray arrayWithObjects:@"Friedrich Hayek", @"John Maynard Keynes", nil]];
-    [mutableExamples addObject:[NSArray arrayWithObjects:@"Kurt Vonnegut", nil]];
+    [mutableExamples addObject:@[@"John Lennon", @"Paul McCartney", @"George Harrison", @"Ringo Starr"]];
+    [mutableExamples addObject:@[@"Bertrand Russel", @"Baruch de Spinoza", @"John Rawls"]];
+    [mutableExamples addObject:@[@"Friedrich Hayek", @"John Maynard Keynes"]];
+    [mutableExamples addObject:@[@"Kurt Vonnegut"]];
     self.examples = [NSArray arrayWithArray:mutableExamples];
 
     return self;
