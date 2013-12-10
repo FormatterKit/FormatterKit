@@ -64,6 +64,11 @@
 @property (nonatomic, copy) NSString *deicticExpressionFormat;
 
 /**
+ Specifies the localized string used to format the time with its suffix. "#{Time} #{Unit}" by default.
+ */
+@property (nonatomic, strong) NSString *suffixExpressionFormat;
+
+/**
  Specifies the time interval before and after the present moment that is described as still being in the present, rather than the past or future. Defaults to 1 second.
  */
 @property (nonatomic, assign) NSTimeInterval presentTimeIntervalMargin;
