@@ -246,6 +246,19 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
     return NO;
 }
 
+#pragma mark - NSCopying
+
+- (id)copyWithZone:(NSZone *)zone {
+    TTTUnitOfInformationFormatter *formatter = [[[self class] allocWithZone:zone] init];
+
+    formatter.numberFormatter = [self.numberFormatter copyWithZone:zone];
+    formatter.displaysInTermsOfBytes = self.displaysInTermsOfBytes;
+    formatter.usesIECBinaryPrefixesForCalculation = self.usesIECBinaryPrefixesForCalculation;
+    formatter.usesIECBinaryPrefixesForDisplay = self.usesIECBinaryPrefixesForDisplay;
+
+    return formatter;
+}
+
 #pragma mark - NSCoding
 
 - (id)initWithCoder:(NSCoder *)aDecoder {

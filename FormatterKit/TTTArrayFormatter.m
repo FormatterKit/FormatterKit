@@ -154,6 +154,22 @@
     return returnValue;
 }
 
+#pragma mark - NSCopying
+
+- (id)copyWithZone:(NSZone *)zone {
+    TTTArrayFormatter *formatter = [[[self class] allocWithZone:zone] init];
+
+    formatter.arrayStyle = self.arrayStyle;
+    formatter.delimiter = [self.delimiter copyWithZone:zone];
+    formatter.separator = [self.separator copyWithZone:zone];
+    formatter.conjunction = [self.conjunction copyWithZone:zone];
+    formatter.abbreviatedConjunction = [self.abbreviatedConjunction copyWithZone:zone];
+    formatter.usesAbbreviatedConjunction = self.usesAbbreviatedConjunction;
+    formatter.usesSerialDelimiter = self.usesSerialDelimiter;
+
+    return formatter;
+}
+
 #pragma mark - NSCoding
 
 - (id)initWithCoder:(NSCoder *)aDecoder {

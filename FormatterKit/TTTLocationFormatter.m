@@ -322,6 +322,19 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
     return NO;
 }
 
+#pragma mark - NSCopying
+
+- (id)copyWithZone:(NSZone *)zone {
+    TTTLocationFormatter *formatter = [[[self class] allocWithZone:zone] init];
+
+    formatter.numberFormatter = [self.numberFormatter copyWithZone:zone];
+    formatter.coordinateOrder = self.coordinateOrder;
+    formatter.bearingStyle = self.bearingStyle;
+    formatter.unitSystem = self.unitSystem;
+
+    return formatter;
+}
+
 #pragma mark - NSCoding
 
 - (id)initWithCoder:(NSCoder *)aDecoder {

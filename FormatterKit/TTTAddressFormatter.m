@@ -96,6 +96,15 @@
     return NO;
 }
 
+#pragma mark - NSCopying
+
+- (id)copyWithZone:(NSZone *)zone {
+    TTTAddressFormatter *formatter = [[[self class] allocWithZone:zone] init];
+    formatter.locale = [self.locale copyWithZone:zone];
+
+    return formatter;
+}
+
 #pragma mark - NSCoding
 
 - (id)initWithCoder:(NSCoder *)aDecoder {

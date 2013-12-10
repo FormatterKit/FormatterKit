@@ -262,6 +262,18 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     return NO;
 }
 
+#pragma mark - NSCopying
+
+- (id)copyWithZone:(NSZone *)zone {
+    TTTOrdinalNumberFormatter *formatter = [[[self class] allocWithZone:zone] init];
+
+    formatter.ordinalIndicator = [self.ordinalIndicator copyWithZone:zone];
+    formatter.grammaticalGender = self.grammaticalGender;
+    formatter.grammaticalNumber = self.grammaticalNumber;
+
+    return formatter;
+}
+
 #pragma mark - NSCoding
 
 - (id)initWithCoder:(NSCoder *)aDecoder {

@@ -386,6 +386,25 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     return NO;
 }
 
+#pragma mark - NSCopying
+
+- (id)copyWithZone:(NSZone *)zone {
+    TTTTimeIntervalFormatter *formatter = [[[self class] allocWithZone:zone] init];
+
+    formatter.locale = [self.locale copyWithZone:zone];
+    formatter.pastDeicticExpression = [self.pastDeicticExpression copyWithZone:zone];
+    formatter.presentDeicticExpression = [self.presentDeicticExpression copyWithZone:zone];
+    formatter.futureDeicticExpression = [self.futureDeicticExpression copyWithZone:zone];
+    formatter.deicticExpressionFormat = [self.deicticExpressionFormat copyWithZone:zone];
+    formatter.approximateQualifierFormat = [self.approximateQualifierFormat copyWithZone:zone];
+    formatter.presentTimeIntervalMargin = self.presentTimeIntervalMargin;
+    formatter.usesAbbreviatedCalendarUnits = self.usesAbbreviatedCalendarUnits;
+    formatter.usesApproximateQualifier = self.usesApproximateQualifier;
+    formatter.usesIdiomaticDeicticExpressions = self.usesIdiomaticDeicticExpressions;
+
+    return formatter;
+}
+
 #pragma mark - NSCoding
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
