@@ -61,7 +61,7 @@
 }
 
 - (NSString *)stringFromArray:(NSArray *)anArray
-           rangesOfComponents:(NSArray **)rangeValues
+           rangesOfComponents:(NSArray * __autoreleasing *)rangeValues
 {
     NSMutableString *mutableString = [NSMutableString string];
     NSMutableArray *componentRanges = [NSMutableArray arrayWithCapacity:[anArray count]];

@@ -115,7 +115,7 @@ typedef enum {
  @param rangeValues Upon return contains an array of NSRange objects that represent the substring ranges of the components in the formatted string.
  */
 - (NSString *)stringFromArray:(NSArray *)anArray
-           rangesOfComponents:(NSArray **)rangeValues;
+           rangesOfComponents:(NSArray * __autoreleasing *)rangeValues;
 
 /**
  Returns an array representation of a given string interpreted using the receiver’s current settings.
