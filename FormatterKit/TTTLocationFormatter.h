@@ -26,32 +26,32 @@
 /**
  Specifies the ordering of latitude and longitude in coordinate pairs.
  */
-typedef enum {
+typedef NS_ENUM(NSInteger, TTTLocationFormatterCoordinateOrder) {
     TTTCoordinateLatLngOrder = 0,
     TTTCoordinateLngLatOrder,
-} TTTLocationFormatterCoordinateOrder;
+};
 
 /**
  Specifies the style used when formatting bearing into a string.
  */
-typedef enum {
+typedef NS_ENUM(NSInteger, TTTLocationFormatterBearingStyle) {
     TTTBearingWordStyle = 0,            // e.g. "Southwest"
     TTTBearingAbbreviationWordStyle,    // e.g. "SW"
     TTTBearingNumericStyle,             // e.g. "225°"
-} TTTLocationFormatterBearingStyle;
+};
 
 /**
  Specifies the units used to express distance in formatted strings.
  */
-typedef enum {
+typedef NS_ENUM(NSInteger, TTTLocationUnitSystem) {
     TTTMetricSystem = 0,    // Expresses distance in meters and kilometers.
     TTTImperialSystem,      // Expresses distance in feet, yards, and miles.
-} TTTLocationUnitSystem;
+};
 
 /**
  Defines the cardinal directions.
  */
-typedef enum {
+typedef NS_ENUM(NSInteger, TTTLocationCardinalDirection) {
     TTTNorthDirection,
     TTTNortheastDirection,
     TTTEastDirection,
@@ -60,7 +60,7 @@ typedef enum {
     TTTSouthwestDirection,
     TTTWestDirection,
     TTTNorthwestDirection,
-} TTTLocationCardinalDirection;
+};
 
 /**
  Converts a specified bearing from degrees into its closest cardinal direction.
