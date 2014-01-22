@@ -1,0 +1,9 @@
+[main]
+host = https://www.transifex.com
+lang_map = pt_BR: pt_BR, es_ES: es, pt_PT: pt
+
+[strava-ios.formatterkitresourcesbundleenlprojformatterkitstrings]
+file_filter = FormatterKitResources.bundle/<lang>.lproj/FormatterKit.strings
+source_file = FormatterKitResources.bundle/en.lproj/FormatterKit.strings
+source_lang = en_US
+type = STRINGS
