@@ -26,7 +26,7 @@
 /**
  Specifies the ordering of latitude and longitude in coordinate pairs.
  */
-typedef NS_ENUM(NSInteger, TTTLocationFormatterCoordinateOrder) {
+typedef NS_ENUM(NSUInteger, TTTLocationFormatterCoordinateOrder) {
     TTTCoordinateLatLngOrder = 0,
     TTTCoordinateLngLatOrder,
 };
@@ -34,7 +34,7 @@ typedef NS_ENUM(NSInteger, TTTLocationFormatterCoordinateOrder) {
 /**
  Specifies the style used when formatting bearing into a string.
  */
-typedef NS_ENUM(NSInteger, TTTLocationFormatterBearingStyle) {
+typedef NS_ENUM(NSUInteger, TTTLocationFormatterBearingStyle) {
     TTTBearingWordStyle = 0,            // e.g. "Southwest"
     TTTBearingAbbreviationWordStyle,    // e.g. "SW"
     TTTBearingNumericStyle,             // e.g. "225°"
@@ -43,7 +43,7 @@ typedef NS_ENUM(NSInteger, TTTLocationFormatterBearingStyle) {
 /**
  Specifies the units used to express distance in formatted strings.
  */
-typedef NS_ENUM(NSInteger, TTTLocationUnitSystem) {
+typedef NS_ENUM(NSUInteger, TTTLocationUnitSystem) {
     TTTMetricSystem = 0,    // Expresses distance in meters and kilometers.
     TTTImperialSystem,      // Expresses distance in feet, yards, and miles.
 };
@@ -51,7 +51,7 @@ typedef NS_ENUM(NSInteger, TTTLocationUnitSystem) {
 /**
  Defines the cardinal directions.
  */
-typedef NS_ENUM(NSInteger, TTTLocationCardinalDirection) {
+typedef NS_ENUM(NSUInteger, TTTLocationCardinalDirection) {
     TTTNorthDirection,
     TTTNortheastDirection,
     TTTEastDirection,

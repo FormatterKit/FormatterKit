@@ -25,7 +25,7 @@
 /**
  Specifies the grammatical gender of the word conjugated by the ordinal number.
  */
-typedef NS_ENUM(NSInteger, TTTOrdinalNumberFormatterPredicateGrammaticalGender) {
+typedef NS_ENUM(NSUInteger, TTTOrdinalNumberFormatterPredicateGrammaticalGender) {
     TTTOrdinalNumberFormatterMaleGender     = 1,
     TTTOrdinalNumberFormatterFemaleGender   = 2,
     TTTOrdinalNumberFormatterNeuterGender   = 3,
@@ -34,7 +34,7 @@ typedef NS_ENUM(NSInteger, TTTOrdinalNumberFormatterPredicateGrammaticalGender) 
 /**
  Specifies the grammatical number of the word conjugatd by the ordinal number.
  */
-typedef NS_ENUM(NSInteger, TTTOrdinalNumberFormatterPredicateGrammaticalNumber) {
+typedef NS_ENUM(NSUInteger, TTTOrdinalNumberFormatterPredicateGrammaticalNumber) {
     TTTOrdinalNumberFormatterSingular       = 1,
     TTTOrdinalNumberFormatterDual           = 2,
     TTTOrdinalNumberFormatterTrial          = 3,
