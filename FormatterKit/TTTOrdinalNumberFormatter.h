@@ -25,23 +25,23 @@
 /**
  Specifies the grammatical gender of the word conjugated by the ordinal number.
  */
-typedef enum {
+typedef NS_ENUM(NSInteger, TTTOrdinalNumberFormatterPredicateGrammaticalGender) {
     TTTOrdinalNumberFormatterMaleGender     = 1,
     TTTOrdinalNumberFormatterFemaleGender   = 2,
     TTTOrdinalNumberFormatterNeuterGender   = 3,
-} TTTOrdinalNumberFormatterPredicateGrammaticalGender;
+};
 
 /**
  Specifies the grammatical number of the word conjugatd by the ordinal number.
  */
-typedef enum {
+typedef NS_ENUM(NSInteger, TTTOrdinalNumberFormatterPredicateGrammaticalNumber) {
     TTTOrdinalNumberFormatterSingular       = 1,
     TTTOrdinalNumberFormatterDual           = 2,
     TTTOrdinalNumberFormatterTrial          = 3,
     TTTOrdinalNumberFormatterQuadral        = 4,
     TTTOrdinalNumberFormatterSingularCollective,
     TTTOrdinalNumberFormatterPlural,
-} TTTOrdinalNumberFormatterPredicateGrammaticalNumber;
+};
 
 /**
  Instances of `TTTOrdinalNumberFormatter` create localized ordinal string representations of `NSNumber` objects.
