@@ -252,8 +252,6 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return [self caRelativeDateStringForComponents:components];
     } else if ([languageCode isEqualToString:@"pl"]) {
         return [self plRelativeDateStringForComponents:components];
-    } else if ([languageCode isEqualToString:@"pl"]) {
-        return [self plRelativeDateStringForComponents:components];
     }
 
     return nil;
