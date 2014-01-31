@@ -250,6 +250,10 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return [self nlRelativeDateStringForComponents:components];
     } else if ([languageCode isEqualToString:@"ca"]){
         return [self caRelativeDateStringForComponents:components];
+    } else if ([languageCode isEqualToString:@"pl"]) {
+        return [self plRelativeDateStringForComponents:components];
+    } else if ([languageCode isEqualToString:@"pl"]) {
+        return [self plRelativeDateStringForComponents:components];
     }
 
     return nil;
@@ -307,6 +311,30 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     return nil;
 }
 
+- (NSString *)plRelativeDateStringForComponents:(NSDateComponents *)components {
+    if ([components year] == -1) {
+        return @"zeszły rok";
+    } else if ([components month] == -1 && [components year] == 0) {
+        return @"zeszły miesiąc";
+    } else if ([components week] == -1 && [components year] == 0 && [components month] == 0) {
+        return @"zeszły tydzień";
+    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"wczoraj";
+    }
+    
+    if ([components year] == 1) {
+        return @"przyszły rok";
+    } else if ([components month] == 1 && [components year] == 0) {
+        return @"przyszły miesiąc";
+    } else if ([components week] == 1 && [components year] == 0 && [components month] == 0) {
+        return @"przyszły tydzień";
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"jutro";
+    }
+    
+    return nil;
+}
+
 - (NSString *)esRelativeDateStringForComponents:(NSDateComponents *)components {
     if ([components year] == -1) {
         return @"año pasado";
@@ -360,6 +388,30 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"overmorgen";
     }
     
+    return nil;
+}
+
+- (NSString *)plRelativeDateStringForComponents:(NSDateComponents *)components {
+    if ([components year] == -1) {
+        return @"zeszły rok";
+    } else if ([components month] == -1 && [components year] == 0) {
+        return @"zeszły miesiąc";
+    } else if ([components week] == -1 && [components year] == 0 && [components month] == 0) {
+        return @"zeszły tydzień";
+    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"wczoraj";
+    }
+
+    if ([components year] == 1) {
+        return @"przyszły rok";
+    } else if ([components month] == 1 && [components year] == 0) {
+        return @"przyszły miesiąc";
+    } else if ([components week] == 1 && [components year] == 0 && [components month] == 0) {
+        return @"przyszły tydzień";
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"jutro";
+    }
+
     return nil;
 }
 
