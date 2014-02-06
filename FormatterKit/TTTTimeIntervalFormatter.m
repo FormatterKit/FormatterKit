@@ -131,9 +131,9 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     return self;
 }
 
-
 - (NSString *)stringForTimeInterval:(NSTimeInterval)seconds {
-    return [self stringForTimeIntervalFromDate:[NSDate date] toDate:[NSDate dateWithTimeIntervalSinceNow:seconds]];
+    NSDate *date = [NSDate date];
+    return [self stringForTimeIntervalFromDate:date toDate:[NSDate dateWithTimeInterval:seconds sinceDate:date]];
 }
 
 - (NSString *)stringForTimeIntervalFromDate:(NSDate *)startingDate
