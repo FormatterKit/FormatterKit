@@ -37,9 +37,15 @@ FormatterKit comes fully internationalized, with `.strings` files for the follow
 - Spanish (`es`)
 - Swedish (`sv`)
 - Turkish (`tr`)
-- Vietnamese (`vi`) 
+- Vietnamese (`vi`)
 
 If you'd like to contribute an additional localization, feel free to [open a new pull request](https://github.com/mattt/FormatterKit/pulls).
+
+### Removing Unused Localizations
+
+Because the App Store automatically attempts to determine supported locales, and FormatterKit includes localizations for the aforementioned locales, you may want to remove the `.strings` file and `.lproj` directory. You can do this most easily by having the following command run in a new Build Phase:
+
+        $ find "$TARGET_BUILD_DIR" -maxdepth 8 -type f -name "FormatterKit.strings" -execdir rm -r -v {} \;
 
 ## Demo
 
