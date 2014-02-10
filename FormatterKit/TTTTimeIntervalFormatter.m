@@ -252,6 +252,8 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return [self caRelativeDateStringForComponents:components];
     } else if ([languageCode isEqualToString:@"pl"]) {
         return [self plRelativeDateStringForComponents:components];
+    } else if ([languageCode isEqualToString:@"cs"]) {
+        return [self csRelativeDateStringForComponents:components];
     }
 
     return nil;
@@ -386,6 +388,34 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"jutro";
     }
 
+    return nil;
+}
+
+- (NSString *)csRelativeDateStringForComponents:(NSDateComponents *)components {
+    if ([components year] == -1) {
+        return @"minulý rok";
+    } else if ([components month] == -1 && [components year] == 0) {
+        return @"minulý měsíc";
+    } else if ([components week] == -1 && [components year] == 0 && [components month] == 0) {
+        return @"minulý týden";
+    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"včera";
+    } else if ([components day] == -2 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"předevčírem";
+    }
+    
+    if ([components year] == 1) {
+        return @"příští rok";
+    } else if ([components month] == 1 && [components year] == 0) {
+        return @"příští měsíc";
+    } else if ([components week] == 1 && [components year] == 0 && [components month] == 0) {
+        return @"příští týden";
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"zítra";
+    } else if ([components day] == 2 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"pozítří";
+    }
+    
     return nil;
 }
 
