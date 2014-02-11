@@ -254,6 +254,8 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return [self plRelativeDateStringForComponents:components];
     } else if ([languageCode isEqualToString:@"cs"]) {
         return [self csRelativeDateStringForComponents:components];
+    } else if ([languageCode isEqualToString:@"ja"]) {
+        return [self jaRelativeDateStringForComponents:components];
     }
 
     return nil;
@@ -414,6 +416,30 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"zítra";
     } else if ([components day] == 2 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
         return @"pozítří";
+    }
+    
+    return nil;
+}
+
+- (NSString *)jaRelativeDateStringForComponents:(NSDateComponents *)components {
+    if ([components year] == -1) {
+        return @"去年";
+    } else if ([components month] == -1 && [components year] == 0) {
+        return @"先月";
+    } else if ([components week] == -1 && [components year] == 0 && [components month] == 0) {
+        return @"先週";
+    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"昨日";
+    }
+    
+    if ([components year] == 1) {
+        return @"来年";
+    } else if ([components month] == 1 && [components year] == 0) {
+        return @"来月";
+    } else if ([components week] == 1 && [components year] == 0 && [components month] == 0) {
+        return @"来週";
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"明日";
     }
     
     return nil;
