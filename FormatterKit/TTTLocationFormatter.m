@@ -213,7 +213,11 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
                 case TTTNorthwestDirection:
                     return NSLocalizedStringFromTable(@"Northwest", @"FormatterKit", @"Northwest Direction");
             }
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunreachable-code"
             break;
+#pragma clang diagnostic pop
+
         case TTTBearingAbbreviationWordStyle:
             switch (TTTLocationCardinalDirectionFromBearing(bearing)) {
                 case TTTNorthDirection:
@@ -233,7 +237,11 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
                 case TTTNorthwestDirection:
                     return NSLocalizedStringFromTable(@"NW", @"FormatterKit", @"Northwest Direction Abbreviation");;
             }
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunreachable-code"
             break;
+#pragma clang diagnostic pop
+
         case TTTBearingNumericStyle:
             return [_numberFormatter stringFromNumber:@(bearing)];
     }
