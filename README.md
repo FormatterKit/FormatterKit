@@ -20,6 +20,7 @@ In short, use this library if you're manually formatting any of the following (w
 FormatterKit comes fully internationalized, with `.strings` files for the following locales:
 
 - Catalan (`ca`)
+- Chinese (Simplified) (`zh_Hans`)
 - Czech (`cs`)
 - Danish (`da`)
 - Dutch (`nl`)
@@ -38,6 +39,7 @@ FormatterKit comes fully internationalized, with `.strings` files for the follow
 - Spanish (`es`)
 - Swedish (`sv`)
 - Turkish (`tr`)
+- Ukranian (`uk`)
 - Vietnamese (`vi`)
 
 If you'd like to contribute an additional localization, feel free to [open a new pull request](https://github.com/mattt/FormatterKit/pulls).
