@@ -280,8 +280,8 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     self = [super initWithCoder:aDecoder];
 
     self.ordinalIndicator = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(ordinalIndicator))];
-    self.grammaticalGender = [aDecoder decodeIntegerForKey:NSStringFromSelector(@selector(grammaticalGender))];
-    self.grammaticalNumber = [aDecoder decodeIntegerForKey:NSStringFromSelector(@selector(grammaticalNumber))];
+    self.grammaticalGender = (TTTOrdinalNumberFormatterPredicateGrammaticalGender)[aDecoder decodeIntegerForKey:NSStringFromSelector(@selector(grammaticalGender))];
+    self.grammaticalNumber = (TTTOrdinalNumberFormatterPredicateGrammaticalNumber)[aDecoder decodeIntegerForKey:NSStringFromSelector(@selector(grammaticalNumber))];
 
     return self;
 }

@@ -349,9 +349,9 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
     self = [super initWithCoder:aDecoder];
 
     self.numberFormatter = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(numberFormatter))];
-    self.coordinateOrder = [aDecoder decodeIntegerForKey:NSStringFromSelector(@selector(coordinateOrder))];
-    self.bearingStyle = [aDecoder decodeIntegerForKey:NSStringFromSelector(@selector(bearingStyle))];
-    self.unitSystem = [aDecoder decodeIntegerForKey:NSStringFromSelector(@selector(unitSystem))];
+    self.coordinateOrder = (TTTLocationFormatterCoordinateOrder)[aDecoder decodeIntegerForKey:NSStringFromSelector(@selector(coordinateOrder))];
+    self.bearingStyle = (TTTLocationFormatterBearingStyle)[aDecoder decodeIntegerForKey:NSStringFromSelector(@selector(bearingStyle))];
+    self.unitSystem = (TTTLocationUnitSystem)[aDecoder decodeIntegerForKey:NSStringFromSelector(@selector(unitSystem))];
 
     return self;
 }
