@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E33D9A6A18D86AD000803D65 /* JSONFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E33D9A6918D86AD000803D65 /* JSONFormatterViewController.m */; };
+		E33D9A6D18D86BF500803D65 /* TTTJSONFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = E33D9A6B18D86BF500803D65 /* TTTJSONFormatter.m */; };
 		F8202D0917F4FAAE006C5810 /* TTTColorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8202D0817F4FAAE006C5810 /* TTTColorFormatter.m */; };
 		F8202D0C17F50AF5006C5810 /* ColorFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8202D0B17F50AF5006C5810 /* ColorFormatterViewController.m */; };
 		F872625414FD3BED00800E11 /* UnitOfInformationFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F872625314FD3BED00800E11 /* UnitOfInformationFormatterViewController.m */; };
@@ -38,6 +40,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E33D9A6818D86AD000803D65 /* JSONFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONFormatterViewController.h; sourceTree = "<group>"; };
+		E33D9A6918D86AD000803D65 /* JSONFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONFormatterViewController.m; sourceTree = "<group>"; };
+		E33D9A6B18D86BF500803D65 /* TTTJSONFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTJSONFormatter.m; sourceTree = "<group>"; };
+		E33D9A6C18D86BF500803D65 /* TTTJSONFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTJSONFormatter.h; sourceTree = "<group>"; };
 		F8202D0717F4FAAE006C5810 /* TTTColorFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTColorFormatter.h; sourceTree = "<group>"; };
 		F8202D0817F4FAAE006C5810 /* TTTColorFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTColorFormatter.m; sourceTree = "<group>"; };
 		F8202D0A17F50AF5006C5810 /* ColorFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorFormatterViewController.h; sourceTree = "<group>"; };
@@ -126,6 +132,8 @@
 				F89C9EFF166154AB0040FB03 /* TTTUnitOfInformationFormatter.m */,
 				F89C9F00166154AB0040FB03 /* TTTURLRequestFormatter.h */,
 				F89C9F01166154AB0040FB03 /* TTTURLRequestFormatter.m */,
+				E33D9A6C18D86BF500803D65 /* TTTJSONFormatter.h */,
+				E33D9A6B18D86BF500803D65 /* TTTJSONFormatter.m */,
 			);
 			name = FormatterKit;
 			path = ../FormatterKit;
@@ -224,6 +232,8 @@
 				F872625314FD3BED00800E11 /* UnitOfInformationFormatterViewController.m */,
 				F8FBFA491427E260001409DB /* URLRequestFormatterViewController.h */,
 				F8FBFA4A1427E260001409DB /* URLRequestFormatterViewController.m */,
+				E33D9A6818D86AD000803D65 /* JSONFormatterViewController.h */,
+				E33D9A6918D86AD000803D65 /* JSONFormatterViewController.m */,
 			);
 			name = Formatters;
 			sourceTree = "<group>";
@@ -297,6 +307,7 @@
 				F8FBFA351427CEC0001409DB /* RootViewController.m in Sources */,
 				F8FBFA381427D159001409DB /* FormatterViewController.m in Sources */,
 				F8FBFA3B1427D3DA001409DB /* ArrayFormatterViewController.m in Sources */,
+				E33D9A6D18D86BF500803D65 /* TTTJSONFormatter.m in Sources */,
 				F8FBFA421427E1DC001409DB /* LocationFormatterViewController.m in Sources */,
 				F8FBFA451427E21C001409DB /* OrdinalNumberFormatterViewController.m in Sources */,
 				F8FBFA481427E23C001409DB /* TimeIntervalFormatterViewController.m in Sources */,
@@ -307,6 +318,7 @@
 				F89C9F02166154AB0040FB03 /* TTTAddressFormatter.m in Sources */,
 				F89C9F03166154AB0040FB03 /* TTTArrayFormatter.m in Sources */,
 				F89C9F04166154AB0040FB03 /* TTTLocationFormatter.m in Sources */,
+				E33D9A6A18D86AD000803D65 /* JSONFormatterViewController.m in Sources */,
 				F89C9F05166154AB0040FB03 /* TTTOrdinalNumberFormatter.m in Sources */,
 				F89C9F06166154AB0040FB03 /* TTTTimeIntervalFormatter.m in Sources */,
 				F89C9F07166154AB0040FB03 /* TTTUnitOfInformationFormatter.m in Sources */,
