@@ -29,6 +29,7 @@
 #import "TimeIntervalFormatterViewController.h"
 #import "UnitOfInformationFormatterViewController.h"
 #import "URLRequestFormatterViewController.h"
+#import "JSONFormatterViewController.h"
 
 NS_ENUM(NSUInteger, RootViewControllerRowIndexes) {
     AddressRowIndex,
@@ -38,7 +39,8 @@ NS_ENUM(NSUInteger, RootViewControllerRowIndexes) {
     OrdinalNumberRowIndex,
     TimeIntervalRowIndex,
     UnitOfInformationRowIndex,
-    URLRequestRowIndex
+    URLRequestRowIndex,
+    JSONRowIndex
 };
 
 @implementation RootViewController
@@ -78,7 +80,7 @@ NS_ENUM(NSUInteger, RootViewControllerRowIndexes) {
 - (NSInteger)tableView:(__unused UITableView *)tableView
  numberOfRowsInSection:(__unused NSInteger)section
 {
-    return 7;
+    return 9;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -115,6 +117,9 @@ NS_ENUM(NSUInteger, RootViewControllerRowIndexes) {
             break;
         case URLRequestRowIndex:
             cell.textLabel.text = NSLocalizedString(@"URL Request Formatter", nil);
+            break;
+        case JSONRowIndex:
+            cell.textLabel.text = NSLocalizedString(@"JSON Formatter", nil);
             break;
         default:
             break;
@@ -153,6 +158,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
             break;
         case URLRequestRowIndex:
             viewController = [[URLRequestFormatterViewController alloc] init];
+            break;
+        case JSONRowIndex:
+            viewController = [[JSONFormatterViewController alloc] init];
             break;
     }
     

@@ -12,6 +12,7 @@ In short, use this library if you're manually formatting any of the following (w
 * __Time Intervals__: Show relative time distance between any two `NSDate` objects *(e.g. "3 minutes ago" / "yesterday")*
 * __Units of Information__: Humanized representations of quantities of bits and bytes *(e.g. "2.7 MB")*
 * __URL Requests__: Print out `cURL` or `Wget` command equivalents for any `NSURLRequest` *(e.g. `curl -X POST "https://www.example.com/" -H "Accept: text/html"`)*
+* __JSON__: Print out `jq` command equivalents for `JSON`, `NSString` and `NSData` *(e.g. `cat <<'END' | jq '.' \n{"foo":"bar"}\nEND`)*
 
 > FormatterKit, along with [TransformerKit](https://github.com/mattt/TransformerKit) & [InflectorKit](https://github.com/mattt/InflectorKit) provide well-designed APIs for manipulating user-facing content.
 
@@ -249,6 +250,20 @@ NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL U
 ```
 
     curl -X POST "https://www.example.com/" -H "Accept: text/html"
+    
+## TTTJSONFormatter
+
+Enter `TTTJSONFormatter`. It will generate `jq` commands from JSON for debugging in the console.
+
+### Example Usage
+
+```objective-c
+[TTTJSONFormatter jqCommandFromJSON:@{@"foo": @"bar"}];
+```
+
+    cat <<'END' | jq '.' 
+    {"foo":"bar"}
+    END
 
 ---
 

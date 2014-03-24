@@ -52,6 +52,12 @@
       <FileRef
          location = "group:TTTURLRequestFormatter.m">
       </FileRef>
+      <FileRef
+         location = "group:TTTJSONFormatter.h">
+      </FileRef>
+      <FileRef
+         location = "group:TTTJSONFormatter.m">
+      </FileRef>
    </Group>
    <FileRef
       location = "group:Example/FormatterKit Example.xcodeproj">
