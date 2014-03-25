@@ -235,7 +235,7 @@ static inline double CLLocationSpeedToMilesPerHour(CLLocationSpeed speed) {
                 case TTTWestDirection:
                     return NSLocalizedStringFromTable(@"W", @"FormatterKit", @"West Direction Abbreviation");
                 case TTTNorthwestDirection:
-                    return NSLocalizedStringFromTable(@"NW", @"FormatterKit", @"Northwest Direction Abbreviation");;
+                    return NSLocalizedStringFromTable(@"NW", @"FormatterKit", @"Northwest Direction Abbreviation");
             }
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunreachable-code"
