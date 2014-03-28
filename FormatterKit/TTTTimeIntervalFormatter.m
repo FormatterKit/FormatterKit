@@ -256,6 +256,8 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return [self csRelativeDateStringForComponents:components];
     } else if ([languageCode isEqualToString:@"ja"]) {
         return [self jaRelativeDateStringForComponents:components];
+    } else if ([languageCode isEqualToString:@"fr"]) {
+        return [self frRelativeDateStringForComponents:components];
     }
 
     return nil;
@@ -440,6 +442,30 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"来週";
     } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
         return @"明日";
+    }
+    
+    return nil;
+}
+
+- (NSString *)frRelativeDateStringForComponents:(NSDateComponents *)components {
+    if ([components year] == -1) {
+        return @"l'annnée dernière";
+    } else if ([components month] == -1 && [components year] == 0) {
+        return @"le mois dernier";
+    } else if ([components week] == -1 && [components year] == 0 && [components month] == 0) {
+        return @"la semaine dernière";
+    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"hier";
+    }
+    
+    if ([components year] == 1) {
+        return @"l'année prochaine";
+    } else if ([components month] == 1 && [components year] == 0) {
+        return @"le mois prochain";
+    } else if ([components week] == 1 && [components year] == 0 && [components month] == 0) {
+        return @"la semaine prochaine";
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+        return @"demain";
     }
     
     return nil;
