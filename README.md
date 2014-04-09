@@ -21,6 +21,7 @@ FormatterKit comes fully internationalized, with `.strings` files for the follow
 
 - Catalan (`ca`)
 - Chinese (Simplified) (`zh_Hans`)
+- Chinese (Traditional) (`zh_Hant`)
 - Czech (`cs`)
 - Danish (`da`)
 - Dutch (`nl`)
