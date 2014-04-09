@@ -190,22 +190,22 @@ iOS 4 introduced a `-doesRelativeDateFormatting` property for `NSDateFormatter`,
 ```objective-c
 TTTTimeIntervalFormatter *timeIntervalFormatter = [[TTTTimeIntervalFormatter alloc] init];
 [timeIntervalFormatter stringForTimeInterval:0]; // "just now"
-[timeIntervalFormatter stringForTimeInterval:100]; // "1 minute ago"
-[timeIntervalFormatter stringForTimeInterval:8000]; // "2 hours ago"
+[timeIntervalFormatter stringForTimeInterval:-100]; // "1 minute ago"
+[timeIntervalFormatter stringForTimeInterval:-8000]; // "2 hours ago"
 
 // Turn idiomatic deictic expressions on / off
-[timeIntervalFormatter stringForTimeInterval:100000]; // "yesterday"
-[timeIntervalFormatter setUsesIdiomaticDeicticExpressions:NO];
-[timeIntervalFormatter stringForTimeInterval:100000]; // "1 day ago"
+[timeIntervalFormatter stringForTimeInterval:-100000]; // "1 day ago"
+[timeIntervalFormatter setUsesIdiomaticDeicticExpressions:YES];
+[timeIntervalFormatter stringForTimeInterval:-100000]; // "yesterday"
 
 // Customize the present tense deictic expression for
 [timeIntervalFormatter setPresentDeicticExpression:@"seconds ago"];
 [timeIntervalFormatter stringForTimeInterval:0]; // "seconds ago"
 
 // Expand the time interval for present tense
-[timeIntervalFormatter stringForTimeInterval:3]; // "3 seconds ago"
-[timeIntervalFormatter setPresentTimeIntervalMargin:3];
-[timeIntervalFormatter stringForTimeInterval:3]; // "seconds ago"
+[timeIntervalFormatter stringForTimeInterval:-3]; // "3 seconds ago"
+[timeIntervalFormatter setPresentTimeIntervalMargin:10];
+[timeIntervalFormatter stringForTimeInterval:-3]; // "seconds ago"
 ```
 
 ## TTTUnitOfInformationFormatter
