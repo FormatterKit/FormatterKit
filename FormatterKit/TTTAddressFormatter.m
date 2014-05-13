@@ -22,7 +22,13 @@
 
 #import "TTTAddressFormatter.h"
 
-#if defined(__ABPerson__)
+#import <Availability.h>
+
+#import <AddressBook/AddressBook.h>
+
+#if __IPHONE_OS_VERSION_MIN_REQUIRED
+#import <AddressBookUI/AddressBookUI.h>
+#endif
 
 @implementation TTTAddressFormatter
 @synthesize locale = _locale;
@@ -122,5 +128,3 @@
 }
 
 @end
-
-#endif
