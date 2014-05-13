@@ -36,12 +36,12 @@
 #define TTTAddressCountryKey ((__bridge NSString *)kABPersonAddressCountryKey)
 #define TTTAddressCountryCodeKey ((__bridge NSString *)kABPersonAddressCountryCodeKey)
 #else
-#define TTTAddressStreetKey ((__bridge NSString *)kABAddressStreetKey)
-#define TTTAddressLocalityKey ((__bridge NSString *)kABAddressCityKey)
-#define TTTAddressRegionKey ((__bridge NSString *)kABAddressStateKey)
-#define TTTAddressPostalCodeKey ((__bridge NSString *)kABAddressZIPKey)
-#define TTTAddressCountryKey ((__bridge NSString *)kABAddressCountryKey)
-#define TTTAddressCountryCodeKey ((__bridge NSString *)kABAddressCountryCodeKey)
+#define TTTAddressStreetKey (kABAddressStreetKey)
+#define TTTAddressLocalityKey (kABAddressCityKey)
+#define TTTAddressRegionKey (kABAddressStateKey)
+#define TTTAddressPostalCodeKey (kABAddressZIPKey)
+#define TTTAddressCountryKey (kABAddressCountryKey)
+#define TTTAddressCountryCodeKey (kABAddressCountryCodeKey)
 #endif
 
 @implementation TTTAddressFormatter
