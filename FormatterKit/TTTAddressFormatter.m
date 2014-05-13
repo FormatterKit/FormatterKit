@@ -29,19 +29,19 @@
 #if __IPHONE_OS_VERSION_MIN_REQUIRED
 #import <AddressBookUI/AddressBookUI.h>
 
-#define TTTAddressStreetKey ((__bridge id)kABPersonAddressStreetKey)
-#define TTTAddressLocalityKey ((__bridge id)kABPersonAddressCityKey)
-#define TTTAddressRegionKey ((__bridge id)kABPersonAddressStateKey)
-#define TTTAddressPostalCodeKey ((__bridge id)kABPersonAddressZIPKey)
-#define TTTAddressCountryKey ((__bridge id)kABPersonAddressCountryKey)
-#define TTTAddressCountryCodeKey ((__bridge id)kABPersonAddressCountryCodeKey)
+#define TTTAddressStreetKey ((__bridge NSString *)kABPersonAddressStreetKey)
+#define TTTAddressLocalityKey ((__bridge NSString *)kABPersonAddressCityKey)
+#define TTTAddressRegionKey ((__bridge NSString *)kABPersonAddressStateKey)
+#define TTTAddressPostalCodeKey ((__bridge NSString *)kABPersonAddressZIPKey)
+#define TTTAddressCountryKey ((__bridge NSString *)kABPersonAddressCountryKey)
+#define TTTAddressCountryCodeKey ((__bridge NSString *)kABPersonAddressCountryCodeKey)
 #else
-#define TTTAddressStreetKey ((__bridge id)kABAddressStreetKey)
-#define TTTAddressLocalityKey ((__bridge id)kABAddressCityKey)
-#define TTTAddressRegionKey ((__bridge id)kABAddressStateKey)
-#define TTTAddressPostalCodeKey ((__bridge id)kABAddressZIPKey)
-#define TTTAddressCountryKey ((__bridge id)kABAddressCountryKey)
-#define TTTAddressCountryCodeKey ((__bridge id)kABAddressCountryCodeKey)
+#define TTTAddressStreetKey ((__bridge NSString *)kABAddressStreetKey)
+#define TTTAddressLocalityKey ((__bridge NSString *)kABAddressCityKey)
+#define TTTAddressRegionKey ((__bridge NSString *)kABAddressStateKey)
+#define TTTAddressPostalCodeKey ((__bridge NSString *)kABAddressZIPKey)
+#define TTTAddressCountryKey ((__bridge NSString *)kABAddressCountryKey)
+#define TTTAddressCountryCodeKey ((__bridge NSString *)kABAddressCountryCodeKey)
 #endif
 
 @implementation TTTAddressFormatter
