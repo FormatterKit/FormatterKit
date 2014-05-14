@@ -231,7 +231,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
         [self setPositiveSuffix:nil];
         
         NSString *languageCode = [[self locale] objectForKey:NSLocaleLanguageCode];
-        if ([languageCode isEqualToString:@"zh"]) {
+        if ([languageCode hasPrefix:@"zh"]) {
             [self setPositivePrefix:indicator];
         } else {
             [self setPositiveSuffix:indicator];
