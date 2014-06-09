@@ -266,11 +266,11 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"any passat";
     } else if ([components month] == -1 && [components year] == 0) {
         return @"mes passat";
-    } else if ([components week] == -1 && [components year] == 0 && [components month] == 0) {
+    } else if ([components weekOfYear] == -1 && [components year] == 0 && [components month] == 0) {
         return @"setmana passada";
-    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"ahir";
-    } else if ([components day] == -2 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+    } else if ([components day] == -2 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"abans d'ahir";
     }
     
@@ -278,11 +278,11 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"pròxim any";
     } else if ([components month] == 1 && [components year] == 0) {
         return @"pròxim mes";
-    } else if ([components week] == 1 && [components year] == 0 && [components month] == 0) {
+    } else if ([components weekOfYear] == 1 && [components year] == 0 && [components month] == 0) {
         return @"pròxima setmana";
-    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"demà";
-    } else if ([components day] == 2 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+    } else if ([components day] == 2 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"passat demà";
     }
     
@@ -294,9 +294,9 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"last year";
     } else if ([components month] == -1 && [components year] == 0) {
         return @"last month";
-    } else if ([components week] == -1 && [components year] == 0 && [components month] == 0) {
+    } else if ([components weekOfYear] == -1 && [components year] == 0 && [components month] == 0) {
         return @"last week";
-    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"yesterday";
     }
 
@@ -304,9 +304,9 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"next year";
     } else if ([components month] == 1 && [components year] == 0) {
         return @"next month";
-    } else if ([components week] == 1 && [components year] == 0 && [components month] == 0) {
+    } else if ([components weekOfYear] == 1 && [components year] == 0 && [components month] == 0) {
         return @"next week";
-    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"tomorrow";
     }
 
@@ -318,11 +318,11 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"año pasado";
     } else if ([components month] == -1 && [components year] == 0) {
         return @"mes pasado";
-    } else if ([components week] == -1 && [components year] == 0 && [components month] == 0) {
+    } else if ([components weekOfYear] == -1 && [components year] == 0 && [components month] == 0) {
         return @"semana pasada";
-    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"ayer";
-    } else if ([components day] == -2 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+    } else if ([components day] == -2 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"antes de ayer";
     }
 
@@ -330,11 +330,11 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"próximo año";
     } else if ([components month] == 1 && [components year] == 0) {
         return @"próximo mes";
-    } else if ([components week] == 1 && [components year] == 0 && [components month] == 0) {
+    } else if ([components weekOfYear] == 1 && [components year] == 0 && [components month] == 0) {
         return @"próxima semana";
-    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"mañana";
-    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"pasado mañana";
     }
 
@@ -346,11 +346,11 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"vorig jaar";
     } else if ([components month] == -1 && [components year] == 0) {
         return @"vorige maand";
-    } else if ([components week] == -1 && [components year] == 0 && [components month] == 0) {
+    } else if ([components weekOfYear] == -1 && [components year] == 0 && [components month] == 0) {
         return @"vorige week";
-    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"gisteren";
-    } else if ([components day] == -2 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+    } else if ([components day] == -2 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"eergisteren";
     }
     
@@ -358,11 +358,11 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"volgend jaar";
     } else if ([components month] == 1 && [components year] == 0) {
         return @"volgende maand";
-    } else if ([components week] == 1 && [components year] == 0 && [components month] == 0) {
+    } else if ([components weekOfYear] == 1 && [components year] == 0 && [components month] == 0) {
         return @"volgende week";
-    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"morgen";
-    } else if ([components day] == 2 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+    } else if ([components day] == 2 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"overmorgen";
     }
     
@@ -374,9 +374,9 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"zeszły rok";
     } else if ([components month] == -1 && [components year] == 0) {
         return @"zeszły miesiąc";
-    } else if ([components week] == -1 && [components year] == 0 && [components month] == 0) {
+    } else if ([components weekOfYear] == -1 && [components year] == 0 && [components month] == 0) {
         return @"zeszły tydzień";
-    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"wczoraj";
     }
 
@@ -384,9 +384,9 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"przyszły rok";
     } else if ([components month] == 1 && [components year] == 0) {
         return @"przyszły miesiąc";
-    } else if ([components week] == 1 && [components year] == 0 && [components month] == 0) {
+    } else if ([components weekOfYear] == 1 && [components year] == 0 && [components month] == 0) {
         return @"przyszły tydzień";
-    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"jutro";
     }
 
@@ -398,11 +398,11 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"minulý rok";
     } else if ([components month] == -1 && [components year] == 0) {
         return @"minulý měsíc";
-    } else if ([components week] == -1 && [components year] == 0 && [components month] == 0) {
+    } else if ([components weekOfYear] == -1 && [components year] == 0 && [components month] == 0) {
         return @"minulý týden";
-    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"včera";
-    } else if ([components day] == -2 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+    } else if ([components day] == -2 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"předevčírem";
     }
     
@@ -410,11 +410,11 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"příští rok";
     } else if ([components month] == 1 && [components year] == 0) {
         return @"příští měsíc";
-    } else if ([components week] == 1 && [components year] == 0 && [components month] == 0) {
+    } else if ([components weekOfYear] == 1 && [components year] == 0 && [components month] == 0) {
         return @"příští týden";
-    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"zítra";
-    } else if ([components day] == 2 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+    } else if ([components day] == 2 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"pozítří";
     }
     
@@ -426,9 +426,9 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"去年";
     } else if ([components month] == -1 && [components year] == 0) {
         return @"先月";
-    } else if ([components week] == -1 && [components year] == 0 && [components month] == 0) {
+    } else if ([components weekOfYear] == -1 && [components year] == 0 && [components month] == 0) {
         return @"先週";
-    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"昨日";
     }
     
@@ -436,9 +436,9 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"来年";
     } else if ([components month] == 1 && [components year] == 0) {
         return @"来月";
-    } else if ([components week] == 1 && [components year] == 0 && [components month] == 0) {
+    } else if ([components weekOfYear] == 1 && [components year] == 0 && [components month] == 0) {
         return @"来週";
-    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components week] == 0) {
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"明日";
     }
     
