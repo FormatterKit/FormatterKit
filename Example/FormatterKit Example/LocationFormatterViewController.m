@@ -26,10 +26,12 @@
 #import "TTTLocationFormatter.h"
 
 NS_ENUM(NSUInteger, LocationFormatterViewControllerSectionIndexes) {
+    CoordinatesSignedDegreesSectionIndex,
+    CoordinatesDegreesWithDirectionSectionIndex,
+    CoordinatesDegreesMinutesSecondsWithDirectionSectionIndex,
     DistanceInMetricWithCardinalDirectionsSectionIndex,
     DistanceInImperialWithcardinalDirectionAbbreviationsSectionIndex,
     SpeedInImperialWithBearingsInDegreesSectionIndex,
-    CoordinatesSectionIndex,
 };
 
 @implementation LocationFormatterViewController
@@ -52,7 +54,7 @@ NS_ENUM(NSUInteger, LocationFormatterViewControllerSectionIndexes) {
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(__unused UITableView *)tableView {
-    return 4;
+    return 6;
 }
 
 - (NSInteger)tableView:(__unused UITableView *)tableView
@@ -65,14 +67,18 @@ NS_ENUM(NSUInteger, LocationFormatterViewControllerSectionIndexes) {
 titleForHeaderInSection:(NSInteger)section
 {
     switch (section) {
+        case CoordinatesSignedDegreesSectionIndex:
+            return NSLocalizedString(@"Coordinates (Signed Degrees)", nil);
+        case CoordinatesDegreesWithDirectionSectionIndex:
+            return NSLocalizedString(@"Coordinates (Degrees + Compass Direction)", nil);
+        case CoordinatesDegreesMinutesSecondsWithDirectionSectionIndex:
+            return NSLocalizedString(@"Coordinates (Degrees / Minutes / Seconds + Compass Direction)", nil);
         case DistanceInMetricWithCardinalDirectionsSectionIndex:
             return NSLocalizedString(@"Distance in Metric Units, with Cardinal Directions", nil);
         case DistanceInImperialWithcardinalDirectionAbbreviationsSectionIndex:
             return NSLocalizedString(@"Distance in Imperial Units, with Cardinal Direction Abbreviations", nil);
         case SpeedInImperialWithBearingsInDegreesSectionIndex:
             return NSLocalizedString(@"Speed in Imperial Units, with Bearing in Degrees", nil);
-        case CoordinatesSectionIndex:
-            return NSLocalizedString(@"Coordinates", nil);
         default:
             return nil;
     }
@@ -95,7 +101,24 @@ titleForHeaderInSection:(NSInteger)section
     });
     
     cell.textLabel.font = [UIFont systemFontOfSize:16];
+    cell.textLabel.adjustsFontSizeToFitWidth = YES;
+
     switch (indexPath.section) {
+        case CoordinatesSignedDegreesSectionIndex:
+            _locationFormatter.coordinateStyle = TTTSignedDegreesFormat;
+
+            cell.textLabel.text = [_locationFormatter stringFromLocation:_austin];
+            break;
+        case CoordinatesDegreesWithDirectionSectionIndex:
+            _locationFormatter.coordinateStyle = TTTDegreesFormat;
+
+            cell.textLabel.text = [_locationFormatter stringFromLocation:_austin];
+            break;
+        case CoordinatesDegreesMinutesSecondsWithDirectionSectionIndex:
+            _locationFormatter.coordinateStyle = TTTDegreesMinutesSecondsFormat;
+
+            cell.textLabel.text = [_locationFormatter stringFromLocation:_austin];
+            break;
         case DistanceInMetricWithCardinalDirectionsSectionIndex:
             [_locationFormatter setUnitSystem:TTTMetricSystem];
             [_locationFormatter setBearingStyle:TTTBearingWordStyle];
@@ -113,11 +136,6 @@ titleForHeaderInSection:(NSInteger)section
             [_locationFormatter setBearingStyle:TTTBearingNumericStyle];
             
             cell.textLabel.text = [_locationFormatter stringFromVelocityFromLocation:_pittsburgh toLocation:_austin atSpeed:25];
-            break;
-        case CoordinatesSectionIndex:
-            [_locationFormatter.numberFormatter setUsesSignificantDigits:NO];
-            
-            cell.textLabel.text = [_locationFormatter stringFromLocation:_austin];
             break;
     }
 }

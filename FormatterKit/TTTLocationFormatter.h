@@ -32,6 +32,15 @@ typedef NS_ENUM(NSUInteger, TTTLocationFormatterCoordinateOrder) {
 };
 
 /**
+ Specifies the format of coordinate pairs.
+ */
+typedef NS_ENUM(NSUInteger, TTTLocationFormatterCoordinateStyle) {
+    TTTSignedDegreesFormat = 0,         // e.g. "45.55873, -122.77854"
+    TTTDegreesFormat,                   // 45.5200° N, 122.6819° W
+    TTTDegreesMinutesSecondsFormat,     // e.g. "45° 33′ 31.43″ N, 122° 46′ 42.74″ W"
+};
+
+/**
  Specifies the style used when formatting bearing into a string.
  */
 typedef NS_ENUM(NSUInteger, TTTLocationFormatterBearingStyle) {
@@ -87,6 +96,11 @@ extern TTTLocationCardinalDirection TTTLocationCardinalDirectionFromBearing(CLLo
  Specifies the ordering of latitude and longitude values in coordinate pairs. `TTTCoordinateLatLngOrder` by default.
  */
 @property (nonatomic, assign) TTTLocationFormatterCoordinateOrder coordinateOrder;
+
+/**
+ Specifies the formatting of coordinate pairs. `TTTSignedDegreesFormat` by default.
+ */
+@property (nonatomic, assign) TTTLocationFormatterCoordinateStyle coordinateStyle;
 
 /**
  Specifies the formatting of bearing in strings. `TTTBearingWordStyle` by default.
