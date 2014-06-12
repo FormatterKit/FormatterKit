@@ -51,6 +51,23 @@ Because the App Store automatically attempts to determine supported locales, and
 
         $ find "$TARGET_BUILD_DIR" -maxdepth 8 -type f -name "FormatterKit.strings" -execdir rm -r -v {} \;
 
+If you are using CocoaPods, you may want to remove unwanted localizations using the pre install script below. Modify the supported_locales array to match your supported locales and paste it into your Podfile.
+
+```ruby
+pre_install do |installer|
+    supported_locales = ['da', 'en']
+    
+    installer.pods.each do |pod|
+        %x[ find "#{pod.root}" -name '*.lproj' ].split.each do |bundle|
+            if (!supported_locales.include?(File.basename(bundle, ".lproj").downcase))
+                puts "Removing #{bundle}"
+                FileUtils.rm_rf(bundle)
+            end
+        end
+    end
+end
+```
+
 ## Demo
 
 Build and run the `FormatterKit Example` project in Xcode to see an inventory of the available `FormatterKit` components.
