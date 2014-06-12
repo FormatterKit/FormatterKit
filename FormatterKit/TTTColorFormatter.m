@@ -22,9 +22,9 @@
 
 #import "TTTColorFormatter.h"
 
-#import <tgmath.h>
-
 #ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
+
+#import <tgmath.h>
 
 static void TTTGetRGBAComponentsFromColor(UIColor *color, CGFloat *red, CGFloat *green, CGFloat *blue, CGFloat *alpha) {
     [color getRed:red green:green blue:blue alpha:alpha];

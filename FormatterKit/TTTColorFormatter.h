@@ -21,11 +21,10 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-
 #import <Availability.h>
 
 #ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
+#import <UIKit/UIKit.h>
 
 /**
  Instances of `TTTColorFormatter` create string representations of `UIColor` objects, and convert textual representations of colors into `UIColor` objects.
