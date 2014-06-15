@@ -223,7 +223,7 @@ static NSString * TTTLocalizedStringForAbbreviatedCardinalDirection(TTTLocationC
             TTTLocationCardinalDirection latitudeDirection, longitudeDirection;
             TTTGetCardinalDirectionsFromCoordinate(coordinate, &latitudeDirection, &longitudeDirection);
             latitudeString = [NSString stringWithFormat:TTTDegreesFormatString, [self.numberFormatter stringFromNumber:@(fabs(coordinate.latitude))], TTTLocalizedStringForAbbreviatedCardinalDirection(latitudeDirection)];
-            longitudeString = [NSString stringWithFormat:TTTDegreesFormatString, [self.numberFormatter stringFromNumber:@(fabs(coordinate.longitude))], TTTLocalizedStringForAbbreviatedCardinalDirection(latitudeDirection)];
+            longitudeString = [NSString stringWithFormat:TTTDegreesFormatString, [self.numberFormatter stringFromNumber:@(fabs(coordinate.longitude))], TTTLocalizedStringForAbbreviatedCardinalDirection(longitudeDirection)];
             break;
         }
         case TTTDegreesMinutesSecondsFormat: {
