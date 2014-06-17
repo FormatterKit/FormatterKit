@@ -194,7 +194,7 @@ NSLog(@"%@", [NSString stringWithFormat:NSLocalizedString(@"You came in %@ place
 Assuming you've provided localized strings for "You came in %@ place!", the output would be:
 
 - English: "You came in 2nd place!"
-- French: "Vous êtes venu à la 2eme place!"
+- French: "Vous êtes arrivé à la 2e place !"
 - Spanish: "Usted llegó en 2.o lugar!"
 
 ## TTTTimeIntervalFormatter
