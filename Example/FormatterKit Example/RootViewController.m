@@ -78,7 +78,7 @@ NS_ENUM(NSUInteger, RootViewControllerRowIndexes) {
 - (NSInteger)tableView:(__unused UITableView *)tableView
  numberOfRowsInSection:(__unused NSInteger)section
 {
-    return 7;
+    return 8;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
