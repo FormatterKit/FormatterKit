@@ -56,8 +56,8 @@ static inline double RAD2DEG(double radians) {
 static inline void TTTGetDegreesMinutesSecondsFromCoordinateDegrees(CLLocationDegrees degrees, double *d, double *m, double *s) {
     double r;
 
-    *d = floor(fabs(degrees));
-    r = degrees - *d;
+    *d = trunc(degrees);
+    r = fabs(degrees - *d);
 
     *m = 60.0 * r;
     r = *m - floor(*m);
