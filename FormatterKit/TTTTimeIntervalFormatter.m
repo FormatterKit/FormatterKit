@@ -336,7 +336,7 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"próxima semana";
     } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"mañana";
-    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
+    } else if ([components day] == 2 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"pasado mañana";
     }
 
@@ -380,6 +380,8 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"zeszły tydzień";
     } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"wczoraj";
+    } else if ([components day] == -2 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
+        return @"przedwczoraj";
     }
 
     if ([components year] == 1) {
@@ -390,6 +392,8 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"przyszły tydzień";
     } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"jutro";
+    } else if ([components day] == 2 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
+        return @"pojutrze";
     }
 
     return nil;
