@@ -112,7 +112,7 @@ extern TTTLocationCardinalDirection TTTLocationCardinalDirectionFromBearing(CLLo
 ///------------------------------
 
 /**
- Specifies the units used to express distance in formatted strings. `TTTMetricSystem` by default.
+ Specifies the units used to express distance in formatted strings. By default, it will look at the device locale preferences and set the appropriate value.
  */
 @property (nonatomic, assign) TTTLocationUnitSystem unitSystem;
 
