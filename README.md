@@ -55,10 +55,10 @@ If you are using CocoaPods, you may want to remove unwanted localizations using 
 
 ```ruby
 pre_install do |installer|
-    supported_locales = ['da', 'en']
-    
+    supported_locales = ['base', 'da', 'en']
+
     installer.pods.each do |pod|
-        %x[ find "#{pod.root}" -name '*.lproj' ].split.each do |bundle|
+        Dir.glob(File.join(pod.root, '**', '*.lproj')).each do |bundle|
             if (!supported_locales.include?(File.basename(bundle, ".lproj").downcase))
                 puts "Removing #{bundle}"
                 FileUtils.rm_rf(bundle)
