@@ -535,7 +535,7 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [super encodeWithCoder:aCoder];
 
-    [aCoder encodeObject:self.locale forKey:@"locale"];
+    [aCoder encodeObject:self.locale forKey:NSStringFromSelector(@selector(locale))];
     [aCoder encodeObject:self.pastDeicticExpression forKey:NSStringFromSelector(@selector(pastDeicticExpression))];
     [aCoder encodeObject:self.presentDeicticExpression forKey:NSStringFromSelector(@selector(presentDeicticExpression))];
     [aCoder encodeObject:self.futureDeicticExpression forKey:NSStringFromSelector(@selector(futureDeicticExpression))];
