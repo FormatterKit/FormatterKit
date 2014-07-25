@@ -25,6 +25,7 @@
 #import "ArrayFormatterViewController.h"
 #import "ColorFormatterViewController.h"
 #import "LocationFormatterViewController.h"
+#import "NameFormatterViewController.h"
 #import "OrdinalNumberFormatterViewController.h"
 #import "TimeIntervalFormatterViewController.h"
 #import "UnitOfInformationFormatterViewController.h"
@@ -35,6 +36,7 @@ NS_ENUM(NSUInteger, RootViewControllerRowIndexes) {
     ArrayRowIndex,
     ColorRowIndex,
     LocationRowIndex,
+    NameRowIndex,
     OrdinalNumberRowIndex,
     TimeIntervalRowIndex,
     UnitOfInformationRowIndex,
@@ -78,7 +80,7 @@ NS_ENUM(NSUInteger, RootViewControllerRowIndexes) {
 - (NSInteger)tableView:(__unused UITableView *)tableView
  numberOfRowsInSection:(__unused NSInteger)section
 {
-    return 8;
+    return 9;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -103,6 +105,9 @@ NS_ENUM(NSUInteger, RootViewControllerRowIndexes) {
             break;
         case LocationRowIndex:
             cell.textLabel.text = NSLocalizedString(@"Location Formatter", nil);
+            break;
+        case NameRowIndex:
+            cell.textLabel.text = NSLocalizedString(@"Name Formatter", nil);
             break;
         case OrdinalNumberRowIndex:
             cell.textLabel.text = NSLocalizedString(@"Ordinal Number Formatter", nil);
@@ -141,6 +146,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
             break;
         case LocationRowIndex:
             viewController = [[LocationFormatterViewController alloc] init];
+            break;
+        case NameRowIndex:
+            viewController = [[NameFormatterViewController alloc] init];
             break;
         case OrdinalNumberRowIndex:
             viewController = [[OrdinalNumberFormatterViewController alloc] init];

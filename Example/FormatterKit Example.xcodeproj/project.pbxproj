@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F8202D0917F4FAAE006C5810 /* TTTColorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8202D0817F4FAAE006C5810 /* TTTColorFormatter.m */; };
 		F8202D0C17F50AF5006C5810 /* ColorFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8202D0B17F50AF5006C5810 /* ColorFormatterViewController.m */; };
+		F83F967F1982DAB90012B3AF /* NameFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83F967E1982DAB90012B3AF /* NameFormatterViewController.m */; };
+		F83F96821982DADF0012B3AF /* TTTNameFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F83F96811982DADF0012B3AF /* TTTNameFormatter.m */; };
 		F872625414FD3BED00800E11 /* UnitOfInformationFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F872625314FD3BED00800E11 /* UnitOfInformationFormatterViewController.m */; };
 		F892375416A4BE43002FCF70 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F892375316A4BE43002FCF70 /* Default-568h@2x.png */; };
 		F89C9F02166154AB0040FB03 /* TTTAddressFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EF5166154AB0040FB03 /* TTTAddressFormatter.m */; };
@@ -42,6 +44,10 @@
 		F8202D0817F4FAAE006C5810 /* TTTColorFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTColorFormatter.m; sourceTree = "<group>"; };
 		F8202D0A17F50AF5006C5810 /* ColorFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorFormatterViewController.h; sourceTree = "<group>"; };
 		F8202D0B17F50AF5006C5810 /* ColorFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorFormatterViewController.m; sourceTree = "<group>"; };
+		F83F967D1982DAB90012B3AF /* NameFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameFormatterViewController.h; sourceTree = "<group>"; };
+		F83F967E1982DAB90012B3AF /* NameFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameFormatterViewController.m; sourceTree = "<group>"; };
+		F83F96801982DADF0012B3AF /* TTTNameFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTNameFormatter.h; sourceTree = "<group>"; };
+		F83F96811982DADF0012B3AF /* TTTNameFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTNameFormatter.m; sourceTree = "<group>"; };
 		F872625214FD3BED00800E11 /* UnitOfInformationFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitOfInformationFormatterViewController.h; sourceTree = "<group>"; };
 		F872625314FD3BED00800E11 /* UnitOfInformationFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitOfInformationFormatterViewController.m; sourceTree = "<group>"; };
 		F892375316A4BE43002FCF70 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -118,6 +124,8 @@
 				F8202D0817F4FAAE006C5810 /* TTTColorFormatter.m */,
 				F89C9EF8166154AB0040FB03 /* TTTLocationFormatter.h */,
 				F89C9EF9166154AB0040FB03 /* TTTLocationFormatter.m */,
+				F83F96801982DADF0012B3AF /* TTTNameFormatter.h */,
+				F83F96811982DADF0012B3AF /* TTTNameFormatter.m */,
 				F89C9EFA166154AB0040FB03 /* TTTOrdinalNumberFormatter.h */,
 				F89C9EFB166154AB0040FB03 /* TTTOrdinalNumberFormatter.m */,
 				F89C9EFC166154AB0040FB03 /* TTTTimeIntervalFormatter.h */,
@@ -216,6 +224,8 @@
 				F8202D0B17F50AF5006C5810 /* ColorFormatterViewController.m */,
 				F8FBFA401427E1DB001409DB /* LocationFormatterViewController.h */,
 				F8FBFA411427E1DB001409DB /* LocationFormatterViewController.m */,
+				F83F967D1982DAB90012B3AF /* NameFormatterViewController.h */,
+				F83F967E1982DAB90012B3AF /* NameFormatterViewController.m */,
 				F8FBFA431427E21C001409DB /* OrdinalNumberFormatterViewController.h */,
 				F8FBFA441427E21C001409DB /* OrdinalNumberFormatterViewController.m */,
 				F8FBFA461427E23C001409DB /* TimeIntervalFormatterViewController.h */,
@@ -307,6 +317,8 @@
 				F89C9F02166154AB0040FB03 /* TTTAddressFormatter.m in Sources */,
 				F89C9F03166154AB0040FB03 /* TTTArrayFormatter.m in Sources */,
 				F89C9F04166154AB0040FB03 /* TTTLocationFormatter.m in Sources */,
+				F83F967F1982DAB90012B3AF /* NameFormatterViewController.m in Sources */,
+				F83F96821982DADF0012B3AF /* TTTNameFormatter.m in Sources */,
 				F89C9F05166154AB0040FB03 /* TTTOrdinalNumberFormatter.m in Sources */,
 				F89C9F06166154AB0040FB03 /* TTTTimeIntervalFormatter.m in Sources */,
 				F89C9F07166154AB0040FB03 /* TTTUnitOfInformationFormatter.m in Sources */,

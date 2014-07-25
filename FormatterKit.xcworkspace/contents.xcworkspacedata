@@ -29,6 +29,12 @@
          location = "group:TTTLocationFormatter.m">
       </FileRef>
       <FileRef
+         location = "group:TTTNameFormatter.h">
+      </FileRef>
+      <FileRef
+         location = "group:TTTNameFormatter.m">
+      </FileRef>
+      <FileRef
          location = "group:TTTOrdinalNumberFormatter.h">
       </FileRef>
       <FileRef

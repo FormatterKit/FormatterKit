@@ -8,6 +8,7 @@ In short, use this library if you're manually formatting any of the following (w
 * __Arrays__: Display `NSArray` elements in a comma-delimited list *(e.g. "Russell, Spinoza & Rawls")*
 * __Colors__: RGB, CMYK, and HSL your ROY G. BIV in style. *(e.g. `#BADF00D`, `rgb(255, 100, 42)`)*
 * __Location, Distance & Direction__: Show `CLLocationDistance`, `CLLocationDirection`, and `CLLocationSpeed` in metric or imperial units *(eg. "240ft Northwest" / "45 km/h SE")*
+* __Names__: Display personal names in the correct format, according to the current locale and source language *(eg. "山田花子" for the Japanese first name "花子" (Hanako) and last name "山田" (Yamada))*
 * __Ordinal Numbers__: Convert cardinal `NSNumber` objects to their ordinal in most major languages *(eg. "1st, 2nd, 3rd" / "1ère, 2ème, 3ème")*
 * __Time Intervals__: Show relative time distance between any two `NSDate` objects *(e.g. "3 minutes ago" / "yesterday")*
 * __Units of Information__: Humanized representations of quantities of bits and bytes *(e.g. "2.7 MB")*
@@ -56,7 +57,7 @@ If you are using CocoaPods, you may want to remove unwanted localizations using 
 ```ruby
 pre_install do |installer|
     supported_locales = ['da', 'en']
-    
+
     installer.pods.each do |pod|
         %x[ find "#{pod.root}" -name '*.lproj' ].split.each do |bundle|
             if (!supported_locales.include?(File.basename(bundle, ".lproj").downcase))
@@ -171,6 +172,23 @@ NSLog(@"%@ at %@", [locationFormatter stringFromSpeed:25],[locationFormatter str
 [locationFormatter.numberFormatter setUsesSignificantDigits:NO];
 NSLog(@"%@", [locationFormatter stringFromLocation:austin]);
 // (30.2669444, -97.7427778)
+```
+
+## TTTNameFormatter
+
+`TTTNameFormatter` formats names according to the internationalization standards of the AddressBook framework, which determine, for example, the display order of names and whether or not to delimit components with whitespace.
+
+### Example Usage
+
+```objective-c
+TTTNameFormatter *nameFormatter = [[TTTNameFormatter alloc] init];
+NSString *frenchName = [nameFormatter stringFromPrefix:nil firstName:@"Guillaume" middleName:@"François" lastName:@"Antoine" suffix:@"Marquis de l'Hôpital"];
+NSLog(@"%@", frenchName);
+// "Guillaume François Antoine Marquis de l'Hôpital"
+
+NSString *japaneseName = [nameFormatter stringFromFirstName:@"孝和" lastName:@"関"];
+NSLog(@"%@", japaneseName);
+// "関孝和"
 ```
 
 ## TTTOrdinalNumberFormatter
