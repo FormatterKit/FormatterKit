@@ -36,7 +36,6 @@ NS_ENUM(NSUInteger, TimeIntervalFormatterViewControllerRowIndexes) {
     HoursRowIndex,
     DaysRowIndex,
     TwoDaysRowIndex,
-    WeeksRowIndex,
     MonthRowIndex,
 };
 
@@ -66,7 +65,7 @@ NS_ENUM(NSUInteger, TimeIntervalFormatterViewControllerRowIndexes) {
 - (NSInteger)tableView:(__unused UITableView *)tableView
  numberOfRowsInSection:(__unused NSInteger)section
 {
-    return 7;
+    return 6;
 }
 
 - (NSString *)tableView:(__unused UITableView *)tableView
@@ -120,9 +119,6 @@ titleForHeaderInSection:(NSInteger)section
             break;
         case TwoDaysRowIndex:
             timeInterval = 200000;
-            break;
-        case WeeksRowIndex:
-            timeInterval = 1000000;
             break;
         case MonthRowIndex:
             timeInterval = 10000000;
