@@ -22,6 +22,17 @@
 
 #import "TTTTimeIntervalFormatter.h"
 
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0
+#define NSYearCalendarUnit NSCalendarUnitYear
+#define NSMonthCalendarUnit NSCalendarUnitMonth
+#define NSWeekCalendarUnit NSCalendarUnitWeekOfYear
+#define NSDayCalendarUnit NSCalendarUnitDay
+#define NSHourCalendarUnit NSCalendarUnitHour
+#define NSMinuteCalendarUnit NSCalendarUnitMinute
+#define NSSecondCalendarUnit NSCalendarUnitSecond
+#define NSUndefinedDateComponent NSDateComponentUndefined
+#endif
+
 static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
     if ([string isEqualToString:@"year"]) {
         return NSYearCalendarUnit;
