@@ -86,7 +86,10 @@
         mutableAddressComponents[TTTAddressCountryKey] = country;
     }
     
-    mutableAddressComponents[TTTAddressCountryCodeKey] = [self.locale objectForKey:NSLocaleCountryCode];
+    NSString *countryCode = [self.locale objectForKey:NSLocaleCountryCode];
+    if (countryCode) {
+        mutableAddressComponents[TTTAddressCountryCodeKey] = countryCode;
+    }
     
     return [self stringForObjectValue:mutableAddressComponents];
 }
