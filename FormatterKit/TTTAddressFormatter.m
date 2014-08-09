@@ -102,7 +102,7 @@
     }
 
 #if __IPHONE_OS_VERSION_MIN_REQUIRED
-    return ABCreateStringWithAddressDictionary((NSDictionary *)anObject, YES);
+    return ABCreateStringWithAddressDictionary((NSDictionary *)anObject, NO);
 #elif __MAC_OS_X_VERSION_MIN_REQUIRED
     return [[[ABAddressBook sharedAddressBook] formattedAddressFromDictionary:(NSDictionary *)anObject] string];
 #else
