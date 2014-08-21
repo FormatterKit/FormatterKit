@@ -55,19 +55,19 @@
 "hours" = "Stunden";
 
 /* Hour Unit (Singular, Abbreviated) */
-"hr" = "h";
+"hr" = "Std.";
 
 /* Hour Unit (Plural, Abbreviated) */
-"hrs" = "h";
+"hrs" = "Stdn.";
 
 /* Present Deictic Expression */
 "just now" = "Gerade eben";
 
 /* Minute Unit (Singular, Abbreviated) */
-"min" = "m";
+"min" = "Min.";
 
 /* Minute Unit (Plural, Abbreviated) */
-"mins" = "m";
+"mins" = "Min.";
 
 /* Minute Unit (Singular) */
 "minute" = "Minute";
@@ -76,7 +76,7 @@
 "minutes" = "Minuten";
 
 /* Month Unit (Singular, Abbreviated) */
-"mo" = "M";
+"mo" = "M.";
 
 /* Month Unit (Singular) */
 "month" = "Monat";
@@ -85,7 +85,7 @@
 "months" = "Monaten";
 
 /* Month Unit (Plural, Abbreviated) */
-"mos" = "M";
+"mos" = "M.";
 
 /* Miles Per Hour Unit */
 "mph" = "mph";
@@ -110,7 +110,7 @@
 
 /* Second Unit (Plural, Abbreviated)
    Second Unit (Singular, Abbreviated) */
-"s" = "s";
+"s" = "Sek.";
 
 /* South Direction Abbreviation */
 "S" = "S";
@@ -152,10 +152,10 @@
 "West" = "West";
 
 /* Week Unit (Singular, Abbreviated) */
-"wk" = "W";
+"wk" = "Wo.";
 
 /* Week Unit (Plural, Abbreviated) */
-"wks" = "W";
+"wks" = "Wo.";
 
 /* Yard Unit */
 "yds" = "yds";
@@ -167,8 +167,8 @@
 "years" = "Jahre";
 
 /* Year Unit (Singular, Abbreviated) */
-"yr" = "a";
+"yr" = "J.";
 
 /* Year Unit (Plural, Abbreviated) */
-"yrs" = "a";
+"yrs" = "J.";
 
