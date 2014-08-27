@@ -160,7 +160,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     } else {
         ordinalIndicator = @"e";
     }
-    
+
     switch (self.grammaticalNumber) {
         case TTTOrdinalNumberFormatterDual:
         case TTTOrdinalNumberFormatterTrial:
@@ -176,7 +176,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 }
 
 - (NSString *)gaOrdinalIndicatorStringFromNumber:(__unused NSNumber *)number {
-    return @"\u00fa"; // LATIN SMALL LETTER U WITH ACUTE
+    return @"\u00FA"; // LATIN SMALL LETTER U WITH ACUTE
 }
 
 - (NSString *)itOrdinalIndicatorStringFromNumber:(__unused NSNumber *)number {
@@ -191,7 +191,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 }
 
 - (NSString *)jaOrdinalIndicatorStringFromNumber:(__unused NSNumber *)number {
-    return @"\u756a";
+    return @"\u756A"; // Unicode Han Character 'to take turns; a turn, a time; to repeat'
 }
 
 - (NSString *)nlOrdinalIndicatorStringFromNumber:(__unused NSNumber *)number {
@@ -210,7 +210,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 }
 
 - (NSString *)zhHansOrdinalIndicatorStringFromNumber:(__unused NSNumber *)number {
-    return @"\u7b2c";
+    return @"\u7B2C"; // Unicode Han Character 'sequence, number; grade, degree'
 }
 
 #pragma mark - NSFormatter
@@ -219,27 +219,27 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     if (![anObject isKindOfClass:[NSNumber class]]) {
         return nil;
     }
-    
+
     NSString *indicator = self.ordinalIndicator;
     if (!indicator) {
         indicator = [self localizedOrdinalIndicatorStringFromNumber:(NSNumber *)anObject];
     }
-    
+
     NSString *string = nil;
     @synchronized(self) {
         [self setPositivePrefix:nil];
         [self setPositiveSuffix:nil];
-        
+
         NSString *languageCode = [[self locale] objectForKey:NSLocaleLanguageCode];
         if ([languageCode hasPrefix:@"zh"]) {
             [self setPositivePrefix:indicator];
         } else {
             [self setPositiveSuffix:indicator];
         }
-        
+
         string = [super stringForObjectValue:anObject];
     }
-    
+
     return string;
 }
 
