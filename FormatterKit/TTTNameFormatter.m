@@ -22,6 +22,8 @@
 
 #import "TTTNameFormatter.h"
 
+#if !defined(__MAC_OS_X_VERSION_MAX_ALLOWED)
+
 #import <AddressBook/AddressBook.h>
 
 @implementation TTTNameFormatter
@@ -39,19 +41,11 @@
                         suffix:(NSString *)suffix;
 {
     ABRecordRef record = ABPersonCreate();
-#if defined(__MAC_OS_X_VERSION_MAX_ALLOWED)
-    ABRecordSetValue(record, (__bridge CFStringRef)kABTitleProperty, (__bridge CFStringRef)prefix);
-    ABRecordSetValue(record, (__bridge CFStringRef)kABFirstNameProperty, (__bridge CFStringRef)firstName);
-    ABRecordSetValue(record, (__bridge CFStringRef)kABMiddleNameProperty, (__bridge CFStringRef)middleName);
-    ABRecordSetValue(record, (__bridge CFStringRef)kABLastNameProperty, (__bridge CFStringRef)lastName);
-    ABRecordSetValue(record, (__bridge CFStringRef)kABSuffixProperty, (__bridge CFStringRef)suffix);
-#else
     ABRecordSetValue(record, kABPersonPrefixProperty, (__bridge CFStringRef)prefix, NULL);
     ABRecordSetValue(record, kABPersonFirstNameProperty, (__bridge CFStringRef)firstName, NULL);
     ABRecordSetValue(record, kABPersonMiddleNameProperty, (__bridge CFStringRef)middleName, NULL);
     ABRecordSetValue(record, kABPersonLastNameProperty, (__bridge CFStringRef)lastName, NULL);
     ABRecordSetValue(record, kABPersonSuffixProperty, (__bridge CFStringRef)suffix, NULL);
-#endif
 
     NSString *name = (__bridge_transfer NSString *)ABRecordCopyCompositeName(record);
     CFRelease(record);
@@ -60,3 +54,5 @@
 }
 
 @end
+
+#endif

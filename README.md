@@ -180,6 +180,8 @@ NSLog(@"%@", [locationFormatter stringFromLocation:austin]);
 
 `TTTNameFormatter` formats names according to the internationalization standards of the AddressBook framework, which determine, for example, the display order of names and whether or not to delimit components with whitespace.
 
+> `TTTNameFormatter` is not available on OS X.
+
 ### Example Usage
 
 ```objective-c
