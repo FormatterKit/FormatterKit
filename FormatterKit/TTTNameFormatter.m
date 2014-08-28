@@ -39,12 +39,12 @@
                         suffix:(NSString *)suffix;
 {
     ABRecordRef record = ABPersonCreate();
-#if defined(__MAC_OS_X_VERSION_MAX_ALLOWED) && __MAC_OS_X_VERSION_MAX_ALLOWED >= 1100
-    ABRecordSetValue(record, kABPrefixProperty, (__bridge CFStringRef)prefix);
-    ABRecordSetValue(record, kABFirstNameProperty, (__bridge CFStringRef)firstName);
-    ABRecordSetValue(record, kABMiddleNameProperty, (__bridge CFStringRef)middleName);
-    ABRecordSetValue(record, kABLastNameProperty, (__bridge CFStringRef)lastName);
-    ABRecordSetValue(record, kABSuffixProperty, (__bridge CFStringRef)suffix);
+#if defined(__MAC_OS_X_VERSION_MAX_ALLOWED)
+    ABRecordSetValue(record, (__bridge CFStringRef)kABTitleProperty, (__bridge CFStringRef)prefix);
+    ABRecordSetValue(record, (__bridge CFStringRef)kABFirstNameProperty, (__bridge CFStringRef)firstName);
+    ABRecordSetValue(record, (__bridge CFStringRef)kABMiddleNameProperty, (__bridge CFStringRef)middleName);
+    ABRecordSetValue(record, (__bridge CFStringRef)kABLastNameProperty, (__bridge CFStringRef)lastName);
+    ABRecordSetValue(record, (__bridge CFStringRef)kABSuffixProperty, (__bridge CFStringRef)suffix);
 #else
     ABRecordSetValue(record, kABPersonPrefixProperty, (__bridge CFStringRef)prefix, NULL);
     ABRecordSetValue(record, kABPersonFirstNameProperty, (__bridge CFStringRef)firstName, NULL);
