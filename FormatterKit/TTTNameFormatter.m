@@ -39,11 +39,20 @@
                         suffix:(NSString *)suffix;
 {
     ABRecordRef record = ABPersonCreate();
+#if defined(__MAC_OS_X_VERSION_MAX_ALLOWED) && __MAC_OS_X_VERSION_MAX_ALLOWED >= 1100
+    ABRecordSetValue(record, kABPrefixProperty, (__bridge CFStringRef)prefix);
+    ABRecordSetValue(record, kABFirstNameProperty, (__bridge CFStringRef)firstName);
+    ABRecordSetValue(record, kABMiddleNameProperty, (__bridge CFStringRef)middleName);
+    ABRecordSetValue(record, kABLastNameProperty, (__bridge CFStringRef)lastName);
+    ABRecordSetValue(record, kABSuffixProperty, (__bridge CFStringRef)suffix);
+#else
     ABRecordSetValue(record, kABPersonPrefixProperty, (__bridge CFStringRef)prefix, NULL);
     ABRecordSetValue(record, kABPersonFirstNameProperty, (__bridge CFStringRef)firstName, NULL);
     ABRecordSetValue(record, kABPersonMiddleNameProperty, (__bridge CFStringRef)middleName, NULL);
     ABRecordSetValue(record, kABPersonLastNameProperty, (__bridge CFStringRef)lastName, NULL);
     ABRecordSetValue(record, kABPersonSuffixProperty, (__bridge CFStringRef)suffix, NULL);
+#endif
+
     NSString *name = (__bridge_transfer NSString *)ABRecordCopyCompositeName(record);
     CFRelease(record);
 

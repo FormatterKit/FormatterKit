@@ -38,8 +38,7 @@ Pod::Spec.new do |s|
   s.subspec 'NameFormatter' do |ss|
     ss.source_files = 'FormatterKit/TTTNameFormatter.{h,m}'
     ss.resources = 'Localizations/**'
-    ss.osx.frameworks = 'AddressBook'
-    ss.ios.frameworks = 'AddressBook', 'AddressBookUI'
+    ss.frameworks = 'AddressBook'
   end
 
   s.subspec 'OrdinalNumberFormatter' do |ss|
