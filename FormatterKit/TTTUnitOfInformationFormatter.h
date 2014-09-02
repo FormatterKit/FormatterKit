@@ -25,25 +25,25 @@
 /**
  Defines units of information.
  */
-typedef enum {
+typedef NS_ENUM(NSUInteger, TTTUnitOfInformation) {
     TTTBit,
     TTTNibble,
     TTTByte,
     TTTWord,
     TTTDoubleWord
-} TTTUnitOfInformation;
+};
 
 /**
  Defines unit prefixes.
  */
-typedef enum {
+typedef NS_ENUM(NSUInteger, TTTUnitPrefix) {
     TTTKilo,
     TTTMega,
     TTTGiga,
     TTTTera,
     TTTPeta,
     TTTExa,
-} TTTUnitPrefix;
+};
 
 /**
  Instances of `TTTUnitOfInformationFormatter` create localized string representations of quantities of information.
