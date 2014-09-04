@@ -25,10 +25,10 @@
 /**
  Specifies the style of how array components are joined.
  */
-typedef enum {
+typedef NS_ENUM(NSUInteger, TTTArrayFormatterStyle) {
     TTTArrayFormatterSentenceStyle = 0, // Join with delimiters and a conjunction before the penultimate component.
     TTTArrayFormatterDataStyle,         // Join with delimiters, bound within square brackets like an array literal.
-} TTTArrayFormatterStyle;
+};
 
 /**
  Instances of `TTTArrayFormatter` create localized string representations of `NSArray` objects, and convert textual representations of arrays into `NSArray` objects.
