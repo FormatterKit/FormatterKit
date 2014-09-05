@@ -38,7 +38,7 @@
                      firstName:(NSString *)firstName
                     middleName:(NSString *)middleName
                       lastName:(NSString *)lastName
-                        suffix:(NSString *)suffix;
+                        suffix:(NSString *)suffix
 {
     ABRecordRef record = ABPersonCreate();
     ABRecordSetValue(record, kABPersonPrefixProperty, (__bridge CFStringRef)prefix, NULL);
