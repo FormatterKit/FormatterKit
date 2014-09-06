@@ -197,7 +197,7 @@ static NSString * TTTLocalizedStringForAbbreviatedCardinalDirection(TTTLocationC
     self.coordinateOrder = TTTCoordinateLatLngOrder;
     self.bearingStyle = TTTBearingWordStyle;
 
-    BOOL usesMetricSystem = [[(NSLocale*)[NSLocale currentLocale] objectForKey:NSLocaleUsesMetricSystem] boolValue];
+    BOOL usesMetricSystem = [[(NSLocale *)[NSLocale currentLocale] objectForKey:NSLocaleUsesMetricSystem] boolValue];
     self.unitSystem = usesMetricSystem ? TTTMetricSystem : TTTImperialSystem;
 
     _numberFormatter = [[NSNumberFormatter alloc] init];
