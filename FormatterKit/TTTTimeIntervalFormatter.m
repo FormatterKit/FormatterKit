@@ -25,6 +25,7 @@
 #if (defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000) || (defined(__MAC_OS_X_VERSION_MAX_ALLOWED) && __MAC_OS_X_VERSION_MAX_ALLOWED >= 1090)
     #define TTTCalendarUnitYear NSCalendarUnitYear
     #define TTTCalendarUnitMonth NSCalendarUnitMonth
+    #define TTTCalendarUnitWeek NSCalendarUnitWeekOfYear
     #define TTTCalendarUnitDay NSCalendarUnitDay
     #define TTTCalendarUnitHour NSCalendarUnitHour
     #define TTTCalendarUnitMinute NSCalendarUnitMinute
@@ -34,6 +35,7 @@
 #else
     #define TTTCalendarUnitYear NSYearCalendarUnit
     #define TTTCalendarUnitMonth NSMonthCalendarUnit
+    #define TTTCalendarUnitWeek NSWeekOfYearCalendarUnit
     #define TTTCalendarUnitDay NSDayCalendarUnit
     #define TTTCalendarUnitHour NSHourCalendarUnit
     #define TTTCalendarUnitMinute NSMinuteCalendarUnit
@@ -47,6 +49,8 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
         return TTTCalendarUnitYear;
     } else if ([string isEqualToString:@"month"]) {
         return TTTCalendarUnitMonth;
+    } else if ([string isEqualToString:@"week"]) {
+        return TTTCalendarUnitWeek;
     } else if ([string isEqualToString:@"day"]) {
         return TTTCalendarUnitDay;
     } else if ([string isEqualToString:@"hour"]) {
@@ -106,7 +110,7 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
 
     self.presentTimeIntervalMargin = 1;
 
-    self.significantUnits = TTTCalendarUnitYear | TTTCalendarUnitMonth | TTTCalendarUnitDay | TTTCalendarUnitHour | TTTCalendarUnitMinute | TTTCalendarUnitSecond;
+    self.significantUnits = TTTCalendarUnitYear | TTTCalendarUnitMonth | TTTCalendarUnitWeek | TTTCalendarUnitDay | TTTCalendarUnitHour | TTTCalendarUnitMinute | TTTCalendarUnitSecond;
     self.numberOfSignificantUnits = 1;
     self.leastSignificantUnit = TTTCalendarUnitSecond;
 
