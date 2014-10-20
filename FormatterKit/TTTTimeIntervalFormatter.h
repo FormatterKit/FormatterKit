@@ -101,7 +101,7 @@
 /**
  A bitmask specifying the significant units. Defaults to a bitmask of year, month, week, day, hour, minute, and second.
  */
-@property (nonatomic, assign) NSUInteger significantUnits;
+@property (nonatomic, assign) NSCalendarUnit significantUnits;
 
 /**
  Specifies the number of units that should be displayed before approximating. `0` to show all units. `1` by default. 
