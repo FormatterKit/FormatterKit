@@ -49,7 +49,7 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
         return TTTCalendarUnitYear;
     } else if ([string isEqualToString:@"month"]) {
         return TTTCalendarUnitMonth;
-    } else if ([string isEqualToString:@"week"]) {
+    } else if ([string isEqualToString:@"weekOfYear"]) {
         return TTTCalendarUnitWeek;
     } else if ([string isEqualToString:@"day"]) {
         return TTTCalendarUnitDay;
@@ -65,12 +65,32 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
 }
 
 static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUnit a, NSCalendarUnit b) {
-    if (a > b) {
-        return NSOrderedAscending;
-    } else if (a < b) {
-        return NSOrderedDescending;
+    if ((a == TTTCalendarUnitWeek) ^ (b == TTTCalendarUnitWeek)) {
+        if (a == TTTCalendarUnitWeek) {
+            switch (a) {
+                case TTTCalendarUnitYear:
+                case TTTCalendarUnitMonth:
+                    return NSOrderedAscending;
+                default:
+                    return NSOrderedDescending;
+            }
+        } else {
+            switch (b) {
+                case TTTCalendarUnitYear:
+                case TTTCalendarUnitMonth:
+                    return NSOrderedDescending;
+                default:
+                    return NSOrderedAscending;
+            }
+        }
     } else {
-        return NSOrderedSame;
+        if (a > b) {
+            return NSOrderedAscending;
+        } else if (a < b) {
+            return NSOrderedDescending;
+        } else {
+            return NSOrderedSame;
+        }
     }
 }
 
@@ -142,7 +162,7 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     NSString *string = nil;
     BOOL isApproximate = NO;
     NSUInteger numberOfUnits = 0;
-    for (NSString *unitName in @[@"year", @"month", @"week", @"day", @"hour", @"minute", @"second"]) {
+    for (NSString *unitName in @[@"year", @"month", @"weekOfYear", @"day", @"hour", @"minute", @"second"]) {
         NSCalendarUnit unit = NSCalendarUnitFromString(unitName);
         if ((self.significantUnits & unit) && NSCalendarUnitCompareSignificance(self.leastSignificantUnit, unit) != NSOrderedDescending) {
             NSNumber *number = @(abs((int)[[components valueForKey:unitName] integerValue]));
@@ -189,6 +209,8 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
                 return singular ? NSLocalizedStringFromTable(@"yr", @"FormatterKit", @"Year Unit (Singular, Abbreviated)") : NSLocalizedStringFromTable(@"yrs", @"FormatterKit", @"Year Unit (Plural, Abbreviated)");
             case TTTCalendarUnitMonth:
                 return singular ? NSLocalizedStringFromTable(@"mo", @"FormatterKit", @"Month Unit (Singular, Abbreviated)") : NSLocalizedStringFromTable(@"mos", @"FormatterKit", @"Month Unit (Plural, Abbreviated)");
+            case TTTCalendarUnitWeek:
+                return singular ? NSLocalizedStringFromTable(@"wk", @"FormatterKit", @"Week Unit (Singular, Abbreviated)") : NSLocalizedStringFromTable(@"wks", @"FormatterKit", @"Week Unit (Plural, Abbreviated)");
             case TTTCalendarUnitDay:
                 return singular ? NSLocalizedStringFromTable(@"day", @"FormatterKit", @"Day Unit (Singular, Abbreviated)") : NSLocalizedStringFromTable(@"days", @"FormatterKit", @"Day Unit (Plural, Abbreviated)");
             case TTTCalendarUnitHour:
@@ -206,6 +228,8 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
                 return singular ? NSLocalizedStringFromTable(@"year", @"FormatterKit", @"Year Unit (Singular)") : NSLocalizedStringFromTable(@"years", @"FormatterKit", @"Year Unit (Plural)");
             case TTTCalendarUnitMonth:
                 return singular ? NSLocalizedStringFromTable(@"month", @"FormatterKit", @"Month Unit (Singular)") : NSLocalizedStringFromTable(@"months", @"FormatterKit", @"Month Unit (Plural)");
+            case TTTCalendarUnitWeek:
+                return singular ? NSLocalizedStringFromTable(@"week", @"FormatterKit", @"Week Unit (Singular)") : NSLocalizedStringFromTable(@"weeks", @"FormatterKit", @"Week Unit (Plural)");
             case TTTCalendarUnitDay:
                 return singular ? NSLocalizedStringFromTable(@"day", @"FormatterKit", @"Day Unit (Singular)") : NSLocalizedStringFromTable(@"days", @"FormatterKit", @"Day Unit (Plural)");
             case TTTCalendarUnitHour:
