@@ -1,5 +1,5 @@
 ﻿/* List separator */
-" " = " ";
+" " = "";
 
 /* Ampersand. */
 "&" = "和";
