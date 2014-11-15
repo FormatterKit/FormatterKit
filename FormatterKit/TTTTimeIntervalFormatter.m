@@ -248,26 +248,26 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
 
 - (NSString *)localizedIdiomaticDeicticExpressionForComponents:(NSDateComponents *)components {
     NSString *languageCode = [self.locale objectForKey:NSLocaleLanguageCode];
-    if ([languageCode isEqualToString:@"en"]) {
-        return [self enRelativeDateStringForComponents:components];
-    } else if ([languageCode isEqualToString:@"es"]){
-        return [self esRelativeDateStringForComponents:components];
-    } else if ([languageCode isEqualToString:@"nl"]){
-        return [self nlRelativeDateStringForComponents:components];
-    } else if ([languageCode isEqualToString:@"ca"]){
+    if ([languageCode isEqualToString:@"ca"]) {
         return [self caRelativeDateStringForComponents:components];
-    } else if ([languageCode isEqualToString:@"pl"]) {
-        return [self plRelativeDateStringForComponents:components];
     } else if ([languageCode isEqualToString:@"cs"]) {
         return [self csRelativeDateStringForComponents:components];
-    } else if ([languageCode isEqualToString:@"ja"]) {
-        return [self jaRelativeDateStringForComponents:components];
+    } else if ([languageCode isEqualToString:@"es"]) {
+        return [self esRelativeDateStringForComponents:components];
+    } else if ([languageCode isEqualToString:@"en"]) {
+        return [self enRelativeDateStringForComponents:components];
     } else if ([languageCode isEqualToString:@"fr"]) {
         return [self frRelativeDateStringForComponents:components];
     } else if ([languageCode isEqualToString:@"it"]) {
         return [self itRelativeDateStringForComponents:components];
+    } else if ([languageCode isEqualToString:@"ja"]) {
+        return [self jaRelativeDateStringForComponents:components];
+    } else if ([languageCode isEqualToString:@"nl"]) {
+        return [self nlRelativeDateStringForComponents:components];
+    } else if ([languageCode isEqualToString:@"pl"]) {
+        return [self plRelativeDateStringForComponents:components];
     }
-    
+
     return nil;
 }
 
