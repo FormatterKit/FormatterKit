@@ -264,8 +264,10 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return [self jaRelativeDateStringForComponents:components];
     } else if ([languageCode isEqualToString:@"fr"]) {
         return [self frRelativeDateStringForComponents:components];
+    } else if ([languageCode isEqualToString:@"it"]) {
+        return [self itRelativeDateStringForComponents:components];
     }
-
+    
     return nil;
 }
 
@@ -476,6 +478,30 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"la semaine prochaine";
     } else if ([components day] == 1 && [components weekOfYear] == 0 && [components month] == 0 && [components year] == 0) {
         return @"demain";
+    }
+    
+    return nil;
+}
+
+- (NSString *)itRelativeDateStringForComponents:(NSDateComponents *)components {
+    if ([components year] == -1) {
+        return @"un anno fa";
+    } else if ([components month] == -1 && [components year] == 0) {
+        return @"un mese fa";
+    } else if ([components weekOfYear] == -1 && [components year] == 0 && [components month] == 0) {
+        return @"una settimana fa";
+    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
+        return @"ieri";
+    }
+    
+    if ([components year] == 1) {
+        return @"l'anno prossimo";
+    } else if ([components month] == 1 && [components year] == 0) {
+        return @"il mese prossimo";
+    } else if ([components weekOfYear] == 1 && [components year] == 0 && [components month] == 0) {
+        return @"la prossima settimana";
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
+        return @"domani";
     }
     
     return nil;
