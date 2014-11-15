@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name      = 'FormatterKit'
-  s.version   = '1.7.2'
+  s.version   = '1.7.3'
   s.license   = { :type => 'MIT' }
   s.summary   = '`stringWithFormat:` for the sophisticated hacker set.'
   s.homepage  = 'https://github.com/mattt/FormatterKit'
   s.social_media_url = 'https://twitter.com/mattt'
   s.author    = { 'Mattt Thompson' => 'm@mattt.me' }
-  s.source    = { :git => 'https://github.com/mattt/FormatterKit.git', :tag => '1.7.2' }
+  s.source    = { :git => 'https://github.com/mattt/FormatterKit.git', :tag => '1.7.3' }
 
   s.description = "FormatterKit is a collection of well-crafted NSFormatter subclasses for things like units of information, distance, and relative time intervals. Each formatter abstracts away the complex business logic of their respective domain, so that you can focus on the more important aspects of your application."
 
