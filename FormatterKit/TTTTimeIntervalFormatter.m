@@ -197,7 +197,7 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         }
     }
 
-    return string;
+    return string ?: self.presentDeicticExpression;
 }
 
 - (NSString *)localizedStringForNumber:(NSUInteger)number ofCalendarUnit:(NSCalendarUnit)unit {
