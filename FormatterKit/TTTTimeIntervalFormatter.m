@@ -195,9 +195,11 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         if (isApproximate && self.usesApproximateQualifier) {
             string = [NSString stringWithFormat:self.approximateQualifierFormat, string];
         }
+    } else {
+        string = self.presentDeicticExpression;
     }
 
-    return string ?: self.presentDeicticExpression;
+    return string;
 }
 
 - (NSString *)localizedStringForNumber:(NSUInteger)number ofCalendarUnit:(NSCalendarUnit)unit {
