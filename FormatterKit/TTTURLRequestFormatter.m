@@ -64,11 +64,12 @@
     if ([request URL]) {
         NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[request URL]];
         if (cookies.count) {
-            NSMutableString *cookiesString = [NSMutableString string];
+            NSMutableString *mutableCookieString = [NSMutableString string];
             for (NSHTTPCookie *cookie in cookies) {
-                [cookiesString appendFormat:@"%@=%@;", [cookie name], [cookie value]];
+                [mutableCookieString appendFormat:@"%@=%@;", cookie.name, cookie.value];
             }
-            [command appendCommandLineArgument:[NSString stringWithFormat:@"--cookie \"%@\"", cookiesString]];
+
+            [command appendCommandLineArgument:[NSString stringWithFormat:@"--cookie \"%@\"", mutableCookieString]];
         }
     }
 
