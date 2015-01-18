@@ -1,6 +1,6 @@
 // TTTTimeIntervalFormatter.h
 //
-// Copyright (c) 2011 Mattt Thompson (http://mattt.me)
+// Copyright (c) 2011–2015 Mattt Thompson (http://mattt.me)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -104,7 +104,7 @@
 @property (nonatomic, assign) NSCalendarUnit significantUnits;
 
 /**
- Specifies the number of units that should be displayed before approximating. `0` to show all units. `1` by default. 
+ Specifies the number of units that should be displayed before approximating. `0` to show all units. `1` by default.
  */
 @property (nonatomic, assign) NSUInteger numberOfSignificantUnits;
 

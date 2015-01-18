@@ -1,17 +1,17 @@
 // ArrayFormatterViewController.m
 //
-// Copyright (c) 2011 Mattt Thompson (http://mattt.me)
-// 
+// Copyright (c) 2011–2015 Mattt Thompson (http://mattt.me)
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -43,9 +43,9 @@ NS_ENUM(NSUInteger, ArrayFormatterViewControllerSectionIndexes) {
     if (!self) {
         return nil;
     }
-    
+
     self.title = NSLocalizedString(@"Array Formatter", nil);
-    
+
     NSMutableArray *mutableExamples = [NSMutableArray array];
     [mutableExamples addObject:@[@"John Lennon", @"Paul McCartney", @"George Harrison", @"Ringo Starr"]];
     [mutableExamples addObject:@[@"Bertrand Russel", @"Baruch de Spinoza", @"John Rawls"]];
@@ -95,11 +95,11 @@ titleForHeaderInSection:(NSInteger)section
     dispatch_once(&onceToken, ^{
         _arrayFormatter = [[TTTArrayFormatter alloc] init];
     });
-    
+
     [_arrayFormatter setArrayStyle:TTTArrayFormatterSentenceStyle];
     [_arrayFormatter setUsesSerialDelimiter:YES];
     [_arrayFormatter setUsesAbbreviatedConjunction:NO];
-    
+
     switch (indexPath.section) {
         case StandardSectionIndex:
             break;
@@ -113,10 +113,10 @@ titleForHeaderInSection:(NSInteger)section
             [_arrayFormatter setArrayStyle:TTTArrayFormatterDataStyle];
             break;
     }
-    
+
     cell.textLabel.font = [UIFont systemFontOfSize:14];
     cell.textLabel.numberOfLines = 3;
-    
+
     NSArray *example = self.examples[(NSUInteger)indexPath.row];
     cell.textLabel.text = [_arrayFormatter stringFromArray:example];
 }
