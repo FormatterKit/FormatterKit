@@ -70,24 +70,24 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
             switch (a) {
                 case TTTCalendarUnitYear:
                 case TTTCalendarUnitMonth:
-                    return NSOrderedAscending;
-                default:
                     return NSOrderedDescending;
+                default:
+                    return NSOrderedAscending;
             }
         } else {
             switch (b) {
                 case TTTCalendarUnitYear:
                 case TTTCalendarUnitMonth:
-                    return NSOrderedDescending;
-                default:
                     return NSOrderedAscending;
+                default:
+                    return NSOrderedDescending;
             }
         }
     } else {
         if (a > b) {
-            return NSOrderedAscending;
-        } else if (a < b) {
             return NSOrderedDescending;
+        } else if (a < b) {
+            return NSOrderedAscending;
         } else {
             return NSOrderedSame;
         }
