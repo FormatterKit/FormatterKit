@@ -1,6 +1,6 @@
 # Change Log
 
-## [Unreleased](https://github.com/mattt/FormatterKit/tree/HEAD) (2015-03-02)
+## [Unreleased](https://github.com/mattt/FormatterKit/tree/HEAD)
 
 [Full Changelog](https://github.com/mattt/FormatterKit/compare/1.8.0...HEAD)
 
@@ -28,7 +28,7 @@
 
 **Merged pull requests:**
 
-- #147 Return presentDeicticExpression if past interval is less than least significant unit [\#148](https://github.com/mattt/FormatterKit/pull/148) ([krzyzanowskim](https://github.com/krzyzanowskim))
+- \#147 Return presentDeicticExpression if past interval is less than least significant unit [\#148](https://github.com/mattt/FormatterKit/pull/148) ([krzyzanowskim](https://github.com/krzyzanowskim))
 
 - Minutes abbreviated in french does not have an 's' :\) [\#146](https://github.com/mattt/FormatterKit/pull/146) ([hartbit](https://github.com/hartbit))
 
@@ -66,7 +66,7 @@
 
 - Cleans up the 'significantUnits' property. [\#141](https://github.com/mattt/FormatterKit/pull/141) ([sstigler](https://github.com/sstigler))
 
-- \[Issue #139\] Fix time interval calculation involving weeks. [\#140](https://github.com/mattt/FormatterKit/pull/140) ([scraton](https://github.com/scraton))
+- \[Issue \#139\] Fix time interval calculation involving weeks. [\#140](https://github.com/mattt/FormatterKit/pull/140) ([scraton](https://github.com/scraton))
 
 ## [1.7.1](https://github.com/mattt/FormatterKit/tree/1.7.1) (2014-10-05)
 
@@ -350,7 +350,7 @@
 
 - Add french localization [\#50](https://github.com/mattt/FormatterKit/pull/50) ([flambert](https://github.com/flambert))
 
-- Use NSLocalizedStringWithDefaultValue to fix issue #47 [\#48](https://github.com/mattt/FormatterKit/pull/48) ([flambert](https://github.com/flambert))
+- Use NSLocalizedStringWithDefaultValue to fix issue \#47 [\#48](https://github.com/mattt/FormatterKit/pull/48) ([flambert](https://github.com/flambert))
 
 - Deictic expression in Spanish lacked a character [\#44](https://github.com/mattt/FormatterKit/pull/44) ([alvaromb](https://github.com/alvaromb))
 
