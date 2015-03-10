@@ -37,13 +37,16 @@
 "days" = "天";
 
 /* Deictic Expression Format (#{Time} #{Ago/From Now} */
-"Deictic Expression Format String" = "%1$@ %2$@";
+"Deictic Expression Format String" = "%1$@%2$@";
 
 /* #{Dimensional Quantity} #{Direction} */
-"Dimension Format String" = "%1$@ %2$@";
+"Dimension Format String" = "%1$@%2$@";
 
 /* #{Distance} #{Unit} */
-"Distance Format String" = "%1$@ %2$@";
+"Distance Format String" = "%1$@%2$@";
+
+/* Suffix Expression Format (#{Time} #{Unit}) */
+"Suffix Expression Format String" = "%1$@%2$@";
 
 /* East Direction Abbreviation */
 "E" = "E";
