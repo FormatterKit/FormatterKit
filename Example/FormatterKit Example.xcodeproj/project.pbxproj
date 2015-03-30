@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7F9C0291AC5E3E200D1747A /* RelativeDatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F9C0281AC5E3E200D1747A /* RelativeDatesViewController.m */; };
 		F8202D0917F4FAAE006C5810 /* TTTColorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8202D0817F4FAAE006C5810 /* TTTColorFormatter.m */; };
 		F8202D0C17F50AF5006C5810 /* ColorFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8202D0B17F50AF5006C5810 /* ColorFormatterViewController.m */; };
 		F83F967F1982DAB90012B3AF /* NameFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83F967E1982DAB90012B3AF /* NameFormatterViewController.m */; };
@@ -40,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B7F9C0271AC5E3E200D1747A /* RelativeDatesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelativeDatesViewController.h; sourceTree = "<group>"; };
+		B7F9C0281AC5E3E200D1747A /* RelativeDatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelativeDatesViewController.m; sourceTree = "<group>"; };
 		F8202D0717F4FAAE006C5810 /* TTTColorFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTColorFormatter.h; sourceTree = "<group>"; };
 		F8202D0817F4FAAE006C5810 /* TTTColorFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTColorFormatter.m; sourceTree = "<group>"; };
 		F8202D0A17F50AF5006C5810 /* ColorFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorFormatterViewController.h; sourceTree = "<group>"; };
@@ -234,6 +237,8 @@
 				F872625314FD3BED00800E11 /* UnitOfInformationFormatterViewController.m */,
 				F8FBFA491427E260001409DB /* URLRequestFormatterViewController.h */,
 				F8FBFA4A1427E260001409DB /* URLRequestFormatterViewController.m */,
+				B7F9C0271AC5E3E200D1747A /* RelativeDatesViewController.h */,
+				B7F9C0281AC5E3E200D1747A /* RelativeDatesViewController.m */,
 			);
 			name = Formatters;
 			sourceTree = "<group>";
@@ -304,6 +309,7 @@
 			files = (
 				F8FBF9F51427A456001409DB /* main.m in Sources */,
 				F8FBF9F91427A456001409DB /* AppDelegate.m in Sources */,
+				B7F9C0291AC5E3E200D1747A /* RelativeDatesViewController.m in Sources */,
 				F8FBFA351427CEC0001409DB /* RootViewController.m in Sources */,
 				F8FBFA381427D159001409DB /* FormatterViewController.m in Sources */,
 				F8FBFA3B1427D3DA001409DB /* ArrayFormatterViewController.m in Sources */,

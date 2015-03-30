@@ -30,6 +30,7 @@
 #import "TimeIntervalFormatterViewController.h"
 #import "UnitOfInformationFormatterViewController.h"
 #import "URLRequestFormatterViewController.h"
+#import "RelativeDatesViewController.h"
 
 NS_ENUM(NSUInteger, RootViewControllerRowIndexes) {
     AddressRowIndex,
@@ -39,6 +40,7 @@ NS_ENUM(NSUInteger, RootViewControllerRowIndexes) {
     NameRowIndex,
     OrdinalNumberRowIndex,
     TimeIntervalRowIndex,
+    RelativeDatesRowIndex,
     UnitOfInformationRowIndex,
     URLRequestRowIndex
 };
@@ -115,6 +117,9 @@ NS_ENUM(NSUInteger, RootViewControllerRowIndexes) {
         case TimeIntervalRowIndex:
             cell.textLabel.text = NSLocalizedString(@"Time Interval Formatter", nil);
             break;
+        case RelativeDatesRowIndex:
+            cell.textLabel.text = NSLocalizedString(@"Relative Dates Formatter", nil);
+            break;
         case UnitOfInformationRowIndex:
             cell.textLabel.text = NSLocalizedString(@"Unit of Information Formatter", nil);
             break;
@@ -155,6 +160,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
             break;
         case TimeIntervalRowIndex:
             viewController = [[TimeIntervalFormatterViewController alloc] init];
+            break;
+        case RelativeDatesRowIndex:
+            viewController = [[RelativeDatesViewController alloc] init];
             break;
         case UnitOfInformationRowIndex:
             viewController = [[UnitOfInformationFormatterViewController alloc] init];
