@@ -260,6 +260,8 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return [self enRelativeDateStringForComponents:components];
     } else if ([languageCode isEqualToString:@"fr"]) {
         return [self frRelativeDateStringForComponents:components];
+    } else if ([languageCode isEqualToString:@"he"]) {
+        return [self heRelativeDateStringForComponents:components];
     } else if ([languageCode isEqualToString:@"it"]) {
         return [self itRelativeDateStringForComponents:components];
     } else if ([languageCode isEqualToString:@"ja"]) {
@@ -348,6 +350,50 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"mañana";
     } else if ([components day] == 2 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"pasado mañana";
+    }
+
+    return nil;
+}
+
+- (NSString *)heRelativeDateStringForComponents:(NSDateComponents *)components {
+    if ([components year] == -1) {
+        return @"שנה שעברה";
+    } else if ([components month] == -1 && [components year] == 0) {
+        return @"חדש שעבר";
+    } else if ([components weekOfYear] == -1 && [components year] == 0 && [components month] == 0) {
+        return @"שבוע שעבר";
+    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
+        return @"אתמול";
+    }
+
+    if ([components year] == -2) {
+        return @"לפני שנתיים";
+    } else if ([components month] == -2 && [components year] == 0) {
+        return @"לפני חודשיים";
+    } else if ([components weekOfYear] == -2 && [components year] == 0 && [components month] == 0) {
+        return @"לפני שבועיים";
+    } else if ([components day] == -2 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
+        return @"שלשום";
+    }
+
+    if ([components year] == 1) {
+        return @"שנה הבאה";
+    } else if ([components month] == 1 && [components year] == 0) {
+        return @"חודש הבא";
+    } else if ([components weekOfYear] == 1 && [components year] == 0 && [components month] == 0) {
+        return @"שבוע שבא";
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
+        return @"מחר";
+    }
+
+    if ([components year] == 2) {
+        return @"בעוד שנתיים";
+    } else if ([components month] == 2 && [components year] == 0) {
+        return @"בעוד חודשיים";
+    } else if ([components weekOfYear] == 2 && [components year] == 0 && [components month] == 0) {
+        return @"בעוד שבועיים";
+    } else if ([components day] == 2 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
+        return @"מחרתיים";
     }
 
     return nil;
