@@ -30,6 +30,7 @@ FormatterKit comes fully internationalized, with `.strings` files for the follow
 - German (`de`)
 - Greek (`el`)
 - French (`fr`)
+- Hebrew (`he`)
 - Indonesian (`id`)
 - Italian (`it`)
 - Korean (`ko`)
