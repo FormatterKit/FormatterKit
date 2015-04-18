@@ -1,0 +1,3 @@
+language: objective-c
+xcode_project: FormatterKit Example.xcodeproj # path to your xcodeproj folder
+xcode_scheme: FormatterKitTests
