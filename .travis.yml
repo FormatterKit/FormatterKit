@@ -1,6 +1,7 @@
 language: objective-c
-xcode_workspace: FormatterKit Example.xcodeproj # path to your xcodeproj folder
+xcode_workspace: FormatterKit.xcworkspace/
 xcode_scheme: FormatterKitTests
+script: xctool -workspace FormatterKit.xcworkspace/ --scheme FormatterKitTests test -sdk iphonesimulator
 
 branches:
   only:
