@@ -21,13 +21,11 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
     self.formatter = [TTTTimeIntervalFormatter new];
     self.referenceDate = [NSDate date];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
@@ -82,6 +80,20 @@
     NSTimeInterval interval = 2;
     NSString *singularUnit = @"seconds";
     [self checkTimeUnit:singularUnit forTimeInterval:interval];
+}
+
+#pragma mark - second / minute / hour / day tests
+- (void)testSecondMinuteHourDayUnits
+{
+    NSArray *units = @[@"second", @"minute", @"hour", @"day"];
+    NSTimeInterval multiples[] = {1, 60, 60, 24};
+
+    NSTimeInterval interval = 1;
+    for (int i = 0; i < 4; i++) {
+        interval *= multiples[i];
+        NSString *expected = units[i];
+        [self checkTimeUnit:expected forTimeInterval:interval];
+    }
 }
 
 @end
