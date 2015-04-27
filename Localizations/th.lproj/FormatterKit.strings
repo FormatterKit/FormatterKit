@@ -1,0 +1,299 @@
+﻿/* List separator */
+" " = " ";
+
+/* No comment provided by engineer. */
+"&" = "&";
+
+/* Coordinate format */
+"(%@, %@)" = "(%1$@, %2$@)";
+
+/* List delimiter */
+"," = ",";
+
+/* Approximate Qualifier Format */
+"about %@" = "ประมาณ %@";
+
+/* Past Deictic Expression */
+"ago" = "ที่แล้ว";
+
+/* List conjunction */
+"and" = "และ";
+
+/* Bit Unit */
+"bits" = "bits";
+
+/* Byte Unit */
+"bytes" = "bytes";
+
+/* Error converting to NSArray */
+"Couldn’t convert to NSArray" = "ไม่สามารถแปลงเป็น NSArray ได้";
+
+/* Day Unit (Singular, Abbreviated)
+   Day Unit (Singular) */
+"day" = "วัน";
+
+/* Day Unit (Plural, Abbreviated)
+   Day Unit (Plural) */
+"days" = "วัน";
+
+/* Deictic Expression Format (#{Time} #{Ago/From Now} */
+"Deictic Expression Format String" = "%1$@%2$@";
+
+/* #{Dimensional Quantity} #{Direction} */
+"Dimension Format String" = "%1$@ %2$@";
+
+/* #{Distance} #{Unit} */
+"Distance Format String" = "%1$@ %2$@";
+
+/* East Direction Abbreviation */
+"E" = "อ.";
+
+/* East Direction */
+"East" = "ตะวันออก";
+
+/* Exabyte Unit */
+"EB" = "EB";
+
+/* Exbibyte Unit */
+"EiB" = "EiB";
+
+/* Future Deictic Expression */
+"from now" = "จากตอนนี้";
+
+/* Feet Unit */
+"ft" = "ฟุต";
+
+/* Feet Per Second Unit */
+"ft/s" = "ฟุต/วิ";
+
+/* Gigabyte Unit */
+"GB" = "GB";
+
+/* Gigabit Unit */
+"Gbit" = "Gbit";
+
+/* Gibibyte Unit */
+"GiB" = "GiB";
+
+/* Gibibit Unit */
+"Gibit" = "Gibit";
+
+/* Hour Unit (Singular) */
+"hour" = "ชั่วโมง";
+
+/* Hour Unit (Plural) */
+"hours" = "ชั่วโมง";
+
+/* Hour Unit (Singular, Abbreviated) */
+"hr" = "ชม.";
+
+/* Hour Unit (Plural, Abbreviated) */
+"hrs" = "ชม.";
+
+/* Present Deictic Expression */
+"just now" = "เมื่อครู่นี้";
+
+/* Kilobyte Unit */
+"KB" = "KB";
+
+/* Kilobit Unit */
+"kbit" = "kbit";
+
+/* Kibibyte Unit */
+"KiB" = "KiB";
+
+/* Kibibit Unit */
+"Kibit" = "Kibit";
+
+/* Kilometer Unit */
+"km" = "กม.";
+
+/* Kilometers Per Hour Unit */
+"km/h" = "กม./ชม.";
+
+/* No comment provided by engineer. */
+"last month" = "เดือนที่แล้ว";
+
+/* No comment provided by engineer. */
+"last week" = "สัปดาห์ที่แล้ว";
+
+/* No comment provided by engineer. */
+"last year" = "ปีที่แล้ว";
+
+/* Meter Unit */
+"m" = "ม.";
+
+/* Meters Per Second Unit */
+"m/s" = "ม./วิ";
+
+/* Megabyte Unit */
+"MB" = "MB";
+
+/* Megabit Unit */
+"Mbit" = "Mbit";
+
+/* No comment provided by engineer. */
+"Method Not Implemented" = "Method ยังไม่ถูก Implemented";
+
+/* Mebibyte Unit */
+"MiB" = "MiB";
+
+/* Mebibit Unit */
+"Mibit" = "Mibit";
+
+/* Mile Unit (Singular) */
+"mile" = "ไมล์";
+
+/* Mile Unit (Plural) */
+"miles" = "ไมล์";
+
+/* Minute Unit (Singular, Abbreviated) */
+"min" = "น.";
+
+/* Minute Unit (Plural, Abbreviated) */
+"mins" = "น.";
+
+/* Minute Unit (Singular) */
+"minute" = "นาที";
+
+/* Minute Unit (Plural) */
+"minutes" = "นาที";
+
+/* Month Unit (Singular, Abbreviated) */
+"mo" = "ด.";
+
+/* Month Unit (Singular) */
+"month" = "เดือน";
+
+/* Month Unit (Plural) */
+"months" = "เดือน";
+
+/* Month Unit (Plural, Abbreviated) */
+"mos" = "ด.";
+
+/* Miles Per Hour Unit */
+"mph" = "ไมล์/ชม.";
+
+/* North Direction Abbreviation */
+"N" = "น.";
+
+/* Northeast Direction Abbreviation */
+"NE" = "ต.อ.น.";
+
+/* No comment provided by engineer. */
+"next month" = "เดือนหน้า";
+
+/* No comment provided by engineer. */
+"next week" = "สัปดาห์หน้า";
+
+/* No comment provided by engineer. */
+"next year" = "ปีหน้า";
+
+/* North Direction */
+"North" = "เหนือ";
+
+/* Northeast Direction */
+"Northeast" = "ตะวันออกเฉียงเหนือ";
+
+/* Northwest Direction */
+"Northwest" = "ตะวันตกเฉียงเหนือ";
+
+/* Northwest Direction Abbreviation */
+"NW" = "ต.ต.น.";
+
+/* Petabyte Unit */
+"PB" = "PB";
+
+/* Petabit Unit */
+"Pbit" = "Pbit";
+
+/* Pebibyte Unit */
+"PiB" = "PiB";
+
+/* Pebibit Unit */
+"Pibit" = "Pibit";
+
+/* South Direction Abbreviation */
+"S" = "ต.";
+
+/* Second Unit (Plural, Abbreviated)
+   Second Unit (Singular, Abbreviated) */
+"s" = "วิ";
+
+/* Southeast Direction Abbreviation */
+"SE" = "ต.อ.ต.";
+
+/* Second Unit (Singular) */
+"second" = "วินาที";
+
+/* Second Unit (Plural) */
+"seconds" = "วินาที";
+
+/* South Direction */
+"South" = "ใต้";
+
+/* Southeast Direction */
+"Southeast" = "ตะวันออกเฉียงใต้";
+
+/* Southwest Direction */
+"Southwest" = "ตะวันตกเฉียงใต้";
+
+/* #{Speed} #{Unit} */
+"Speed Format String" = "%1$@ %2$@";
+
+/* Southwest Direction Abbreviation */
+"SW" = "ต.ต.ต.";
+
+/* Terabyte Unit */
+"TB" = "TB";
+
+/* Terabit Unit */
+"Tbit" = "Tbit";
+
+/* Tebibyte Unit */
+"TiB" = "TiB";
+
+/* Tebibit Unit */
+"Tibit" = "Tibit";
+
+/* No comment provided by engineer. */
+"tomorrow" = "พรุ่งนี้";
+
+/* #{Value} #{Unit} */
+"Unit of Information Format String" = "%1$@ %2$@";
+
+/* West Direction Abbreviation */
+"W" = "ต.";
+
+/* Week Unit (Singular) */
+"week" = "สัปดาห์";
+
+/* Week Unit (Plural) */
+"weeks" = "สัปดาห์";
+
+/* West Direction */
+"West" = "ตะวันตก";
+
+/* Week Unit (Singular, Abbreviated) */
+"wk" = "สัปดาห์";
+
+/* Week Unit (Plural, Abbreviated) */
+"wks" = "สัปดาห์";
+
+/* Yard Unit */
+"yds" = "หลา";
+
+/* Year Unit (Singular) */
+"year" = "ปี";
+
+/* Year Unit (Plural) */
+"years" = "ปี";
+
+/* No comment provided by engineer. */
+"yesterday" = "เมื่อวาน";
+
+/* Year Unit (Singular, Abbreviated) */
+"yr" = "ปี";
+
+/* Year Unit (Plural, Abbreviated) */
+"yrs" = "ปี";
