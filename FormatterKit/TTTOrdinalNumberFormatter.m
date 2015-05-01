@@ -69,6 +69,8 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
         return [self zhHansOrdinalIndicatorStringFromNumber:number];
     } else if ([languageCode isEqualToString:@"ca"]) {
         return [self caOrdinalIndicatorStringFromNumber:number];
+    } else if ([languageCode isEqualToString:@"sv"]) {
+        return [self svOrdinalIndicatorStringFromNumber:number];
     } else {
         return kTTTOrdinalNumberFormatterDefaultOrdinalIndicator;
     }
@@ -211,6 +213,23 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
 
 - (NSString *)zhHansOrdinalIndicatorStringFromNumber:(__unused NSNumber *)number {
     return @"\u7B2C"; // Unicode Han Character 'sequence, number; grade, degree'
+}
+
+- (NSString *)svOrdinalIndicatorStringFromNumber:(NSNumber *)number {
+    // If number % 100 is 11 or 12, ordinals are 11:e and 12:e.
+    if (NSLocationInRange([number integerValue] % 100, NSMakeRange(11, 2))) {
+        return @":e";
+    }
+    
+    // 1:a, 2:a, 3:e, 4:e and so on. Also, 21:a, 22:a, 23:e ...
+    switch ([number integerValue] % 10) {
+        case 1:
+            return @":a";
+        case 2:
+            return @":a";
+        default:
+            return @":e";
+    }
 }
 
 #pragma mark - NSFormatter

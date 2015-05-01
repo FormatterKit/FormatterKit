@@ -51,6 +51,7 @@
     [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"pt_PT"]];
     [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"zh-Hant_CN"]];
     [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"ca_ES"]];
+    [mutableLocales addObject:[[NSLocale alloc] initWithLocaleIdentifier:@"sv_SE"]];
     self.locales = [NSArray arrayWithArray:mutableLocales];
 
     return self;
@@ -58,7 +59,7 @@
 
 
 + (NSString *)formatterDescription {
-    return NSLocalizedString(@"TTTOrdinalNumberFormatter formats cardinals (1, 2, 3, etc.) into ordinals (1st, 2nd, 3rd, etc.), and supports English, Spanish, French, German, Irish, Italian, Japanese, Dutch, Portuguese, and Mandarin Chinese. For other languages, you can use the standard default, or override it with your own. For languages whose ordinal indicator depends upon the grammatical properties of the predicate, TTTOrdinalNumberFormatter can format according to a specified gender and/or plurality.", nil);
+    return NSLocalizedString(@"TTTOrdinalNumberFormatter formats cardinals (1, 2, 3, etc.) into ordinals (1st, 2nd, 3rd, etc.), and supports English, Spanish, French, German, Irish, Italian, Japanese, Dutch, Portuguese, Mandarin Chinese and Swedish. For other languages, you can use the standard default, or override it with your own. For languages whose ordinal indicator depends upon the grammatical properties of the predicate, TTTOrdinalNumberFormatter can format according to a specified gender and/or plurality.", nil);
 }
 
 #pragma mark - UITableViewDataSource
