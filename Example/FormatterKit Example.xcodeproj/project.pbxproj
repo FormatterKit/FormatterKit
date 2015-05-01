@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		659BF4C41AE2807F00CD4A06 /* TTTTimeIntervalFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF4C31AE2807F00CD4A06 /* TTTTimeIntervalFormatterTests.m */; };
+		659BF4D21AE281AB00CD4A06 /* TTTTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EFD166154AB0040FB03 /* TTTTimeIntervalFormatter.m */; };
 		F8202D0917F4FAAE006C5810 /* TTTColorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8202D0817F4FAAE006C5810 /* TTTColorFormatter.m */; };
 		F8202D0C17F50AF5006C5810 /* ColorFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8202D0B17F50AF5006C5810 /* ColorFormatterViewController.m */; };
 		F83F967F1982DAB90012B3AF /* NameFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83F967E1982DAB90012B3AF /* NameFormatterViewController.m */; };
@@ -39,7 +41,20 @@
 		F8FBFA591428EE32001409DB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBFA581428EE31001409DB /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		659BF4BD1AE27FA300CD4A06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8FBF9DB1427A456001409DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8FBF9E31427A456001409DB;
+			remoteInfo = "FormatterKit Example";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		659BF4B71AE27FA300CD4A06 /* FormatterKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormatterKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		659BF4BA1AE27FA300CD4A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		659BF4C31AE2807F00CD4A06 /* TTTTimeIntervalFormatterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTTimeIntervalFormatterTests.m; sourceTree = "<group>"; };
 		F8202D0717F4FAAE006C5810 /* TTTColorFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTColorFormatter.h; sourceTree = "<group>"; };
 		F8202D0817F4FAAE006C5810 /* TTTColorFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTColorFormatter.m; sourceTree = "<group>"; };
 		F8202D0A17F50AF5006C5810 /* ColorFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorFormatterViewController.h; sourceTree = "<group>"; };
@@ -97,6 +112,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		659BF4B41AE27FA300CD4A06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8FBF9E11427A456001409DB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -113,6 +135,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		659BF4B81AE27FA300CD4A06 /* FormatterKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				659BF4C31AE2807F00CD4A06 /* TTTTimeIntervalFormatterTests.m */,
+				659BF4B91AE27FA300CD4A06 /* Supporting Files */,
+			);
+			path = FormatterKitTests;
+			sourceTree = "<group>";
+		};
+		659BF4B91AE27FA300CD4A06 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				659BF4BA1AE27FA300CD4A06 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		F89C9EF3166154AB0040FB03 /* FormatterKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +183,7 @@
 			children = (
 				F892375316A4BE43002FCF70 /* Default-568h@2x.png */,
 				F8FBF9EE1427A456001409DB /* FormatterKit Example */,
+				659BF4B81AE27FA300CD4A06 /* FormatterKitTests */,
 				F8FBF9E71427A456001409DB /* Frameworks */,
 				F8FBF9E51427A456001409DB /* Products */,
 				F8FBFA071427A4D2001409DB /* Vendor */,
@@ -154,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				F8FBF9E41427A456001409DB /* FormatterKit Example.app */,
+				659BF4B71AE27FA300CD4A06 /* FormatterKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,6 +282,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		659BF4B61AE27FA300CD4A06 /* FormatterKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 659BF4C11AE27FA300CD4A06 /* Build configuration list for PBXNativeTarget "FormatterKitTests" */;
+			buildPhases = (
+				659BF4B31AE27FA300CD4A06 /* Sources */,
+				659BF4B41AE27FA300CD4A06 /* Frameworks */,
+				659BF4B51AE27FA300CD4A06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				659BF4BE1AE27FA300CD4A06 /* PBXTargetDependency */,
+			);
+			name = FormatterKitTests;
+			productName = FormatterKitTests;
+			productReference = 659BF4B71AE27FA300CD4A06 /* FormatterKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F8FBF9E31427A456001409DB /* FormatterKit Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8FBF9FC1427A456001409DB /* Build configuration list for PBXNativeTarget "FormatterKit Example" */;
@@ -266,6 +325,12 @@
 			attributes = {
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = Gowalla;
+				TargetAttributes = {
+					659BF4B61AE27FA300CD4A06 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = F8FBF9E31427A456001409DB;
+					};
+				};
 			};
 			buildConfigurationList = F8FBF9DE1427A456001409DB /* Build configuration list for PBXProject "FormatterKit Example" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -281,11 +346,19 @@
 			projectRoot = "";
 			targets = (
 				F8FBF9E31427A456001409DB /* FormatterKit Example */,
+				659BF4B61AE27FA300CD4A06 /* FormatterKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		659BF4B51AE27FA300CD4A06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8FBF9E21427A456001409DB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -298,6 +371,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		659BF4B31AE27FA300CD4A06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				659BF4D21AE281AB00CD4A06 /* TTTTimeIntervalFormatter.m in Sources */,
+				659BF4C41AE2807F00CD4A06 /* TTTTimeIntervalFormatterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8FBF9E01427A456001409DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -329,6 +411,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		659BF4BE1AE27FA300CD4A06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8FBF9E31427A456001409DB /* FormatterKit Example */;
+			targetProxy = 659BF4BD1AE27FA300CD4A06 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		F8FBF9F11427A456001409DB /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -341,6 +431,66 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		659BF4BF1AE27FA300CD4A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = FormatterKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
+			};
+			name = Debug;
+		};
+		659BF4C01AE27FA300CD4A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = FormatterKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
+			};
+			name = Release;
+		};
 		F8FBF9FA1427A456001409DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -490,6 +640,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		659BF4C11AE27FA300CD4A06 /* Build configuration list for PBXNativeTarget "FormatterKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				659BF4BF1AE27FA300CD4A06 /* Debug */,
+				659BF4C01AE27FA300CD4A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F8FBF9DE1427A456001409DB /* Build configuration list for PBXProject "FormatterKit Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
