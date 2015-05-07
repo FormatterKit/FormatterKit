@@ -240,7 +240,7 @@ static void TTTGetHSLComponentsFromColor(UIColor *color, CGFloat *hue, CGFloat *
         return YES;
     }
 
-    *error = NSLocalizedStringFromTable(@"Color format not recognized", @"FormatterKit", nil);
+    *error = NSLocalizedStringFromTableInBundle(@"Color format not recognized", @"FormatterKit", [NSBundle bundleForClass:[self class]], nil);
 
     return NO;
 }
