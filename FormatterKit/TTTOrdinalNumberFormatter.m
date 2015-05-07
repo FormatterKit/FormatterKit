@@ -276,7 +276,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
         return YES;
     }
 
-    *error = NSLocalizedStringFromTable(@"String did not contain a valid ordinal number", @"FormatterKit", nil);
+    *error = NSLocalizedStringFromTableInBundle(@"String did not contain a valid ordinal number", @"FormatterKit", [NSBundle bundleForClass:[self class]], nil);
 
     return NO;
 }
