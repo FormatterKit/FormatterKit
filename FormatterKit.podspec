@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.subspec 'Resources' do |ss|
-    ss.resource_bundles = {'FormatterKit' => ['Localizations/**']}
+    ss.resources = 'Localizations/**'
   end
   
   s.subspec 'AddressFormatter' do |ss|
