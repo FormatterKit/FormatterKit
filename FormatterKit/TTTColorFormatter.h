@@ -61,6 +61,15 @@
  */
 - (UIColor *)colorFromHexadecimalString:(NSString *)string;
 
+/**
+ Returns the color represented by the specified integerd.
+ 
+ @param numeric string for color
+ 
+ @return The color
+ */
+- (UIColor *)colorFromHexadecimalNumber:(NSInteger)integer;
+
 ///----------
 /// @name RGB
 ///----------
