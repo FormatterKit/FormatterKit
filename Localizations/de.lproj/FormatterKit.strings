@@ -30,11 +30,11 @@
 
 /* Day Unit (Singular)
    Day Unit (Singular, Abbreviated) */
-"day" = "T.";
+"day" = "Tag";
 
 /* Day Unit (Plural)
    Day Unit (Plural, Abbreviated) */
-"days" = "T.";
+"days" = "Tage";
 
 /* East Direction Abbreviation */
 "E" = "O";
