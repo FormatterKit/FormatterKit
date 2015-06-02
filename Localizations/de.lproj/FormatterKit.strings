@@ -34,7 +34,7 @@
 
 /* Day Unit (Plural)
    Day Unit (Plural, Abbreviated) */
-"days" = "Tage";
+"days" = "Tagen";
 
 /* East Direction Abbreviation */
 "E" = "O";
