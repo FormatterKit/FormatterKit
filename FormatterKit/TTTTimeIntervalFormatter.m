@@ -66,8 +66,8 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
 
 static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUnit a, NSCalendarUnit b) {
     if ((a == TTTCalendarUnitWeek) ^ (b == TTTCalendarUnitWeek)) {
-        if (b == TTTCalendarUnitWeek) {
-            switch (a) {
+        if (a == TTTCalendarUnitWeek) {
+            switch (b) {
                 case TTTCalendarUnitYear:
                 case TTTCalendarUnitMonth:
                     return NSOrderedAscending;
@@ -214,7 +214,7 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
             case TTTCalendarUnitWeek:
                 return singular ? NSLocalizedStringFromTable(@"wk", @"FormatterKit", @"Week Unit (Singular, Abbreviated)") : NSLocalizedStringFromTable(@"wks", @"FormatterKit", @"Week Unit (Plural, Abbreviated)");
             case TTTCalendarUnitDay:
-                return singular ? NSLocalizedStringFromTable(@"d", @"FormatterKit", @"Day Unit (Singular, Abbreviated)") : NSLocalizedStringFromTable(@"days", @"FormatterKit", @"Day Unit (Plural, Abbreviated)");
+                return singular ? NSLocalizedStringFromTable(@"day", @"FormatterKit", @"Day Unit (Singular, Abbreviated)") : NSLocalizedStringFromTable(@"days", @"FormatterKit", @"Day Unit (Plural, Abbreviated)");
             case TTTCalendarUnitHour:
                 return singular ? NSLocalizedStringFromTable(@"hr", @"FormatterKit", @"Hour Unit (Singular, Abbreviated)") : NSLocalizedStringFromTable(@"hrs", @"FormatterKit", @"Hour Unit (Plural, Abbreviated)");
             case TTTCalendarUnitMinute:
