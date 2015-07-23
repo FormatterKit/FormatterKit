@@ -66,8 +66,8 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
 
 static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUnit a, NSCalendarUnit b) {
     if ((a == TTTCalendarUnitWeek) ^ (b == TTTCalendarUnitWeek)) {
-        if (b == TTTCalendarUnitWeek) {
-            switch (a) {
+        if (a == TTTCalendarUnitWeek) {
+            switch (b) {
                 case TTTCalendarUnitYear:
                 case TTTCalendarUnitMonth:
                     return NSOrderedAscending;
