@@ -28,13 +28,17 @@
 /* Error converting to NSArray */
 "Couldn’t convert to NSArray" = "Converteren naar NSArray mislukt";
 
-/* Day Unit (Singular)
-   Day Unit (Singular, Abbreviated) */
+/* Day Unit (Singular)*/
 "day" = "dag";
 
-/* Day Unit (Plural)
-   Day Unit (Plural, Abbreviated) */
+/* Day Unit (Plural) */
 "days" = "dagen";
+
+/* Day Unit (Singular, Abbreviated) */
+"d" = "d";
+
+/* Day Unit (Plural, Abbreviated) */
+"ds" = "d";
 
 /* East Direction Abbreviation */
 "E" = "O";

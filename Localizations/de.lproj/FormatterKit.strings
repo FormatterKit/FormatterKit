@@ -28,13 +28,17 @@
 /* List conjunction */
 "and" = "und";
 
-/* Day Unit (Singular)
-   Day Unit (Singular, Abbreviated) */
-"day" = "T.";
+/* Day Unit (Singular) */
+"day" = "Tag";
 
-/* Day Unit (Plural)
-   Day Unit (Plural, Abbreviated) */
-"days" = "T.";
+/* Day Unit (Plural) */
+"days" = "Tagen";
+
+/* Day Unit (Singular, Abbreviated) */
+"d" = "T.";
+
+/* Day Unit (Plural, Abbreviated) */
+"ds" = "T.";
 
 /* East Direction Abbreviation */
 "E" = "O";

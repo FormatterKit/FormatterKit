@@ -42,13 +42,17 @@
 /* Error converting to NSArray */
 "Couldn’t convert to NSArray" = "Impossibile convertire a NSArray";
 
-/* Day Unit (Singular, Abbreviated)
-   Day Unit (Singular) */
+/* Day Unit (Singular) */
 "day" = "g";
 
-/* Day Unit (Plural, Abbreviated)
-   Day Unit (Plural) */
+/* Day Unit (Plural) */
 "days" = "g";
+
+/* Day Unit (Singular, Abbreviated) */
+"d" = "g";
+
+/* Day Unit (Plural, Abbreviated) */
+"ds" = "g";
 
 /* East Direction Abbreviation */
 "E" = "E";
