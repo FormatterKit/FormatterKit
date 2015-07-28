@@ -89,7 +89,7 @@
     NSTimeInterval multiples[] = {1, 60, 60, 24};
 
     NSTimeInterval interval = 1;
-    for (int i = 0; i < 4; i++) {
+    for (NSUInteger i = 0; i < 4; i++) {
         interval *= multiples[i];
         NSString *expected = units[i];
         [self checkTimeUnit:expected forTimeInterval:interval];

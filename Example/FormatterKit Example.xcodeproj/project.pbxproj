@@ -8,15 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		659BF4C41AE2807F00CD4A06 /* TTTTimeIntervalFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF4C31AE2807F00CD4A06 /* TTTTimeIntervalFormatterTests.m */; };
-		659BF4C61AE281AB00CD4A06 /* TTTAddressFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EF5166154AB0040FB03 /* TTTAddressFormatter.m */; };
-		659BF4C81AE281AB00CD4A06 /* TTTArrayFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EF7166154AB0040FB03 /* TTTArrayFormatter.m */; };
-		659BF4CA1AE281AB00CD4A06 /* TTTColorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8202D0817F4FAAE006C5810 /* TTTColorFormatter.m */; };
-		659BF4CC1AE281AB00CD4A06 /* TTTLocationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EF9166154AB0040FB03 /* TTTLocationFormatter.m */; };
-		659BF4CE1AE281AB00CD4A06 /* TTTNameFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F83F96811982DADF0012B3AF /* TTTNameFormatter.m */; };
-		659BF4D01AE281AB00CD4A06 /* TTTOrdinalNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EFB166154AB0040FB03 /* TTTOrdinalNumberFormatter.m */; };
 		659BF4D21AE281AB00CD4A06 /* TTTTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EFD166154AB0040FB03 /* TTTTimeIntervalFormatter.m */; };
-		659BF4D41AE281AB00CD4A06 /* TTTUnitOfInformationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9EFF166154AB0040FB03 /* TTTUnitOfInformationFormatter.m */; };
-		659BF4D61AE281AB00CD4A06 /* TTTURLRequestFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C9F01166154AB0040FB03 /* TTTURLRequestFormatter.m */; };
 		F8202D0917F4FAAE006C5810 /* TTTColorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8202D0817F4FAAE006C5810 /* TTTColorFormatter.m */; };
 		F8202D0C17F50AF5006C5810 /* ColorFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8202D0B17F50AF5006C5810 /* ColorFormatterViewController.m */; };
 		F83F967F1982DAB90012B3AF /* NameFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83F967E1982DAB90012B3AF /* NameFormatterViewController.m */; };
@@ -383,15 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				659BF4C61AE281AB00CD4A06 /* TTTAddressFormatter.m in Sources */,
-				659BF4C81AE281AB00CD4A06 /* TTTArrayFormatter.m in Sources */,
-				659BF4CA1AE281AB00CD4A06 /* TTTColorFormatter.m in Sources */,
-				659BF4CC1AE281AB00CD4A06 /* TTTLocationFormatter.m in Sources */,
-				659BF4CE1AE281AB00CD4A06 /* TTTNameFormatter.m in Sources */,
-				659BF4D01AE281AB00CD4A06 /* TTTOrdinalNumberFormatter.m in Sources */,
 				659BF4D21AE281AB00CD4A06 /* TTTTimeIntervalFormatter.m in Sources */,
-				659BF4D41AE281AB00CD4A06 /* TTTUnitOfInformationFormatter.m in Sources */,
-				659BF4D61AE281AB00CD4A06 /* TTTURLRequestFormatter.m in Sources */,
 				659BF4C41AE2807F00CD4A06 /* TTTTimeIntervalFormatterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
