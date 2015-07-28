@@ -1,6 +1,2 @@
 language: objective-c
-script: xctool -workspace FormatterKit.xcworkspace/ --scheme FormatterKitTests test -sdk iphonesimulator
-branches:
-  only:
-    - master
-    - feature/unit-tests
+script: xctool -workspace FormatterKit.xcworkspace -scheme FormatterKitTests -sdk iphonesimulator build test
