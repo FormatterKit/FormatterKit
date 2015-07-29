@@ -253,20 +253,18 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
 #pragma mark -
 
 - (NSString *)localizedIdiomaticDeicticExpressionForStartingDate:(NSDate *)startingDate endingDate:(NSDate *)endingDate {
-    NSCalendarUnit allUnits = TTTCalendarUnitYear | TTTCalendarUnitMonth | TTTCalendarUnitWeek | TTTCalendarUnitDay | TTTCalendarUnitHour | TTTCalendarUnitMinute | TTTCalendarUnitSecond | TTTCalendarUnitWeekday;
-    NSDateComponents *startingComponents = [self.calendar components:allUnits fromDate:startingDate];
-    NSDateComponents *endingComponents = [self.calendar components:allUnits fromDate:endingDate];
+    NSCalendarUnit units = TTTCalendarUnitYear | TTTCalendarUnitMonth | TTTCalendarUnitWeek | TTTCalendarUnitDay | TTTCalendarUnitWeekday;
+    NSDateComponents *startingComponents = [self.calendar components:units fromDate:startingDate];
+    NSDateComponents *endingComponents = [self.calendar components:units fromDate:endingDate];
+    startingDate = [self.calendar dateFromComponents:startingComponents];   // strip time
+    endingDate = [self.calendar dateFromComponents:endingComponents];
     
-    BOOL previousWeekday = (endingComponents.weekday % 7) + 1 == startingComponents.weekday;
-    BOOL nextWeekday = (startingComponents.weekday % 7) + 1 == endingComponents.weekday;
+    NSInteger dayDifference = [self.calendar components:TTTCalendarUnitDay fromDate:startingDate toDate:endingDate options:0].day;
     
-    NSTimeInterval difference = [endingDate timeIntervalSinceDate:startingDate];
-    NSTimeInterval fourtyEightHours = 60 * 60 * 48;
-    
-    if ([self shouldUseUnit:TTTCalendarUnitDay] && -fourtyEightHours < difference && difference < 0 && previousWeekday) {
+    if ([self shouldUseUnit:TTTCalendarUnitDay] && dayDifference == -1) {
         return @"yesterday";
     }
-    if ([self shouldUseUnit:TTTCalendarUnitDay] && fourtyEightHours > difference && difference > 0 && nextWeekday) {
+    if ([self shouldUseUnit:TTTCalendarUnitDay] && dayDifference == 1) {
         return @"tomorrow";
     }
     
