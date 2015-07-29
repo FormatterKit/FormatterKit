@@ -263,10 +263,10 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     NSTimeInterval difference = [endingDate timeIntervalSinceDate:startingDate];
     NSTimeInterval fourtyEightHours = 60 * 60 * 48;
     
-    if ([self shouldUseUnit:TTTCalendarUnitDay] && difference < 0 && difference > -fourtyEightHours && previousWeekday) {
+    if ([self shouldUseUnit:TTTCalendarUnitDay] && -fourtyEightHours < difference && difference < 0 && previousWeekday) {
         return @"yesterday";
     }
-    if ([self shouldUseUnit:TTTCalendarUnitDay] && difference > 0 && difference < fourtyEightHours && nextWeekday) {
+    if ([self shouldUseUnit:TTTCalendarUnitDay] && fourtyEightHours > difference && difference > 0 && nextWeekday) {
         return @"tomorrow";
     }
     
