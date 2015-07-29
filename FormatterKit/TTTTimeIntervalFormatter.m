@@ -258,7 +258,7 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     NSTimeInterval difference = [endingDate timeIntervalSinceDate:startingDate];
     NSTimeInterval fourtyEightHours = 60 * 60 * 48;
     
-    BOOL dayIsSignificant = (self.significantUnits & TTTCalendarUnitDay) != 0;
+    BOOL dayIsSignificant = self.significantUnits & TTTCalendarUnitDay;
     if (dayIsSignificant && difference < 0 && difference > -fourtyEightHours && previousWeekday) {
         return @"yesterday";
     }
@@ -280,7 +280,7 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     BOOL previousWeek = precedingWeekNumber && (sameMonth || previousMonth);
     BOOL nextWeek = succeedingWeekNumber && (sameMonth || nextMonth);
 
-    BOOL weekIsSignificant = (self.significantUnits & TTTCalendarUnitWeek) != 0;
+    BOOL weekIsSignificant = self.significantUnits & TTTCalendarUnitWeek;
     if (weekIsSignificant && previousWeek) {
         return @"last week";
     }
@@ -288,7 +288,7 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"next week";
     }
     
-    BOOL monthIsSignificant = (self.significantUnits & TTTCalendarUnitMonth) != 0;
+    BOOL monthIsSignificant = self.significantUnits & TTTCalendarUnitMonth;
     if (monthIsSignificant && previousMonth) {
         return @"last month";
     }
@@ -296,7 +296,7 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"next month";
     }
     
-    BOOL yearIsSignificant = (self.significantUnits & TTTCalendarUnitYear) != 0;
+    BOOL yearIsSignificant = self.significantUnits & TTTCalendarUnitYear;
     if (yearIsSignificant && previousYear) {
         return @"last year";
     }
