@@ -142,6 +142,20 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     return (self.significantUnits & unit) && NSCalendarUnitCompareSignificance(self.leastSignificantUnit, unit) != NSOrderedDescending;
 }
 
+- (NSDateComponents *)componentsWithoutTime:(NSDate *)date {
+    NSCalendarUnit units = TTTCalendarUnitYear | TTTCalendarUnitMonth | TTTCalendarUnitWeek | TTTCalendarUnitDay | TTTCalendarUnitWeekday;
+    return [self.calendar components:units fromDate:date];
+}
+
+- (NSInteger)numberOfDaysFrom:(NSDate *)fromDate to:(NSDate *)toDate {
+    NSDateComponents *fromComponents = [self componentsWithoutTime:fromDate];
+    NSDateComponents *toComponents = [self componentsWithoutTime:toDate];
+    fromDate = [self.calendar dateFromComponents:fromComponents];
+    toDate = [self.calendar dateFromComponents:toComponents];
+    
+    return [self.calendar components:TTTCalendarUnitDay fromDate:fromDate toDate:toDate options:0].day;
+}
+
 - (NSString *)stringForTimeInterval:(NSTimeInterval)seconds {
     NSDate *date = [NSDate date];
     return [self stringForTimeIntervalFromDate:date toDate:[NSDate dateWithTimeInterval:seconds sinceDate:date]];
@@ -169,8 +183,10 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     for (NSString *unitName in @[@"year", @"month", @"weekOfYear", @"day", @"hour", @"minute", @"second"]) {
         NSCalendarUnit unit = NSCalendarUnitFromString(unitName);
         if ([self shouldUseUnit:unit]) {
-            NSNumber *number = @(abs((int)[[components valueForKey:unitName] integerValue]));
-            if ([number integerValue]) {
+            BOOL reportOnlyDays = unit == TTTCalendarUnitDay && self.numberOfSignificantUnits == 1;
+            NSInteger value = reportOnlyDays ? [self numberOfDaysFrom:startingDate to:endingDate] : [[components valueForKey:unitName] integerValue];
+            if (value) {
+                NSNumber *number = @(abs((int)value));
                 NSString *suffix = [NSString stringWithFormat:self.suffixExpressionFormat, number, [self localizedStringForNumber:[number unsignedIntegerValue] ofCalendarUnit:unit]];
                 if (!string) {
                     string = suffix;
@@ -253,14 +269,10 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
 #pragma mark -
 
 - (NSString *)localizedIdiomaticDeicticExpressionForStartingDate:(NSDate *)startingDate endingDate:(NSDate *)endingDate {
-    NSCalendarUnit units = TTTCalendarUnitYear | TTTCalendarUnitMonth | TTTCalendarUnitWeek | TTTCalendarUnitDay | TTTCalendarUnitWeekday;
-    NSDateComponents *startingComponents = [self.calendar components:units fromDate:startingDate];
-    NSDateComponents *endingComponents = [self.calendar components:units fromDate:endingDate];
-    startingDate = [self.calendar dateFromComponents:startingComponents];   // strip time
-    endingDate = [self.calendar dateFromComponents:endingComponents];
+    NSDateComponents *startingComponents = [self componentsWithoutTime:startingDate];
+    NSDateComponents *endingComponents = [self componentsWithoutTime:endingDate];
     
-    NSInteger dayDifference = [self.calendar components:TTTCalendarUnitDay fromDate:startingDate toDate:endingDate options:0].day;
-    
+    NSInteger dayDifference = [self numberOfDaysFrom:startingDate to:endingDate];
     if ([self shouldUseUnit:TTTCalendarUnitDay] && dayDifference == -1) {
         return @"yesterday";
     }
