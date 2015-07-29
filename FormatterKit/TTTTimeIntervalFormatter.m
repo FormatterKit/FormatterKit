@@ -137,6 +137,11 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     return self;
 }
 
+- (BOOL)shouldUseUnit:(NSCalendarUnit)unit
+{
+    return (self.significantUnits & unit) && NSCalendarUnitCompareSignificance(self.leastSignificantUnit, unit) != NSOrderedDescending;
+}
+
 - (NSString *)stringForTimeInterval:(NSTimeInterval)seconds {
     NSDate *date = [NSDate date];
     return [self stringForTimeIntervalFromDate:date toDate:[NSDate dateWithTimeInterval:seconds sinceDate:date]];
@@ -163,7 +168,7 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     NSUInteger numberOfUnits = 0;
     for (NSString *unitName in @[@"year", @"month", @"weekOfYear", @"day", @"hour", @"minute", @"second"]) {
         NSCalendarUnit unit = NSCalendarUnitFromString(unitName);
-        if ((self.significantUnits & unit) && NSCalendarUnitCompareSignificance(self.leastSignificantUnit, unit) != NSOrderedDescending) {
+        if ([self shouldUseUnit:unit]) {
             NSNumber *number = @(abs((int)[[components valueForKey:unitName] integerValue]));
             if ([number integerValue]) {
                 NSString *suffix = [NSString stringWithFormat:self.suffixExpressionFormat, number, [self localizedStringForNumber:[number unsignedIntegerValue] ofCalendarUnit:unit]];
@@ -258,11 +263,10 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     NSTimeInterval difference = [endingDate timeIntervalSinceDate:startingDate];
     NSTimeInterval fourtyEightHours = 60 * 60 * 48;
     
-    BOOL dayIsSignificant = self.significantUnits & TTTCalendarUnitDay;
-    if (dayIsSignificant && difference < 0 && difference > -fourtyEightHours && previousWeekday) {
+    if ([self shouldUseUnit:TTTCalendarUnitDay] && difference < 0 && difference > -fourtyEightHours && previousWeekday) {
         return @"yesterday";
     }
-    if (dayIsSignificant && difference > 0 && difference < fourtyEightHours && nextWeekday) {
+    if ([self shouldUseUnit:TTTCalendarUnitDay] && difference > 0 && difference < fourtyEightHours && nextWeekday) {
         return @"tomorrow";
     }
     
@@ -280,27 +284,24 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     BOOL previousWeek = precedingWeekNumber && (sameMonth || previousMonth);
     BOOL nextWeek = succeedingWeekNumber && (sameMonth || nextMonth);
 
-    BOOL weekIsSignificant = self.significantUnits & TTTCalendarUnitWeek;
-    if (weekIsSignificant && previousWeek) {
+    if ([self shouldUseUnit:TTTCalendarUnitWeek] && previousWeek) {
         return @"last week";
     }
-    if (weekIsSignificant && nextWeek) {
+    if ([self shouldUseUnit:TTTCalendarUnitWeek] && nextWeek) {
         return @"next week";
     }
     
-    BOOL monthIsSignificant = self.significantUnits & TTTCalendarUnitMonth;
-    if (monthIsSignificant && previousMonth) {
+    if ([self shouldUseUnit:TTTCalendarUnitMonth] && previousMonth) {
         return @"last month";
     }
-    if (monthIsSignificant && nextMonth) {
+    if ([self shouldUseUnit:TTTCalendarUnitMonth] && nextMonth) {
         return @"next month";
     }
     
-    BOOL yearIsSignificant = self.significantUnits & TTTCalendarUnitYear;
-    if (yearIsSignificant && previousYear) {
+    if ([self shouldUseUnit:TTTCalendarUnitYear] && previousYear) {
         return @"last year";
     }
-    if (yearIsSignificant && nextYear) {
+    if ([self shouldUseUnit:TTTCalendarUnitYear] && nextYear) {
         return @"next year";
     }
     
