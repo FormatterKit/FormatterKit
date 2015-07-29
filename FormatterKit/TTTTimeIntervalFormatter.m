@@ -150,15 +150,14 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return self.presentDeicticExpression;
     }
 
-    NSDateComponents *components = [self.calendar components:self.significantUnits fromDate:startingDate toDate:endingDate options:0];
-
     if (self.usesIdiomaticDeicticExpressions) {
-        NSString *idiomaticDeicticExpression = [self localizedIdiomaticDeicticExpressionForComponents:components];
+        NSString *idiomaticDeicticExpression = [self localizedIdiomaticDeicticExpressionForStartingDate:startingDate endingDate:endingDate];
         if (idiomaticDeicticExpression) {
             return idiomaticDeicticExpression;
         }
     }
-
+    
+    NSDateComponents *components = [self.calendar components:self.significantUnits fromDate:startingDate toDate:endingDate options:0];
     NSString *string = nil;
     BOOL isApproximate = NO;
     NSUInteger numberOfUnits = 0;
@@ -248,30 +247,65 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
 
 #pragma mark -
 
-- (NSString *)localizedIdiomaticDeicticExpressionForComponents:(NSDateComponents *)components {
-    NSString *languageCode = [self.locale objectForKey:NSLocaleLanguageCode];
-    if ([languageCode isEqualToString:@"ca"]) {
-        return [self caRelativeDateStringForComponents:components];
-    } else if ([languageCode isEqualToString:@"cs"]) {
-        return [self csRelativeDateStringForComponents:components];
-    } else if ([languageCode isEqualToString:@"es"]) {
-        return [self esRelativeDateStringForComponents:components];
-    } else if ([languageCode isEqualToString:@"en"]) {
-        return [self enRelativeDateStringForComponents:components];
-    } else if ([languageCode isEqualToString:@"fr"]) {
-        return [self frRelativeDateStringForComponents:components];
-    } else if ([languageCode isEqualToString:@"he"]) {
-        return [self heRelativeDateStringForComponents:components];
-    } else if ([languageCode isEqualToString:@"it"]) {
-        return [self itRelativeDateStringForComponents:components];
-    } else if ([languageCode isEqualToString:@"ja"]) {
-        return [self jaRelativeDateStringForComponents:components];
-    } else if ([languageCode isEqualToString:@"nl"]) {
-        return [self nlRelativeDateStringForComponents:components];
-    } else if ([languageCode isEqualToString:@"pl"]) {
-        return [self plRelativeDateStringForComponents:components];
+- (NSString *)localizedIdiomaticDeicticExpressionForStartingDate:(NSDate *)startingDate endingDate:(NSDate *)endingDate {
+    NSDateComponents *diffComponents = [self.calendar components:self.significantUnits fromDate:startingDate toDate:endingDate options:0];
+    
+    NSCalendarUnit allUnits = TTTCalendarUnitYear | TTTCalendarUnitMonth | TTTCalendarUnitWeek | TTTCalendarUnitDay | TTTCalendarUnitHour | TTTCalendarUnitMinute | TTTCalendarUnitSecond | TTTCalendarUnitWeekday;
+    NSDateComponents *startingComponents = [self.calendar components:allUnits fromDate:startingDate];
+    NSDateComponents *endingComponents = [self.calendar components:allUnits fromDate:endingDate];
+    
+    BOOL previousWeekday = (endingComponents.weekday % 7) + 1 == startingComponents.weekday;
+    BOOL nextWeekday = (startingComponents.weekday % 7) + 1 == endingComponents.weekday;
+    
+    NSTimeInterval difference = [endingDate timeIntervalSinceDate:startingDate];
+    NSTimeInterval fourtyEightHours = 60 * 60 * 48;
+    
+    BOOL dayIsSignificant = (self.significantUnits & TTTCalendarUnitDay) != 0;
+    if (dayIsSignificant && difference < 0 && difference > -fourtyEightHours && previousWeekday && diffComponents.month == 0 && diffComponents.year == 0) {
+        return @"yesterday";
     }
+    if (dayIsSignificant && difference > 0 && difference < fourtyEightHours && nextWeekday && diffComponents.month == 0 && diffComponents.year == 0) {
+        return @"tomorrow";
+    }
+    
+    BOOL sameYear = startingComponents.year == endingComponents.year;
+    BOOL previousYear = startingComponents.year - 1 == endingComponents.year;
+    BOOL nextYear = startingComponents.year + 1 == endingComponents.year;
+    
+    BOOL sameMonth = sameYear && startingComponents.month == endingComponents.month;
+    BOOL previousMonth = (sameYear && startingComponents.month - 1 == endingComponents.month) || (previousYear && startingComponents.month == 1 && endingComponents.month == 12);
+    BOOL nextMonth = (sameYear && startingComponents.month + 1 == endingComponents.month) || (nextYear && startingComponents.month == 12 && endingComponents.month == 1);
 
+    long numberOfWeeks = MAX(MAX(startingComponents.weekOfYear, endingComponents.weekOfYear), 52);
+    BOOL precedingWeekNumber = (endingComponents.weekOfYear % numberOfWeeks) + 1 == startingComponents.weekOfYear;
+    BOOL succeedingWeekNumber = (startingComponents.weekOfYear % numberOfWeeks) + 1 == endingComponents.weekOfYear;
+    BOOL previousWeek = precedingWeekNumber && (sameMonth || previousMonth);
+    BOOL nextWeek = succeedingWeekNumber && (sameMonth || nextMonth);
+
+    BOOL weekIsSignificant = (self.significantUnits & TTTCalendarUnitWeek) != 0;
+    if (weekIsSignificant && previousWeek) {
+        return @"last week";
+    }
+    if (weekIsSignificant && nextWeek) {
+        return @"next week";
+    }
+    
+    BOOL monthIsSignificant = (self.significantUnits & TTTCalendarUnitMonth) != 0;
+    if (monthIsSignificant && previousMonth) {
+        return @"last month";
+    }
+    if (monthIsSignificant && nextMonth) {
+        return @"next month";
+    }
+    
+    BOOL yearIsSignificant = (self.significantUnits & TTTCalendarUnitYear) != 0;
+    if (yearIsSignificant && previousYear) {
+        return @"last year";
+    }
+    if (yearIsSignificant && nextYear) {
+        return @"next year";
+    }
+    
     return nil;
 }
 
