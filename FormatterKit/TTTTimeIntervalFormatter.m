@@ -248,8 +248,6 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
 #pragma mark -
 
 - (NSString *)localizedIdiomaticDeicticExpressionForStartingDate:(NSDate *)startingDate endingDate:(NSDate *)endingDate {
-    NSDateComponents *diffComponents = [self.calendar components:self.significantUnits fromDate:startingDate toDate:endingDate options:0];
-    
     NSCalendarUnit allUnits = TTTCalendarUnitYear | TTTCalendarUnitMonth | TTTCalendarUnitWeek | TTTCalendarUnitDay | TTTCalendarUnitHour | TTTCalendarUnitMinute | TTTCalendarUnitSecond | TTTCalendarUnitWeekday;
     NSDateComponents *startingComponents = [self.calendar components:allUnits fromDate:startingDate];
     NSDateComponents *endingComponents = [self.calendar components:allUnits fromDate:endingDate];
@@ -261,10 +259,10 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     NSTimeInterval fourtyEightHours = 60 * 60 * 48;
     
     BOOL dayIsSignificant = (self.significantUnits & TTTCalendarUnitDay) != 0;
-    if (dayIsSignificant && difference < 0 && difference > -fourtyEightHours && previousWeekday && diffComponents.month == 0 && diffComponents.year == 0) {
+    if (dayIsSignificant && difference < 0 && difference > -fourtyEightHours && previousWeekday) {
         return @"yesterday";
     }
-    if (dayIsSignificant && difference > 0 && difference < fourtyEightHours && nextWeekday && diffComponents.month == 0 && diffComponents.year == 0) {
+    if (dayIsSignificant && difference > 0 && difference < fourtyEightHours && nextWeekday) {
         return @"tomorrow";
     }
     
