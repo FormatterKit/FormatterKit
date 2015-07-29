@@ -63,6 +63,15 @@
 /* Present Deictic Expression */
 "just now" = "Gerade eben";
 
+/* No comment provided by engineer. */
+"last month" = "letzten Monat";
+
+/* No comment provided by engineer. */
+"last week" = "letzte Woche";
+
+/* No comment provided by engineer. */
+"last year" = "letztes Jahr";
+
 /* Minute Unit (Singular, Abbreviated) */
 "min" = "Min.";
 
@@ -95,6 +104,15 @@
 
 /* Northeast Direction Abbreviation */
 "NE" = "NO";
+
+/* No comment provided by engineer. */
+"next month" = "nächsten Monat";
+
+/* No comment provided by engineer. */
+"next week" = "nächste Woche";
+
+/* No comment provided by engineer. */
+"next year" = "nächstes Jahr";
 
 /* North Direction */
 "North" = "Nord";
@@ -136,6 +154,9 @@
 /* Southwest Direction Abbreviation */
 "SW" = "SW";
 
+/* No comment provided by engineer. */
+"tomorrow" = "morgen";
+
 /* #{Value} #{Unit} */
 "Unit of Information Format String" = "%1$@ %2$@";
 
@@ -165,6 +186,9 @@
 
 /* Year Unit (Plural) */
 "years" = "Jahre";
+
+/* No comment provided by engineer. */
+"yesterday" = "gestern";
 
 /* Year Unit (Singular, Abbreviated) */
 "yr" = "J.";
