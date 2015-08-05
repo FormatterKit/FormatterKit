@@ -21,8 +21,8 @@ In short, use this library if you're manually formatting any of the following (w
 FormatterKit comes fully internationalized, with `.strings` files for the following locales:
 
 - Catalan (`ca`)
-- Chinese (Simplified) (`zh_Hans`)
-- Chinese (Traditional) (`zh_Hant`)
+- Chinese (Simplified) (`zh-Hans`)
+- Chinese (Traditional) (`zh-Hant`)
 - Czech (`cs`)
 - Danish (`da`)
 - Dutch (`nl`)
@@ -37,7 +37,7 @@ FormatterKit comes fully internationalized, with `.strings` files for the follow
 - Norwegian Bokmål (`nb`)
 - Norwegian Nynorsk (`nn`)
 - Polish (`pl`)
-- Portuguese (Brazilian) (`pt_BR`)
+- Portuguese (Brazilian) (`pt-BR`)
 - Russian (`ru`)
 - Spanish (`es`)
 - Swedish (`sv`)
