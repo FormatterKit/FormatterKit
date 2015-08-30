@@ -1,0 +1,300 @@
+/* List separator */
+" " = " ";
+
+/* No comment provided by engineer. */
+"&" = "&";
+
+/* Coordinate format */
+"(%@, %@)" = "(%1$@, %2$@)";
+
+/* List delimiter */
+"," = ",";
+
+/* Approximate Qualifier Format */
+"about %@" = "körülbelül %@";
+
+/* Past Deictic Expression */
+"ago" = "óta";
+
+/* List conjunction */
+"and" = "és";
+
+/* Bit Unit */
+"bits" = "bit";
+
+/* Byte Unit */
+"bytes" = "bájt";
+
+/* Error converting to NSArray */
+"Couldn’t convert to NSArray" = "Nem konvertálható NSArray-re";
+
+/* Day Unit (Singular, Abbreviated)
+ Day Unit (Singular) */
+"day" = "nap";
+
+/* Day Unit (Plural, Abbreviated)
+ Day Unit (Plural) */
+"days" = "nap";
+
+/* Deictic Expression Format (#{Time} #{Ago/From Now} */
+"Deictic Expression Format String" = "%1$@ %2$@";
+
+/* #{Dimensional Quantity} #{Direction} */
+"Dimension Format String" = "%1$@ %2$@";
+
+/* #{Distance} #{Unit} */
+"Distance Format String" = "%1$@ %2$@";
+
+/* East Direction Abbreviation */
+"E" = "K";
+
+/* East Direction */
+"East" = "Kelet";
+
+/* Exabyte Unit */
+"EB" = "EB";
+
+/* Exbibyte Unit */
+"EiB" = "EiB";
+
+/* Future Deictic Expression */
+"from now" = "múlva";
+
+/* Feet Unit */
+"ft" = "láb";
+
+/* Feet Per Second Unit */
+"ft/s" = "láb/s";
+
+/* Gigabyte Unit */
+"GB" = "gigabájt";
+
+/* Gigabit Unit */
+"Gbit" = "gigabit";
+
+/* Gibibyte Unit */
+"GiB" = "GiB";
+
+/* Gibibit Unit */
+"Gibit" = "Gibit";
+
+/* Hour Unit (Singular) */
+"hour" = "óra";
+
+/* Hour Unit (Plural) */
+"hours" = "óra";
+
+/* Hour Unit (Singular, Abbreviated) */
+"hr" = "ó";
+
+/* Hour Unit (Plural, Abbreviated) */
+"hrs" = "ó";
+
+/* Present Deictic Expression */
+"just now" = "éppen most";
+
+/* Kilobyte Unit */
+"KB" = "kilobájt";
+
+/* Kilobit Unit */
+"kbit" = "kilobit";
+
+/* Kibibyte Unit */
+"KiB" = "KiB";
+
+/* Kibibit Unit */
+"Kibit" = "Kibit";
+
+/* Kilometer Unit */
+"km" = "kilométer";
+
+/* Kilometers Per Hour Unit */
+"km/h" = "kilométer/óra";
+
+/* No comment provided by engineer. */
+"last month" = "múlt hónap";
+
+/* No comment provided by engineer. */
+"last week" = "múlt hét";
+
+/* No comment provided by engineer. */
+"last year" = "tavaly";
+
+/* Meter Unit */
+"m" = "m";
+
+/* Meters Per Second Unit */
+"m/s" = "m/s";
+
+/* Megabyte Unit */
+"MB" = "megabájt";
+
+/* Megabit Unit */
+"Mbit" = "megabit";
+
+/* No comment provided by engineer. */
+"Method Not Implemented" = "Nincs implementálva";
+
+/* Mebibyte Unit */
+"MiB" = "MiB";
+
+/* Mebibit Unit */
+"Mibit" = "Mibit";
+
+/* Mile Unit (Singular) */
+"mile" = "mérföld";
+
+/* Mile Unit (Plural) */
+"miles" = "mérföld";
+
+/* Minute Unit (Singular, Abbreviated) */
+"min" = "p";
+
+/* Minute Unit (Plural, Abbreviated) */
+"mins" = "p";
+
+/* Minute Unit (Singular) */
+"minute" = "perc";
+
+/* Minute Unit (Plural) */
+"minutes" = "perc";
+
+/* Month Unit (Singular, Abbreviated) */
+"mo" = "hó";
+
+/* Month Unit (Singular) */
+"month" = "hónap";
+
+/* Month Unit (Plural) */
+"months" = "hónap";
+
+/* Month Unit (Plural, Abbreviated) */
+"mos" = "hó";
+
+/* Miles Per Hour Unit */
+"mph" = "mérföld/óra";
+
+/* North Direction Abbreviation */
+"N" = "É";
+
+/* Northeast Direction Abbreviation */
+"NE" = "ÉK";
+
+/* No comment provided by engineer. */
+"next month" = "következő hónap";
+
+/* No comment provided by engineer. */
+"next week" = "jövő hét";
+
+/* No comment provided by engineer. */
+"next year" = "jövőre";
+
+/* North Direction */
+"North" = "Észak";
+
+/* Northeast Direction */
+"Northeast" = "Észak-Kelet";
+
+/* Northwest Direction */
+"Northwest" = "Észak-Nyugat";
+
+/* Northwest Direction Abbreviation */
+"NW" = "ÉNY";
+
+/* Petabyte Unit */
+"PB" = "PB";
+
+/* Petabit Unit */
+"Pbit" = "Pbit";
+
+/* Pebibyte Unit */
+"PiB" = "PiB";
+
+/* Pebibit Unit */
+"Pibit" = "Pibit";
+
+/* South Direction Abbreviation */
+"S" = "D";
+
+/* Second Unit (Plural, Abbreviated)
+ Second Unit (Singular, Abbreviated) */
+"s" = "m";
+
+/* Southeast Direction Abbreviation */
+"SE" = "Dék-Kelet";
+
+/* Second Unit (Singular) */
+"second" = "másodperc";
+
+/* Second Unit (Plural) */
+"seconds" = "másodperc";
+
+/* South Direction */
+"South" = "Dél";
+
+/* Southeast Direction */
+"Southeast" = "Dél-Kelet";
+
+/* Southwest Direction */
+"Southwest" = "Dél-Nyugat";
+
+/* #{Speed} #{Unit} */
+"Speed Format String" = "%1$@ %2$@";
+
+/* Southwest Direction Abbreviation */
+"SW" = "DK";
+
+/* Terabyte Unit */
+"TB" = "TB";
+
+/* Terabit Unit */
+"Tbit" = "Tbit";
+
+/* Tebibyte Unit */
+"TiB" = "TiB";
+
+/* Tebibit Unit */
+"Tibit" = "Tibit";
+
+/* No comment provided by engineer. */
+"tomorrow" = "holnap";
+
+/* #{Value} #{Unit} */
+"Unit of Information Format String" = "%1$@ %2$@";
+
+/* West Direction Abbreviation */
+"W" = "NY";
+
+/* Week Unit (Singular) */
+"week" = "hét";
+
+/* Week Unit (Plural) */
+"weeks" = "hét";
+
+/* West Direction */
+"West" = "Nyugat";
+
+/* Week Unit (Singular, Abbreviated) */
+"wk" = "hét";
+
+/* Week Unit (Plural, Abbreviated) */
+"wks" = "hét";
+
+/* Yard Unit */
+"yds" = "yars";
+
+/* Year Unit (Singular) */
+"year" = "év";
+
+/* Year Unit (Plural) */
+"years" = "év";
+
+/* No comment provided by engineer. */
+"yesterday" = "tengnap";
+
+/* Year Unit (Singular, Abbreviated) */
+"yr" = "é";
+
+/* Year Unit (Plural, Abbreviated) */
+"yrs" = "é";
+

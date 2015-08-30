@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import "TTTTimeIntervalFormatter.h"
+#import "TTTArrayFormatter.h"
 
 #if (defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000) || (defined(__MAC_OS_X_VERSION_MAX_ALLOWED) && __MAC_OS_X_VERSION_MAX_ALLOWED >= 1090)
     #define TTTCalendarUnitYear NSCalendarUnitYear
@@ -268,6 +269,8 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return [self nlRelativeDateStringForComponents:components];
     } else if ([languageCode isEqualToString:@"pl"]) {
         return [self plRelativeDateStringForComponents:components];
+    } else if ([languageCode isEqualToString:@"hu"]) {
+        return [self huRelativeDateStringForComponents:components];
     }
 
     return nil;
@@ -506,6 +509,35 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"domani";
     }
 
+    return nil;
+}
+
+- (NSString *)huRelativeDateStringForComponents:(NSDateComponents *)components {
+    TTTArrayFormatter* arrayFormatter = [[TTTArrayFormatter alloc] init];
+    arrayFormatter.usesSerialDelimiter = YES;
+    
+    NSMutableArray* stringComponents = [NSMutableArray array];
+    
+    if ([components year] < 0) {
+        [stringComponents addObject:[NSString stringWithFormat:@"%d éve", -1 * (int)[components year]]];
+    } else if ([components month] < 0) {
+        [stringComponents addObject:[NSString stringWithFormat:@"%d hónapja", -1 * (int)[components month]]];
+    } else if ([components weekOfYear] < 0) {
+        [stringComponents addObject:[NSString stringWithFormat:@"%d hete", -1 * (int)[components weekOfYear]]];
+    } else if ([components day] < 0) {
+        [stringComponents addObject:[NSString stringWithFormat:@"%d napja", -1 * (int)[components day]]];
+    } else if ([components hour] < 0) {
+        [stringComponents addObject:[NSString stringWithFormat:@"%d órája", -1 * (int)[components hour]]];
+    } else if ([components minute] < 0) {
+        [stringComponents addObject:[NSString stringWithFormat:@"%d perce", -1 * (int)[components minute]]];
+    } else if ([components second] < 0) {
+        [stringComponents addObject:[NSString stringWithFormat:@"%d másodperce", -1 * (int)[components second]]];
+    }
+    
+    if ([stringComponents count] > 0) {
+        return [arrayFormatter stringFromArray:[stringComponents copy]];
+    }
+    
     return nil;
 }
 
