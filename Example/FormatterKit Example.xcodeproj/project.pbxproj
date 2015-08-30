@@ -27,7 +27,6 @@
 		F8FBF9E91427A456001409DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBF9E81427A456001409DB /* UIKit.framework */; };
 		F8FBF9EB1427A456001409DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBF9EA1427A456001409DB /* Foundation.framework */; };
 		F8FBF9ED1427A456001409DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBF9EC1427A456001409DB /* CoreGraphics.framework */; };
-		F8FBF9F31427A456001409DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8FBF9F11427A456001409DB /* InfoPlist.strings */; };
 		F8FBF9F51427A456001409DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBF9F41427A456001409DB /* main.m */; };
 		F8FBF9F91427A456001409DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBF9F81427A456001409DB /* AppDelegate.m */; };
 		F8FBFA351427CEC0001409DB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA341427CEC0001409DB /* RootViewController.m */; };
@@ -101,7 +100,6 @@
 		F8FBF9EA1427A456001409DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F8FBF9EC1427A456001409DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F8FBF9F01427A456001409DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8FBF9F21427A456001409DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F8FBF9F41427A456001409DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8FBF9F61427A456001409DB /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		F8FBF9F71427A456001409DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -223,7 +221,6 @@
 			isa = PBXGroup;
 			children = (
 				F8FBF9F01427A456001409DB /* Info.plist */,
-				F8FBF9F11427A456001409DB /* InfoPlist.strings */,
 				F8FBF9F41427A456001409DB /* main.m */,
 				F8FBF9F61427A456001409DB /* Prefix.pch */,
 			);
@@ -351,7 +348,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8FBF9F31427A456001409DB /* InfoPlist.strings in Resources */,
 				3A626B011B9383AB0091B677 /* FormatterKit.strings in Resources */,
 				F892375416A4BE43002FCF70 /* Default-568h@2x.png in Resources */,
 			);
@@ -423,14 +419,6 @@
 				3A626B001B9383AB0091B677 /* zh-Hant */,
 			);
 			name = FormatterKit.strings;
-			sourceTree = "<group>";
-		};
-		F8FBF9F11427A456001409DB /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F8FBF9F21427A456001409DB /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
