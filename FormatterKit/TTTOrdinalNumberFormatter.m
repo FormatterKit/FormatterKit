@@ -112,10 +112,6 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     }
 }
 
-- (NSString *)deOrdinalIndicatorStringFromNumber:(__unused NSNumber *)number {
-	return @".";
-}
-
 - (NSString *)enOrdinalIndicatorStringFromNumber:(NSNumber *)number {
     // If number % 100 is 11, 12, or 13
     if (NSLocationInRange([number integerValue] % 100, NSMakeRange(11, 3))) {
