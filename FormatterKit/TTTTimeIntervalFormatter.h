@@ -122,6 +122,15 @@
  */
 @property (nonatomic, assign) BOOL usesAbbreviatedCalendarUnits;
 
+///----------------------------------------------
+/// @name Custom Initializers
+///----------------------------------------------
+
+/**
+ Initialize with a given locale to support localization different from the current device's locale.
+ */
+- (id)initWithLocale:(NSLocale *)locale;
+
 ///-------------------------
 /// @name Converting Objects
 ///-------------------------
