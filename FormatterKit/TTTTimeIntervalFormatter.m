@@ -112,30 +112,34 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
 @synthesize significantUnits = _significantUnits;
 
 - (id)init {
-    self = [super init];
-    if (!self) {
-        return nil;
-    }
+	return [self initWithLocale:[NSLocale currentLocale]];
+}
 
-    self.locale = [NSLocale currentLocale];
-    self.calendar = [NSCalendar currentCalendar];
-
+- (id)initWithLocale:(NSLocale *)locale {
+	self = [super init];
+	if (!self) {
+		return nil;
+	}
+	
+	self.locale = locale;
+	self.calendar = [NSCalendar currentCalendar];
+	
 	NSBundle *formatterKitBundle = [NSBundle bundleForClass:[self class]];
-    self.pastDeicticExpression = NSLocalizedStringFromTableInBundle(@"ago", @"FormatterKit", formatterKitBundle, @"Past Deictic Expression");
-    self.presentDeicticExpression = NSLocalizedStringFromTableInBundle(@"just now", @"FormatterKit", formatterKitBundle, @"Present Deictic Expression");
-    self.futureDeicticExpression = NSLocalizedStringFromTableInBundle(@"from now", @"FormatterKit", formatterKitBundle, @"Future Deictic Expression");
-
-    self.deicticExpressionFormat = NSLocalizedStringWithDefaultValue(@"Deictic Expression Format String", @"FormatterKit", formatterKitBundle, @"%@ %@", @"Deictic Expression Format (#{Time} #{Ago/From Now}");
-    self.approximateQualifierFormat = NSLocalizedStringFromTableInBundle(@"about %@", @"FormatterKit", formatterKitBundle, @"Approximate Qualifier Format");
-    self.suffixExpressionFormat = NSLocalizedStringWithDefaultValue(@"Suffix Expression Format String", @"FormatterKit", formatterKitBundle, @"%@ %@", @"Suffix Expression Format (#{Time} #{Unit})");
-
-    self.presentTimeIntervalMargin = 1;
-
-    self.significantUnits = TTTCalendarUnitYear | TTTCalendarUnitMonth | TTTCalendarUnitWeek | TTTCalendarUnitDay | TTTCalendarUnitHour | TTTCalendarUnitMinute | TTTCalendarUnitSecond;
-    self.numberOfSignificantUnits = 1;
-    self.leastSignificantUnit = TTTCalendarUnitSecond;
-
-    return self;
+	self.pastDeicticExpression = NSLocalizedStringFromTableInBundle(@"ago", @"FormatterKit", formatterKitBundle, @"Past Deictic Expression");
+	self.presentDeicticExpression = NSLocalizedStringFromTableInBundle(@"just now", @"FormatterKit", formatterKitBundle, @"Present Deictic Expression");
+	self.futureDeicticExpression = NSLocalizedStringFromTableInBundle(@"from now", @"FormatterKit", formatterKitBundle, @"Future Deictic Expression");
+	
+	self.deicticExpressionFormat = NSLocalizedStringWithDefaultValue(@"Deictic Expression Format String", @"FormatterKit", formatterKitBundle, @"%@ %@", @"Deictic Expression Format (#{Time} #{Ago/From Now}");
+	self.approximateQualifierFormat = NSLocalizedStringFromTableInBundle(@"about %@", @"FormatterKit", formatterKitBundle, @"Approximate Qualifier Format");
+	self.suffixExpressionFormat = NSLocalizedStringWithDefaultValue(@"Suffix Expression Format String", @"FormatterKit", formatterKitBundle, @"%@ %@", @"Suffix Expression Format (#{Time} #{Unit})");
+	
+	self.presentTimeIntervalMargin = 1;
+	
+	self.significantUnits = TTTCalendarUnitYear | TTTCalendarUnitMonth | TTTCalendarUnitWeek | TTTCalendarUnitDay | TTTCalendarUnitHour | TTTCalendarUnitMinute | TTTCalendarUnitSecond;
+	self.numberOfSignificantUnits = 1;
+	self.leastSignificantUnit = TTTCalendarUnitSecond;
+	
+	return self;
 }
 
 - (NSString *)stringForTimeInterval:(NSTimeInterval)seconds {
