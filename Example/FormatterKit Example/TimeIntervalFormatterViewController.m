@@ -28,6 +28,7 @@ NS_ENUM(NSUInteger, TimeIntervalFormatterViewControllerSectionIndexes) {
     StandardPastSectionIndex,
     StandardFutureSectionIndex,
     IdiomaticDeicticExpressionsSectionIndex,
+    AbbreviatedUnits
 };
 
 NS_ENUM(NSUInteger, TimeIntervalFormatterViewControllerRowIndexes) {
@@ -59,7 +60,7 @@ NS_ENUM(NSUInteger, TimeIntervalFormatterViewControllerRowIndexes) {
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(__unused UITableView *)tableView {
-    return 3;
+    return 4;
 }
 
 - (NSInteger)tableView:(__unused UITableView *)tableView
@@ -78,6 +79,8 @@ titleForHeaderInSection:(NSInteger)section
             return NSLocalizedString(@"Standard Future", nil);
         case IdiomaticDeicticExpressionsSectionIndex:
             return NSLocalizedString(@"Idiomatic Past", nil);
+        case AbbreviatedUnits:
+            return NSLocalizedString(@"Abbreviated Units", nil);
         default:
             return nil;
     }
@@ -100,6 +103,9 @@ titleForHeaderInSection:(NSInteger)section
             break;
         case IdiomaticDeicticExpressionsSectionIndex:
             [_timeIntervalFormatter setUsesIdiomaticDeicticExpressions:YES];
+            break;
+        case AbbreviatedUnits:
+            [_timeIntervalFormatter setUsesAbbreviatedCalendarUnits:YES];
             break;
     }
 
