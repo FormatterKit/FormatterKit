@@ -283,14 +283,6 @@ NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL U
 
 ---
 
-## Contact
-
-Mattt Thompson
-
-- http://github.com/mattt
-- http://twitter.com/mattt
-- m@mattt.me
-
 ## License
 
 FormatterKit is available under the MIT license. See the LICENSE file for more info.
