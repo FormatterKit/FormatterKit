@@ -187,7 +187,9 @@
 				F8FBF9E51427A456001409DB /* Products */,
 				F8FBFA071427A4D2001409DB /* Vendor */,
 			);
+			indentWidth = 4;
 			sourceTree = "<group>";
+			tabWidth = 4;
 		};
 		F8FBF9E51427A456001409DB /* Products */ = {
 			isa = PBXGroup;
@@ -322,6 +324,7 @@
 		F8FBF9DB1427A456001409DB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = Gowalla;
 				TargetAttributes = {
