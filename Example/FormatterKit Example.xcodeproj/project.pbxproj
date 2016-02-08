@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		502B4F441C686832007347C5 /* TTTTimeIntervalFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B4F431C686832007347C5 /* TTTTimeIntervalFormatterTests.swift */; };
 		50E226D81C6863BF0088FAA5 /* AppDeletage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E226D71C6863BF0088FAA5 /* AppDeletage.swift */; };
-		659BF4C41AE2807F00CD4A06 /* TTTTimeIntervalFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF4C31AE2807F00CD4A06 /* TTTTimeIntervalFormatterTests.m */; };
 		F8202D0917F4FAAE006C5810 /* TTTColorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8202D0817F4FAAE006C5810 /* TTTColorFormatter.m */; };
 		F8202D0C17F50AF5006C5810 /* ColorFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8202D0B17F50AF5006C5810 /* ColorFormatterViewController.m */; };
 		F83F967F1982DAB90012B3AF /* NameFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83F967E1982DAB90012B3AF /* NameFormatterViewController.m */; };
@@ -50,12 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		502B4F431C686832007347C5 /* TTTTimeIntervalFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTTTimeIntervalFormatterTests.swift; sourceTree = "<group>"; };
 		504295101C683A6300143D6F /* FormatterKitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FormatterKitTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		504295131C683A9C00143D6F /* FormatterKit Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FormatterKit Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		50E226D71C6863BF0088FAA5 /* AppDeletage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDeletage.swift; sourceTree = "<group>"; };
 		659BF4B71AE27FA300CD4A06 /* FormatterKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormatterKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		659BF4BA1AE27FA300CD4A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		659BF4C31AE2807F00CD4A06 /* TTTTimeIntervalFormatterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTTimeIntervalFormatterTests.m; sourceTree = "<group>"; };
 		F8202D0717F4FAAE006C5810 /* TTTColorFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTColorFormatter.h; sourceTree = "<group>"; };
 		F8202D0817F4FAAE006C5810 /* TTTColorFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTColorFormatter.m; sourceTree = "<group>"; };
 		F8202D0A17F50AF5006C5810 /* ColorFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorFormatterViewController.h; sourceTree = "<group>"; };
@@ -136,9 +136,9 @@
 		659BF4B81AE27FA300CD4A06 /* FormatterKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				659BF4C31AE2807F00CD4A06 /* TTTTimeIntervalFormatterTests.m */,
-				659BF4B91AE27FA300CD4A06 /* Supporting Files */,
 				504295101C683A6300143D6F /* FormatterKitTests-Bridging-Header.h */,
+				659BF4B91AE27FA300CD4A06 /* Supporting Files */,
+				502B4F431C686832007347C5 /* TTTTimeIntervalFormatterTests.swift */,
 			);
 			path = FormatterKitTests;
 			sourceTree = "<group>";
@@ -376,7 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				659BF4C41AE2807F00CD4A06 /* TTTTimeIntervalFormatterTests.m in Sources */,
+				502B4F441C686832007347C5 /* TTTTimeIntervalFormatterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
