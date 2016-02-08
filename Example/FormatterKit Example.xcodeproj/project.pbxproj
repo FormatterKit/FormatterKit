@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50E226D81C6863BF0088FAA5 /* AppDeletage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E226D71C6863BF0088FAA5 /* AppDeletage.swift */; };
 		659BF4C41AE2807F00CD4A06 /* TTTTimeIntervalFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF4C31AE2807F00CD4A06 /* TTTTimeIntervalFormatterTests.m */; };
 		F8202D0917F4FAAE006C5810 /* TTTColorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8202D0817F4FAAE006C5810 /* TTTColorFormatter.m */; };
 		F8202D0C17F50AF5006C5810 /* ColorFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8202D0B17F50AF5006C5810 /* ColorFormatterViewController.m */; };
@@ -28,8 +29,6 @@
 		F8FBF9EB1427A456001409DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBF9EA1427A456001409DB /* Foundation.framework */; };
 		F8FBF9ED1427A456001409DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBF9EC1427A456001409DB /* CoreGraphics.framework */; };
 		F8FBF9F31427A456001409DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8FBF9F11427A456001409DB /* InfoPlist.strings */; };
-		F8FBF9F51427A456001409DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBF9F41427A456001409DB /* main.m */; };
-		F8FBF9F91427A456001409DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBF9F81427A456001409DB /* AppDelegate.m */; };
 		F8FBFA351427CEC0001409DB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA341427CEC0001409DB /* RootViewController.m */; };
 		F8FBFA381427D159001409DB /* FormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA371427D159001409DB /* FormatterViewController.m */; };
 		F8FBFA3B1427D3DA001409DB /* ArrayFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFA3A1427D3DA001409DB /* ArrayFormatterViewController.m */; };
@@ -51,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		504295101C683A6300143D6F /* FormatterKitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FormatterKitTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		504295131C683A9C00143D6F /* FormatterKit Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FormatterKit Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		50E226D71C6863BF0088FAA5 /* AppDeletage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDeletage.swift; sourceTree = "<group>"; };
 		659BF4B71AE27FA300CD4A06 /* FormatterKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormatterKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		659BF4BA1AE27FA300CD4A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		659BF4C31AE2807F00CD4A06 /* TTTTimeIntervalFormatterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTTimeIntervalFormatterTests.m; sourceTree = "<group>"; };
@@ -89,10 +91,7 @@
 		F8FBF9EC1427A456001409DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F8FBF9F01427A456001409DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8FBF9F21427A456001409DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F8FBF9F41427A456001409DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8FBF9F61427A456001409DB /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
-		F8FBF9F71427A456001409DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F8FBF9F81427A456001409DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F8FBFA331427CEC0001409DB /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		F8FBFA341427CEC0001409DB /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		F8FBFA361427D159001409DB /* FormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormatterViewController.h; sourceTree = "<group>"; };
@@ -139,6 +138,7 @@
 			children = (
 				659BF4C31AE2807F00CD4A06 /* TTTTimeIntervalFormatterTests.m */,
 				659BF4B91AE27FA300CD4A06 /* Supporting Files */,
+				504295101C683A6300143D6F /* FormatterKitTests-Bridging-Header.h */,
 			);
 			path = FormatterKitTests;
 			sourceTree = "<group>";
@@ -216,9 +216,9 @@
 		F8FBF9EE1427A456001409DB /* FormatterKit Example */ = {
 			isa = PBXGroup;
 			children = (
+				50E226D71C6863BF0088FAA5 /* AppDeletage.swift */,
 				F8FBFA321427CEA5001409DB /* Controllers */,
-				F8FBF9F71427A456001409DB /* AppDelegate.h */,
-				F8FBF9F81427A456001409DB /* AppDelegate.m */,
+				504295131C683A9C00143D6F /* FormatterKit Example-Bridging-Header.h */,
 				F8FBF9EF1427A456001409DB /* Supporting Files */,
 			);
 			path = "FormatterKit Example";
@@ -229,7 +229,6 @@
 			children = (
 				F8FBF9F01427A456001409DB /* Info.plist */,
 				F8FBF9F11427A456001409DB /* InfoPlist.strings */,
-				F8FBF9F41427A456001409DB /* main.m */,
 				F8FBF9F61427A456001409DB /* Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -385,8 +384,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8FBF9F51427A456001409DB /* main.m in Sources */,
-				F8FBF9F91427A456001409DB /* AppDelegate.m in Sources */,
 				F8FBFA351427CEC0001409DB /* RootViewController.m in Sources */,
 				F8FBFA381427D159001409DB /* FormatterViewController.m in Sources */,
 				F8FBFA3B1427D3DA001409DB /* ArrayFormatterViewController.m in Sources */,
@@ -403,6 +400,7 @@
 				F83F967F1982DAB90012B3AF /* NameFormatterViewController.m in Sources */,
 				F83F96821982DADF0012B3AF /* TTTNameFormatter.m in Sources */,
 				F89C9F05166154AB0040FB03 /* TTTOrdinalNumberFormatter.m in Sources */,
+				50E226D81C6863BF0088FAA5 /* AppDeletage.swift in Sources */,
 				F89C9F06166154AB0040FB03 /* TTTTimeIntervalFormatter.m in Sources */,
 				F89C9F07166154AB0040FB03 /* TTTUnitOfInformationFormatter.m in Sources */,
 				F89C9F08166154AB0040FB03 /* TTTURLRequestFormatter.m in Sources */,
@@ -454,6 +452,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FormatterKitTests/FormatterKitTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -478,6 +478,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FormatterKitTests/FormatterKitTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -501,6 +502,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -555,6 +557,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
@@ -587,6 +590,7 @@
 		F8FBF9FD1427A456001409DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
@@ -600,7 +604,10 @@
 				GCC_WARN_SIGN_COMPARE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				INFOPLIST_FILE = "FormatterKit Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FormatterKit Example/FormatterKit Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -608,6 +615,7 @@
 		F8FBF9FE1427A456001409DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
@@ -621,7 +629,9 @@
 				GCC_WARN_SIGN_COMPARE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				INFOPLIST_FILE = "FormatterKit Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FormatterKit Example/FormatterKit Example-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
