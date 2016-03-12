@@ -1,2 +1,3 @@
 language: objective-c
+osx_image: xcode7.2
 script: xctool -workspace FormatterKit.xcworkspace -scheme "FormatterKit Example" -sdk iphonesimulator build test
