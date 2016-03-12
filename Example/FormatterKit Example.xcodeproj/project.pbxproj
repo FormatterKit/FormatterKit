@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500C0A6D1C948B5500F643D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C0A6C1C948B5500F643D3 /* Main.storyboard */; };
 		502B4F441C686832007347C5 /* TTTTimeIntervalFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B4F431C686832007347C5 /* TTTTimeIntervalFormatterTests.swift */; };
 		50E226D81C6863BF0088FAA5 /* AppDeletage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E226D71C6863BF0088FAA5 /* AppDeletage.swift */; };
 		F8202D0917F4FAAE006C5810 /* TTTColorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8202D0817F4FAAE006C5810 /* TTTColorFormatter.m */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		500C0A6C1C948B5500F643D3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		502B4F431C686832007347C5 /* TTTTimeIntervalFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTTTimeIntervalFormatterTests.swift; sourceTree = "<group>"; };
 		504295101C683A6300143D6F /* FormatterKitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FormatterKitTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		504295131C683A9C00143D6F /* FormatterKit Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FormatterKit Example-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				50E226D71C6863BF0088FAA5 /* AppDeletage.swift */,
 				F8FBFA321427CEA5001409DB /* Controllers */,
 				504295131C683A9C00143D6F /* FormatterKit Example-Bridging-Header.h */,
+				500C0A6C1C948B5500F643D3 /* Main.storyboard */,
 				F8FBF9EF1427A456001409DB /* Supporting Files */,
 			);
 			path = "FormatterKit Example";
@@ -364,6 +367,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500C0A6D1C948B5500F643D3 /* Main.storyboard in Resources */,
 				F8FBF9F31427A456001409DB /* InfoPlist.strings in Resources */,
 				F892375416A4BE43002FCF70 /* Default-568h@2x.png in Resources */,
 			);
@@ -608,6 +612,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FormatterKit Example/FormatterKit Example-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -632,6 +637,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FormatterKit Example/FormatterKit Example-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

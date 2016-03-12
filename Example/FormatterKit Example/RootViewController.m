@@ -45,15 +45,6 @@ NS_ENUM(NSUInteger, RootViewControllerRowIndexes) {
 
 @implementation RootViewController
 
-- (id)init {
-    self = [super initWithStyle:UITableViewStyleGrouped];
-    if (!self) {
-        return nil;
-    }
-
-    return self;
-}
-
 #pragma mark - UIViewController
 
 - (void)viewDidLoad {
@@ -86,12 +77,7 @@ NS_ENUM(NSUInteger, RootViewControllerRowIndexes) {
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-    }
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
 
     switch (indexPath.row) {
         case AddressRowIndex:
