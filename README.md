@@ -53,14 +53,7 @@ Because the App Store automatically attempts to determine supported locales, and
 
         $ find "$TARGET_BUILD_DIR" -maxdepth 8 -type f -name "FormatterKit.strings" -execdir rm -r -v {} \;
 
-If you are using CocoaPods, you may want to remove unwanted localizations using the pre install script below. Modify the supported_locales array to match your supported locales and paste it into your Podfile.
-
-```ruby
-prepare_command = <<-CMD
-    SUPPORTED_LOCALES="['base', 'da', 'en']"
-    find . -type d ! -name "*$SUPPORTED_LOCALES.lproj" | grep .lproj | xargs rm -rf
-CMD
-```
+If you are using CocoaPods, a seprate localization bundle will be created for the pod. Therefore, App Store won't pick up the extraneous localizations.
 
 ## Demo
 
