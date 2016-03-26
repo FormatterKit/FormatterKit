@@ -1,64 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <Group
-      location = "group:FormatterKit"
-      name = "FormatterKit">
-      <FileRef
-         location = "group:TTTAddressFormatter.h">
-      </FileRef>
-      <FileRef
-         location = "group:TTTAddressFormatter.m">
-      </FileRef>
-      <FileRef
-         location = "group:TTTArrayFormatter.h">
-      </FileRef>
-      <FileRef
-         location = "group:TTTArrayFormatter.m">
-      </FileRef>
-      <FileRef
-         location = "group:TTTColorFormatter.h">
-      </FileRef>
-      <FileRef
-         location = "group:TTTColorFormatter.m">
-      </FileRef>
-      <FileRef
-         location = "group:TTTLocationFormatter.h">
-      </FileRef>
-      <FileRef
-         location = "group:TTTLocationFormatter.m">
-      </FileRef>
-      <FileRef
-         location = "group:TTTNameFormatter.h">
-      </FileRef>
-      <FileRef
-         location = "group:TTTNameFormatter.m">
-      </FileRef>
-      <FileRef
-         location = "group:TTTOrdinalNumberFormatter.h">
-      </FileRef>
-      <FileRef
-         location = "group:TTTOrdinalNumberFormatter.m">
-      </FileRef>
-      <FileRef
-         location = "group:TTTTimeIntervalFormatter.h">
-      </FileRef>
-      <FileRef
-         location = "group:TTTTimeIntervalFormatter.m">
-      </FileRef>
-      <FileRef
-         location = "group:TTTUnitOfInformationFormatter.h">
-      </FileRef>
-      <FileRef
-         location = "group:TTTUnitOfInformationFormatter.m">
-      </FileRef>
-      <FileRef
-         location = "group:TTTURLRequestFormatter.h">
-      </FileRef>
-      <FileRef
-         location = "group:TTTURLRequestFormatter.m">
-      </FileRef>
-   </Group>
+   <FileRef
+      location = "group:FormatterKit.xcodeproj">
+   </FileRef>
    <FileRef
       location = "group:Example/FormatterKit Example.xcodeproj">
    </FileRef>
