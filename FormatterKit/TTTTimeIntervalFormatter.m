@@ -30,7 +30,6 @@
     #define TTTCalendarUnitHour NSCalendarUnitHour
     #define TTTCalendarUnitMinute NSCalendarUnitMinute
     #define TTTCalendarUnitSecond NSCalendarUnitSecond
-    #define TTTCalendarUnitWeekday NSCalendarUnitWeekday
     #define TTTDateComponentUndefined NSDateComponentUndefined
 #else
     #define TTTCalendarUnitYear NSYearCalendarUnit
@@ -40,7 +39,6 @@
     #define TTTCalendarUnitHour NSHourCalendarUnit
     #define TTTCalendarUnitMinute NSMinuteCalendarUnit
     #define TTTCalendarUnitSecond NSSecondCalendarUnit
-    #define TTTCalendarUnitWeekday NSWeekdayCalendarUnit
     #define TTTDateComponentUndefined NSUndefinedDateComponent
 #endif
 
