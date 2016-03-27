@@ -185,7 +185,12 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     if (string) {
         if (seconds > 0) {
             if ([self.pastDeicticExpression length]) {
-                string = [NSString stringWithFormat:self.deicticExpressionFormat, string, self.pastDeicticExpression];
+                NSString *languageCode = [self.locale objectForKey:NSLocaleLanguageCode];
+                if ([languageCode isEqualToString:@"hu"]) {
+                    string = [self huPastDeicticExpression:components];
+                } else {
+                    string = [NSString stringWithFormat:self.deicticExpressionFormat, string, self.pastDeicticExpression];
+                }
             }
         } else {
             if ([self.futureDeicticExpression length]) {
@@ -198,6 +203,50 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         }
     } else {
         string = self.presentDeicticExpression;
+    }
+
+    return string;
+}
+
+- (NSString*)huPastDeicticExpression:(NSDateComponents *)components
+{
+    NSString *string = nil;
+    BOOL isApproximate = NO;
+    NSUInteger numberOfUnits = 0;
+    for (NSString *unitName in @[@"year", @"month", @"weekOfYear", @"day", @"hour", @"minute", @"second"]) {
+        NSCalendarUnit unit = NSCalendarUnitFromString(unitName);
+        if ((self.significantUnits & unit) && NSCalendarUnitCompareSignificance(self.leastSignificantUnit, unit) != NSOrderedDescending) {
+            NSNumber *number = @(abs((int)[[components valueForKey:unitName] integerValue]));
+            if ([number integerValue]) {
+                NSString* suffix = nil;
+                
+                if (unit == TTTCalendarUnitYear) {
+                    suffix = [NSString stringWithFormat:@"%@ éve", number];
+                } else if (unit == TTTCalendarUnitMonth) {
+                    suffix = [NSString stringWithFormat:@"%@ hónapja", number];
+                } else if (unit == TTTCalendarUnitWeek) {
+                    suffix = [NSString stringWithFormat:@"%@ hete", number];
+                } else if (unit == TTTCalendarUnitDay) {
+                    suffix = [NSString stringWithFormat:@"%@ napja", number];
+                } else if (unit == TTTCalendarUnitHour) {
+                    suffix = [NSString stringWithFormat:@"%@ órája", number];
+                } else if (unit == TTTCalendarUnitMinute) {
+                    suffix = [NSString stringWithFormat:@"%@ perce", number];
+                } else if (unit == TTTCalendarUnitSecond) {
+                    suffix = [NSString stringWithFormat:@"%@ másodperce", number];
+                }
+                
+                if (!string) {
+                    string = suffix;
+                } else if (self.numberOfSignificantUnits == 0 || numberOfUnits < self.numberOfSignificantUnits) {
+                    string = [string stringByAppendingFormat:@" %@", suffix];
+                } else {
+                    isApproximate = YES;
+                }
+                
+                numberOfUnits++;
+            }
+        }
     }
 
     return string;
@@ -512,30 +561,30 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     return nil;
 }
 
-- (NSString *)huRelativeDateStringForComponents:(NSDateComponents *)components {
-    TTTArrayFormatter* arrayFormatter = [[TTTArrayFormatter alloc] init];
-    arrayFormatter.usesSerialDelimiter = YES;
-    
-    NSMutableArray* stringComponents = [NSMutableArray array];
-    
-    if ([components year] < 0) {
-        [stringComponents addObject:[NSString stringWithFormat:@"%d éve", -1 * (int)[components year]]];
-    } else if ([components month] < 0) {
-        [stringComponents addObject:[NSString stringWithFormat:@"%d hónapja", -1 * (int)[components month]]];
-    } else if ([components weekOfYear] < 0) {
-        [stringComponents addObject:[NSString stringWithFormat:@"%d hete", -1 * (int)[components weekOfYear]]];
-    } else if ([components day] < 0) {
-        [stringComponents addObject:[NSString stringWithFormat:@"%d napja", -1 * (int)[components day]]];
-    } else if ([components hour] < 0) {
-        [stringComponents addObject:[NSString stringWithFormat:@"%d órája", -1 * (int)[components hour]]];
-    } else if ([components minute] < 0) {
-        [stringComponents addObject:[NSString stringWithFormat:@"%d perce", -1 * (int)[components minute]]];
-    } else if ([components second] < 0) {
-        [stringComponents addObject:[NSString stringWithFormat:@"%d másodperce", -1 * (int)[components second]]];
+- (NSString *)huRelativeDateStringForComponents:(NSDateComponents *)components
+{
+    if ([components year] == -1) {
+        return @"tavaly";
+    } else if ([components month] == -1 && [components year] == 0) {
+        return @"múlt hónapban";
+    } else if ([components weekOfYear] == -1 && [components year] == 0 && [components month] == 0) {
+        return @"előző week";
+    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
+        return @"tegnap";
+    } else if ([components day] == -2 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
+        return @"tegnapelőtt";
     }
     
-    if ([stringComponents count] > 0) {
-        return [arrayFormatter stringFromArray:[stringComponents copy]];
+    if ([components year] == 1) {
+        return @"jövőre";
+    } else if ([components month] == 1 && [components year] == 0) {
+        return @"jövő hónapban";
+    } else if ([components weekOfYear] == 1 && [components year] == 0 && [components month] == 0) {
+        return @"jövő héten";
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
+        return @"holnap";
+    } else if ([components day] == 2 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
+        return @"holnapután";
     }
     
     return nil;
