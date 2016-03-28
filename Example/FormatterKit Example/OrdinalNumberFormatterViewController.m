@@ -22,7 +22,7 @@
 
 #import "OrdinalNumberFormatterViewController.h"
 
-#import "TTTOrdinalNumberFormatter.h"
+#import <FormatterKit/TTTOrdinalNumberFormatter.h>
 
 @interface OrdinalNumberFormatterViewController ()
 @property (readwrite, nonatomic, strong) NSArray *locales;

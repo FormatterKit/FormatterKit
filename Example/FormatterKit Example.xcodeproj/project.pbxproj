@@ -9,16 +9,8 @@
 /* Begin PBXBuildFile section */
 		500C0A6D1C948B5500F643D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C0A6C1C948B5500F643D3 /* Main.storyboard */; };
 		502B4F441C686832007347C5 /* TTTTimeIntervalFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B4F431C686832007347C5 /* TTTTimeIntervalFormatterTests.swift */; };
+		502F03151CA8FDCC0026119C /* FormatterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502F03141CA8FDCC0026119C /* FormatterKit.framework */; };
 		50E226D81C6863BF0088FAA5 /* AppDeletage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E226D71C6863BF0088FAA5 /* AppDeletage.swift */; };
-		5B31FE551CA6B4D400309D75 /* TTTAddressFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FE441CA6B4D400309D75 /* TTTAddressFormatter.m */; };
-		5B31FE561CA6B4D400309D75 /* TTTArrayFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FE461CA6B4D400309D75 /* TTTArrayFormatter.m */; };
-		5B31FE571CA6B4D400309D75 /* TTTColorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FE481CA6B4D400309D75 /* TTTColorFormatter.m */; };
-		5B31FE581CA6B4D400309D75 /* TTTLocationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FE4A1CA6B4D400309D75 /* TTTLocationFormatter.m */; };
-		5B31FE591CA6B4D400309D75 /* TTTNameFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FE4C1CA6B4D400309D75 /* TTTNameFormatter.m */; };
-		5B31FE5A1CA6B4D400309D75 /* TTTOrdinalNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FE4E1CA6B4D400309D75 /* TTTOrdinalNumberFormatter.m */; };
-		5B31FE5B1CA6B4D400309D75 /* TTTTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FE501CA6B4D400309D75 /* TTTTimeIntervalFormatter.m */; };
-		5B31FE5C1CA6B4D400309D75 /* TTTUnitOfInformationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FE521CA6B4D400309D75 /* TTTUnitOfInformationFormatter.m */; };
-		5B31FE5D1CA6B4D400309D75 /* TTTURLRequestFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FE541CA6B4D400309D75 /* TTTURLRequestFormatter.m */; };
 		F8202D0C17F50AF5006C5810 /* ColorFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8202D0B17F50AF5006C5810 /* ColorFormatterViewController.m */; };
 		F83F967F1982DAB90012B3AF /* NameFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83F967E1982DAB90012B3AF /* NameFormatterViewController.m */; };
 		F872625414FD3BED00800E11 /* UnitOfInformationFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F872625314FD3BED00800E11 /* UnitOfInformationFormatterViewController.m */; };
@@ -53,27 +45,11 @@
 /* Begin PBXFileReference section */
 		500C0A6C1C948B5500F643D3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		502B4F431C686832007347C5 /* TTTTimeIntervalFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTTTimeIntervalFormatterTests.swift; sourceTree = "<group>"; };
+		502F03141CA8FDCC0026119C /* FormatterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FormatterKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/FormatterKit-evcpsmwiwrimnmfbebdofilhkvkp/Build/Products/Debug-iphonesimulator/FormatterKit.framework"; sourceTree = "<group>"; };
+		502F31A51CA9029F004CC55E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		504295101C683A6300143D6F /* FormatterKitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FormatterKitTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		504295131C683A9C00143D6F /* FormatterKit Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FormatterKit Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		50E226D71C6863BF0088FAA5 /* AppDeletage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDeletage.swift; sourceTree = "<group>"; };
-		5B31FE431CA6B4D400309D75 /* TTTAddressFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAddressFormatter.h; sourceTree = "<group>"; };
-		5B31FE441CA6B4D400309D75 /* TTTAddressFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAddressFormatter.m; sourceTree = "<group>"; };
-		5B31FE451CA6B4D400309D75 /* TTTArrayFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTArrayFormatter.h; sourceTree = "<group>"; };
-		5B31FE461CA6B4D400309D75 /* TTTArrayFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTArrayFormatter.m; sourceTree = "<group>"; };
-		5B31FE471CA6B4D400309D75 /* TTTColorFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTColorFormatter.h; sourceTree = "<group>"; };
-		5B31FE481CA6B4D400309D75 /* TTTColorFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTColorFormatter.m; sourceTree = "<group>"; };
-		5B31FE491CA6B4D400309D75 /* TTTLocationFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTLocationFormatter.h; sourceTree = "<group>"; };
-		5B31FE4A1CA6B4D400309D75 /* TTTLocationFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTLocationFormatter.m; sourceTree = "<group>"; };
-		5B31FE4B1CA6B4D400309D75 /* TTTNameFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTNameFormatter.h; sourceTree = "<group>"; };
-		5B31FE4C1CA6B4D400309D75 /* TTTNameFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTNameFormatter.m; sourceTree = "<group>"; };
-		5B31FE4D1CA6B4D400309D75 /* TTTOrdinalNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTOrdinalNumberFormatter.h; sourceTree = "<group>"; };
-		5B31FE4E1CA6B4D400309D75 /* TTTOrdinalNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTOrdinalNumberFormatter.m; sourceTree = "<group>"; };
-		5B31FE4F1CA6B4D400309D75 /* TTTTimeIntervalFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTTimeIntervalFormatter.h; sourceTree = "<group>"; };
-		5B31FE501CA6B4D400309D75 /* TTTTimeIntervalFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTTimeIntervalFormatter.m; sourceTree = "<group>"; };
-		5B31FE511CA6B4D400309D75 /* TTTUnitOfInformationFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTUnitOfInformationFormatter.h; sourceTree = "<group>"; };
-		5B31FE521CA6B4D400309D75 /* TTTUnitOfInformationFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTUnitOfInformationFormatter.m; sourceTree = "<group>"; };
-		5B31FE531CA6B4D400309D75 /* TTTURLRequestFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTURLRequestFormatter.h; sourceTree = "<group>"; };
-		5B31FE541CA6B4D400309D75 /* TTTURLRequestFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTURLRequestFormatter.m; sourceTree = "<group>"; };
 		659BF4B71AE27FA300CD4A06 /* FormatterKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormatterKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		659BF4BA1AE27FA300CD4A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8202D0A17F50AF5006C5810 /* ColorFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorFormatterViewController.h; sourceTree = "<group>"; };
@@ -123,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				502F03151CA8FDCC0026119C /* FormatterKit.framework in Frameworks */,
 				F8A847A6161E982500940F39 /* AddressBook.framework in Frameworks */,
 				F8A847A0161E93D800940F39 /* AddressBookUI.framework in Frameworks */,
 				F8FBFA591428EE32001409DB /* CoreLocation.framework in Frameworks */,
@@ -153,32 +130,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F89C9EF3166154AB0040FB03 /* FormatterKit */ = {
-			isa = PBXGroup;
-			children = (
-				5B31FE431CA6B4D400309D75 /* TTTAddressFormatter.h */,
-				5B31FE441CA6B4D400309D75 /* TTTAddressFormatter.m */,
-				5B31FE451CA6B4D400309D75 /* TTTArrayFormatter.h */,
-				5B31FE461CA6B4D400309D75 /* TTTArrayFormatter.m */,
-				5B31FE471CA6B4D400309D75 /* TTTColorFormatter.h */,
-				5B31FE481CA6B4D400309D75 /* TTTColorFormatter.m */,
-				5B31FE491CA6B4D400309D75 /* TTTLocationFormatter.h */,
-				5B31FE4A1CA6B4D400309D75 /* TTTLocationFormatter.m */,
-				5B31FE4B1CA6B4D400309D75 /* TTTNameFormatter.h */,
-				5B31FE4C1CA6B4D400309D75 /* TTTNameFormatter.m */,
-				5B31FE4D1CA6B4D400309D75 /* TTTOrdinalNumberFormatter.h */,
-				5B31FE4E1CA6B4D400309D75 /* TTTOrdinalNumberFormatter.m */,
-				5B31FE4F1CA6B4D400309D75 /* TTTTimeIntervalFormatter.h */,
-				5B31FE501CA6B4D400309D75 /* TTTTimeIntervalFormatter.m */,
-				5B31FE511CA6B4D400309D75 /* TTTUnitOfInformationFormatter.h */,
-				5B31FE521CA6B4D400309D75 /* TTTUnitOfInformationFormatter.m */,
-				5B31FE531CA6B4D400309D75 /* TTTURLRequestFormatter.h */,
-				5B31FE541CA6B4D400309D75 /* TTTURLRequestFormatter.m */,
-			);
-			name = FormatterKit;
-			path = ../FormatterKit;
-			sourceTree = "<group>";
-		};
 		F8FBF9D91427A456001409DB = {
 			isa = PBXGroup;
 			children = (
@@ -187,7 +138,6 @@
 				659BF4B81AE27FA300CD4A06 /* FormatterKitTests */,
 				F8FBF9E71427A456001409DB /* Frameworks */,
 				F8FBF9E51427A456001409DB /* Products */,
-				F8FBFA071427A4D2001409DB /* Vendor */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
@@ -205,6 +155,7 @@
 		F8FBF9E71427A456001409DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				502F03141CA8FDCC0026119C /* FormatterKit.framework */,
 				F8A847A5161E982500940F39 /* AddressBook.framework */,
 				F8A8479F161E93D800940F39 /* AddressBookUI.framework */,
 				F8FBFA581428EE31001409DB /* CoreLocation.framework */,
@@ -235,14 +186,6 @@
 				F8FBF9F61427A456001409DB /* Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F8FBFA071427A4D2001409DB /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				F89C9EF3166154AB0040FB03 /* FormatterKit */,
-			);
-			name = Vendor;
 			sourceTree = "<group>";
 		};
 		F8FBFA321427CEA5001409DB /* Controllers */ = {
@@ -388,25 +331,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B31FE5A1CA6B4D400309D75 /* TTTOrdinalNumberFormatter.m in Sources */,
-				5B31FE5B1CA6B4D400309D75 /* TTTTimeIntervalFormatter.m in Sources */,
-				5B31FE551CA6B4D400309D75 /* TTTAddressFormatter.m in Sources */,
-				5B31FE561CA6B4D400309D75 /* TTTArrayFormatter.m in Sources */,
 				F8FBFA351427CEC0001409DB /* RootViewController.m in Sources */,
 				F8FBFA381427D159001409DB /* FormatterViewController.m in Sources */,
 				F8FBFA3B1427D3DA001409DB /* ArrayFormatterViewController.m in Sources */,
-				5B31FE591CA6B4D400309D75 /* TTTNameFormatter.m in Sources */,
-				5B31FE571CA6B4D400309D75 /* TTTColorFormatter.m in Sources */,
 				F8FBFA421427E1DC001409DB /* LocationFormatterViewController.m in Sources */,
 				F8FBFA451427E21C001409DB /* OrdinalNumberFormatterViewController.m in Sources */,
 				F8FBFA481427E23C001409DB /* TimeIntervalFormatterViewController.m in Sources */,
 				F8FBFA4B1427E260001409DB /* URLRequestFormatterViewController.m in Sources */,
-				5B31FE581CA6B4D400309D75 /* TTTLocationFormatter.m in Sources */,
-				5B31FE5D1CA6B4D400309D75 /* TTTURLRequestFormatter.m in Sources */,
 				F872625414FD3BED00800E11 /* UnitOfInformationFormatterViewController.m in Sources */,
 				F8A847A9161E98D800940F39 /* AddressFormatterViewController.m in Sources */,
 				F8202D0C17F50AF5006C5810 /* ColorFormatterViewController.m in Sources */,
-				5B31FE5C1CA6B4D400309D75 /* TTTUnitOfInformationFormatter.m in Sources */,
 				F83F967F1982DAB90012B3AF /* NameFormatterViewController.m in Sources */,
 				50E226D81C6863BF0088FAA5 /* AppDeletage.swift in Sources */,
 			);
@@ -539,7 +473,7 @@
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "FormatterKit Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -588,7 +522,7 @@
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "FormatterKit Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

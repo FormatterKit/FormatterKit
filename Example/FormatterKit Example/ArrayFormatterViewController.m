@@ -22,7 +22,7 @@
 
 #import "ArrayFormatterViewController.h"
 
-#import "TTTArrayFormatter.h"
+#import <FormatterKit/TTTArrayFormatter.h>
 
 NS_ENUM(NSUInteger, ArrayFormatterViewControllerSectionIndexes) {
     StandardSectionIndex,

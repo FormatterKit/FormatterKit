@@ -22,7 +22,7 @@
 
 #import "UnitOfInformationFormatterViewController.h"
 
-#import "TTTUnitOfInformationFormatter.h"
+#import <FormatterKit/TTTUnitOfInformationFormatter.h>
 
 NS_ENUM(NSUInteger, UnitOfInformationFormatterViewControllerSectionIndexes) {
     SIPrefixByteSectionIndex,

@@ -22,7 +22,7 @@
 
 #import "AddressFormatterViewController.h"
 
-#import "TTTAddressFormatter.h"
+#import <FormatterKit/TTTAddressFormatter.h>
 
 NS_ENUM(NSUInteger, AddressFormatterViewControllerFormatterViewControllerSectionIndexes) {
     UnitedStatesSectionIndex,

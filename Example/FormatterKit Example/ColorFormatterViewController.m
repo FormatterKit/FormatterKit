@@ -22,7 +22,7 @@
 
 #import "ColorFormatterViewController.h"
 
-#import "TTTColorFormatter.h"
+#import <FormatterKit/TTTColorFormatter.h>
 
 static UIImage * UIImageForSwatchOfColorWithSize(UIColor *color, CGSize size) {
     UIImage *image = nil;

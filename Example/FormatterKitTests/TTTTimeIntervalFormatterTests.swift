@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import FormatterKit_Example
+import FormatterKit
 
 class TTTTimeIntervalFormatterTests: XCTestCase {
 
