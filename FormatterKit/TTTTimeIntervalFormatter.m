@@ -268,6 +268,8 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return [self nlRelativeDateStringForComponents:components];
     } else if ([languageCode isEqualToString:@"pl"]) {
         return [self plRelativeDateStringForComponents:components];
+    } else if ([languageCode isEqualToString:@"hu"]) {
+        return [self huRelativeDateStringForComponents:components];
     }
 
     return nil;
@@ -550,6 +552,35 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"domani";
     }
 
+    return nil;
+}
+
+- (NSString *)huRelativeDateStringForComponents:(NSDateComponents *)components
+{
+    if ([components year] == -1) {
+        return @"tavaly";
+    } else if ([components month] == -1 && [components year] == 0) {
+        return @"múlt hónapban";
+    } else if ([components weekOfYear] == -1 && [components year] == 0 && [components month] == 0) {
+        return @"előző week";
+    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
+        return @"tegnap";
+    } else if ([components day] == -2 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
+        return @"tegnapelőtt";
+    }
+
+    if ([components year] == 1) {
+        return @"jövőre";
+    } else if ([components month] == 1 && [components year] == 0) {
+        return @"jövő hónapban";
+    } else if ([components weekOfYear] == 1 && [components year] == 0 && [components month] == 0) {
+        return @"jövő héten";
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
+        return @"holnap";
+    } else if ([components day] == 2 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
+        return @"holnapután";
+    }
+    
     return nil;
 }
 
