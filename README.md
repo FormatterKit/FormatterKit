@@ -1,4 +1,4 @@
-# FormatterKit [![Build Status](https://travis-ci.org/mattt/FormatterKit.svg?branch=master)](https://travis-ci.org/mattt/FormatterKit) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+# FormatterKit [![Build Status](https://travis-ci.org/mattt/FormatterKit.svg?branch=master)](https://travis-ci.org/mattt/FormatterKit) [![CocoaPods compatible](https://img.shields.io/cocoapods/v/FormatterKit.svg)](https://cocoapods.org/pods/FormatterKit) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 `FormatterKit` is a collection of well-crafted `NSFormatter` subclasses for things like units of information, distance, and relative time intervals. Each formatter abstracts away the complex business logic of their respective domain, so that you can focus on the more important aspects of your application.
 
