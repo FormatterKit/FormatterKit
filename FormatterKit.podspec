@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.subspec 'Resources' do |ss|
     ss.resources = 'Localizations/**'
   end
-  
+
   s.subspec 'AddressFormatter' do |ss|
     ss.source_files = 'FormatterKit/TTTAddressFormatter.{h,m}'
     ss.dependency 'FormatterKit/Resources'
