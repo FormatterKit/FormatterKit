@@ -1,6 +1,6 @@
 //
-//  TTTTimeIntervalFormatterTests.swift
-//  FormatterKit Example
+//  TimeIntervalFormatterTests.swift
+//  Tests-English
 //
 //  Created by Victor Ilyukevich on 2/7/16.
 //  Copyright © 2016. All rights reserved.

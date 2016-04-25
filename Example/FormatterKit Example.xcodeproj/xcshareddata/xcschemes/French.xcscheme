@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "659BF4B61AE27FA300CD4A06"
-               BuildableName = "FormatterKitTests.xctest"
-               BlueprintName = "FormatterKitTests"
+               BlueprintIdentifier = "50F3E89E1CCE0EEC00BC8526"
+               BuildableName = "Tests-French.xctest"
+               BlueprintName = "Tests-French"
                ReferencedContainer = "container:FormatterKit Example.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -71,6 +71,16 @@
             ReferencedContainer = "container:FormatterKit Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-AppleLanguages (fr)"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-AppleLocale fr_FR"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
