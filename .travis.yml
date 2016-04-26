@@ -5,3 +5,8 @@ install:
   - bundle install
 
 script: bundle exec rake spec
+
+after_success:
+  - bundle exec rake "coverage:consolidate"
+  - bundle exec slather coverage --cobertura-xml --output-directory build/coverage-reports
+  - bash <(curl -s https://codecov.io/bash) -f build/coverage-reports/cobertura.xml
