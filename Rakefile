@@ -8,8 +8,12 @@ end
 
 task :default => :spec
 
+task :clean do
+  run "rm -rf build/"
+end
+
 desc 'Run unit tests'
-task :spec do
+task :spec => :clean do
   status = languages.map do |lang|
     puts "===\n=== Running tests for #{lang}\n==="
     run "xcodebuild -workspace FormatterKit.xcworkspace -scheme #{lang} -sdk iphonesimulator -derivedDataPath build/DerivedData/#{lang} test | bundle exec xcpretty --test && exit ${PIPESTATUS[0]}"
