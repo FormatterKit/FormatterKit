@@ -1,8 +1,34 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (4.2.6)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
+    claide (0.9.1)
+    clamp (0.6.5)
+    colored (1.2)
+    i18n (0.7.0)
+    json (1.8.3)
+    mini_portile2 (2.0.0)
+    minitest (5.8.4)
+    nokogiri (1.6.7.2)
+      mini_portile2 (~> 2.0.0.rc2)
     rake (10.4.2)
     rouge (1.10.1)
+    slather (2.1.0)
+      clamp (~> 0.6)
+      nokogiri (~> 1.6.3)
+      xcodeproj (>= 0.28.2, < 1.1.0)
+    thread_safe (0.3.5)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
+    xcodeproj (0.28.2)
+      activesupport (>= 3)
+      claide (~> 0.9.1)
+      colored (~> 1.2)
     xcpretty (0.2.2)
       rouge (~> 1.8)
 
@@ -11,4 +37,5 @@ PLATFORMS
 
 DEPENDENCIES
   rake
+  slather
   xcpretty

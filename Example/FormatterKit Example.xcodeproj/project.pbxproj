@@ -880,6 +880,8 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -935,6 +937,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
@@ -1027,6 +1031,7 @@
 				505136C91CCE1EF600569478 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		50F3E8A81CCE0EEC00BC8526 /* Build configuration list for PBXNativeTarget "Tests-French" */ = {
 			isa = XCConfigurationList;
@@ -1035,7 +1040,7 @@
 				50F3E8A71CCE0EEC00BC8526 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		50F3E8B41CCE0F2100BC8526 /* Build configuration list for PBXNativeTarget "Tests-Spanish" */ = {
 			isa = XCConfigurationList;
@@ -1044,7 +1049,7 @@
 				50F3E8B61CCE0F2100BC8526 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		50F3E8C21CCE144D00BC8526 /* Build configuration list for PBXNativeTarget "Tests-English" */ = {
 			isa = XCConfigurationList;
@@ -1053,7 +1058,7 @@
 				50F3E8C41CCE144D00BC8526 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		F8FBF9DE1427A456001409DB /* Build configuration list for PBXProject "FormatterKit Example" */ = {
 			isa = XCConfigurationList;
@@ -1062,7 +1067,7 @@
 				F8FBF9FB1427A456001409DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		F8FBF9FC1427A456001409DB /* Build configuration list for PBXNativeTarget "FormatterKit Example" */ = {
 			isa = XCConfigurationList;
@@ -1071,7 +1076,7 @@
 				F8FBF9FE1427A456001409DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
