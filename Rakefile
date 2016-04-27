@@ -1,4 +1,11 @@
-languages = ['English', 'French', 'Spanish', 'Russian']
+languages = [
+  'Arabic', 'Catalan', 'Chinese-Simplified', 'Chinese-Traditional',
+  'Czech', 'Danish', 'Dutch', 'English', 'French', 'German', 'Greek',
+  'Hebrew', 'Hungarian', 'Indonesian', 'Italian', 'Japanese', 'Korean',
+  'Malay', 'Norwegian-Bokmal', 'Norwegian-Nynorsk', 'Polish', 'Portuguese',
+  'Portuguese-Brazil', 'Romanian', 'Russian', 'Spanish', 'Swedish', 'Thai',
+  'Turkish', 'Ukrainian', 'Vietnamese'
+]
 
 def run(command, min_exit_status = 0)
   puts "Executing: `#{command}`"
