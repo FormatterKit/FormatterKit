@@ -22,6 +22,7 @@ task :spec => :clean do
   exit status
 end
 
+desc 'Prints code coverage statistics.'
 task :coverage => ['coverage:consolidate'] do
   run "bundle exec slather coverage"
 end
