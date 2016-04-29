@@ -10,7 +10,11 @@ languages = [
 def run(command, min_exit_status = 0)
   puts "Executing: `#{command}`"
   system(command)
-  return $?.exitstatus
+  $?.exitstatus
+end
+
+def is_travis?
+  ENV.has_key?("TRAVIS")
 end
 
 task :default => :spec
@@ -22,8 +26,19 @@ end
 desc 'Run unit tests'
 task :spec => :clean do
   status = languages.map do |lang|
-    puts "===\n=== Running tests for #{lang}\n==="
-    run "xcodebuild -workspace FormatterKit.xcworkspace -scheme #{lang} -sdk iphonesimulator -derivedDataPath build/DerivedData/#{lang} test | bundle exec xcpretty --test && exit ${PIPESTATUS[0]}"
+    if is_travis?
+      puts "travis_fold:start:ios.tests.#{lang}"
+    else
+      puts "===\n=== Running tests for #{lang}\n==="
+    end
+
+    xcpretty_flags = is_travis? ? '' : '--test'
+    status = run "xcodebuild -workspace FormatterKit.xcworkspace -scheme #{lang} -sdk iphonesimulator -derivedDataPath build/DerivedData/#{lang} test | bundle exec xcpretty #{xcpretty_flags} && exit ${PIPESTATUS[0]}"
+    if is_travis?
+      puts "travis_fold:end:ios.tests.#{lang}"
+    end
+
+    status
   end.max.to_i
 
   exit status
