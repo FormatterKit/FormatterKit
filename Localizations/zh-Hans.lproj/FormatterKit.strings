@@ -163,16 +163,16 @@
 "minutes" = "分钟";
 
 /* Month Unit (Singular, Abbreviated) */
-"mo" = "月";
+"mo" = "个月";
 
 /* Month Unit (Singular) */
-"month" = "月";
+"month" = "个月";
 
 /* Month Unit (Plural) */
-"months" = "月";
+"months" = "个月";
 
 /* Month Unit (Plural, Abbreviated) */
-"mos" = "月";
+"mos" = "个月";
 
 /* Miles Per Hour Unit */
 "mph" = "英里/小时";
