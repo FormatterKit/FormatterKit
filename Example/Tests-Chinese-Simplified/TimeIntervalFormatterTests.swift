@@ -29,12 +29,12 @@ class TTTTimeIntervalFormatterTests: XCTestCase {
     }
 
     func testStandardFuture() {
-        XCTAssertEqual(formatter.stringForTimeInterval(1), "1秒之后")
-        XCTAssertEqual(formatter.stringForTimeInterval(100), "1分钟之后")
-        XCTAssertEqual(formatter.stringForTimeInterval(10000), "2小时之后")
-        XCTAssertEqual(formatter.stringForTimeInterval(100000), "1天之后")
-        XCTAssertEqual(formatter.stringForTimeInterval(200000), "2天之后")
-        XCTAssertEqual(formatter.stringForTimeInterval(10000000), "3月之后")
+        XCTAssertEqual(formatter.stringForTimeInterval(1), "1秒后")
+        XCTAssertEqual(formatter.stringForTimeInterval(100), "1分钟后")
+        XCTAssertEqual(formatter.stringForTimeInterval(10000), "2小时后")
+        XCTAssertEqual(formatter.stringForTimeInterval(100000), "1天后")
+        XCTAssertEqual(formatter.stringForTimeInterval(200000), "2天后")
+        XCTAssertEqual(formatter.stringForTimeInterval(10000000), "3月后")
     }
 
     func testIdiomaticPast() {
