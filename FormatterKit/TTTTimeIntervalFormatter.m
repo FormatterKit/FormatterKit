@@ -271,9 +271,9 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     } else if ([languageCode isEqualToString:@"hu"]) {
         return [self huRelativeDateStringForComponents:components];
     } else if ([languageCode isEqualToString:@"zh"]) {
-        NSString *languageCountry = [self.locale objectForKey:NSLocaleCountryCode];
-        if ([languageCountry isEqualToString:@"CN"]) {
-            return [self zhCNRelativeDateStringForComponents:components];
+        NSString *languageScript = [self.locale objectForKey:NSLocaleScriptCode];
+        if (![languageScript isEqualToString:@"Hant"]) {
+            return [self zhHansRelativeDateStringForComponents:components];
         }
     }
 
@@ -589,7 +589,7 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     return nil;
 }
 
-- (NSString *)zhCNRelativeDateStringForComponents:(NSDateComponents *)components {
+- (NSString *)zhHansRelativeDateStringForComponents:(NSDateComponents *)components {
     if ([components year] == -2) {
         return @"前年";
     } else if ([components year] == -1) {
