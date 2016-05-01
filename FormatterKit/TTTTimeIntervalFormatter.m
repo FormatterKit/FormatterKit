@@ -270,6 +270,11 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return [self plRelativeDateStringForComponents:components];
     } else if ([languageCode isEqualToString:@"hu"]) {
         return [self huRelativeDateStringForComponents:components];
+    } else if ([languageCode isEqualToString:@"zh"]) {
+        NSString *languageScript = [self.locale objectForKey:NSLocaleScriptCode];
+        if (![languageScript isEqualToString:@"Hant"]) {
+            return [self zhHansRelativeDateStringForComponents:components];
+        }
     }
 
     return nil;
@@ -581,6 +586,38 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"holnapután";
     }
     
+    return nil;
+}
+
+- (NSString *)zhHansRelativeDateStringForComponents:(NSDateComponents *)components {
+    if ([components year] == -2) {
+        return @"前年";
+    } else if ([components year] == -1) {
+        return @"去年";
+    } else if ([components month] == -1 && [components year] == 0) {
+        return @"上月";
+    } else if ([components weekOfYear] == -1 && [components month] == 0 && [components year] == 0) {
+        return @"上周";
+    } else if ([components day] == -1 && [components weekOfYear] == 0 && [components month] == 0 && [components year] == 0) {
+        return @"昨天";
+    } else if ([components day] == -2 && [components weekOfYear] == 0 && [components month] == 0 && [components year] == 0) {
+        return @"前天";
+    }
+
+    if ([components year] == 2) {
+        return @"后年";
+    } else if ([components year] == 1) {
+        return @"明年";
+    } else if ([components month] == 1 && [components year] == 0) {
+        return @"下月";
+    } else if ([components weekOfYear] == 1 && [components month] == 0 && [components year] == 0) {
+        return @"下周";
+    } else if ([components day] == 1 && [components weekOfYear] == 0 && [components month] == 0 && [components year] == 0) {
+        return @"明天";
+    } else if ([components day] == 2 && [components weekOfYear] == 0 && [components month] == 0 && [components year] == 0) {
+        return @"后天";
+    }
+
     return nil;
 }
 
