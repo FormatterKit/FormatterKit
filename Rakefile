@@ -32,13 +32,13 @@ task :spec => :clean do
       puts "===\n=== Running tests for #{lang}\n==="
     end
 
-    status = run "xcodebuild -workspace FormatterKit.xcworkspace -scheme #{lang} -sdk iphonesimulator -derivedDataPath build/DerivedData/#{lang} test | bundle exec xcpretty --test && exit ${PIPESTATUS[0]}"
-    if is_travis?
+    status = run "xcodebuild -workspace FormatterKit.xcworkspace -scheme #{lang} -sdk iphonesimulator -derivedDataPath build/DerivedData/#{lang} test | bundle exec xcpretty --test && exit ${PIPESTATUS[0]}" || 0
+    if status.zero? && is_travis?
       puts "travis_fold:end:ios.tests.#{lang}"
     end
 
     status
-  end.max.to_i
+  end.max
 
   exit status
 end
