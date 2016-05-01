@@ -1,3 +1,13 @@
+GIT
+  remote: https://github.com/SlatherOrg/slather.git
+  revision: 79d7652d5b5faf677852ecb8856e7994c4a195df
+  ref: 79d7652
+  specs:
+    slather (2.1.0)
+      clamp (~> 0.6)
+      nokogiri (~> 1.6.3)
+      xcodeproj (>= 0.28.2, < 1.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -18,10 +28,6 @@ GEM
       mini_portile2 (~> 2.0.0.rc2)
     rake (10.4.2)
     rouge (1.10.1)
-    slather (2.1.0)
-      clamp (~> 0.6)
-      nokogiri (~> 1.6.3)
-      xcodeproj (>= 0.28.2, < 1.1.0)
     thread_safe (0.3.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
@@ -37,5 +43,5 @@ PLATFORMS
 
 DEPENDENCIES
   rake
-  slather
+  slather!
   xcpretty
