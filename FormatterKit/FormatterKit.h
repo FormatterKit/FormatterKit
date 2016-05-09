@@ -6,7 +6,7 @@
 //  Copyright © 2016 FormatterKit. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for FormatterKit.
 FOUNDATION_EXPORT double FormatterKitVersionNumber;
