@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import "TTTUnitOfInformationFormatter.h"
+#import "NSBundle+FormatterKit.h"
 
 static inline NSUInteger TTTNumberOfBitsInUnit(TTTUnitOfInformation unit) {
     switch (unit) {
@@ -199,7 +200,7 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
     }
 
     if (doubleValue < [self scaleFactorForPrefix:TTTKilo]) {
-        unitString = self.displaysInTermsOfBytes ? NSLocalizedStringFromTableInBundle(@"bytes", @"FormatterKit", [NSBundle bundleForClass:[self class]],  @"Byte Unit") : NSLocalizedStringFromTableInBundle(@"bits", @"FormatterKit", [NSBundle bundleForClass:[self class]],  @"Bit Unit");
+        unitString = self.displaysInTermsOfBytes ? NSLocalizedStringFromTableInBundle(@"bytes", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Byte Unit") : NSLocalizedStringFromTableInBundle(@"bits", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Bit Unit");
     } else {
         TTTUnitPrefix prefix = [self prefixForInteger:(uint64_t)llround(doubleValue)];
         if (self.displaysInTermsOfBytes) {
@@ -211,7 +212,7 @@ static inline NSString * TTTByteUnitStringForSIPrefix(TTTUnitPrefix prefix) {
         doubleValue /= [self scaleFactorForPrefix:prefix];
     }
 
-    return [NSString stringWithFormat:NSLocalizedStringWithDefaultValue(@"Unit of Information Format String", @"FormatterKit", [NSBundle bundleForClass:[self class]], @"%@ %@", @"#{Value} #{Unit}"), [_numberFormatter stringFromNumber:@(doubleValue)], unitString];
+    return [NSString stringWithFormat:NSLocalizedStringWithDefaultValue(@"Unit of Information Format String", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]], @"%@ %@", @"#{Value} #{Unit}"), [_numberFormatter stringFromNumber:@(doubleValue)], unitString];
 }
 
 - (NSString *)stringFromNumber:(NSNumber *)number

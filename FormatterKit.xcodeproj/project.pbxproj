@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50B7E6B31D706201006BEE5C /* NSBundle+FormatterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B7E6B11D706201006BEE5C /* NSBundle+FormatterKit.h */; };
+		50B7E6B41D706201006BEE5C /* NSBundle+FormatterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B7E6B11D706201006BEE5C /* NSBundle+FormatterKit.h */; };
+		50B7E6B51D706201006BEE5C /* NSBundle+FormatterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B7E6B11D706201006BEE5C /* NSBundle+FormatterKit.h */; };
+		50B7E6B61D706201006BEE5C /* NSBundle+FormatterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B7E6B11D706201006BEE5C /* NSBundle+FormatterKit.h */; };
+		50B7E6B71D706201006BEE5C /* NSBundle+FormatterKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B7E6B21D706201006BEE5C /* NSBundle+FormatterKit.m */; };
+		50B7E6B81D706201006BEE5C /* NSBundle+FormatterKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B7E6B21D706201006BEE5C /* NSBundle+FormatterKit.m */; };
+		50B7E6B91D706201006BEE5C /* NSBundle+FormatterKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B7E6B21D706201006BEE5C /* NSBundle+FormatterKit.m */; };
+		50B7E6BA1D706201006BEE5C /* NSBundle+FormatterKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B7E6B21D706201006BEE5C /* NSBundle+FormatterKit.m */; };
 		5B08B66D1CA69F99009541EC /* FormatterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B66C1CA69F99009541EC /* FormatterKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B08B6931CA6A0C3009541EC /* TTTAddressFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B6811CA6A0C3009541EC /* TTTAddressFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B08B6941CA6A0C3009541EC /* TTTAddressFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B6811CA6A0C3009541EC /* TTTAddressFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -92,6 +100,8 @@
 /* Begin PBXFileReference section */
 		5006052F1CA8CCDE00F9DD6B /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/FormatterKit.strings; sourceTree = "<group>"; };
 		500605301CA8CCFF00F9DD6B /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = ms.lproj/FormatterKit.strings; sourceTree = "<group>"; };
+		50B7E6B11D706201006BEE5C /* NSBundle+FormatterKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+FormatterKit.h"; sourceTree = "<group>"; };
+		50B7E6B21D706201006BEE5C /* NSBundle+FormatterKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+FormatterKit.m"; sourceTree = "<group>"; };
 		5B08B6691CA69F99009541EC /* FormatterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FormatterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B08B66C1CA69F99009541EC /* FormatterKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FormatterKit.h; sourceTree = "<group>"; };
 		5B08B66E1CA69F99009541EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -204,6 +214,8 @@
 			children = (
 				5B08B66C1CA69F99009541EC /* FormatterKit.h */,
 				5B08B66E1CA69F99009541EC /* Info.plist */,
+				50B7E6B11D706201006BEE5C /* NSBundle+FormatterKit.h */,
+				50B7E6B21D706201006BEE5C /* NSBundle+FormatterKit.m */,
 				5B08B6811CA6A0C3009541EC /* TTTAddressFormatter.h */,
 				5B08B6821CA6A0C3009541EC /* TTTAddressFormatter.m */,
 				5B08B6831CA6A0C3009541EC /* TTTArrayFormatter.h */,
@@ -251,6 +263,7 @@
 				5B08B6931CA6A0C3009541EC /* TTTAddressFormatter.h in Headers */,
 				5B08B6AF1CA6A0C3009541EC /* TTTUnitOfInformationFormatter.h in Headers */,
 				5B08B6971CA6A0C3009541EC /* TTTArrayFormatter.h in Headers */,
+				50B7E6B31D706201006BEE5C /* NSBundle+FormatterKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +281,7 @@
 				5B08B6A81CA6A0C3009541EC /* TTTOrdinalNumberFormatter.h in Headers */,
 				5B08B6941CA6A0C3009541EC /* TTTAddressFormatter.h in Headers */,
 				5B08B69C1CA6A0C3009541EC /* TTTColorFormatter.h in Headers */,
+				50B7E6B41D706201006BEE5C /* NSBundle+FormatterKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +299,7 @@
 				FE4100C51D4996140059B762 /* TTTAddressFormatter.h in Headers */,
 				FE4100CC1D4996140059B762 /* TTTUnitOfInformationFormatter.h in Headers */,
 				FE4100C61D4996140059B762 /* TTTArrayFormatter.h in Headers */,
+				50B7E6B61D706201006BEE5C /* NSBundle+FormatterKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +317,7 @@
 				FE65C4891D1EF8B900A8AC9D /* TTTAddressFormatter.h in Headers */,
 				FE65C4861D1EF72C00A8AC9D /* TTTUnitOfInformationFormatter.h in Headers */,
 				FE65C4781D1EF70E00A8AC9D /* TTTArrayFormatter.h in Headers */,
+				50B7E6B51D706201006BEE5C /* NSBundle+FormatterKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +513,7 @@
 				5B08B6951CA6A0C3009541EC /* TTTAddressFormatter.m in Sources */,
 				5B08B6A51CA6A0C3009541EC /* TTTNameFormatter.m in Sources */,
 				5B08B6991CA6A0C3009541EC /* TTTArrayFormatter.m in Sources */,
+				50B7E6B71D706201006BEE5C /* NSBundle+FormatterKit.m in Sources */,
 				5B08B6AD1CA6A0C3009541EC /* TTTTimeIntervalFormatter.m in Sources */,
 				5B08B6B51CA6A0C3009541EC /* TTTURLRequestFormatter.m in Sources */,
 				5B08B6B11CA6A0C3009541EC /* TTTUnitOfInformationFormatter.m in Sources */,
@@ -513,6 +530,7 @@
 				5B08B6961CA6A0C3009541EC /* TTTAddressFormatter.m in Sources */,
 				5B08B6A61CA6A0C3009541EC /* TTTNameFormatter.m in Sources */,
 				5B08B69A1CA6A0C3009541EC /* TTTArrayFormatter.m in Sources */,
+				50B7E6B81D706201006BEE5C /* NSBundle+FormatterKit.m in Sources */,
 				5B08B6AE1CA6A0C3009541EC /* TTTTimeIntervalFormatter.m in Sources */,
 				5B08B6B61CA6A0C3009541EC /* TTTURLRequestFormatter.m in Sources */,
 				5B08B6B21CA6A0C3009541EC /* TTTUnitOfInformationFormatter.m in Sources */,
@@ -529,6 +547,7 @@
 				FE4100CE1D4996310059B762 /* TTTAddressFormatter.m in Sources */,
 				FE4100D21D4996310059B762 /* TTTNameFormatter.m in Sources */,
 				FE4100CF1D4996310059B762 /* TTTArrayFormatter.m in Sources */,
+				50B7E6BA1D706201006BEE5C /* NSBundle+FormatterKit.m in Sources */,
 				FE4100D41D4996310059B762 /* TTTTimeIntervalFormatter.m in Sources */,
 				FE4100D61D4996310059B762 /* TTTURLRequestFormatter.m in Sources */,
 				FE4100D51D4996310059B762 /* TTTUnitOfInformationFormatter.m in Sources */,
@@ -545,6 +564,7 @@
 				FE65C4791D1EF71400A8AC9D /* TTTArrayFormatter.m in Sources */,
 				FE65C47E1D1EF72100A8AC9D /* TTTTimeIntervalFormatter.m in Sources */,
 				FE65C4801D1EF72100A8AC9D /* TTTURLRequestFormatter.m in Sources */,
+				50B7E6B91D706201006BEE5C /* NSBundle+FormatterKit.m in Sources */,
 				FE65C47F1D1EF72100A8AC9D /* TTTUnitOfInformationFormatter.m in Sources */,
 				FE65C47B1D1EF72100A8AC9D /* TTTLocationFormatter.m in Sources */,
 				FE65C48B1D1F066A00A8AC9D /* TTTAddressFormatter.m in Sources */,
