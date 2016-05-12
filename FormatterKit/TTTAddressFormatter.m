@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import "TTTAddressFormatter.h"
+#import "NSBundle+FormatterKit.h"
 
 #import <Availability.h>
 
@@ -114,7 +115,7 @@
              forString:(__unused NSString *)string
       errorDescription:(out NSString *__autoreleasing *)error
 {
-    *error = NSLocalizedStringFromTableInBundle(@"Method Not Implemented", @"FormatterKit", [NSBundle bundleForClass:[self class]], nil);
+    *error = NSLocalizedStringFromTableInBundle(@"Method Not Implemented", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]], nil);
     
     return NO;
 }

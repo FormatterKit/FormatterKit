@@ -47,6 +47,10 @@
 		5B08B6B71CA6A26A009541EC /* FormatterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B66C1CA69F99009541EC /* FormatterKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B31FE411CA6B47800309D75 /* FormatterKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B31FE231CA6B47800309D75 /* FormatterKit.strings */; };
 		5B31FE421CA6B47800309D75 /* FormatterKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B31FE231CA6B47800309D75 /* FormatterKit.strings */; };
+		DCBC8EB31CE3D5C2008E89F2 /* NSBundle+FormatterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DCBC8EB11CE3D5C2008E89F2 /* NSBundle+FormatterKit.h */; };
+		DCBC8EB41CE3D5C2008E89F2 /* NSBundle+FormatterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DCBC8EB11CE3D5C2008E89F2 /* NSBundle+FormatterKit.h */; };
+		DCBC8EB51CE3D5C2008E89F2 /* NSBundle+FormatterKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBC8EB21CE3D5C2008E89F2 /* NSBundle+FormatterKit.m */; };
+		DCBC8EB61CE3D5C2008E89F2 /* NSBundle+FormatterKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBC8EB21CE3D5C2008E89F2 /* NSBundle+FormatterKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +107,8 @@
 		5B31FE3E1CA6B47800309D75 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/FormatterKit.strings; sourceTree = "<group>"; };
 		5B31FE3F1CA6B47800309D75 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/FormatterKit.strings"; sourceTree = "<group>"; };
 		5B31FE401CA6B47800309D75 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/FormatterKit.strings"; sourceTree = "<group>"; };
+		DCBC8EB11CE3D5C2008E89F2 /* NSBundle+FormatterKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+FormatterKit.h"; sourceTree = "<group>"; };
+		DCBC8EB21CE3D5C2008E89F2 /* NSBundle+FormatterKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+FormatterKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +170,8 @@
 				5B08B6901CA6A0C3009541EC /* TTTUnitOfInformationFormatter.m */,
 				5B08B6911CA6A0C3009541EC /* TTTURLRequestFormatter.h */,
 				5B08B6921CA6A0C3009541EC /* TTTURLRequestFormatter.m */,
+				DCBC8EB11CE3D5C2008E89F2 /* NSBundle+FormatterKit.h */,
+				DCBC8EB21CE3D5C2008E89F2 /* NSBundle+FormatterKit.m */,
 			);
 			path = FormatterKit;
 			sourceTree = "<group>";
@@ -193,6 +201,7 @@
 				5B08B6931CA6A0C3009541EC /* TTTAddressFormatter.h in Headers */,
 				5B08B6AF1CA6A0C3009541EC /* TTTUnitOfInformationFormatter.h in Headers */,
 				5B08B6971CA6A0C3009541EC /* TTTArrayFormatter.h in Headers */,
+				DCBC8EB31CE3D5C2008E89F2 /* NSBundle+FormatterKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +219,7 @@
 				5B08B6A81CA6A0C3009541EC /* TTTOrdinalNumberFormatter.h in Headers */,
 				5B08B6941CA6A0C3009541EC /* TTTAddressFormatter.h in Headers */,
 				5B08B69C1CA6A0C3009541EC /* TTTColorFormatter.h in Headers */,
+				DCBC8EB41CE3D5C2008E89F2 /* NSBundle+FormatterKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +355,7 @@
 				5B08B6951CA6A0C3009541EC /* TTTAddressFormatter.m in Sources */,
 				5B08B6A51CA6A0C3009541EC /* TTTNameFormatter.m in Sources */,
 				5B08B6991CA6A0C3009541EC /* TTTArrayFormatter.m in Sources */,
+				DCBC8EB51CE3D5C2008E89F2 /* NSBundle+FormatterKit.m in Sources */,
 				5B08B6AD1CA6A0C3009541EC /* TTTTimeIntervalFormatter.m in Sources */,
 				5B08B6B51CA6A0C3009541EC /* TTTURLRequestFormatter.m in Sources */,
 				5B08B6B11CA6A0C3009541EC /* TTTUnitOfInformationFormatter.m in Sources */,
@@ -361,6 +372,7 @@
 				5B08B6961CA6A0C3009541EC /* TTTAddressFormatter.m in Sources */,
 				5B08B6A61CA6A0C3009541EC /* TTTNameFormatter.m in Sources */,
 				5B08B69A1CA6A0C3009541EC /* TTTArrayFormatter.m in Sources */,
+				DCBC8EB61CE3D5C2008E89F2 /* NSBundle+FormatterKit.m in Sources */,
 				5B08B6AE1CA6A0C3009541EC /* TTTTimeIntervalFormatter.m in Sources */,
 				5B08B6B61CA6A0C3009541EC /* TTTURLRequestFormatter.m in Sources */,
 				5B08B6B21CA6A0C3009541EC /* TTTUnitOfInformationFormatter.m in Sources */,
