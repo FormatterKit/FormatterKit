@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import "TTTArrayFormatter.h"
+#import "NSBundle+FormatterKit.h"
 
 @implementation TTTArrayFormatter
 @synthesize arrayStyle = _arrayStyle;
@@ -37,10 +38,10 @@
         return nil;
     }
 
-    self.delimiter = NSLocalizedStringFromTableInBundle(@",", @"FormatterKit", [NSBundle bundleForClass:[self class]],  @"List delimiter");
-    self.separator = NSLocalizedStringFromTableInBundle(@" ", @"FormatterKit", [NSBundle bundleForClass:[self class]],  @"List separator");
-    self.conjunction = NSLocalizedStringFromTableInBundle(@"and", @"FormatterKit", [NSBundle bundleForClass:[self class]],  @"List conjunction");
-    self.abbreviatedConjunction = NSLocalizedStringFromTableInBundle(@"&", @"FormatterKit", [NSBundle bundleForClass:[self class]],  nil);
+    self.delimiter = NSLocalizedStringFromTableInBundle(@",", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"List delimiter");
+    self.separator = NSLocalizedStringFromTableInBundle(@" ", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"List separator");
+    self.conjunction = NSLocalizedStringFromTableInBundle(@"and", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"List conjunction");
+    self.abbreviatedConjunction = NSLocalizedStringFromTableInBundle(@"&", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  nil);
     self.usesAbbreviatedConjunction = NO;
     self.usesSerialDelimiter = YES;
 
@@ -146,7 +147,7 @@
             *obj = [NSArray arrayWithArray:components];
         } else {
             if (error) {
-                *error = NSLocalizedStringFromTableInBundle(@"Couldn’t convert to NSArray", @"FormatterKit", [NSBundle bundleForClass:[self class]],  @"Error converting to NSArray");
+                *error = NSLocalizedStringFromTableInBundle(@"Couldn’t convert to NSArray", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Error converting to NSArray");
             }
         }
     }
