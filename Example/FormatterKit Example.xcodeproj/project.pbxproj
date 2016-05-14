@@ -11,6 +11,7 @@
 		500C616B1CE79EE7002A1D96 /* ArrayFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C616A1CE79EE7002A1D96 /* ArrayFormatterTests.swift */; };
 		502F03151CA8FDCC0026119C /* FormatterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502F03141CA8FDCC0026119C /* FormatterKit.framework */; };
 		5044222F1CE7A188005E5721 /* ArrayFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5044222E1CE7A188005E5721 /* ArrayFormatterTests.swift */; };
+		504422311CE7A417005E5721 /* ColorFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504422301CE7A417005E5721 /* ColorFormatterTests.swift */; };
 		505136C41CCE1EF600569478 /* TimeIntervalFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505136C31CCE1EF600569478 /* TimeIntervalFormatterTests.swift */; };
 		50ACC1E31CD0B0DA004FB5F1 /* TimeIntervalFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ACC1E21CD0B0DA004FB5F1 /* TimeIntervalFormatterTests.swift */; };
 		50ACC1F11CD0B111004FB5F1 /* TimeIntervalFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ACC1F01CD0B111004FB5F1 /* TimeIntervalFormatterTests.swift */; };
@@ -320,6 +321,7 @@
 		502F03141CA8FDCC0026119C /* FormatterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FormatterKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/FormatterKit-evcpsmwiwrimnmfbebdofilhkvkp/Build/Products/Debug-iphonesimulator/FormatterKit.framework"; sourceTree = "<group>"; };
 		504295131C683A9C00143D6F /* FormatterKit Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FormatterKit Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		5044222E1CE7A188005E5721 /* ArrayFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayFormatterTests.swift; sourceTree = "<group>"; };
+		504422301CE7A417005E5721 /* ColorFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorFormatterTests.swift; sourceTree = "<group>"; };
 		505136C11CCE1EF600569478 /* Tests-Russian.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-Russian.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		505136C31CCE1EF600569478 /* TimeIntervalFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalFormatterTests.swift; sourceTree = "<group>"; };
 		50ACC1E01CD0B0DA004FB5F1 /* Tests-Arabic.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-Arabic.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -967,6 +969,7 @@
 			children = (
 				50F3E8BD1CCE144D00BC8526 /* TimeIntervalFormatterTests.swift */,
 				500C616A1CE79EE7002A1D96 /* ArrayFormatterTests.swift */,
+				504422301CE7A417005E5721 /* ColorFormatterTests.swift */,
 			);
 			name = English;
 			path = "Tests-English";
@@ -2367,6 +2370,7 @@
 			files = (
 				50F3E8BE1CCE144D00BC8526 /* TimeIntervalFormatterTests.swift in Sources */,
 				500C616B1CE79EE7002A1D96 /* ArrayFormatterTests.swift in Sources */,
+				504422311CE7A417005E5721 /* ColorFormatterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
