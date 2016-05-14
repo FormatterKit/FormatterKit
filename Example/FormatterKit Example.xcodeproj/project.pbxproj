@@ -1683,7 +1683,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = Gowalla;
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					505136C01CCE1EF600569478 = {
 						CreatedOnToolsVersion = 7.3.1;
