@@ -43,6 +43,43 @@ task :spec => :clean do
   exit status
 end
 
+desc 'Runs all integration tests. Note: exit status is not handled properly.'
+task :integration_tests => [
+  'integration:cocoapods_ios',
+  'integration:cocoapods_ios_static',
+  'integration:cocoapods_osx',
+  'integration:carthage_ios',
+  'integration:carthage_osx'
+]
+
+namespace :integration do
+  task :cocoapods_ios do
+    puts "travis_fold:start:integration.cocoapods_ios" if is_travis?
+    run "cd ./IntegrationTests/CocoaPods-iOS && ./run.sh; cd -"
+    puts "travis_fold:end:integration.cocoapods_ios" if is_travis?
+  end
+  task :cocoapods_ios_static do
+    puts "travis_fold:start:integration.cocoapods_ios_static" if is_travis?
+    run "cd ./IntegrationTests/CocoaPods-iOS-static && ./run.sh; cd -"
+    puts "travis_fold:end:integration.cocoapods_ios_static" if is_travis?
+  end
+  task :cocoapods_osx do
+    puts "travis_fold:start:integration.cocoapods_osx" if is_travis?
+    run "cd ./IntegrationTests/CocoaPods-OSX && ./run.sh; cd -"
+    puts "travis_fold:end:integration.cocoapods_osx" if is_travis?
+  end
+  task :carthage_ios do
+    puts "travis_fold:start:integration.cocoapods_carthage_ios" if is_travis?
+    run "cd ./IntegrationTests/Carthage-iOS && ./run.sh; cd -"
+    puts "travis_fold:end:integration.cocoapods_carthage_ios" if is_travis?
+  end
+  task :carthage_osx do
+    puts "travis_fold:start:integration.cocoapods_carthage_osx" if is_travis?
+    run "cd ./IntegrationTests/Carthage-OSX && ./run.sh; cd -"
+    puts "travis_fold:end:integration.cocoapods_carthage_osx" if is_travis?
+  end
+end
+
 desc 'Prints code coverage statistics.'
 task :coverage => ['coverage:consolidate'] do
   run "bundle exec slather coverage"
