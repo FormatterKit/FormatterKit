@@ -11,6 +11,8 @@ script:
   - bundle exec rake integration:cocoapods_osx
   - bundle exec rake integration:carthage_ios
   - bundle exec rake integration:carthage_osx
+  - bundle exec pod lib lint
+  - bundle exec pod lib lint --use-libraries
 
 after_success:
   - bundle exec rake "coverage:consolidate"
