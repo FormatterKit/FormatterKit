@@ -1,19 +1,22 @@
 language: objective-c
 osx_image: xcode7.3
 
-install:
-  - bundle install
+cache: bundler
+
+env:
+  - TTT_LANGS="Arabic Catalan Chinese-Simplified Chinese-Traditional Czech Danish Dutch English French German"
+  - TTT_LANGS="Greek Hebrew Hungarian Indonesian Italian Japanese Korean Malay Norwegian-Bokmal Norwegian-Nynorsk"
+  - TTT_LANGS="Polish Portuguese Portuguese-Brazil Romanian Russian Spanish Swedish Thai Turkish Ukrainian Vietnamese"
+  - TTT_COMMAND="rake integration:cocoapods_ios"
+  - TTT_COMMAND="rake integration:cocoapods_ios_static"
+  - TTT_COMMAND="rake integration:cocoapods_osx"
+  - TTT_COMMAND="rake integration:carthage_ios"
+  - TTT_COMMAND="rake integration:carthage_osx"
+  - TTT_COMMAND="pod lib lint"
+  - TTT_COMMAND="pod lib lint --use-libraries"
 
 script:
-  - bundle exec rake spec
-  - bundle exec rake integration:cocoapods_ios
-  - bundle exec rake integration:cocoapods_ios_static
-  - bundle exec rake integration:cocoapods_osx
-  - bundle exec rake integration:carthage_ios
-  - bundle exec rake integration:carthage_osx
-  - bundle exec pod lib lint
-  - bundle exec pod lib lint --use-libraries
+  - test -n "$TTT_LANGS" && rake spec || bundle exec $TTT_COMMAND
 
 after_success:
-  - bundle exec rake "coverage:consolidate"
-  - bundle exec slather coverage --coveralls
+  - test -n "$TTT_LANGS" && bundle exec rake "coverage:consolidate" && bundle exec slather coverage --coveralls

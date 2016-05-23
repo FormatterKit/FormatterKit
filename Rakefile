@@ -1,4 +1,4 @@
-languages = [
+KNOWN_LANGUAGES = [
   'Arabic', 'Catalan', 'Chinese-Simplified', 'Chinese-Traditional',
   'Czech', 'Danish', 'Dutch', 'English', 'French', 'German', 'Greek',
   'Hebrew', 'Hungarian', 'Indonesian', 'Italian', 'Japanese', 'Korean',
@@ -23,20 +23,26 @@ task :clean do
   run "rm -rf build/"
 end
 
-desc 'Run unit tests'
-task :spec => :clean do
+def languages
+  if ENV["TTT_LANGS"]
+    passed_langs = ENV["TTT_LANGS"].split(' ')
+    raise "Unknown language(s) in `#{ENV["TTT_LANGS"]}`" unless passed_langs.all? { |l| KNOWN_LANGUAGES.include?(l) }
+    passed_langs
+  else
+    KNOWN_LANGUAGES
+  end
+end
+
+desc 'Runs unit tests. '
+task :spec do
   status = languages.map do |lang|
     if is_travis?
       puts "travis_fold:start:ios.tests.#{lang}"
     else
       puts "===\n=== Running tests for #{lang}\n==="
     end
-
     status = run "xcodebuild -workspace FormatterKit.xcworkspace -scheme #{lang} -sdk iphonesimulator -derivedDataPath build/DerivedData/#{lang} test | bundle exec xcpretty --test && exit ${PIPESTATUS[0]}" || 0
-    if status.zero? && is_travis?
-      puts "travis_fold:end:ios.tests.#{lang}"
-    end
-
+    puts "travis_fold:end:ios.tests.#{lang}" if is_travis? && status.zero?
     status
   end.max
 
@@ -97,6 +103,8 @@ namespace :coverage do
     dir = 'build/slather/FormatterKit\\ Example'
     run "mkdir -p #{dir}"
     run "xcrun llvm-profdata merge -output=#{dir}/Coverage.profdata #{paths.join " "}"
+    # Copy binary file for slather to find
+    run "cp -R build/DerivedData/#{languages.first}/Build/Intermediates/CodeCoverage/Products/Debug-iphonesimulator/FormatterKit.framework build/slather/"
   end
 end
 
