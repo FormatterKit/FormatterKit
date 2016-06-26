@@ -1,0 +1,7 @@
+use_frameworks!
+
+target 'watchOS App Extension' do
+  platform :watchos, '2.0'
+  pod 'FormatterKit', :path => '../../'
+end
+
