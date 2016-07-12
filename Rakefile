@@ -54,8 +54,10 @@ task :integration_tests => [
   'integration:cocoapods_ios',
   'integration:cocoapods_ios_static',
   'integration:cocoapods_osx',
+  'integration:cocoapods_watchos',
   'integration:carthage_ios',
-  'integration:carthage_osx'
+  'integration:carthage_osx',
+  'integration:carthage_watchos',
 ]
 
 namespace :integration do
@@ -74,6 +76,11 @@ namespace :integration do
     run "cd ./IntegrationTests/CocoaPods-OSX && ./run.sh; cd -"
     puts "travis_fold:end:integration.cocoapods_osx" if is_travis?
   end
+  task :cocoapods_watchos do
+    puts "travis_fold:start:integration.cocoapods_watchos" if is_travis?
+    run "cd ./IntegrationTests/CocoaPods-watchOS && ./run.sh; cd -"
+    puts "travis_fold:end:integration.cocoapods_watchos" if is_travis?
+  end
   task :carthage_ios do
     puts "travis_fold:start:integration.cocoapods_carthage_ios" if is_travis?
     run "cd ./IntegrationTests/Carthage-iOS && ./run.sh; cd -"
@@ -83,6 +90,11 @@ namespace :integration do
     puts "travis_fold:start:integration.cocoapods_carthage_osx" if is_travis?
     run "cd ./IntegrationTests/Carthage-OSX && ./run.sh; cd -"
     puts "travis_fold:end:integration.cocoapods_carthage_osx" if is_travis?
+  end
+  task :carthage_watchos do
+    puts "travis_fold:start:integration.cocoapods_carthage_watchos" if is_travis?
+    run "cd ./IntegrationTests/Carthage-watchOS && ./run.sh; cd -"
+    puts "travis_fold:end:integration.cocoapods_carthage_watchos" if is_travis?
   end
 end
 

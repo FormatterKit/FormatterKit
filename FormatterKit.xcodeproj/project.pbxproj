@@ -47,6 +47,26 @@
 		5B08B6B71CA6A26A009541EC /* FormatterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B66C1CA69F99009541EC /* FormatterKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B31FE411CA6B47800309D75 /* FormatterKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B31FE231CA6B47800309D75 /* FormatterKit.strings */; };
 		5B31FE421CA6B47800309D75 /* FormatterKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B31FE231CA6B47800309D75 /* FormatterKit.strings */; };
+		FE65C4751D1EF6FE00A8AC9D /* FormatterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B66C1CA69F99009541EC /* FormatterKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE65C4781D1EF70E00A8AC9D /* TTTArrayFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B6831CA6A0C3009541EC /* TTTArrayFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE65C4791D1EF71400A8AC9D /* TTTArrayFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B08B6841CA6A0C3009541EC /* TTTArrayFormatter.m */; };
+		FE65C47A1D1EF72100A8AC9D /* TTTColorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B08B6861CA6A0C3009541EC /* TTTColorFormatter.m */; };
+		FE65C47B1D1EF72100A8AC9D /* TTTLocationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B08B6881CA6A0C3009541EC /* TTTLocationFormatter.m */; };
+		FE65C47D1D1EF72100A8AC9D /* TTTOrdinalNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B08B68C1CA6A0C3009541EC /* TTTOrdinalNumberFormatter.m */; };
+		FE65C47E1D1EF72100A8AC9D /* TTTTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B08B68E1CA6A0C3009541EC /* TTTTimeIntervalFormatter.m */; };
+		FE65C47F1D1EF72100A8AC9D /* TTTUnitOfInformationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B08B6901CA6A0C3009541EC /* TTTUnitOfInformationFormatter.m */; };
+		FE65C4801D1EF72100A8AC9D /* TTTURLRequestFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B08B6921CA6A0C3009541EC /* TTTURLRequestFormatter.m */; };
+		FE65C4811D1EF72C00A8AC9D /* TTTColorFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B6851CA6A0C3009541EC /* TTTColorFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE65C4821D1EF72C00A8AC9D /* TTTLocationFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B6871CA6A0C3009541EC /* TTTLocationFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE65C4841D1EF72C00A8AC9D /* TTTOrdinalNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B68B1CA6A0C3009541EC /* TTTOrdinalNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE65C4851D1EF72C00A8AC9D /* TTTTimeIntervalFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B68D1CA6A0C3009541EC /* TTTTimeIntervalFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE65C4861D1EF72C00A8AC9D /* TTTUnitOfInformationFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B68F1CA6A0C3009541EC /* TTTUnitOfInformationFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE65C4871D1EF72C00A8AC9D /* TTTURLRequestFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B6911CA6A0C3009541EC /* TTTURLRequestFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE65C4881D1EF74800A8AC9D /* FormatterKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B31FE231CA6B47800309D75 /* FormatterKit.strings */; };
+		FE65C4891D1EF8B900A8AC9D /* TTTAddressFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B6811CA6A0C3009541EC /* TTTAddressFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE65C48A1D1F066700A8AC9D /* TTTNameFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B08B68A1CA6A0C3009541EC /* TTTNameFormatter.m */; };
+		FE65C48B1D1F066A00A8AC9D /* TTTAddressFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B08B6821CA6A0C3009541EC /* TTTAddressFormatter.m */; };
+		FE65C48C1D1F066F00A8AC9D /* TTTNameFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B6891CA6A0C3009541EC /* TTTNameFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +123,7 @@
 		5B31FE3E1CA6B47800309D75 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/FormatterKit.strings; sourceTree = "<group>"; };
 		5B31FE3F1CA6B47800309D75 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/FormatterKit.strings"; sourceTree = "<group>"; };
 		5B31FE401CA6B47800309D75 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/FormatterKit.strings"; sourceTree = "<group>"; };
+		FE65C46D1D1EF59200A8AC9D /* FormatterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FormatterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +135,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5B08B6751CA6A078009541EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE65C4691D1EF59200A8AC9D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -137,6 +165,7 @@
 			children = (
 				5B08B6691CA69F99009541EC /* FormatterKit.framework */,
 				5B08B6791CA6A078009541EC /* FormatterKit.framework */,
+				FE65C46D1D1EF59200A8AC9D /* FormatterKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,6 +242,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FE65C46A1D1EF59200A8AC9D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE65C4811D1EF72C00A8AC9D /* TTTColorFormatter.h in Headers */,
+				FE65C48C1D1F066F00A8AC9D /* TTTNameFormatter.h in Headers */,
+				FE65C4841D1EF72C00A8AC9D /* TTTOrdinalNumberFormatter.h in Headers */,
+				FE65C4751D1EF6FE00A8AC9D /* FormatterKit.h in Headers */,
+				FE65C4871D1EF72C00A8AC9D /* TTTURLRequestFormatter.h in Headers */,
+				FE65C4851D1EF72C00A8AC9D /* TTTTimeIntervalFormatter.h in Headers */,
+				FE65C4821D1EF72C00A8AC9D /* TTTLocationFormatter.h in Headers */,
+				FE65C4891D1EF8B900A8AC9D /* TTTAddressFormatter.h in Headers */,
+				FE65C4861D1EF72C00A8AC9D /* TTTUnitOfInformationFormatter.h in Headers */,
+				FE65C4781D1EF70E00A8AC9D /* TTTArrayFormatter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -252,6 +298,24 @@
 			productReference = 5B08B6791CA6A078009541EC /* FormatterKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		FE65C46C1D1EF59200A8AC9D /* FormatterKit-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE65C4741D1EF59200A8AC9D /* Build configuration list for PBXNativeTarget "FormatterKit-watchOS" */;
+			buildPhases = (
+				FE65C4681D1EF59200A8AC9D /* Sources */,
+				FE65C4691D1EF59200A8AC9D /* Frameworks */,
+				FE65C46A1D1EF59200A8AC9D /* Headers */,
+				FE65C46B1D1EF59200A8AC9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FormatterKit-watchOS";
+			productName = "FormatterKit-watchOS";
+			productReference = FE65C46D1D1EF59200A8AC9D /* FormatterKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -266,6 +330,9 @@
 					};
 					5B08B6781CA6A078009541EC = {
 						CreatedOnToolsVersion = 7.3;
+					};
+					FE65C46C1D1EF59200A8AC9D = {
+						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
 			};
@@ -313,6 +380,7 @@
 			targets = (
 				5B08B6681CA69F99009541EC /* FormatterKit-iOS */,
 				5B08B6781CA6A078009541EC /* FormatterKit-OSX */,
+				FE65C46C1D1EF59200A8AC9D /* FormatterKit-watchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -331,6 +399,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B31FE421CA6B47800309D75 /* FormatterKit.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE65C46B1D1EF59200A8AC9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE65C4881D1EF74800A8AC9D /* FormatterKit.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +442,22 @@
 				5B08B6B21CA6A0C3009541EC /* TTTUnitOfInformationFormatter.m in Sources */,
 				5B08B6A21CA6A0C3009541EC /* TTTLocationFormatter.m in Sources */,
 				5B08B69E1CA6A0C3009541EC /* TTTColorFormatter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE65C4681D1EF59200A8AC9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE65C47D1D1EF72100A8AC9D /* TTTOrdinalNumberFormatter.m in Sources */,
+				FE65C4791D1EF71400A8AC9D /* TTTArrayFormatter.m in Sources */,
+				FE65C47E1D1EF72100A8AC9D /* TTTTimeIntervalFormatter.m in Sources */,
+				FE65C4801D1EF72100A8AC9D /* TTTURLRequestFormatter.m in Sources */,
+				FE65C47F1D1EF72100A8AC9D /* TTTUnitOfInformationFormatter.m in Sources */,
+				FE65C47B1D1EF72100A8AC9D /* TTTLocationFormatter.m in Sources */,
+				FE65C48B1D1F066A00A8AC9D /* TTTAddressFormatter.m in Sources */,
+				FE65C48A1D1F066700A8AC9D /* TTTNameFormatter.m in Sources */,
+				FE65C47A1D1EF72100A8AC9D /* TTTColorFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +550,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -500,6 +593,7 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -579,6 +673,46 @@
 			};
 			name = Release;
 		};
+		FE65C4721D1EF59200A8AC9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FormatterKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.matt.FormatterKit.FormatterKit-watchOS";
+				PRODUCT_NAME = FormatterKit;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		FE65C4731D1EF59200A8AC9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FormatterKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.matt.FormatterKit.FormatterKit-watchOS";
+				PRODUCT_NAME = FormatterKit;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -608,6 +742,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		FE65C4741D1EF59200A8AC9D /* Build configuration list for PBXNativeTarget "FormatterKit-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE65C4721D1EF59200A8AC9D /* Debug */,
+				FE65C4731D1EF59200A8AC9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

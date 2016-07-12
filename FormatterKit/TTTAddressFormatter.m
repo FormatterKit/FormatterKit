@@ -22,6 +22,8 @@
 
 #import "TTTAddressFormatter.h"
 
+#if !TARGET_OS_WATCH
+
 #import <Availability.h>
 
 #import <AddressBook/AddressBook.h>
@@ -145,3 +147,5 @@
 }
 
 @end
+
+#endif

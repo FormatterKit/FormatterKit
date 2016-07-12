@@ -22,6 +22,8 @@
 
 #import <Foundation/Foundation.h>
 
+#if !TARGET_OS_WATCH
+
 /**
  Instances of `TTTAddressFormatter` create address strings formatted according to a given locale.
  
@@ -67,3 +69,5 @@
                                   country:(NSString *)country;
 
 @end
+
+#endif
