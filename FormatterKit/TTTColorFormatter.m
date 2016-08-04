@@ -100,10 +100,15 @@ static void TTTGetHSLComponentsFromColor(UIColor *color, CGFloat *hue, CGFloat *
     unsigned value;
     [scanner scanHexInt:&value];
 
-    CGFloat r = ((value & 0xFF0000) >> 16) / 255.0f;
-    CGFloat g = ((value & 0xFF00) >> 8) / 255.0f;
-    CGFloat b = ((value & 0xFF)) / 255.0f;
+    return [self colorFromHexadecimalNumber:value];
+}
 
+-(UIColor *)colorFromHexadecimalNumber:(NSInteger)integer
+{
+    CGFloat r = ((integer & 0xFF0000) >> 16) / 255.0f;
+    CGFloat g = ((integer & 0xFF00) >> 8) / 255.0f;
+    CGFloat b = ((integer & 0xFF)) / 255.0f;
+    
     return [UIColor colorWithRed:r green:g blue:b alpha:1.0];
 }
 
