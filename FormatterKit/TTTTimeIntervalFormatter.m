@@ -83,9 +83,9 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         }
     } else {
         if (a > b) {
-            return NSOrderedAscending;
-        } else if (a < b) {
             return NSOrderedDescending;
+        } else if (a < b) {
+            return NSOrderedAscending;
         } else {
             return NSOrderedSame;
         }
