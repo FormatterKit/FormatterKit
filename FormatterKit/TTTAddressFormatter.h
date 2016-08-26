@@ -22,7 +22,7 @@
 
 #import <Foundation/Foundation.h>
 
-#if !TARGET_OS_WATCH
+#if !TARGET_OS_WATCH && !TARGET_OS_TV
 
 /**
  Instances of `TTTAddressFormatter` create address strings formatted according to a given locale.
