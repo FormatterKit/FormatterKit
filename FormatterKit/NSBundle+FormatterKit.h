@@ -23,6 +23,10 @@
 
 #import <Foundation/Foundation.h>
 
+#define TTT_BUNDLE TTT_BUNDLE_INLINE(self)
+
+#define TTT_BUNDLE_INLINE(klass) [NSBundle formatterKitBundle] ?: [NSBundle bundleForClass:[klass class]]
+
 @interface NSBundle (FormatterKit)
 
 /**

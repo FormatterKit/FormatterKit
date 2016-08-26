@@ -38,10 +38,10 @@
         return nil;
     }
 
-    self.delimiter = NSLocalizedStringFromTableInBundle(@",", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"List delimiter");
-    self.separator = NSLocalizedStringFromTableInBundle(@" ", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"List separator");
-    self.conjunction = NSLocalizedStringFromTableInBundle(@"and", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"List conjunction");
-    self.abbreviatedConjunction = NSLocalizedStringFromTableInBundle(@"&", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  nil);
+    self.delimiter = NSLocalizedStringFromTableInBundle(@",", @"FormatterKit", TTT_BUNDLE,  @"List delimiter");
+    self.separator = NSLocalizedStringFromTableInBundle(@" ", @"FormatterKit", TTT_BUNDLE,  @"List separator");
+    self.conjunction = NSLocalizedStringFromTableInBundle(@"and", @"FormatterKit", TTT_BUNDLE,  @"List conjunction");
+    self.abbreviatedConjunction = NSLocalizedStringFromTableInBundle(@"&", @"FormatterKit", TTT_BUNDLE,  nil);
     self.usesAbbreviatedConjunction = NO;
     self.usesSerialDelimiter = YES;
 
@@ -147,7 +147,7 @@
             *obj = [NSArray arrayWithArray:components];
         } else {
             if (error) {
-                *error = NSLocalizedStringFromTableInBundle(@"Couldn’t convert to NSArray", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Error converting to NSArray");
+                *error = NSLocalizedStringFromTableInBundle(@"Couldn’t convert to NSArray", @"FormatterKit", TTT_BUNDLE,  @"Error converting to NSArray");
             }
         }
     }
