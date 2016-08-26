@@ -123,6 +123,7 @@
 		5B31FE3E1CA6B47800309D75 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/FormatterKit.strings; sourceTree = "<group>"; };
 		5B31FE3F1CA6B47800309D75 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/FormatterKit.strings"; sourceTree = "<group>"; };
 		5B31FE401CA6B47800309D75 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/FormatterKit.strings"; sourceTree = "<group>"; };
+		6E61BBE31D54986100C22F50 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/FormatterKit.strings; sourceTree = "<group>"; };
 		FE65C46D1D1EF59200A8AC9D /* FormatterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FormatterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -372,6 +373,7 @@
 				"zh-Hant",
 				hu,
 				ms,
+				bg,
 			);
 			mainGroup = 5B08B65F1CA69F99009541EC;
 			productRefGroup = 5B08B66A1CA69F99009541EC /* Products */;
@@ -498,6 +500,7 @@
 				5B31FE401CA6B47800309D75 /* zh-Hant */,
 				5006052F1CA8CCDE00F9DD6B /* hu */,
 				500605301CA8CCFF00F9DD6B /* ms */,
+				6E61BBE31D54986100C22F50 /* bg */,
 			);
 			name = FormatterKit.strings;
 			sourceTree = "<group>";
@@ -750,6 +753,7 @@
 				FE65C4731D1EF59200A8AC9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
