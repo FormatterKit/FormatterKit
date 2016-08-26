@@ -89,24 +89,24 @@ namespace :integration do
     puts "travis_fold:end:integration.cocoapods_tvos" if is_travis?
   end
   task :carthage_ios do
-    puts "travis_fold:start:integration.cocoapods_carthage_ios" if is_travis?
+    puts "travis_fold:start:integration.carthage_ios" if is_travis?
     run "cd ./IntegrationTests/Carthage-iOS && ./run.sh; cd -"
-    puts "travis_fold:end:integration.cocoapods_carthage_ios" if is_travis?
+    puts "travis_fold:end:integration.carthage_ios" if is_travis?
   end
   task :carthage_osx do
-    puts "travis_fold:start:integration.cocoapods_carthage_osx" if is_travis?
+    puts "travis_fold:start:integration.carthage_osx" if is_travis?
     run "cd ./IntegrationTests/Carthage-OSX && ./run.sh; cd -"
-    puts "travis_fold:end:integration.cocoapods_carthage_osx" if is_travis?
+    puts "travis_fold:end:integration.carthage_osx" if is_travis?
   end
   task :carthage_watchos do
-    puts "travis_fold:start:integration.cocoapods_carthage_watchos" if is_travis?
+    puts "travis_fold:start:integration.carthage_watchos" if is_travis?
     run "cd ./IntegrationTests/Carthage-watchOS && ./run.sh; cd -"
-    puts "travis_fold:end:integration.cocoapods_carthage_watchos" if is_travis?
+    puts "travis_fold:end:integration.carthage_watchos" if is_travis?
   end
   task :carthage_tvos do
-    puts "travis_fold:start:integration.cocoapods_carthage_tvos" if is_travis?
+    puts "travis_fold:start:integration.carthage_tvos" if is_travis?
     run "cd ./IntegrationTests/Carthage-tvOS && ./run.sh; cd -"
-    puts "travis_fold:end:integration.cocoapods_carthage_tvos" if is_travis?
+    puts "travis_fold:end:integration.carthage_tvos" if is_travis?
   end
 end
 
