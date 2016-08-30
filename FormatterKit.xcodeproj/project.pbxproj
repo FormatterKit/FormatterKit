@@ -15,6 +15,10 @@
 		50B7E6B81D706201006BEE5C /* NSBundle+FormatterKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B7E6B21D706201006BEE5C /* NSBundle+FormatterKit.m */; };
 		50B7E6B91D706201006BEE5C /* NSBundle+FormatterKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B7E6B21D706201006BEE5C /* NSBundle+FormatterKit.m */; };
 		50B7E6BA1D706201006BEE5C /* NSBundle+FormatterKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B7E6B21D706201006BEE5C /* NSBundle+FormatterKit.m */; };
+		50B8F3141D75BF7700384040 /* FormatterKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 50B8F3131D75BF7700384040 /* FormatterKit.bundle */; };
+		50B8F3151D75BF7700384040 /* FormatterKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 50B8F3131D75BF7700384040 /* FormatterKit.bundle */; };
+		50B8F3161D75BF7700384040 /* FormatterKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 50B8F3131D75BF7700384040 /* FormatterKit.bundle */; };
+		50B8F3171D75BF7700384040 /* FormatterKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 50B8F3131D75BF7700384040 /* FormatterKit.bundle */; };
 		5B08B66D1CA69F99009541EC /* FormatterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B66C1CA69F99009541EC /* FormatterKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B08B6931CA6A0C3009541EC /* TTTAddressFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B6811CA6A0C3009541EC /* TTTAddressFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B08B6941CA6A0C3009541EC /* TTTAddressFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B6811CA6A0C3009541EC /* TTTAddressFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -53,8 +57,6 @@
 		5B08B6B51CA6A0C3009541EC /* TTTURLRequestFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B08B6921CA6A0C3009541EC /* TTTURLRequestFormatter.m */; };
 		5B08B6B61CA6A0C3009541EC /* TTTURLRequestFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B08B6921CA6A0C3009541EC /* TTTURLRequestFormatter.m */; };
 		5B08B6B71CA6A26A009541EC /* FormatterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B66C1CA69F99009541EC /* FormatterKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5B31FE411CA6B47800309D75 /* FormatterKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B31FE231CA6B47800309D75 /* FormatterKit.strings */; };
-		5B31FE421CA6B47800309D75 /* FormatterKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B31FE231CA6B47800309D75 /* FormatterKit.strings */; };
 		FE4100C41D4996140059B762 /* FormatterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B66C1CA69F99009541EC /* FormatterKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE4100C51D4996140059B762 /* TTTAddressFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B6811CA6A0C3009541EC /* TTTAddressFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE4100C61D4996140059B762 /* TTTArrayFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B6831CA6A0C3009541EC /* TTTArrayFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -74,7 +76,6 @@
 		FE4100D41D4996310059B762 /* TTTTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B08B68E1CA6A0C3009541EC /* TTTTimeIntervalFormatter.m */; };
 		FE4100D51D4996310059B762 /* TTTUnitOfInformationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B08B6901CA6A0C3009541EC /* TTTUnitOfInformationFormatter.m */; };
 		FE4100D61D4996310059B762 /* TTTURLRequestFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B08B6921CA6A0C3009541EC /* TTTURLRequestFormatter.m */; };
-		FE41013A1D49A2140059B762 /* FormatterKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B31FE231CA6B47800309D75 /* FormatterKit.strings */; };
 		FE65C4751D1EF6FE00A8AC9D /* FormatterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B66C1CA69F99009541EC /* FormatterKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE65C4781D1EF70E00A8AC9D /* TTTArrayFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B6831CA6A0C3009541EC /* TTTArrayFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE65C4791D1EF71400A8AC9D /* TTTArrayFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B08B6841CA6A0C3009541EC /* TTTArrayFormatter.m */; };
@@ -90,7 +91,6 @@
 		FE65C4851D1EF72C00A8AC9D /* TTTTimeIntervalFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B68D1CA6A0C3009541EC /* TTTTimeIntervalFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE65C4861D1EF72C00A8AC9D /* TTTUnitOfInformationFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B68F1CA6A0C3009541EC /* TTTUnitOfInformationFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE65C4871D1EF72C00A8AC9D /* TTTURLRequestFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B6911CA6A0C3009541EC /* TTTURLRequestFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FE65C4881D1EF74800A8AC9D /* FormatterKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B31FE231CA6B47800309D75 /* FormatterKit.strings */; };
 		FE65C4891D1EF8B900A8AC9D /* TTTAddressFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B08B6811CA6A0C3009541EC /* TTTAddressFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE65C48A1D1F066700A8AC9D /* TTTNameFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B08B68A1CA6A0C3009541EC /* TTTNameFormatter.m */; };
 		FE65C48B1D1F066A00A8AC9D /* TTTAddressFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B08B6821CA6A0C3009541EC /* TTTAddressFormatter.m */; };
@@ -98,10 +98,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5006052F1CA8CCDE00F9DD6B /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		500605301CA8CCFF00F9DD6B /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = ms.lproj/FormatterKit.strings; sourceTree = "<group>"; };
 		50B7E6B11D706201006BEE5C /* NSBundle+FormatterKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+FormatterKit.h"; sourceTree = "<group>"; };
 		50B7E6B21D706201006BEE5C /* NSBundle+FormatterKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+FormatterKit.m"; sourceTree = "<group>"; };
+		50B8F3131D75BF7700384040 /* FormatterKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FormatterKit.bundle; sourceTree = "<group>"; };
 		5B08B6691CA69F99009541EC /* FormatterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FormatterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B08B66C1CA69F99009541EC /* FormatterKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FormatterKit.h; sourceTree = "<group>"; };
 		5B08B66E1CA69F99009541EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,35 +123,6 @@
 		5B08B6901CA6A0C3009541EC /* TTTUnitOfInformationFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTUnitOfInformationFormatter.m; sourceTree = "<group>"; };
 		5B08B6911CA6A0C3009541EC /* TTTURLRequestFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTURLRequestFormatter.h; sourceTree = "<group>"; };
 		5B08B6921CA6A0C3009541EC /* TTTURLRequestFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTURLRequestFormatter.m; sourceTree = "<group>"; };
-		5B31FE241CA6B47800309D75 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE251CA6B47800309D75 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE261CA6B47800309D75 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE271CA6B47800309D75 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE281CA6B47800309D75 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE291CA6B47800309D75 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE2A1CA6B47800309D75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE2B1CA6B47800309D75 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE2C1CA6B47800309D75 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE2D1CA6B47800309D75 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE2E1CA6B47800309D75 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE2F1CA6B47800309D75 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE301CA6B47800309D75 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE311CA6B47800309D75 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE321CA6B47800309D75 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE331CA6B47800309D75 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE341CA6B47800309D75 /* nn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nn; path = nn.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE351CA6B47800309D75 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE361CA6B47800309D75 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE371CA6B47800309D75 /* pt_BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt_BR; path = pt_BR.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE381CA6B47800309D75 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE391CA6B47800309D75 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE3A1CA6B47800309D75 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE3B1CA6B47800309D75 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE3C1CA6B47800309D75 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE3D1CA6B47800309D75 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE3E1CA6B47800309D75 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/FormatterKit.strings; sourceTree = "<group>"; };
-		5B31FE3F1CA6B47800309D75 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/FormatterKit.strings"; sourceTree = "<group>"; };
-		5B31FE401CA6B47800309D75 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/FormatterKit.strings"; sourceTree = "<group>"; };
 		FE4100BC1D4995EE0059B762 /* FormatterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FormatterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE65C46D1D1EF59200A8AC9D /* FormatterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FormatterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -193,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				5B08B66B1CA69F99009541EC /* FormatterKit */,
-				5B31FE221CA6B47800309D75 /* Localizations */,
 				5B08B66A1CA69F99009541EC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -212,6 +181,7 @@
 		5B08B66B1CA69F99009541EC /* FormatterKit */ = {
 			isa = PBXGroup;
 			children = (
+				50B8F3131D75BF7700384040 /* FormatterKit.bundle */,
 				5B08B66C1CA69F99009541EC /* FormatterKit.h */,
 				5B08B66E1CA69F99009541EC /* Info.plist */,
 				50B7E6B11D706201006BEE5C /* NSBundle+FormatterKit.h */,
@@ -236,14 +206,6 @@
 				5B08B6921CA6A0C3009541EC /* TTTURLRequestFormatter.m */,
 			);
 			path = FormatterKit;
-			sourceTree = "<group>";
-		};
-		5B31FE221CA6B47800309D75 /* Localizations */ = {
-			isa = PBXGroup;
-			children = (
-				5B31FE231CA6B47800309D75 /* FormatterKit.strings */,
-			);
-			path = Localizations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -474,7 +436,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B31FE411CA6B47800309D75 /* FormatterKit.strings in Resources */,
+				50B8F3141D75BF7700384040 /* FormatterKit.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +444,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B31FE421CA6B47800309D75 /* FormatterKit.strings in Resources */,
+				50B8F3151D75BF7700384040 /* FormatterKit.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,7 +452,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE41013A1D49A2140059B762 /* FormatterKit.strings in Resources */,
+				50B8F3171D75BF7700384040 /* FormatterKit.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,7 +460,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE65C4881D1EF74800A8AC9D /* FormatterKit.strings in Resources */,
+				50B8F3161D75BF7700384040 /* FormatterKit.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,47 +536,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		5B31FE231CA6B47800309D75 /* FormatterKit.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5B31FE241CA6B47800309D75 /* ar */,
-				5B31FE251CA6B47800309D75 /* ca */,
-				5B31FE261CA6B47800309D75 /* cs */,
-				5B31FE271CA6B47800309D75 /* da */,
-				5B31FE281CA6B47800309D75 /* de */,
-				5B31FE291CA6B47800309D75 /* el */,
-				5B31FE2A1CA6B47800309D75 /* en */,
-				5B31FE2B1CA6B47800309D75 /* es */,
-				5B31FE2C1CA6B47800309D75 /* fr */,
-				5B31FE2D1CA6B47800309D75 /* he */,
-				5B31FE2E1CA6B47800309D75 /* id */,
-				5B31FE2F1CA6B47800309D75 /* it */,
-				5B31FE301CA6B47800309D75 /* ja */,
-				5B31FE311CA6B47800309D75 /* ko */,
-				5B31FE321CA6B47800309D75 /* nb */,
-				5B31FE331CA6B47800309D75 /* nl */,
-				5B31FE341CA6B47800309D75 /* nn */,
-				5B31FE351CA6B47800309D75 /* pl */,
-				5B31FE361CA6B47800309D75 /* pt */,
-				5B31FE371CA6B47800309D75 /* pt_BR */,
-				5B31FE381CA6B47800309D75 /* ro */,
-				5B31FE391CA6B47800309D75 /* ru */,
-				5B31FE3A1CA6B47800309D75 /* sv */,
-				5B31FE3B1CA6B47800309D75 /* th */,
-				5B31FE3C1CA6B47800309D75 /* tr */,
-				5B31FE3D1CA6B47800309D75 /* uk */,
-				5B31FE3E1CA6B47800309D75 /* vi */,
-				5B31FE3F1CA6B47800309D75 /* zh-Hans */,
-				5B31FE401CA6B47800309D75 /* zh-Hant */,
-				5006052F1CA8CCDE00F9DD6B /* hu */,
-				500605301CA8CCFF00F9DD6B /* ms */,
-			);
-			name = FormatterKit.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5B08B66F1CA69F99009541EC /* Debug */ = {
