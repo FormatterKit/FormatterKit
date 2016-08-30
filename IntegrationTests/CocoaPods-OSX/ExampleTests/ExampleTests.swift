@@ -14,4 +14,8 @@ class ExampleTests: XCTestCase {
     let a = AppDelegate()
     XCTAssertEqual(a.foo(), "il y a 1 heure")
   }
+
+  func testNumberOfLocalizations() {
+    XCTAssertEqual(NSBundle.mainBundle().localizations.count, 3) // Base, en, es
+  }
 }

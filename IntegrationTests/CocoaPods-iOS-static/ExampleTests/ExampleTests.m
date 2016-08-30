@@ -20,4 +20,8 @@
   XCTAssertEqualObjects(a.foo, @"vor 1 Stunde");
 }
 
+- (void)testNumberOfLocalizations {
+  XCTAssertEqual([NSBundle mainBundle].localizations.count, 2);
+}
+
 @end
