@@ -48,14 +48,6 @@ FormatterKit comes fully internationalized, with `.strings` files for the follow
 
 If you'd like to contribute an additional localization, feel free to [open a new pull request](https://github.com/mattt/FormatterKit/pulls).
 
-### Removing Unused Localizations
-
-Because the App Store automatically attempts to determine supported locales, and FormatterKit includes localizations for the aforementioned locales, you may want to remove the `.strings` file and `.lproj` directory. You can do this most easily by having the following command run in a new Build Phase:
-
-        $ find "$TARGET_BUILD_DIR" -maxdepth 8 -type f -name "FormatterKit.strings" -execdir rm -r -v {} \;
-
-If you are using CocoaPods, a seprate localization bundle will be created for the pod. Therefore, App Store won't pick up the extraneous localizations.
-
 ## Demo
 
 Build and run the `FormatterKit Example` project in Xcode to see an inventory of the available `FormatterKit` components.
