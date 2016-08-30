@@ -119,13 +119,13 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     self.locale = [NSLocale currentLocale];
     self.calendar = [NSCalendar currentCalendar];
 
-    self.pastDeicticExpression = NSLocalizedStringFromTableInBundle(@"ago", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Past Deictic Expression");
-    self.presentDeicticExpression = NSLocalizedStringFromTableInBundle(@"just now", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Present Deictic Expression");
-    self.futureDeicticExpression = NSLocalizedStringFromTableInBundle(@"from now", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Future Deictic Expression");
+    self.pastDeicticExpression = NSLocalizedStringFromTableInBundle(@"ago", @"FormatterKit", [NSBundle formatterKitBundle], @"Past Deictic Expression");
+    self.presentDeicticExpression = NSLocalizedStringFromTableInBundle(@"just now", @"FormatterKit", [NSBundle formatterKitBundle], @"Present Deictic Expression");
+    self.futureDeicticExpression = NSLocalizedStringFromTableInBundle(@"from now", @"FormatterKit", [NSBundle formatterKitBundle], @"Future Deictic Expression");
 
-    self.deicticExpressionFormat = NSLocalizedStringWithDefaultValue(@"Deictic Expression Format String", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]], @"%@ %@", @"Deictic Expression Format (#{Time} #{Ago/From Now}");
-    self.approximateQualifierFormat = NSLocalizedStringFromTableInBundle(@"about %@", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Approximate Qualifier Format");
-    self.suffixExpressionFormat = NSLocalizedStringWithDefaultValue(@"Suffix Expression Format String", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]], @"%@ %@", @"Suffix Expression Format (#{Time} #{Unit})");
+    self.deicticExpressionFormat = NSLocalizedStringWithDefaultValue(@"Deictic Expression Format String", @"FormatterKit", [NSBundle formatterKitBundle], @"%@ %@", @"Deictic Expression Format (#{Time} #{Ago/From Now}");
+    self.approximateQualifierFormat = NSLocalizedStringFromTableInBundle(@"about %@", @"FormatterKit", [NSBundle formatterKitBundle], @"Approximate Qualifier Format");
+    self.suffixExpressionFormat = NSLocalizedStringWithDefaultValue(@"Suffix Expression Format String", @"FormatterKit", [NSBundle formatterKitBundle], @"%@ %@", @"Suffix Expression Format (#{Time} #{Unit})");
 
     self.presentTimeIntervalMargin = 1;
 
@@ -207,38 +207,38 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     if (self.usesAbbreviatedCalendarUnits) {
         switch (unit) {
             case TTTCalendarUnitYear:
-                return singular ? NSLocalizedStringFromTableInBundle(@"yr", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Year Unit (Singular, Abbreviated)") : NSLocalizedStringFromTableInBundle(@"yrs", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Year Unit (Plural, Abbreviated)");
+                return singular ? NSLocalizedStringFromTableInBundle(@"yr", @"FormatterKit", [NSBundle formatterKitBundle], @"Year Unit (Singular, Abbreviated)") : NSLocalizedStringFromTableInBundle(@"yrs", @"FormatterKit", [NSBundle formatterKitBundle], @"Year Unit (Plural, Abbreviated)");
             case TTTCalendarUnitMonth:
-                return singular ? NSLocalizedStringFromTableInBundle(@"mo", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Month Unit (Singular, Abbreviated)") : NSLocalizedStringFromTableInBundle(@"mos", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Month Unit (Plural, Abbreviated)");
+                return singular ? NSLocalizedStringFromTableInBundle(@"mo", @"FormatterKit", [NSBundle formatterKitBundle], @"Month Unit (Singular, Abbreviated)") : NSLocalizedStringFromTableInBundle(@"mos", @"FormatterKit", [NSBundle formatterKitBundle], @"Month Unit (Plural, Abbreviated)");
             case TTTCalendarUnitWeek:
-                return singular ? NSLocalizedStringFromTableInBundle(@"wk", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Week Unit (Singular, Abbreviated)") : NSLocalizedStringFromTableInBundle(@"wks", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Week Unit (Plural, Abbreviated)");
+                return singular ? NSLocalizedStringFromTableInBundle(@"wk", @"FormatterKit", [NSBundle formatterKitBundle], @"Week Unit (Singular, Abbreviated)") : NSLocalizedStringFromTableInBundle(@"wks", @"FormatterKit", [NSBundle formatterKitBundle], @"Week Unit (Plural, Abbreviated)");
             case TTTCalendarUnitDay:
-                return singular ? NSLocalizedStringFromTableInBundle(@"d", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Day Unit (Singular, Abbreviated)") : NSLocalizedStringFromTableInBundle(@"days", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Day Unit (Plural, Abbreviated)");
+                return singular ? NSLocalizedStringFromTableInBundle(@"d", @"FormatterKit", [NSBundle formatterKitBundle], @"Day Unit (Singular, Abbreviated)") : NSLocalizedStringFromTableInBundle(@"days", @"FormatterKit", [NSBundle formatterKitBundle], @"Day Unit (Plural, Abbreviated)");
             case TTTCalendarUnitHour:
-                return singular ? NSLocalizedStringFromTableInBundle(@"hr", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Hour Unit (Singular, Abbreviated)") : NSLocalizedStringFromTableInBundle(@"hrs", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Hour Unit (Plural, Abbreviated)");
+                return singular ? NSLocalizedStringFromTableInBundle(@"hr", @"FormatterKit", [NSBundle formatterKitBundle], @"Hour Unit (Singular, Abbreviated)") : NSLocalizedStringFromTableInBundle(@"hrs", @"FormatterKit", [NSBundle formatterKitBundle], @"Hour Unit (Plural, Abbreviated)");
             case TTTCalendarUnitMinute:
-                return singular ? NSLocalizedStringFromTableInBundle(@"min", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Minute Unit (Singular, Abbreviated)") : NSLocalizedStringFromTableInBundle(@"mins", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Minute Unit (Plural, Abbreviated)");
+                return singular ? NSLocalizedStringFromTableInBundle(@"min", @"FormatterKit", [NSBundle formatterKitBundle], @"Minute Unit (Singular, Abbreviated)") : NSLocalizedStringFromTableInBundle(@"mins", @"FormatterKit", [NSBundle formatterKitBundle], @"Minute Unit (Plural, Abbreviated)");
             case TTTCalendarUnitSecond:
-                return singular ? NSLocalizedStringFromTableInBundle(@"s", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Second Unit (Singular, Abbreviated)") : NSLocalizedStringFromTableInBundle(@"s", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Second Unit (Plural, Abbreviated)");
+                return singular ? NSLocalizedStringFromTableInBundle(@"s", @"FormatterKit", [NSBundle formatterKitBundle], @"Second Unit (Singular, Abbreviated)") : NSLocalizedStringFromTableInBundle(@"s", @"FormatterKit", [NSBundle formatterKitBundle], @"Second Unit (Plural, Abbreviated)");
             default:
                 return nil;
         }
     } else {
         switch (unit) {
             case TTTCalendarUnitYear:
-                return singular ? NSLocalizedStringFromTableInBundle(@"year", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Year Unit (Singular)") : NSLocalizedStringFromTableInBundle(@"years", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Year Unit (Plural)");
+                return singular ? NSLocalizedStringFromTableInBundle(@"year", @"FormatterKit", [NSBundle formatterKitBundle], @"Year Unit (Singular)") : NSLocalizedStringFromTableInBundle(@"years", @"FormatterKit", [NSBundle formatterKitBundle], @"Year Unit (Plural)");
             case TTTCalendarUnitMonth:
-                return singular ? NSLocalizedStringFromTableInBundle(@"month", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Month Unit (Singular)") : NSLocalizedStringFromTableInBundle(@"months", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Month Unit (Plural)");
+                return singular ? NSLocalizedStringFromTableInBundle(@"month", @"FormatterKit", [NSBundle formatterKitBundle], @"Month Unit (Singular)") : NSLocalizedStringFromTableInBundle(@"months", @"FormatterKit", [NSBundle formatterKitBundle], @"Month Unit (Plural)");
             case TTTCalendarUnitWeek:
-                return singular ? NSLocalizedStringFromTableInBundle(@"week", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Week Unit (Singular)") : NSLocalizedStringFromTableInBundle(@"weeks", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Week Unit (Plural)");
+                return singular ? NSLocalizedStringFromTableInBundle(@"week", @"FormatterKit", [NSBundle formatterKitBundle], @"Week Unit (Singular)") : NSLocalizedStringFromTableInBundle(@"weeks", @"FormatterKit", [NSBundle formatterKitBundle], @"Week Unit (Plural)");
             case TTTCalendarUnitDay:
-                return singular ? NSLocalizedStringFromTableInBundle(@"day", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Day Unit (Singular)") : NSLocalizedStringFromTableInBundle(@"days", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Day Unit (Plural)");
+                return singular ? NSLocalizedStringFromTableInBundle(@"day", @"FormatterKit", [NSBundle formatterKitBundle], @"Day Unit (Singular)") : NSLocalizedStringFromTableInBundle(@"days", @"FormatterKit", [NSBundle formatterKitBundle], @"Day Unit (Plural)");
             case TTTCalendarUnitHour:
-                return singular ? NSLocalizedStringFromTableInBundle(@"hour", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Hour Unit (Singular)") : NSLocalizedStringFromTableInBundle(@"hours", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Hour Unit (Plural)");
+                return singular ? NSLocalizedStringFromTableInBundle(@"hour", @"FormatterKit", [NSBundle formatterKitBundle], @"Hour Unit (Singular)") : NSLocalizedStringFromTableInBundle(@"hours", @"FormatterKit", [NSBundle formatterKitBundle], @"Hour Unit (Plural)");
             case TTTCalendarUnitMinute:
-                return singular ? NSLocalizedStringFromTableInBundle(@"minute", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Minute Unit (Singular)") : NSLocalizedStringFromTableInBundle(@"minutes", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Minute Unit (Plural)");
+                return singular ? NSLocalizedStringFromTableInBundle(@"minute", @"FormatterKit", [NSBundle formatterKitBundle], @"Minute Unit (Singular)") : NSLocalizedStringFromTableInBundle(@"minutes", @"FormatterKit", [NSBundle formatterKitBundle], @"Minute Unit (Plural)");
             case TTTCalendarUnitSecond:
-                return singular ? NSLocalizedStringFromTableInBundle(@"second", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Second Unit (Singular)") : NSLocalizedStringFromTableInBundle(@"seconds", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  @"Second Unit (Plural)");
+                return singular ? NSLocalizedStringFromTableInBundle(@"second", @"FormatterKit", [NSBundle formatterKitBundle], @"Second Unit (Singular)") : NSLocalizedStringFromTableInBundle(@"seconds", @"FormatterKit", [NSBundle formatterKitBundle], @"Second Unit (Plural)");
             default:
                 return nil;
         }
@@ -636,7 +636,7 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
              forString:(__unused NSString *)string
       errorDescription:(out NSString *__autoreleasing *)error
 {
-    *error = NSLocalizedStringFromTableInBundle(@"Method Not Implemented", @"FormatterKit", [NSBundle formatterKitBundle]?: [NSBundle bundleForClass:[self class]],  nil);
+    *error = NSLocalizedStringFromTableInBundle(@"Method Not Implemented", @"FormatterKit", [NSBundle formatterKitBundle], nil);
 
     return NO;
 }

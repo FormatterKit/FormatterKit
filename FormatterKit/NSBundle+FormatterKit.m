@@ -23,6 +23,9 @@
 
 #import "NSBundle+FormatterKit.h"
 
+@interface _TTTDummyClassForReferencingBundle : NSObject @end
+@implementation _TTTDummyClassForReferencingBundle @end
+
 @implementation NSBundle (FormatterKit)
 
 + (NSBundle *)formatterKitBundle {
@@ -30,7 +33,7 @@
 
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"FormatterKit" ofType:@"bundle"];
+        NSString *bundlePath = [[NSBundle bundleForClass:[_TTTDummyClassForReferencingBundle class]] pathForResource:@"FormatterKit" ofType:@"bundle"];
         if (bundlePath) fomatterKitBundle = [NSBundle bundleWithPath:bundlePath];
     });
 
