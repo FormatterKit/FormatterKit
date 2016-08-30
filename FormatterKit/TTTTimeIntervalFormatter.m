@@ -514,7 +514,7 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
 
 - (NSString *)frRelativeDateStringForComponents:(NSDateComponents *)components {
     if ([components year] == -1) {
-        return @"l'annnée dernière";
+        return @"l'année dernière";
     } else if ([components month] == -1 && [components year] == 0) {
         return @"le mois dernier";
     } else if ([components weekOfYear] == -1 && [components month] == 0 && [components year] == 0) {
