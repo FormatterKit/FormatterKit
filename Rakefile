@@ -49,7 +49,7 @@ task :spec do
   exit status
 end
 
-desc 'Runs all integration tests. Note: exit status is not handled properly.'
+desc 'Runs all integration tests. Note: exits on first failure.'
 task :integration_tests => [
   'integration:cocoapods_ios',
   'integration:cocoapods_ios_static',
@@ -65,47 +65,56 @@ task :integration_tests => [
 namespace :integration do
   task :cocoapods_ios do
     puts "travis_fold:start:integration.cocoapods_ios" if is_travis?
-    run "cd ./IntegrationTests/CocoaPods-iOS && ./run.sh; cd -"
+    status = run("cd ./IntegrationTests/CocoaPods-iOS && ./run.sh")
+    exit status unless status.zero?
     puts "travis_fold:end:integration.cocoapods_ios" if is_travis?
   end
   task :cocoapods_ios_static do
     puts "travis_fold:start:integration.cocoapods_ios_static" if is_travis?
-    run "cd ./IntegrationTests/CocoaPods-iOS-static && ./run.sh; cd -"
+    status = run "cd ./IntegrationTests/CocoaPods-iOS-static && ./run.sh"
+    exit status unless status.zero?
     puts "travis_fold:end:integration.cocoapods_ios_static" if is_travis?
   end
   task :cocoapods_osx do
     puts "travis_fold:start:integration.cocoapods_osx" if is_travis?
-    run "cd ./IntegrationTests/CocoaPods-OSX && ./run.sh; cd -"
+    status = run "cd ./IntegrationTests/CocoaPods-OSX && ./run.sh"
+    exit status unless status.zero?
     puts "travis_fold:end:integration.cocoapods_osx" if is_travis?
   end
   task :cocoapods_watchos do
     puts "travis_fold:start:integration.cocoapods_watchos" if is_travis?
-    run "cd ./IntegrationTests/CocoaPods-watchOS && ./run.sh; cd -"
+    status = run "cd ./IntegrationTests/CocoaPods-watchOS && ./run.sh"
+    exit status unless status.zero?
     puts "travis_fold:end:integration.cocoapods_watchos" if is_travis?
   end
   task :cocoapods_tvos do
     puts "travis_fold:start:integration.cocoapods_tvos" if is_travis?
-    run "cd ./IntegrationTests/CocoaPods-tvOS && ./run.sh; cd -"
+    status = run "cd ./IntegrationTests/CocoaPods-tvOS && ./run.sh"
+    exit status unless status.zero?
     puts "travis_fold:end:integration.cocoapods_tvos" if is_travis?
   end
   task :carthage_ios do
     puts "travis_fold:start:integration.carthage_ios" if is_travis?
-    run "cd ./IntegrationTests/Carthage-iOS && ./run.sh; cd -"
+    status = run "cd ./IntegrationTests/Carthage-iOS && ./run.sh"
+    exit status unless status.zero?
     puts "travis_fold:end:integration.carthage_ios" if is_travis?
   end
   task :carthage_osx do
     puts "travis_fold:start:integration.carthage_osx" if is_travis?
-    run "cd ./IntegrationTests/Carthage-OSX && ./run.sh; cd -"
+    status = run "cd ./IntegrationTests/Carthage-OSX && ./run.sh"
+    exit status unless status.zero?
     puts "travis_fold:end:integration.carthage_osx" if is_travis?
   end
   task :carthage_watchos do
     puts "travis_fold:start:integration.carthage_watchos" if is_travis?
-    run "cd ./IntegrationTests/Carthage-watchOS && ./run.sh; cd -"
+    status = run "cd ./IntegrationTests/Carthage-watchOS && ./run.sh"
+    exit status unless status.zero?
     puts "travis_fold:end:integration.carthage_watchos" if is_travis?
   end
   task :carthage_tvos do
     puts "travis_fold:start:integration.carthage_tvos" if is_travis?
-    run "cd ./IntegrationTests/Carthage-tvOS && ./run.sh; cd -"
+    status = run "cd ./IntegrationTests/Carthage-tvOS && ./run.sh"
+    exit status unless status.zero?
     puts "travis_fold:end:integration.carthage_tvos" if is_travis?
   end
 end
