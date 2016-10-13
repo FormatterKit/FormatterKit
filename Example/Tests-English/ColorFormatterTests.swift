@@ -21,46 +21,46 @@ class ColorFormatterTests: XCTestCase {
     // MARK: Tests
 
     func testHexadecimal() {
-        XCTAssertEqual(formatter.hexadecimalStringFromColor(UIColor.whiteColor()), "#FFFFFF")
-        XCTAssertEqual(formatter.hexadecimalStringFromColor(UIColor.blackColor()), "#000000")
+        XCTAssertEqual(formatter.hexadecimalString(from: UIColor.white), "#FFFFFF")
+        XCTAssertEqual(formatter.hexadecimalString(from: UIColor.black), "#000000")
 
-        let orange = formatter.colorFromHexadecimalString("#FF8000")
-        XCTAssertEqual(formatter.colorFromHexadecimalString("#ff8000"), orange)
-        XCTAssertEqual(formatter.hexadecimalStringFromColor(orange), "#FF8000")
+        let orange = formatter.color(fromHexadecimalString: "#FF8000")
+        XCTAssertEqual(formatter.color(fromHexadecimalString: "#ff8000"), orange)
+        XCTAssertEqual(formatter.hexadecimalString(from: orange), "#FF8000")
     }
 
     func testRGB() {
-        XCTAssertEqual(formatter.RGBStringFromColor(UIColor.whiteColor()), "rgb(255, 255, 255)")
-        XCTAssertEqual(formatter.RGBStringFromColor(UIColor.blackColor()), "rgb(0, 0, 0)")
+        XCTAssertEqual(formatter.rgbString(from: UIColor.white), "rgb(255, 255, 255)")
+        XCTAssertEqual(formatter.rgbString(from: UIColor.black), "rgb(0, 0, 0)")
 
-        let color = UIColor.redColor()
-        let colorString = formatter.RGBStringFromColor(color)
-        XCTAssertEqual(formatter.colorFromRGBString(colorString), color)
+        let color = UIColor.red
+        let colorString = formatter.rgbString(from: color)
+        XCTAssertEqual(formatter.color(fromRGBString: colorString), color)
     }
 
     func testRGBA() {
-        XCTAssertEqual(formatter.RGBAStringFromColor(UIColor.whiteColor()), "rgb(255, 255, 255, 1)")
-        XCTAssertEqual(formatter.RGBAStringFromColor(UIColor.blackColor().colorWithAlphaComponent(0.42)), "rgb(0, 0, 0, 0.42)")
+        XCTAssertEqual(formatter.rgbaString(from: UIColor.white), "rgb(255, 255, 255, 1)")
+        XCTAssertEqual(formatter.rgbaString(from: UIColor.black.withAlphaComponent(0.42)), "rgb(0, 0, 0, 0.42)")
 
-        let color = UIColor.redColor()
-        let colorString = formatter.RGBAStringFromColor(color)
-        XCTAssertEqual(formatter.colorFromRGBAString(colorString), color)
+        let color = UIColor.red
+        let colorString = formatter.rgbaString(from: color)
+        XCTAssertEqual(formatter.color(fromRGBAString: colorString), color)
     }
 
     func testCMYK() {
-        XCTAssertEqual(formatter.CMYKStringFromColor(UIColor.whiteColor()), "cmyk(0%, 0%, 0%, 0%)")
+        XCTAssertEqual(formatter.cmykString(from: UIColor.white), "cmyk(0%, 0%, 0%, 0%)")
         // TODO: probably a bug. returns `nan%`
         // XCTAssertEqual(formatter.CMYKStringFromColor(UIColor.blackColor()), "cmyk(0%, 0%, 0%, 100%)")
 
-        let color = UIColor.orangeColor()
-        let colorString = formatter.CMYKStringFromColor(color)
-        XCTAssertEqual(formatter.colorFromCMYKString(colorString), color)
+        let color = UIColor.orange
+        let colorString = formatter.cmykString(from: color)
+        XCTAssertEqual(formatter.color(fromCMYKString: colorString), color)
     }
 
     func testHSL() {
-        XCTAssertEqual(formatter.HSLStringFromColor(UIColor.whiteColor()), "hsl(, 0%, 100%)")
-        XCTAssertEqual(formatter.HSLStringFromColor(UIColor.blackColor()), "hsl(, 0%, 0%)")
-        XCTAssertEqual(formatter.HSLStringFromColor(UIColor.redColor()), "hsl(255, 100%, 50%)")
+        XCTAssertEqual(formatter.hslString(from: UIColor.white), "hsl(, 0%, 100%)")
+        XCTAssertEqual(formatter.hslString(from: UIColor.black), "hsl(, 0%, 0%)")
+        XCTAssertEqual(formatter.hslString(from: UIColor.red), "hsl(255, 100%, 50%)")
 
         // TODO: there must be a bug
         // let colorString = "hsl(255, 100%, 50%)"
@@ -70,6 +70,6 @@ class ColorFormatterTests: XCTestCase {
 
     func testUIColorDeclaration() {
         let color = UIColor(red: 0, green: 1, blue: 0.2, alpha: 0.31)
-        XCTAssertEqual(formatter.UIColorDeclarationFromColor(color), "[UIColor colorWithRed:0 green:1 blue:0.2 alpha:0.31]")
+        XCTAssertEqual(formatter.uiColorDeclaration(from: color), "[UIColor colorWithRed:0 green:1 blue:0.2 alpha:0.31]")
     }
 }

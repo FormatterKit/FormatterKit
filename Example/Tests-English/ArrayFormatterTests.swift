@@ -23,7 +23,7 @@ class ArrayFormatterTests: XCTestCase {
     // MARK: Tests
 
     func testDefault() {
-        let result = formatter.stringFromArray(dogCatParrot)
+        let result = formatter.string(from: dogCatParrot)
         let expected = "Dog, Cat, and Parrot"
         
         XCTAssertEqual(result, expected)
@@ -34,7 +34,7 @@ class ArrayFormatterTests: XCTestCase {
     func testAbbreviatedConjunction() {
         formatter.usesAbbreviatedConjunction = true
 
-        let result = formatter.stringFromArray(dogCatParrot)
+        let result = formatter.string(from: dogCatParrot)
         let expected = "Dog, Cat, & Parrot"
 
         XCTAssertEqual(result, expected)
@@ -46,7 +46,7 @@ class ArrayFormatterTests: XCTestCase {
     func testWithoutOxformComma() {
         formatter.usesSerialDelimiter = false
 
-        let result = formatter.stringFromArray(dogCatParrot)
+        let result = formatter.string(from: dogCatParrot)
         let expected = "Dog, Cat and Parrot"
 
         XCTAssertEqual(result, expected)
