@@ -119,7 +119,7 @@ class TTTTimeIntervalFormatterTests: XCTestCase {
     }
 
     func testMonthsFromNow() {
-        XCTAssertEqual(formatter.string(forTimeInterval: 3600 * 24 * 31), "1 month from now")
+        XCTAssertEqual(formatter.string(forTimeInterval: 3600 * 24 * 32), "1 month from now")
         XCTAssertEqual(formatter.string(forTimeInterval: 3600 * 24 * 31 * 6), "6 months from now")
     }
 
