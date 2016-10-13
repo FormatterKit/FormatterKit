@@ -20,32 +20,32 @@ class TTTTimeIntervalFormatterTests: XCTestCase {
     // MARK: Tests
 
     func testStandardPast() {
-        XCTAssertEqual(formatter.stringForTimeInterval(-1), "1 másodperc óta")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100), "1 perc óta")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000), "2 óra óta")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100000), "1 nap óta")
-        XCTAssertEqual(formatter.stringForTimeInterval(-200000), "2 nap óta")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000000), "3 hónap óta")
+        XCTAssertEqual(formatter.string(forTimeInterval: -1), "1 másodperc óta")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100), "1 perc óta")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000), "2 óra óta")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100000), "1 nap óta")
+        XCTAssertEqual(formatter.string(forTimeInterval: -200000), "2 nap óta")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000000), "3 hónap óta")
     }
 
     func testStandardFuture() {
-        XCTAssertEqual(formatter.stringForTimeInterval(1), "1 másodperc múlva")
-        XCTAssertEqual(formatter.stringForTimeInterval(100), "1 perc múlva")
-        XCTAssertEqual(formatter.stringForTimeInterval(10000), "2 óra múlva")
-        XCTAssertEqual(formatter.stringForTimeInterval(100000), "1 nap múlva")
-        XCTAssertEqual(formatter.stringForTimeInterval(200000), "2 nap múlva")
-        XCTAssertEqual(formatter.stringForTimeInterval(10000000), "3 hónap múlva")
+        XCTAssertEqual(formatter.string(forTimeInterval: 1), "1 másodperc múlva")
+        XCTAssertEqual(formatter.string(forTimeInterval: 100), "1 perc múlva")
+        XCTAssertEqual(formatter.string(forTimeInterval: 10000), "2 óra múlva")
+        XCTAssertEqual(formatter.string(forTimeInterval: 100000), "1 nap múlva")
+        XCTAssertEqual(formatter.string(forTimeInterval: 200000), "2 nap múlva")
+        XCTAssertEqual(formatter.string(forTimeInterval: 10000000), "3 hónap múlva")
     }
 
     func testIdiomaticPast() {
         formatter.usesIdiomaticDeicticExpressions = true
 
-        XCTAssertEqual(formatter.stringForTimeInterval(-1), "1 másodperc óta")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100), "1 perc óta")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000), "2 óra óta")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100000), "tegnap")
-        XCTAssertEqual(formatter.stringForTimeInterval(-200000), "tegnapelőtt")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000000), "3 hónap óta")
+        XCTAssertEqual(formatter.string(forTimeInterval: -1), "1 másodperc óta")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100), "1 perc óta")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000), "2 óra óta")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100000), "tegnap")
+        XCTAssertEqual(formatter.string(forTimeInterval: -200000), "tegnapelőtt")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000000), "3 hónap óta")
     }
     
 }

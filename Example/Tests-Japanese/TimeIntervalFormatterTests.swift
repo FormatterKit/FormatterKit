@@ -20,32 +20,32 @@ class TTTTimeIntervalFormatterTests: XCTestCase {
     // MARK: Tests
 
     func testStandardPast() {
-        XCTAssertEqual(formatter.stringForTimeInterval(-1), "1 秒前 ")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100), "1 分前 ")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000), "2 時間前 ")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100000), "1 日前 ")
-        XCTAssertEqual(formatter.stringForTimeInterval(-200000), "2 日前 ")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000000), "3 ヵ月前 ")
+        XCTAssertEqual(formatter.string(forTimeInterval: -1), "1 秒前 ")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100), "1 分前 ")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000), "2 時間前 ")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100000), "1 日前 ")
+        XCTAssertEqual(formatter.string(forTimeInterval: -200000), "2 日前 ")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000000), "3 ヵ月前 ")
     }
 
     func testStandardFuture() {
-        XCTAssertEqual(formatter.stringForTimeInterval(1), "1 秒後 ")
-        XCTAssertEqual(formatter.stringForTimeInterval(100), "1 分後 ")
-        XCTAssertEqual(formatter.stringForTimeInterval(10000), "2 時間後 ")
-        XCTAssertEqual(formatter.stringForTimeInterval(100000), "1 日後 ")
-        XCTAssertEqual(formatter.stringForTimeInterval(200000), "2 日後 ")
-        XCTAssertEqual(formatter.stringForTimeInterval(10000000), "3 ヵ月後 ")
+        XCTAssertEqual(formatter.string(forTimeInterval: 1), "1 秒後 ")
+        XCTAssertEqual(formatter.string(forTimeInterval: 100), "1 分後 ")
+        XCTAssertEqual(formatter.string(forTimeInterval: 10000), "2 時間後 ")
+        XCTAssertEqual(formatter.string(forTimeInterval: 100000), "1 日後 ")
+        XCTAssertEqual(formatter.string(forTimeInterval: 200000), "2 日後 ")
+        XCTAssertEqual(formatter.string(forTimeInterval: 10000000), "3 ヵ月後 ")
     }
 
     func testIdiomaticPast() {
         formatter.usesIdiomaticDeicticExpressions = true
 
-        XCTAssertEqual(formatter.stringForTimeInterval(-1), "1 秒前 ")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100), "1 分前 ")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000), "2 時間前 ")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100000), "昨日")
-        XCTAssertEqual(formatter.stringForTimeInterval(-200000), "2 日前 ")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000000), "3 ヵ月前 ")
+        XCTAssertEqual(formatter.string(forTimeInterval: -1), "1 秒前 ")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100), "1 分前 ")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000), "2 時間前 ")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100000), "昨日")
+        XCTAssertEqual(formatter.string(forTimeInterval: -200000), "2 日前 ")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000000), "3 ヵ月前 ")
     }
     
 }

@@ -20,32 +20,32 @@ class TTTTimeIntervalFormatterTests: XCTestCase {
     // MARK: Tests
 
     func testStandardPast() {
-        XCTAssertEqual(formatter.stringForTimeInterval(-1), "vor 1 Sekunde")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100), "vor 1 Minute")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000), "vor 2 Stunden")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100000), "vor 1 T.")
-        XCTAssertEqual(formatter.stringForTimeInterval(-200000), "vor 2 T.")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000000), "vor 3 Monaten")
+        XCTAssertEqual(formatter.string(forTimeInterval: -1), "vor 1 Sekunde")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100), "vor 1 Minute")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000), "vor 2 Stunden")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100000), "vor 1 T.")
+        XCTAssertEqual(formatter.string(forTimeInterval: -200000), "vor 2 T.")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000000), "vor 3 Monaten")
     }
 
     func testStandardFuture() {
-        XCTAssertEqual(formatter.stringForTimeInterval(1), "in 1 Sekunde")
-        XCTAssertEqual(formatter.stringForTimeInterval(100), "in 1 Minute")
-        XCTAssertEqual(formatter.stringForTimeInterval(10000), "in 2 Stunden")
-        XCTAssertEqual(formatter.stringForTimeInterval(100000), "in 1 T.")
-        XCTAssertEqual(formatter.stringForTimeInterval(200000), "in 2 T.")
-        XCTAssertEqual(formatter.stringForTimeInterval(10000000), "in 3 Monaten")
+        XCTAssertEqual(formatter.string(forTimeInterval: 1), "in 1 Sekunde")
+        XCTAssertEqual(formatter.string(forTimeInterval: 100), "in 1 Minute")
+        XCTAssertEqual(formatter.string(forTimeInterval: 10000), "in 2 Stunden")
+        XCTAssertEqual(formatter.string(forTimeInterval: 100000), "in 1 T.")
+        XCTAssertEqual(formatter.string(forTimeInterval: 200000), "in 2 T.")
+        XCTAssertEqual(formatter.string(forTimeInterval: 10000000), "in 3 Monaten")
     }
 
     func testIdiomaticPast() {
         formatter.usesIdiomaticDeicticExpressions = true
 
-        XCTAssertEqual(formatter.stringForTimeInterval(-1), "vor 1 Sekunde")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100), "vor 1 Minute")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000), "vor 2 Stunden")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100000), "vor 1 T.")
-        XCTAssertEqual(formatter.stringForTimeInterval(-200000), "vor 2 T.")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000000), "vor 3 Monaten")
+        XCTAssertEqual(formatter.string(forTimeInterval: -1), "vor 1 Sekunde")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100), "vor 1 Minute")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000), "vor 2 Stunden")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100000), "vor 1 T.")
+        XCTAssertEqual(formatter.string(forTimeInterval: -200000), "vor 2 T.")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000000), "vor 3 Monaten")
     }
     
 }

@@ -20,32 +20,32 @@ class TTTTimeIntervalFormatterTests: XCTestCase {
     // MARK: Tests
 
     func testStandardPast() {
-        XCTAssertEqual(formatter.stringForTimeInterval(-1), "1 sekund siden")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100), "1 minutt siden")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000), "2 timer siden")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100000), "1 dag siden")
-        XCTAssertEqual(formatter.stringForTimeInterval(-200000), "2 dager siden")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000000), "3 måneder siden")
+        XCTAssertEqual(formatter.string(forTimeInterval: -1), "1 sekund siden")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100), "1 minutt siden")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000), "2 timer siden")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100000), "1 dag siden")
+        XCTAssertEqual(formatter.string(forTimeInterval: -200000), "2 dager siden")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000000), "3 måneder siden")
     }
 
     func testStandardFuture() {
-        XCTAssertEqual(formatter.stringForTimeInterval(1), "1 sekund fra nå")
-        XCTAssertEqual(formatter.stringForTimeInterval(100), "1 minutt fra nå")
-        XCTAssertEqual(formatter.stringForTimeInterval(10000), "2 timer fra nå")
-        XCTAssertEqual(formatter.stringForTimeInterval(100000), "1 dag fra nå")
-        XCTAssertEqual(formatter.stringForTimeInterval(200000), "2 dager fra nå")
-        XCTAssertEqual(formatter.stringForTimeInterval(10000000), "3 måneder fra nå")
+        XCTAssertEqual(formatter.string(forTimeInterval: 1), "1 sekund fra nå")
+        XCTAssertEqual(formatter.string(forTimeInterval: 100), "1 minutt fra nå")
+        XCTAssertEqual(formatter.string(forTimeInterval: 10000), "2 timer fra nå")
+        XCTAssertEqual(formatter.string(forTimeInterval: 100000), "1 dag fra nå")
+        XCTAssertEqual(formatter.string(forTimeInterval: 200000), "2 dager fra nå")
+        XCTAssertEqual(formatter.string(forTimeInterval: 10000000), "3 måneder fra nå")
     }
 
     func testIdiomaticPast() {
         formatter.usesIdiomaticDeicticExpressions = true
 
-        XCTAssertEqual(formatter.stringForTimeInterval(-1), "1 sekund siden")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100), "1 minutt siden")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000), "2 timer siden")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100000), "1 dag siden")
-        XCTAssertEqual(formatter.stringForTimeInterval(-200000), "2 dager siden")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000000), "3 måneder siden")
+        XCTAssertEqual(formatter.string(forTimeInterval: -1), "1 sekund siden")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100), "1 minutt siden")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000), "2 timer siden")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100000), "1 dag siden")
+        XCTAssertEqual(formatter.string(forTimeInterval: -200000), "2 dager siden")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000000), "3 måneder siden")
     }
     
 }

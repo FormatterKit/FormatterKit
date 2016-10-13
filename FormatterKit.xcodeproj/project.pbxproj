@@ -369,6 +369,7 @@
 				TargetAttributes = {
 					5B08B6681CA69F99009541EC = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 					5B08B6781CA6A078009541EC = {
 						CreatedOnToolsVersion = 7.3;
@@ -645,6 +646,7 @@
 				PRODUCT_NAME = FormatterKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -663,6 +665,7 @@
 				PRODUCT_NAME = FormatterKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

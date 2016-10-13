@@ -20,32 +20,32 @@ class TTTTimeIntervalFormatterTests: XCTestCase {
     // MARK: Tests
 
     func testStandardPast() {
-        XCTAssertEqual(formatter.stringForTimeInterval(-1), "1 секунда тому")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100), "1 хвилина тому")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000), "2 години тому")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100000), "1 день тому")
-        XCTAssertEqual(formatter.stringForTimeInterval(-200000), "2 days тому")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000000), "3 місяці тому")
+        XCTAssertEqual(formatter.string(forTimeInterval: -1), "1 секунда тому")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100), "1 хвилина тому")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000), "2 години тому")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100000), "1 день тому")
+        XCTAssertEqual(formatter.string(forTimeInterval: -200000), "2 days тому")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000000), "3 місяці тому")
     }
 
     func testStandardFuture() {
-        XCTAssertEqual(formatter.stringForTimeInterval(1), "1 секунда від тепер")
-        XCTAssertEqual(formatter.stringForTimeInterval(100), "1 хвилина від тепер")
-        XCTAssertEqual(formatter.stringForTimeInterval(10000), "2 години від тепер")
-        XCTAssertEqual(formatter.stringForTimeInterval(100000), "1 день від тепер")
-        XCTAssertEqual(formatter.stringForTimeInterval(200000), "2 days від тепер")
-        XCTAssertEqual(formatter.stringForTimeInterval(10000000), "3 місяці від тепер")
+        XCTAssertEqual(formatter.string(forTimeInterval: 1), "1 секунда від тепер")
+        XCTAssertEqual(formatter.string(forTimeInterval: 100), "1 хвилина від тепер")
+        XCTAssertEqual(formatter.string(forTimeInterval: 10000), "2 години від тепер")
+        XCTAssertEqual(formatter.string(forTimeInterval: 100000), "1 день від тепер")
+        XCTAssertEqual(formatter.string(forTimeInterval: 200000), "2 days від тепер")
+        XCTAssertEqual(formatter.string(forTimeInterval: 10000000), "3 місяці від тепер")
     }
 
     func testIdiomaticPast() {
         formatter.usesIdiomaticDeicticExpressions = true
 
-        XCTAssertEqual(formatter.stringForTimeInterval(-1), "1 секунда тому")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100), "1 хвилина тому")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000), "2 години тому")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100000), "1 день тому")
-        XCTAssertEqual(formatter.stringForTimeInterval(-200000), "2 days тому")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000000), "3 місяці тому")
+        XCTAssertEqual(formatter.string(forTimeInterval: -1), "1 секунда тому")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100), "1 хвилина тому")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000), "2 години тому")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100000), "1 день тому")
+        XCTAssertEqual(formatter.string(forTimeInterval: -200000), "2 days тому")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000000), "3 місяці тому")
     }
     
 }

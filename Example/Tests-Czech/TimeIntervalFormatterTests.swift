@@ -20,32 +20,32 @@ class TTTTimeIntervalFormatterTests: XCTestCase {
     // MARK: Tests
 
     func testStandardPast() {
-        XCTAssertEqual(formatter.stringForTimeInterval(-1), "před 1 sekunda")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100), "před 1 minuta")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000), "před 2 hodiny")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100000), "před 1 den")
-        XCTAssertEqual(formatter.stringForTimeInterval(-200000), "před 2 dny")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000000), "před 3 měsíce")
+        XCTAssertEqual(formatter.string(forTimeInterval: -1), "před 1 sekunda")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100), "před 1 minuta")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000), "před 2 hodiny")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100000), "před 1 den")
+        XCTAssertEqual(formatter.string(forTimeInterval: -200000), "před 2 dny")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000000), "před 3 měsíce")
     }
 
     func testStandardFuture() {
-        XCTAssertEqual(formatter.stringForTimeInterval(1), "za 1 sekunda")
-        XCTAssertEqual(formatter.stringForTimeInterval(100), "za 1 minuta")
-        XCTAssertEqual(formatter.stringForTimeInterval(10000), "za 2 hodiny")
-        XCTAssertEqual(formatter.stringForTimeInterval(100000), "za 1 den")
-        XCTAssertEqual(formatter.stringForTimeInterval(200000), "za 2 dny")
-        XCTAssertEqual(formatter.stringForTimeInterval(10000000), "za 3 měsíce")
+        XCTAssertEqual(formatter.string(forTimeInterval: 1), "za 1 sekunda")
+        XCTAssertEqual(formatter.string(forTimeInterval: 100), "za 1 minuta")
+        XCTAssertEqual(formatter.string(forTimeInterval: 10000), "za 2 hodiny")
+        XCTAssertEqual(formatter.string(forTimeInterval: 100000), "za 1 den")
+        XCTAssertEqual(formatter.string(forTimeInterval: 200000), "za 2 dny")
+        XCTAssertEqual(formatter.string(forTimeInterval: 10000000), "za 3 měsíce")
     }
 
     func testIdiomaticPast() {
         formatter.usesIdiomaticDeicticExpressions = true
 
-        XCTAssertEqual(formatter.stringForTimeInterval(-1), "před 1 sekunda")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100), "před 1 minuta")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000), "před 2 hodiny")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100000), "včera")
-        XCTAssertEqual(formatter.stringForTimeInterval(-200000), "předevčírem")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000000), "před 3 měsíce")
+        XCTAssertEqual(formatter.string(forTimeInterval: -1), "před 1 sekunda")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100), "před 1 minuta")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000), "před 2 hodiny")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100000), "včera")
+        XCTAssertEqual(formatter.string(forTimeInterval: -200000), "předevčírem")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000000), "před 3 měsíce")
     }
     
 }

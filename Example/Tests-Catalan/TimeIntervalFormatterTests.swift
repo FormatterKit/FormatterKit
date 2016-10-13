@@ -20,32 +20,32 @@ class TTTTimeIntervalFormatterTests: XCTestCase {
     // MARK: Tests
 
     func testStandardPast() {
-        XCTAssertEqual(formatter.stringForTimeInterval(-1), "fa 1 segon")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100), "fa 1 minut")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000), "fa 2 hores")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100000), "fa 1 dia")
-        XCTAssertEqual(formatter.stringForTimeInterval(-200000), "fa 2 dies")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000000), "fa 3 mesos")
+        XCTAssertEqual(formatter.string(forTimeInterval: -1), "fa 1 segon")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100), "fa 1 minut")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000), "fa 2 hores")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100000), "fa 1 dia")
+        XCTAssertEqual(formatter.string(forTimeInterval: -200000), "fa 2 dies")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000000), "fa 3 mesos")
     }
 
     func testStandardFuture() {
-        XCTAssertEqual(formatter.stringForTimeInterval(1), "d\'aquí 1 segon")
-        XCTAssertEqual(formatter.stringForTimeInterval(100), "d\'aquí 1 minut")
-        XCTAssertEqual(formatter.stringForTimeInterval(10000), "d\'aquí 2 hores")
-        XCTAssertEqual(formatter.stringForTimeInterval(100000), "d\'aquí 1 dia")
-        XCTAssertEqual(formatter.stringForTimeInterval(200000), "d\'aquí 2 dies")
-        XCTAssertEqual(formatter.stringForTimeInterval(10000000), "d\'aquí 3 mesos")
+        XCTAssertEqual(formatter.string(forTimeInterval: 1), "d\'aquí 1 segon")
+        XCTAssertEqual(formatter.string(forTimeInterval: 100), "d\'aquí 1 minut")
+        XCTAssertEqual(formatter.string(forTimeInterval: 10000), "d\'aquí 2 hores")
+        XCTAssertEqual(formatter.string(forTimeInterval: 100000), "d\'aquí 1 dia")
+        XCTAssertEqual(formatter.string(forTimeInterval: 200000), "d\'aquí 2 dies")
+        XCTAssertEqual(formatter.string(forTimeInterval: 10000000), "d\'aquí 3 mesos")
     }
 
     func testIdiomaticPast() {
         formatter.usesIdiomaticDeicticExpressions = true
 
-        XCTAssertEqual(formatter.stringForTimeInterval(-1), "fa 1 segon")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100), "fa 1 minut")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000), "fa 2 hores")
-        XCTAssertEqual(formatter.stringForTimeInterval(-100000), "ahir")
-        XCTAssertEqual(formatter.stringForTimeInterval(-200000), "abans d\'ahir")
-        XCTAssertEqual(formatter.stringForTimeInterval(-10000000), "fa 3 mesos")
+        XCTAssertEqual(formatter.string(forTimeInterval: -1), "fa 1 segon")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100), "fa 1 minut")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000), "fa 2 hores")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100000), "ahir")
+        XCTAssertEqual(formatter.string(forTimeInterval: -200000), "abans d\'ahir")
+        XCTAssertEqual(formatter.string(forTimeInterval: -10000000), "fa 3 mesos")
     }
     
 }

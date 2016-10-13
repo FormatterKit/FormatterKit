@@ -1696,127 +1696,161 @@
 				TargetAttributes = {
 					505136C01CCE1EF600569478 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC1DF1CD0B0DA004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC1ED1CD0B111004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC1FB1CD0B11C004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC2091CD0B124004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC2171CD0B131004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC2251CD0B141004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC2331CD0B172004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC2411CD0B190004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC24F1CD0B19B004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC25D1CD0B1A8004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC26B1CD0B1B7004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC2791CD0B1F6004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC2871CD0B203004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC2951CD0B222004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC2A31CD0B234004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC2B11CD0B24C004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC2BF1CD0B26C004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC2CD1CD0B27E004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC2DB1CD0B291004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC2E91CD0B2A3004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC2F71CD0B2B0004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC3051CD0B2C5004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC3131CD0B2E1004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC3211CD0B304004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50ACC32F1CD0B30F004FB5F1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50E332831CD0A4FE0016EEDF = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50E332911CD0A5170016EEDF = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50F3E89E1CCE0EEC00BC8526 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50F3E8AC1CCE0F2100BC8526 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
 					};
 					50F3E8BA1CCE144D00BC8526 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F8FBF9E31427A456001409DB;
+					};
+					F8FBF9E31427A456001409DB = {
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -2624,6 +2658,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Russian";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -2650,6 +2685,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Russian";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -2675,6 +2711,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Arabic";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -2701,6 +2738,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Arabic";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -2726,6 +2764,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Catalan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -2752,6 +2791,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Catalan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -2777,6 +2817,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Czech";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -2803,6 +2844,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Czech";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -2828,6 +2870,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Danish";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -2854,6 +2897,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Danish";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -2879,6 +2923,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-German";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -2905,6 +2950,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-German";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -2930,6 +2976,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Greek";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -2956,6 +3003,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Greek";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -2981,6 +3029,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Hebrew";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -3007,6 +3056,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Hebrew";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -3032,6 +3082,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Indonesian";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -3058,6 +3109,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Indonesian";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -3083,6 +3135,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Italian";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -3109,6 +3162,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Italian";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -3134,6 +3188,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Japanese";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -3160,6 +3215,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Japanese";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -3185,6 +3241,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Korean";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -3211,6 +3268,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Korean";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -3236,6 +3294,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Norwegian-Bokma-l";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -3262,6 +3321,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Norwegian-Bokma-l";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -3287,6 +3347,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Dutch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -3313,6 +3374,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Dutch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -3338,6 +3400,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Norwegian-Nynorsk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -3364,6 +3427,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Norwegian-Nynorsk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -3389,6 +3453,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Polish";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -3415,6 +3480,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Polish";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -3440,6 +3506,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Portuguese";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -3466,6 +3533,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Portuguese";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -3491,6 +3559,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Portuguese-Brazil";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -3517,6 +3586,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Portuguese-Brazil";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -3542,6 +3612,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Romanian";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -3568,6 +3639,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Romanian";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -3593,6 +3665,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Swedish";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -3619,6 +3692,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Swedish";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -3644,6 +3718,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Thai";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -3670,6 +3745,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Thai";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -3695,6 +3771,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Turkish";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -3721,6 +3798,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Turkish";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -3746,6 +3824,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Ukrainian";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -3772,6 +3851,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Ukrainian";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -3797,6 +3877,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Vietnamese";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -3823,6 +3904,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Vietnamese";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -3848,6 +3930,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Hungarian";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -3874,6 +3957,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Hungarian";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -3899,6 +3983,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Malay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -3925,6 +4010,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Malay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -3950,6 +4036,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Chinese-Simplified";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -3976,6 +4063,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Chinese-Simplified";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -4001,6 +4089,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Chinese-Traditional";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -4027,6 +4116,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Chinese-Traditional";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -4052,6 +4142,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-French";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -4078,6 +4169,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-French";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -4103,6 +4195,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Spanish";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -4129,6 +4222,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Spanish";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -4154,6 +4248,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-English";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Debug;
@@ -4180,6 +4275,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-English";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
 			};
 			name = Release;
@@ -4316,6 +4412,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FormatterKit Example/FormatterKit Example-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -4342,6 +4439,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mattt.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FormatterKit Example/FormatterKit Example-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

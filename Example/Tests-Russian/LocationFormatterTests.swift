@@ -26,7 +26,7 @@ class LocationFormatterTests: XCTestCase {
     // MARK: Tests
 
     func testDistanceAndBearing() {
-        let result = formatter.stringFromDistanceAndBearingFromLocation(pittsburgh, toLocation: austin)
+        let result = formatter.stringFromDistanceAndBearing(from: pittsburgh, to: austin)
         XCTAssertEqual(result, "2 000 км Юго-запад")
     }
 

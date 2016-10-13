@@ -23,7 +23,7 @@ class ArrayFormatterTests: XCTestCase {
     // MARK: Tests
 
     func testDefault() {
-        let result = formatter.stringFromArray(dogCatParrot)
+        let result = formatter.string(from: dogCatParrot)
         let expected = "狗、猫、及鹦鹉"
 
         XCTAssertEqual(result, expected)
@@ -34,7 +34,7 @@ class ArrayFormatterTests: XCTestCase {
     func testAbbreviatedConjunction() {
         formatter.usesAbbreviatedConjunction = true
 
-        let result = formatter.stringFromArray(dogCatParrot)
+        let result = formatter.string(from: dogCatParrot)
         let expected = "狗、猫、和鹦鹉"
 
         XCTAssertEqual(result, expected)
