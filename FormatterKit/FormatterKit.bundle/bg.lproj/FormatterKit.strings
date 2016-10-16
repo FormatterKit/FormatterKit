@@ -1,0 +1,299 @@
+﻿/* List separator */
+" " = " ";
+
+/* No comment provided by engineer. */
+"&" = "&";
+
+/* Coordinate format */
+"(%@, %@)" = "(%1$@, %2$@)";
+
+/* List delimiter */
+"," = ",";
+
+/* Approximate Qualifier Format */
+"about %@" = "около %@";
+
+/* Past Deictic Expression */
+"ago" = "преди";
+
+/* List conjunction */
+"and" = "и";
+
+/* Bit Unit */
+"bits" = "бита";
+
+/* Byte Unit */
+"bytes" = "байта";
+
+/* Error converting to NSArray */
+"Couldn’t convert to NSArray" = "Не може да преобразува в NSArray";
+
+/* Day Unit (Singular, Abbreviated)
+ Day Unit (Singular) */
+"day" = "ден";
+
+/* Day Unit (Plural, Abbreviated)
+ Day Unit (Plural) */
+"days" = "дни";
+
+/* Deictic Expression Format (#{Time} #{Ago/From Now} */
+"Deictic Expression Format String" = "%2$@ %1$@";
+
+/* #{Dimensional Quantity} #{Direction} */
+"Dimension Format String" = "%1$@ %2$@";
+
+/* #{Distance} #{Unit} */
+"Distance Format String" = "%1$@ %2$@";
+
+/* East Direction Abbreviation */
+"E" = "И";
+
+/* East Direction */
+"East" = "Изток";
+
+/* Exabyte Unit */
+"EB" = "EB";
+
+/* Exbibyte Unit */
+"EiB" = "EiB";
+
+/* Future Deictic Expression */
+"from now" = "след";
+
+/* Feet Unit */
+"ft" = "ft";
+
+/* Feet Per Second Unit */
+"ft/s" = "ft/s";
+
+/* Gigabyte Unit */
+"GB" = "ГБ";
+
+/* Gigabit Unit */
+"Gbit" = "ГБит";
+
+/* Gibibyte Unit */
+"GiB" = "GiB";
+
+/* Gibibit Unit */
+"Gibit" = "Gibit";
+
+/* Hour Unit (Singular) */
+"hour" = "час";
+
+/* Hour Unit (Plural) */
+"hours" = "часа";
+
+/* Hour Unit (Singular, Abbreviated) */
+"hr" = "ч.";
+
+/* Hour Unit (Plural, Abbreviated) */
+"hrs" = "ч.";
+
+/* Present Deictic Expression */
+"just now" = "сега";
+
+/* Kilobyte Unit */
+"KB" = "КБ";
+
+/* Kilobit Unit */
+"kbit" = "КБит";
+
+/* Kibibyte Unit */
+"KiB" = "KiB";
+
+/* Kibibit Unit */
+"Kibit" = "Kibit";
+
+/* Kilometer Unit */
+"km" = "км";
+
+/* Kilometers Per Hour Unit */
+"km/h" = "км/ч";
+
+/* No comment provided by engineer. */
+"last month" = "миналия месец";
+
+/* No comment provided by engineer. */
+"last week" = "миналата седмица";
+
+/* No comment provided by engineer. */
+"last year" = "миналата година";
+
+/* Meter Unit */
+"m" = "м";
+
+/* Meters Per Second Unit */
+"m/s" = "м/с";
+
+/* Megabyte Unit */
+"MB" = "МБ";
+
+/* Megabit Unit */
+"Mbit" = "МБит";
+
+/* No comment provided by engineer. */
+"Method Not Implemented" = "Този метод не съществува";
+
+/* Mebibyte Unit */
+"MiB" = "MiB";
+
+/* Mebibit Unit */
+"Mibit" = "Mibit";
+
+/* Mile Unit (Singular) */
+"mile" = "миля";
+
+/* Mile Unit (Plural) */
+"miles" = "мили";
+
+/* Minute Unit (Singular, Abbreviated) */
+"min" = "мин.";
+
+/* Minute Unit (Plural, Abbreviated) */
+"mins" = "мин.";
+
+/* Minute Unit (Singular) */
+"minute" = "минута";
+
+/* Minute Unit (Plural) */
+"minutes" = "минути";
+
+/* Month Unit (Singular, Abbreviated) */
+"mo" = "мес.";
+
+/* Month Unit (Singular) */
+"month" = "месец";
+
+/* Month Unit (Plural) */
+"months" = "месеци";
+
+/* Month Unit (Plural, Abbreviated) */
+"mos" = "мес.";
+
+/* Miles Per Hour Unit */
+"mph" = "мл/ч";
+
+/* North Direction Abbreviation */
+"N" = "С";
+
+/* Northeast Direction Abbreviation */
+"NE" = "СИ";
+
+/* No comment provided by engineer. */
+"next month" = "следващия месец";
+
+/* No comment provided by engineer. */
+"next week" = "следващата седмица";
+
+/* No comment provided by engineer. */
+"next year" = "следващата година";
+
+/* North Direction */
+"North" = "Север";
+
+/* Northeast Direction */
+"Northeast" = "Северо-Изток";
+
+/* Northwest Direction */
+"Northwest" = "Северо-Запад";
+
+/* Northwest Direction Abbreviation */
+"NW" = "СЗ";
+
+/* Petabyte Unit */
+"PB" = "ПБ";
+
+/* Petabit Unit */
+"Pbit" = "ПБит";
+
+/* Pebibyte Unit */
+"PiB" = "PiB";
+
+/* Pebibit Unit */
+"Pibit" = "Pibit";
+
+/* South Direction Abbreviation */
+"S" = "Ю";
+
+/* Second Unit (Plural, Abbreviated)
+ Second Unit (Singular, Abbreviated) */
+"s" = "с";
+
+/* Southeast Direction Abbreviation */
+"SE" = "СИ";
+
+/* Second Unit (Singular) */
+"second" = "секунда";
+
+/* Second Unit (Plural) */
+"seconds" = "секунди";
+
+/* South Direction */
+"South" = "Юг";
+
+/* Southeast Direction */
+"Southeast" = "Юго-Изток";
+
+/* Southwest Direction */
+"Southwest" = "Юго-Запад";
+
+/* #{Speed} #{Unit} */
+"Speed Format String" = "%1$@ %2$@";
+
+/* Southwest Direction Abbreviation */
+"SW" = "ЮЗ";
+
+/* Terabyte Unit */
+"TB" = "ТБ";
+
+/* Terabit Unit */
+"Tbit" = "Тбит";
+
+/* Tebibyte Unit */
+"TiB" = "TiB";
+
+/* Tebibit Unit */
+"Tibit" = "Tibit";
+
+/* No comment provided by engineer. */
+"tomorrow" = "утре";
+
+/* #{Value} #{Unit} */
+"Unit of Information Format String" = "%1$@ %2$@";
+
+/* West Direction Abbreviation */
+"W" = "З";
+
+/* Week Unit (Singular) */
+"week" = "седмица";
+
+/* Week Unit (Plural) */
+"weeks" = "седмици";
+
+/* West Direction */
+"West" = "Запад";
+
+/* Week Unit (Singular, Abbreviated) */
+"wk" = "седм.";
+
+/* Week Unit (Plural, Abbreviated) */
+"wks" = "седм.";
+
+/* Yard Unit */
+"yds" = "ярда";
+
+/* Year Unit (Singular) */
+"year" = "година";
+
+/* Year Unit (Plural) */
+"years" = "години";
+
+/* No comment provided by engineer. */
+"yesterday" = "вчера";
+
+/* Year Unit (Singular, Abbreviated) */
+"yr" = "г.";
+
+/* Year Unit (Plural, Abbreviated) */
+"yrs" = "г.";

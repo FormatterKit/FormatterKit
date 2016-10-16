@@ -9,7 +9,7 @@ before_install:
   - test -n "$TTT_CARTHAGE" && brew install https://gist.githubusercontent.com/yas375/1d655b68d12d544c34f03281226b57d5/raw/986bfd910215bbb167316800416a5a96fbae1499/carthage.rb || true
 
 env:
-  - TTT_LANGS="Arabic Catalan Chinese-Simplified Chinese-Traditional Czech Danish Dutch English French German"
+  - TTT_LANGS="Arabic Bulgarian Catalan Chinese-Simplified Chinese-Traditional Czech Danish Dutch English French German"
   - TTT_LANGS="Greek Hebrew Hungarian Indonesian Italian Japanese Korean Malay Norwegian-Bokmal Norwegian-Nynorsk"
   - TTT_LANGS="Polish Portuguese Portuguese-Brazil Romanian Russian Spanish Swedish Thai Turkish Ukrainian Vietnamese"
   - TTT_COMMAND="rake integration:cocoapods_ios"

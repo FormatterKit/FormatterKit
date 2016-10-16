@@ -1,5 +1,5 @@
 KNOWN_LANGUAGES = [
-  'Arabic', 'Catalan', 'Chinese-Simplified', 'Chinese-Traditional',
+  'Arabic', 'Bulgarian', 'Catalan', 'Chinese-Simplified', 'Chinese-Traditional',
   'Czech', 'Danish', 'Dutch', 'English', 'French', 'German', 'Greek',
   'Hebrew', 'Hungarian', 'Indonesian', 'Italian', 'Japanese', 'Korean',
   'Malay', 'Norwegian-Bokmal', 'Norwegian-Nynorsk', 'Polish', 'Portuguese',

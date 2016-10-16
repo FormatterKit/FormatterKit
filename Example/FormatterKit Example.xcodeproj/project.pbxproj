@@ -14,6 +14,7 @@
 		5044222F1CE7A188005E5721 /* ArrayFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5044222E1CE7A188005E5721 /* ArrayFormatterTests.swift */; };
 		504422311CE7A417005E5721 /* ColorFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504422301CE7A417005E5721 /* ColorFormatterTests.swift */; };
 		504422331CE7AFC2005E5721 /* LocationFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504422321CE7AFC2005E5721 /* LocationFormatterTests.swift */; };
+		504AB6B11DB332E000F6C09B /* TTTTimeIntervalFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504AB6B01DB332E000F6C09B /* TTTTimeIntervalFormatterTests.swift */; };
 		505136C41CCE1EF600569478 /* TimeIntervalFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505136C31CCE1EF600569478 /* TimeIntervalFormatterTests.swift */; };
 		50ACC1E31CD0B0DA004FB5F1 /* TimeIntervalFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ACC1E21CD0B0DA004FB5F1 /* TimeIntervalFormatterTests.swift */; };
 		50ACC1F11CD0B111004FB5F1 /* TimeIntervalFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ACC1F01CD0B111004FB5F1 /* TimeIntervalFormatterTests.swift */; };
@@ -68,6 +69,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		504AB6A51DB332A800F6C09B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8FBF9DB1427A456001409DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8FBF9E31427A456001409DB;
+			remoteInfo = "FormatterKit Example";
+		};
 		505136C61CCE1EF600569478 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F8FBF9DB1427A456001409DB /* Project object */;
@@ -326,6 +334,9 @@
 		5044222E1CE7A188005E5721 /* ArrayFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayFormatterTests.swift; sourceTree = "<group>"; };
 		504422301CE7A417005E5721 /* ColorFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorFormatterTests.swift; sourceTree = "<group>"; };
 		504422321CE7AFC2005E5721 /* LocationFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationFormatterTests.swift; sourceTree = "<group>"; };
+		504AB6931DB3321600F6C09B /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		504AB6AD1DB332A800F6C09B /* Tests-Bulgarian.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-Bulgarian.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		504AB6B01DB332E000F6C09B /* TTTTimeIntervalFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TTTTimeIntervalFormatterTests.swift; path = "Tests-Bulgarian/TTTTimeIntervalFormatterTests.swift"; sourceTree = "<group>"; };
 		505136C11CCE1EF600569478 /* Tests-Russian.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-Russian.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		505136C31CCE1EF600569478 /* TimeIntervalFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalFormatterTests.swift; sourceTree = "<group>"; };
 		50ACC1E01CD0B0DA004FB5F1 /* Tests-Arabic.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-Arabic.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -425,6 +436,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		504AB6A81DB332A800F6C09B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		505136BE1CCE1EF600569478 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -659,6 +677,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		504AB6A21DB3327100F6C09B /* Bulgarian */ = {
+			isa = PBXGroup;
+			children = (
+				504AB6B01DB332E000F6C09B /* TTTTimeIntervalFormatterTests.swift */,
+			);
+			name = Bulgarian;
+			sourceTree = "<group>";
+		};
 		505136C21CCE1EF600569478 /* Russian */ = {
 			isa = PBXGroup;
 			children = (
@@ -898,6 +924,7 @@
 			isa = PBXGroup;
 			children = (
 				50ACC1E11CD0B0DA004FB5F1 /* Arabic */,
+				504AB6A21DB3327100F6C09B /* Bulgarian */,
 				50ACC1EF1CD0B111004FB5F1 /* Catalan */,
 				50E332851CD0A4FE0016EEDF /* Chinese-Simplified */,
 				50E332931CD0A5170016EEDF /* Chinese-Traditional */,
@@ -1028,6 +1055,7 @@
 				50ACC3141CD0B2E1004FB5F1 /* Tests-Vietnamese.xctest */,
 				50ACC3221CD0B304004FB5F1 /* Tests-Hungarian.xctest */,
 				50ACC3301CD0B30F004FB5F1 /* Tests-Malay.xctest */,
+				504AB6AD1DB332A800F6C09B /* Tests-Bulgarian.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1109,6 +1137,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		504AB6A31DB332A800F6C09B /* Tests-Bulgarian */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 504AB6AA1DB332A800F6C09B /* Build configuration list for PBXNativeTarget "Tests-Bulgarian" */;
+			buildPhases = (
+				504AB6A61DB332A800F6C09B /* Sources */,
+				504AB6A81DB332A800F6C09B /* Frameworks */,
+				504AB6A91DB332A800F6C09B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				504AB6A41DB332A800F6C09B /* PBXTargetDependency */,
+			);
+			name = "Tests-Bulgarian";
+			productName = "Tests-Swedish";
+			productReference = 504AB6AD1DB332A800F6C09B /* Tests-Bulgarian.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		505136C01CCE1EF600569478 /* Tests-Russian */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 505136CA1CCE1EF600569478 /* Build configuration list for PBXNativeTarget "Tests-Russian" */;
@@ -1690,10 +1736,13 @@
 		F8FBF9DB1427A456001409DB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
+					504AB6A31DB332A800F6C09B = {
+						LastSwiftMigration = 0800;
+					};
 					505136C01CCE1EF600569478 = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0800;
@@ -1890,6 +1939,7 @@
 				"zh-Hant",
 				hu,
 				ms,
+				bg,
 			);
 			mainGroup = F8FBF9D91427A456001409DB;
 			productRefGroup = F8FBF9E51427A456001409DB /* Products */;
@@ -1928,11 +1978,19 @@
 				50E332911CD0A5170016EEDF /* Tests-Chinese-Traditional */,
 				50ACC3211CD0B304004FB5F1 /* Tests-Hungarian */,
 				50ACC32F1CD0B30F004FB5F1 /* Tests-Malay */,
+				504AB6A31DB332A800F6C09B /* Tests-Bulgarian */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		504AB6A91DB332A800F6C09B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		505136BF1CCE1EF600569478 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2163,6 +2221,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		504AB6A61DB332A800F6C09B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				504AB6B11DB332E000F6C09B /* TTTTimeIntervalFormatterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		505136BD1CCE1EF600569478 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2438,6 +2504,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		504AB6A41DB332A800F6C09B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8FBF9E31427A456001409DB /* FormatterKit Example */;
+			targetProxy = 504AB6A51DB332A800F6C09B /* PBXContainerItemProxy */;
+		};
 		505136C71CCE1EF600569478 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F8FBF9E31427A456001409DB /* FormatterKit Example */;
@@ -2630,6 +2701,7 @@
 				500783111CAB9BAC0065B481 /* sv */,
 				500783121CAB9BAD0065B481 /* ro */,
 				500783131CAB9BAE0065B481 /* zh-Hans */,
+				504AB6931DB3321600F6C09B /* bg */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -2637,6 +2709,59 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		504AB6AB1DB332A800F6C09B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Swedish";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
+			};
+			name = Debug;
+		};
+		504AB6AC1DB332A800F6C09B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tests-Swedish";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormatterKit Example.app/FormatterKit Example";
+			};
+			name = Release;
+		};
 		505136C81CCE1EF600569478 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -4455,6 +4580,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		504AB6AA1DB332A800F6C09B /* Build configuration list for PBXNativeTarget "Tests-Bulgarian" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				504AB6AB1DB332A800F6C09B /* Debug */,
+				504AB6AC1DB332A800F6C09B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		505136CA1CCE1EF600569478 /* Build configuration list for PBXNativeTarget "Tests-Russian" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
