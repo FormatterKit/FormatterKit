@@ -41,7 +41,7 @@ task :spec do
     else
       puts "===\n=== Running tests for #{lang}\n==="
     end
-    status = run "xcodebuild -workspace FormatterKit.xcworkspace -scheme #{lang} -sdk iphonesimulator -derivedDataPath build/DerivedData/#{lang} test | bundle exec xcpretty --test && exit ${PIPESTATUS[0]}" || 0
+    status = run "xcodebuild -workspace FormatterKit.xcworkspace -scheme #{lang} -destination 'platform=iOS Simulator,name=iPhone 7' -derivedDataPath build/DerivedData/#{lang} test | bundle exec xcpretty --test && exit ${PIPESTATUS[0]}" || 0
     puts "travis_fold:end:ios.tests.#{lang}" if is_travis? && status.zero?
     status
   end.max
