@@ -16,6 +16,6 @@ class ExampleTests: XCTestCase {
   }
 
   func testNumberOfLocalizations() {
-    XCTAssertEqual(NSBundle.mainBundle().localizations.count, 3) // Base, en, es
+    XCTAssertEqual(Bundle.main.localizations.count, 3) // Base, en, es
   }
 }

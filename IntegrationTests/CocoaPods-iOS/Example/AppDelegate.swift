@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func foo() -> String {
     let intervalFormatter = TTTTimeIntervalFormatter()
-    return intervalFormatter.stringForTimeInterval(-3600*24*7*3)
+    return intervalFormatter.string(forTimeInterval: -3600*24*7*3)
   }
 }
 

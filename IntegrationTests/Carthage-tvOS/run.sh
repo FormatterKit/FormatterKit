@@ -5,5 +5,5 @@ echo "git \"file://$(cd `pwd`/../.. && pwd)\" \"`git rev-parse HEAD`\"" > Cartfi
 echo "Carthage `carthage version`"
 carthage update --platform 'tvos' --verbose
 
-xcodebuild -scheme Example -sdk appletvsimulator test | xcpretty && exit ${PIPESTATUS[0]}
+xcodebuild -scheme Example -destination 'platform=tvOS Simulator,name=Apple TV 1080p' test | xcpretty && exit ${PIPESTATUS[0]}
 

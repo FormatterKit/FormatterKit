@@ -1,5 +1,5 @@
 #!/bin/sh -e
 
 bundle exec pod install
-xcodebuild -workspace Example.xcworkspace -scheme Example -sdk iphonesimulator test | xcpretty && exit ${PIPESTATUS[0]}
+xcodebuild -workspace Example.xcworkspace -scheme Example -destination 'platform=iOS Simulator,name=iPhone 6' test | xcpretty && exit ${PIPESTATUS[0]}
 

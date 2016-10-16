@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
   func foo() -> String {
     let a = TTTTimeIntervalFormatter()
-    return a.stringForTimeInterval(-3600)
+    return a.string(forTimeInterval: -3600)
   }
 
 }
