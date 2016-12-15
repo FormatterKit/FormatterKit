@@ -28,13 +28,17 @@
 /* Error converting to NSArray */
 "Couldn’t convert to NSArray" = "Nem konvertálható NSArray-re";
 
-/* Day Unit (Singular, Abbreviated)
- Day Unit (Singular) */
+/* Day Unit (Singular) */
 "day" = "nap";
 
-/* Day Unit (Plural, Abbreviated)
- Day Unit (Plural) */
+/* Day Unit (Plural) */
 "days" = "nap";
+
+/* Day Unit (Singular, Abbreviated) */
+"d" = "nap";
+
+/* Day Unit (Plural, Abbreviated) */
+"ds" = "nap";
 
 /* Deictic Expression Format (#{Time} #{Ago/From Now} */
 "Deictic Expression Format String" = "%1$@ %2$@";
