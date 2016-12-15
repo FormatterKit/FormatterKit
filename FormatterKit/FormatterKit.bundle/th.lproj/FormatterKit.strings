@@ -28,13 +28,17 @@
 /* Error converting to NSArray */
 "Couldn’t convert to NSArray" = "ไม่สามารถแปลงเป็น NSArray ได้";
 
-/* Day Unit (Singular, Abbreviated)
-   Day Unit (Singular) */
+/* Day Unit (Singular) */
 "day" = "วัน";
 
-/* Day Unit (Plural, Abbreviated)
-   Day Unit (Plural) */
+/* Day Unit (Plural) */
 "days" = "วัน";
+
+/* Day Unit (Singular, Abbreviated) */
+"d" = "วัน";
+
+/* Day Unit (Plural, Abbreviated) */
+"ds" = "วัน";
 
 /* Deictic Expression Format (#{Time} #{Ago/From Now} */
 "Deictic Expression Format String" = "%1$@%2$@";

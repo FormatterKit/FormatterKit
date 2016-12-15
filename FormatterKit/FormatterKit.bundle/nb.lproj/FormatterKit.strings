@@ -20,8 +20,17 @@
 "mos." = "mnd";
 "wk." = "u";
 "wks." = "u";
+/* Day Unit (Singular) */
 "day" = "d";
+
+/* Day Unit (Plural) */
 "days" = "d";
+
+/* Day Unit (Singular, Abbreviated) */
+"d" = "d";
+
+/* Day Unit (Plural, Abbreviated) */
+"ds" = "d";
 "hr" = "t";
 "hrs." = "t";
 "min." = "m";
