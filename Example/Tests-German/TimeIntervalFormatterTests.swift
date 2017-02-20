@@ -23,8 +23,8 @@ class TTTTimeIntervalFormatterTests: XCTestCase {
         XCTAssertEqual(formatter.string(forTimeInterval: -1), "vor 1 Sekunde")
         XCTAssertEqual(formatter.string(forTimeInterval: -100), "vor 1 Minute")
         XCTAssertEqual(formatter.string(forTimeInterval: -10000), "vor 2 Stunden")
-        XCTAssertEqual(formatter.string(forTimeInterval: -100000), "vor 1 T.")
-        XCTAssertEqual(formatter.string(forTimeInterval: -200000), "vor 2 T.")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100000), "vor 1 Tag")
+        XCTAssertEqual(formatter.string(forTimeInterval: -200000), "vor 2 Tage")
         XCTAssertEqual(formatter.string(forTimeInterval: -10000000), "vor 3 Monaten")
     }
 
@@ -32,8 +32,8 @@ class TTTTimeIntervalFormatterTests: XCTestCase {
         XCTAssertEqual(formatter.string(forTimeInterval: 1), "in 1 Sekunde")
         XCTAssertEqual(formatter.string(forTimeInterval: 100), "in 1 Minute")
         XCTAssertEqual(formatter.string(forTimeInterval: 10000), "in 2 Stunden")
-        XCTAssertEqual(formatter.string(forTimeInterval: 100000), "in 1 T.")
-        XCTAssertEqual(formatter.string(forTimeInterval: 200000), "in 2 T.")
+        XCTAssertEqual(formatter.string(forTimeInterval: 100000), "in 1 Tag")
+        XCTAssertEqual(formatter.string(forTimeInterval: 200000), "in 2 Tage")
         XCTAssertEqual(formatter.string(forTimeInterval: 10000000), "in 3 Monaten")
     }
 
@@ -43,8 +43,8 @@ class TTTTimeIntervalFormatterTests: XCTestCase {
         XCTAssertEqual(formatter.string(forTimeInterval: -1), "vor 1 Sekunde")
         XCTAssertEqual(formatter.string(forTimeInterval: -100), "vor 1 Minute")
         XCTAssertEqual(formatter.string(forTimeInterval: -10000), "vor 2 Stunden")
-        XCTAssertEqual(formatter.string(forTimeInterval: -100000), "vor 1 T.")
-        XCTAssertEqual(formatter.string(forTimeInterval: -200000), "vor 2 T.")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100000), "vor 1 Tag")
+        XCTAssertEqual(formatter.string(forTimeInterval: -200000), "vor 2 Tage")
         XCTAssertEqual(formatter.string(forTimeInterval: -10000000), "vor 3 Monaten")
     }
     
