@@ -99,7 +99,8 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
 @synthesize pastDeicticExpression = _pastDeicticExpression;
 @synthesize presentDeicticExpression = _presentDeicticExpression;
 @synthesize futureDeicticExpression = _futureDeicticExpression;
-@synthesize deicticExpressionFormat = _deicticExpressionFormat;
+@synthesize pastDeicticExpressionFormat = _pastDeicticExpressionFormat;
+@synthesize futureDeicticExpressionFormat = _futureDeicticExpressionFormat;
 @synthesize suffixExpressionFormat = _suffixExpressionFormat;
 @synthesize approximateQualifierFormat = _approximateQualifierFormat;
 @synthesize presentTimeIntervalMargin = _presentTimeIntervalMargin;
@@ -123,7 +124,8 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     self.presentDeicticExpression = NSLocalizedStringFromTableInBundle(@"just now", @"FormatterKit", [NSBundle formatterKitBundle], @"Present Deictic Expression");
     self.futureDeicticExpression = NSLocalizedStringFromTableInBundle(@"from now", @"FormatterKit", [NSBundle formatterKitBundle], @"Future Deictic Expression");
 
-    self.deicticExpressionFormat = NSLocalizedStringWithDefaultValue(@"Deictic Expression Format String", @"FormatterKit", [NSBundle formatterKitBundle], @"%@ %@", @"Deictic Expression Format (#{Time} #{Ago/From Now}");
+    self.pastDeicticExpressionFormat = NSLocalizedStringWithDefaultValue(@"Past Deictic Expression Format String", @"FormatterKit", [NSBundle formatterKitBundle], @"%@ %@", @"Past Deictic Expression Format (#{Time} #{Ago/From Now}");
+    self.futureDeicticExpressionFormat = NSLocalizedStringWithDefaultValue(@"Future Deictic Expression Format String", @"FormatterKit", [NSBundle formatterKitBundle], @"%@ %@", @"Future Deictic Expression Format (#{In} #{Time}");
     self.approximateQualifierFormat = NSLocalizedStringFromTableInBundle(@"about %@", @"FormatterKit", [NSBundle formatterKitBundle], @"Approximate Qualifier Format");
     self.suffixExpressionFormat = NSLocalizedStringWithDefaultValue(@"Suffix Expression Format String", @"FormatterKit", [NSBundle formatterKitBundle], @"%@ %@", @"Suffix Expression Format (#{Time} #{Unit})");
 
@@ -183,11 +185,11 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     if (string) {
         if (seconds > 0) {
             if ([self.pastDeicticExpression length]) {
-                string = [NSString stringWithFormat:self.deicticExpressionFormat, string, self.pastDeicticExpression];
+                string = [NSString stringWithFormat:self.pastDeicticExpressionFormat, string, self.pastDeicticExpression];
             }
         } else {
             if ([self.futureDeicticExpression length]) {
-                string = [NSString stringWithFormat:self.deicticExpressionFormat, string, self.futureDeicticExpression];
+                string = [NSString stringWithFormat:self.futureDeicticExpressionFormat, string, self.futureDeicticExpression];
             }
         }
 
@@ -650,7 +652,8 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     formatter.pastDeicticExpression = [self.pastDeicticExpression copyWithZone:zone];
     formatter.presentDeicticExpression = [self.presentDeicticExpression copyWithZone:zone];
     formatter.futureDeicticExpression = [self.futureDeicticExpression copyWithZone:zone];
-    formatter.deicticExpressionFormat = [self.deicticExpressionFormat copyWithZone:zone];
+    formatter.pastDeicticExpressionFormat = [self.pastDeicticExpressionFormat copyWithZone:zone];
+    formatter.futureDeicticExpressionFormat = [self.futureDeicticExpressionFormat copyWithZone:zone];
     formatter.approximateQualifierFormat = [self.approximateQualifierFormat copyWithZone:zone];
     formatter.presentTimeIntervalMargin = self.presentTimeIntervalMargin;
     formatter.usesAbbreviatedCalendarUnits = self.usesAbbreviatedCalendarUnits;
@@ -669,7 +672,8 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     self.pastDeicticExpression = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(pastDeicticExpression))];
     self.presentDeicticExpression = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(presentDeicticExpression))];
     self.futureDeicticExpression = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(futureDeicticExpression))];
-    self.deicticExpressionFormat = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(deicticExpressionFormat))];
+    self.pastDeicticExpressionFormat = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(pastDeicticExpressionFormat))];
+    self.futureDeicticExpressionFormat = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(futureDeicticExpressionFormat))];
     self.approximateQualifierFormat = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(approximateQualifierFormat))];
     self.presentTimeIntervalMargin = [aDecoder decodeDoubleForKey:NSStringFromSelector(@selector(presentTimeIntervalMargin))];
     self.usesAbbreviatedCalendarUnits = [aDecoder decodeBoolForKey:NSStringFromSelector(@selector(usesAbbreviatedCalendarUnits))];
@@ -686,7 +690,8 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
     [aCoder encodeObject:self.pastDeicticExpression forKey:NSStringFromSelector(@selector(pastDeicticExpression))];
     [aCoder encodeObject:self.presentDeicticExpression forKey:NSStringFromSelector(@selector(presentDeicticExpression))];
     [aCoder encodeObject:self.futureDeicticExpression forKey:NSStringFromSelector(@selector(futureDeicticExpression))];
-    [aCoder encodeObject:self.deicticExpressionFormat forKey:NSStringFromSelector(@selector(deicticExpressionFormat))];
+    [aCoder encodeObject:self.pastDeicticExpressionFormat forKey:NSStringFromSelector(@selector(pastDeicticExpressionFormat))];
+    [aCoder encodeObject:self.futureDeicticExpressionFormat forKey:NSStringFromSelector(@selector(futureDeicticExpressionFormat))];
     [aCoder encodeObject:self.approximateQualifierFormat forKey:NSStringFromSelector(@selector(approximateQualifierFormat))];
     [aCoder encodeDouble:self.presentTimeIntervalMargin forKey:NSStringFromSelector(@selector(presentTimeIntervalMargin))];
     [aCoder encodeBool:self.usesAbbreviatedCalendarUnits forKey:NSStringFromSelector(@selector(usesAbbreviatedCalendarUnits))];
