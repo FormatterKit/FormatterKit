@@ -339,6 +339,7 @@
 		504AB6B01DB332E000F6C09B /* TTTTimeIntervalFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TTTTimeIntervalFormatterTests.swift; path = "Tests-Bulgarian/TTTTimeIntervalFormatterTests.swift"; sourceTree = "<group>"; };
 		505136C11CCE1EF600569478 /* Tests-Russian.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-Russian.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		505136C31CCE1EF600569478 /* TimeIntervalFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalFormatterTests.swift; sourceTree = "<group>"; };
+		509EC2F01E92BBB400EA1044 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Playground.playground; path = "FormatterKit Example/Playground.playground"; sourceTree = "<group>"; };
 		50ACC1E01CD0B0DA004FB5F1 /* Tests-Arabic.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-Arabic.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50ACC1E21CD0B0DA004FB5F1 /* TimeIntervalFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalFormatterTests.swift; sourceTree = "<group>"; };
 		50ACC1EE1CD0B111004FB5F1 /* Tests-Catalan.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-Catalan.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1011,6 +1012,7 @@
 		F8FBF9D91427A456001409DB = {
 			isa = PBXGroup;
 			children = (
+				509EC2F01E92BBB400EA1044 /* Playground.playground */,
 				F8FBF9EE1427A456001409DB /* FormatterKit Example */,
 				F8FBF9E71427A456001409DB /* Frameworks */,
 				F8FBF9E51427A456001409DB /* Products */,
