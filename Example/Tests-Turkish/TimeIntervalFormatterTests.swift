@@ -29,22 +29,23 @@ class TTTTimeIntervalFormatterTests: XCTestCase {
     }
 
     func testStandardFuture() {
-        XCTAssertEqual(formatter.string(forTimeInterval: 1), "1 saniye from now")
-        XCTAssertEqual(formatter.string(forTimeInterval: 100), "1 dakika from now")
-        XCTAssertEqual(formatter.string(forTimeInterval: 10000), "2 saat from now")
-        XCTAssertEqual(formatter.string(forTimeInterval: 100000), "1 gün from now")
-        XCTAssertEqual(formatter.string(forTimeInterval: 200000), "2 gün from now")
-        XCTAssertEqual(formatter.string(forTimeInterval: 10000000), "3 ay from now")
+        XCTAssertEqual(formatter.string(forTimeInterval: 1), "1 saniye sonra")
+        XCTAssertEqual(formatter.string(forTimeInterval: 100), "1 dakika sonra")
+        XCTAssertEqual(formatter.string(forTimeInterval: 10000), "2 saat sonra")
+        XCTAssertEqual(formatter.string(forTimeInterval: 100000), "1 gün sonra")
+        XCTAssertEqual(formatter.string(forTimeInterval: 200000), "2 gün sonra")
+        XCTAssertEqual(formatter.string(forTimeInterval: 10000000), "3 ay sonra")
     }
-
+    
     func testIdiomaticPast() {
         formatter.usesIdiomaticDeicticExpressions = true
-
+        
         XCTAssertEqual(formatter.string(forTimeInterval: -1), "1 saniye önce")
         XCTAssertEqual(formatter.string(forTimeInterval: -100), "1 dakika önce")
         XCTAssertEqual(formatter.string(forTimeInterval: -10000), "2 saat önce")
-        XCTAssertEqual(formatter.string(forTimeInterval: -100000), "1 gün önce")
-        XCTAssertEqual(formatter.string(forTimeInterval: -200000), "2 gün önce")
+        XCTAssertEqual(formatter.string(forTimeInterval: -100000), "dün")
+        XCTAssertEqual(formatter.string(forTimeInterval: -200000), "evvelki gün")
+        XCTAssertEqual(formatter.string(forTimeInterval: -6000000), "evvelki ay")
         XCTAssertEqual(formatter.string(forTimeInterval: -10000000), "3 ay önce")
     }
     

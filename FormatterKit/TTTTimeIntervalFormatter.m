@@ -271,6 +271,8 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return [self plRelativeDateStringForComponents:components];
     } else if ([languageCode isEqualToString:@"hu"]) {
         return [self huRelativeDateStringForComponents:components];
+    } else if ([languageCode isEqualToString:@"tr"]) {
+        return [self trRelativeDateStringForComponents:components];
     } else if ([languageCode isEqualToString:@"zh"]) {
         NSString *languageScript = [self.locale objectForKey:NSLocaleScriptCode];
         if (![languageScript isEqualToString:@"Hant"]) {
@@ -585,6 +587,40 @@ static inline NSComparisonResult NSCalendarUnitCompareSignificance(NSCalendarUni
         return @"holnap";
     } else if ([components day] == 2 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
         return @"holnapután";
+    }
+    
+    return nil;
+}
+
+- (NSString *)trRelativeDateStringForComponents:(NSDateComponents *)components {
+    if ([components year] == -1) {
+        return @"geçen yıl";
+    } else if ([components month] == -1 && [components year] == 0) {
+        return @"geçen ay";
+    } else if ([components weekOfYear] == -1 && [components year] == 0 && [components month] == 0) {
+        return @"geçen hafta";
+    } else if ([components day] == -1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
+        return @"dün";
+    }
+    
+    if ([components year] == -2) {
+        return @"evvelki yıl";
+    } else if ([components month] == -2 && [components year] == 0) {
+        return @"evvelki ay";
+    } else if ([components weekOfYear] == -2 && [components year] == 0 && [components month] == 0) {
+        return @"evvelki hafta";
+    } else if ([components day] == -2 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
+        return @"evvelki gün";
+    }
+    
+    if ([components year] == 1) {
+        return @"gelecek yıl";
+    } else if ([components month] == 1 && [components year] == 0) {
+        return @"gelecek ay";
+    } else if ([components weekOfYear] == 1 && [components year] == 0 && [components month] == 0) {
+        return @"gelecek hafta";
+    } else if ([components day] == 1 && [components year] == 0 && [components month] == 0 && [components weekOfYear] == 0) {
+        return @"yarın";
     }
     
     return nil;
