@@ -165,13 +165,36 @@
 ///--------------------------
 
 /**
+ Returns a `TTTColor` declaration for the specified color.
+
+ @param color The color.
+
+ @return A `TTTColor` declaration.
+ */
+- (NSString *)TTTColorDeclarationFromColor:(TTTColor *)color;
+
+#if TARGET_OS_IPHONE
+/**
  Returns a `UIColor` declaration for the specified color.
 
  @param color The color.
 
  @return A `UIColor` declaration.
  */
-- (NSString *)TTTColorDeclarationFromColor:(TTTColor *)color;
+- (NSString *)UIColorDeclarationFromColor:(UIColor *)color;
+
+#elif TARGET_OS_MAC
+
+/**
+ Returns a `NSColor` declaration for the specified color.
+
+ @param color The color.
+
+ @return A `NSColor` declaration.
+ */
+- (NSString *)NSColorDeclarationFromColor:(NSColor *)color;
+
+#endif
 
 @end
 

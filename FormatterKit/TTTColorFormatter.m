@@ -206,6 +206,21 @@ static void TTTGetHSLComponentsFromColor(TTTColor *color, CGFloat *hue, CGFloat 
     return [NSString stringWithFormat:@"[TTTColor colorWithRed:%g green:%g blue:%g alpha:%g]", r, g, b, a];
 }
 
+#if TARGET_OS_IPHONE
+
+- (NSString *)UIColorDeclarationFromColor:(UIColor *)color {
+	return [self TTTColorDeclarationFromColor:color];
+}
+
+#elif TARGET_OS_MAC
+
+- (NSString *)NSColorDeclarationFromColor:(NSColor *)color {
+	return [self TTTColorDeclarationFromColor:color];
+}
+
+#endif
+
+
 #pragma mark - NSFormatter
 
 - (NSString *)stringForObjectValue:(id)anObject {
