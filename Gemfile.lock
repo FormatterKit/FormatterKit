@@ -84,6 +84,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler
   cocoapods
   rake
   slather
