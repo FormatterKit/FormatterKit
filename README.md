@@ -1,18 +1,18 @@
-# FormatterKit [![Build Status](https://travis-ci.org/mattt/FormatterKit.svg?branch=master)](https://travis-ci.org/mattt/FormatterKit) [![Coverage Status](https://coveralls.io/repos/github/mattt/FormatterKit/badge.svg?branch=master)](https://coveralls.io/github/mattt/FormatterKit?branch=master) [![CocoaPods compatible](https://img.shields.io/cocoapods/v/FormatterKit.svg)](https://cocoapods.org/pods/FormatterKit) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+# FormatterKit
 
 `FormatterKit` is a collection of well-crafted `NSFormatter` subclasses for things like units of information, distance, and relative time intervals. Each formatter abstracts away the complex business logic of their respective domain, so that you can focus on the more important aspects of your application.
 
 In short, use this library if you're manually formatting any of the following (with string interpolation or the like):
 
-* __Addresses__: Create formatted address strings from components *(e.g. 221b Baker St / Paddington / Greater London / NW1 6XE / United Kingdom )*
-* __Arrays__: Display `NSArray` elements in a comma-delimited list *(e.g. "Russell, Spinoza & Rawls")*
-* __Colors__: RGB, CMYK, and HSL your ROY G. BIV in style. *(e.g. `#BADF00D`, `rgb(255, 100, 42)`)*
-* __Location, Distance & Direction__: Show `CLLocationDistance`, `CLLocationDirection`, and `CLLocationSpeed` in metric or imperial units *(eg. "240ft Northwest" / "45 km/h SE")*
-* __Names__: Display personal names in the correct format, according to the current locale and source language *(eg. "山田花子" for the Japanese first name "花子" (Hanako) and last name "山田" (Yamada))*
-* __Ordinal Numbers__: Convert cardinal `NSNumber` objects to their ordinal in most major languages *(eg. "1st, 2nd, 3rd" / "1ère, 2ème, 3ème")*
-* __Time Intervals__: Show relative time distance between any two `NSDate` objects *(e.g. "3 minutes ago" / "yesterday")*
-* __Units of Information__: Humanized representations of quantities of bits and bytes *(e.g. "2.7 MB")*
-* __URL Requests__: Print out `cURL` or `Wget` command equivalents for any `NSURLRequest` *(e.g. `curl -X POST "https://www.example.com/" -H "Accept: text/html"`)*
+- **Addresses**: Create formatted address strings from components _(e.g. 221b Baker St / Paddington / Greater London / NW1 6XE / United Kingdom )_
+- **Arrays**: Display `NSArray` elements in a comma-delimited list _(e.g. "Russell, Spinoza & Rawls")_
+- **Colors**: RGB, CMYK, and HSL your ROY G. BIV in style. _(e.g. `#BADF00D`, `rgb(255, 100, 42)`)_
+- **Location, Distance & Direction**: Show `CLLocationDistance`, `CLLocationDirection`, and `CLLocationSpeed` in metric or imperial units _(eg. "240ft Northwest" / "45 km/h SE")_
+- **Names**: Display personal names in the correct format, according to the current locale and source language _(eg. "山田花子" for the Japanese first name "花子" (Hanako) and last name "山田" (Yamada))_
+- **Ordinal Numbers**: Convert cardinal `NSNumber` objects to their ordinal in most major languages _(eg. "1st, 2nd, 3rd" / "1ère, 2ème, 3ème")_
+- **Time Intervals**: Show relative time distance between any two `NSDate` objects _(e.g. "3 minutes ago" / "yesterday")_
+- **Units of Information**: Humanized representations of quantities of bits and bytes _(e.g. "2.7 MB")_
+- **URL Requests**: Print out `cURL` or `Wget` command equivalents for any `NSURLRequest` _(e.g. `curl -X POST "https://www.example.com/" -H "Accept: text/html"`)_
 
 > FormatterKit, along with [TransformerKit](https://github.com/mattt/TransformerKit) & [InflectorKit](https://github.com/mattt/InflectorKit) provide well-designed APIs for manipulating user-facing content.
 
@@ -174,7 +174,7 @@ NSLog(@"%@", japaneseName);
 
 ## TTTOrdinalNumberFormatter
 
-`NSNumberFormatter` is great for [Cardinal numbers](http://en.wikipedia.org/wiki/Cardinal_number) (17, 42, 69, etc.), but it doesn't have built-in support for [Ordinal numbers](http://en.wikipedia.org/wiki/Ordinal_number_(linguistics)) (1st, 2nd, 3rd, etc.)
+`NSNumberFormatter` is great for [Cardinal numbers](http://en.wikipedia.org/wiki/Cardinal_number) (17, 42, 69, etc.), but it doesn't have built-in support for [Ordinal numbers](<http://en.wikipedia.org/wiki/Ordinal_number_(linguistics)>) (1st, 2nd, 3rd, etc.)
 
 A naïve implementation might be as simple as throwing the one's place in a switch statement and appending "-st", "-nd", etc. But what if you want to support French, which appends "-er", "-ère", and "-eme" in various contexts? How about Spanish? Japanese?
 
@@ -200,7 +200,7 @@ Assuming you've provided localized strings for "You came in %@ place!", the outp
 
 Nearly every application works with time in some way or another, and most often when we display temporal information to users, it's in relative terms to the present. So "3 minutes ago", "10 months ago", or "last month".
 
-iOS 4 introduced a `-doesRelativeDateFormatting` property for `NSDateFormatter`, but it falls back on an absolute time representation if no idiomatic expression is found.  Instead, `TTTTimeIntervalFormatter` defaults to a smart relative display of an `NSTimeInterval` value, with options to extend that behavior to your particular use case.
+iOS 4 introduced a `-doesRelativeDateFormatting` property for `NSDateFormatter`, but it falls back on an absolute time representation if no idiomatic expression is found. Instead, `TTTTimeIntervalFormatter` defaults to a smart relative display of an `NSTimeInterval` value, with options to extend that behavior to your particular use case.
 
 ### Example Usage
 
