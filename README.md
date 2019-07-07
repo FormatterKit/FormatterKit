@@ -14,39 +14,31 @@ In short, use this library if you're manually formatting any of the following (w
 - **Units of Information**: Humanized representations of quantities of bits and bytes _(e.g. "2.7 MB")_
 - **URL Requests**: Print out `cURL` or `Wget` command equivalents for any `NSURLRequest` _(e.g. `curl -X POST "https://www.example.com/" -H "Accept: text/html"`)_
 
-> FormatterKit, along with [TransformerKit](https://github.com/mattt/TransformerKit) & [InflectorKit](https://github.com/mattt/InflectorKit) provide well-designed APIs for manipulating user-facing content.
+## Installation
 
-## Localizations
+### CocoaPods
 
-FormatterKit comes fully internationalized, with `.strings` files for the following locales:
+You can install `FormatterKit` via CocoaPods,
+by adding the following line to your `Podfile`:
 
-- Catalan (`ca`)
-- Chinese (Simplified) (`zh_Hans`)
-- Chinese (Traditional) (`zh_Hant`)
-- Czech (`cs`)
-- Danish (`da`)
-- Dutch (`nl`)
-- English (`en`)
-- French (`fr`)
-- German (`de`)
-- Greek (`el`)
-- Hebrew (`he`)
-- Hungarian (`hu`)
-- Indonesian (`id`)
-- Italian (`it`)
-- Korean (`ko`)
-- Norwegian Bokmål (`nb`)
-- Norwegian Nynorsk (`nn`)
-- Polish (`pl`)
-- Portuguese (Brazilian) (`pt_BR`)
-- Russian (`ru`)
-- Spanish (`es`)
-- Swedish (`sv`)
-- Turkish (`tr`)
-- Ukranian (`uk`)
-- Vietnamese (`vi`)
+```ruby
+pod 'FormatterKit', '~> 1.9.0'
+```
 
-If you'd like to contribute an additional localization, feel free to [open a new pull request](https://github.com/mattt/FormatterKit/pulls).
+Run the `pod install` command to download the library
+and integrate it into your Xcode project.
+
+### Carthage
+
+To use `FormatterKit` in your Xcode project using Carthage,
+specify it in `Cartfile`:
+
+```
+github "FormatterKit/FormatterKit" ~> 1.9.0
+```
+
+Then run the `carthage update` command to build the framework,
+and drag the built FormatterKit.framework into your Xcode project.
 
 ## Demo
 
@@ -56,7 +48,10 @@ Build and run the `FormatterKit Example` project in Xcode to see an inventory of
 
 ## TTTAddressFormatter
 
-Address formats vary greatly across different regions. `TTTAddressFormatter` ties into the [Address Book frameworks](http://developer.apple.com/library/ios/#documentation/AddressBookUI/Reference/AddressBookUI_Framework/_index.html) to help your users find their place in the world.
+Address formats vary greatly across different regions.
+`TTTAddressFormatter` ties into the
+[Address Book frameworks](https://developer.apple.com/documentation/addressbookui?language=objc)
+to help your users find their place in the world.
 
 For example, addresses in the United States take the form:
 
@@ -71,8 +66,9 @@ Whereas addresses in Japan follow a different convention:
     Street Address
     Country
 
-> Requires the `AddressBook` and `AddressBookUI` frameworks are included, with `#import` statements in `Prefix.pch`.
-> Only available on iOS.
+> Requires that the `AddressBook` and `AddressBookUI` frameworks are linked
+> with `#import` statements in `Prefix.pch`.
+> `TTTAddressFormatter` isn't available on OS X.
 
 ### Example Usage
 
@@ -83,7 +79,10 @@ NSLog(@"%@", [addressFormatter stringFromAddressWithStreet:street locality:local
 
 ## TTTArrayFormatter
 
-Think of this as a production-ready alternative to `NSArray -componentsJoinedByString:`. `TTTArrayFormatter` comes with internationalization baked-in, and provides a concise API that allows you to configure for any edge cases.
+Think of this as a production-ready alternative to
+`NSArray -componentsJoinedByString:`.
+`TTTArrayFormatter` comes with internationalization baked-in
+and provides a concise API that allows you to configure for any edge cases.
 
 ### Example Usage
 
@@ -97,7 +96,8 @@ NSLog(@"%@", [arrayFormatter stringFromArray:list]); // # => "Russell, Spinoza &
 
 ## TTTColorFormatter
 
-RGB, CMYK, and HSL your ROY G. BIV in style. `TTTColorFormatter` provides string representations of colors.
+RGB, CMYK, and HSL your ROY G. BIV in style.
+`TTTColorFormatter` provides string representations of colors.
 
 ### Example Usage
 
@@ -108,9 +108,18 @@ NSString *RGB = [colorFormatter RGBStringFromColor:[UIColor orangeColor]];
 
 ## TTTLocationFormatter
 
-When working with `CoreLocation`, you can use your favorite unit for distance... so long as your favorite unit is the meter. If you want to take distance calculations and display them to the user, you may want to use kilometers instead, or maybe even miles, if you're of the [Imperial](http://en.wikipedia.org/wiki/Imperial_units) persuasion.
+When working with `CoreLocation`,
+you can use your favorite unit for distance...
+so long as your favorite unit is the meter.
+If you want to take distance calculations and display them to the user,
+you may want to use kilometers instead --- or maybe even miles
+if you're of the [Imperial](http://en.wikipedia.org/wiki/Imperial_units) persuasion.
 
-`TTTLocationFormatter` gives you a lot of flexibility in the display of coordinates, distances, direction, speed, and velocity. Choose Metric or Imperial, cardinal directions, abbreviations, or degrees, and configure everything else (number of significant digits, etc.), with the associated `NSNumberFormatter`.
+`TTTLocationFormatter` gives you a lot of flexibility in the display of
+coordinates, distances, direction, speed, and velocity.
+Choose Metric or Imperial, cardinal directions, abbreviations, or degrees,
+and configure everything else (number of significant digits, etc.)
+with the associated `NSNumberFormatter`.
 
 ### Example Usage
 
@@ -155,9 +164,11 @@ NSLog(@"%@", [locationFormatter stringFromLocation:austin]);
 
 ## TTTNameFormatter
 
-`TTTNameFormatter` formats names according to the internationalization standards of the AddressBook framework, which determine, for example, the display order of names and whether or not to delimit components with whitespace.
+`TTTNameFormatter` formats names according to the internationalization standards
+of the AddressBook framework, which determine, for example,
+the display order of names and whether or not to delimit components with whitespace.
 
-> `TTTNameFormatter` is not available on OS X.
+> `TTTNameFormatter` isn't available on OS X.
 
 ### Example Usage
 
@@ -198,9 +209,13 @@ Assuming you've provided localized strings for "You came in %@ place!", the outp
 
 ## TTTTimeIntervalFormatter
 
-Nearly every application works with time in some way or another, and most often when we display temporal information to users, it's in relative terms to the present. So "3 minutes ago", "10 months ago", or "last month".
-
-iOS 4 introduced a `-doesRelativeDateFormatting` property for `NSDateFormatter`, but it falls back on an absolute time representation if no idiomatic expression is found. Instead, `TTTTimeIntervalFormatter` defaults to a smart relative display of an `NSTimeInterval` value, with options to extend that behavior to your particular use case.
+Nearly every application works with time in some way or another.
+And when we display temporal information to users,
+it's typically in relative terms to the present,
+like "3 minutes ago", "10 months ago", or "last month".
+`TTTTimeIntervalFormatter` defaults to a
+smart, relative display of an `NSTimeInterval` value,
+with options to extend that behavior to your particular use case.
 
 ### Example Usage
 
@@ -227,9 +242,11 @@ TTTTimeIntervalFormatter *timeIntervalFormatter = [[TTTTimeIntervalFormatter all
 
 ## TTTUnitOfInformationFormatter
 
-No matter how far abstracted from its underlying hardware an application may be, there comes a day when it has to communicate the size of a file to the user.
-
-`TTTUnitOfInformationFormatter` transforms a number of bits or bytes and into a humanized representation, using either SI decimal or IEC binary unit prefixes.
+No matter how far abstracted from its underlying hardware an application may be,
+there comes a day when it has to communicate the size of a file to the user.
+`TTTUnitOfInformationFormatter` transforms a number of bits or bytes
+into a humanized representation,
+using either SI decimal or IEC binary unit prefixes.
 
 ### Example Usage
 
@@ -252,9 +269,14 @@ TTTUnitOfInformationFormatter *unitOfInformationFormatter = [[TTTUnitOfInformati
 
 ## TTTURLRequestFormatter
 
-`NSURLRequest` objects encapsulate all of the information made in a network request, including url, headers, body, etc. This isn't something you'd normally want to show to a user, but it'd be nice to have a way to make it more portable for debugging.
-
-Enter `TTTURLRequestFormatter`. In addition to formatting requests simply as `POST http://www.example.com/`, it will also generate `cURL` and `Wget` commands with all of its headers and data fields intact to debug in the console.
+`NSURLRequest` objects encapsulate all of the information made in a network request,
+including url, headers, body, etc.
+This isn't something you'd normally want to show to a user,
+but it'd be nice to have a way to make it more portable for debugging.
+Enter: `TTTURLRequestFormatter`.
+In addition to formatting requests simply as `POST http://www.example.com/`,
+it also generates `cURL` and `Wget` commands
+with all of its headers and data fields intact to debug in the console.
 
 ### Example Usage
 
