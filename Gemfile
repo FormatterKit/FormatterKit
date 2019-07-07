@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rake'
-gem 'slather', git: 'https://github.com/SlatherOrg/slather.git', ref: '79d7652'
+gem 'bundler'
+gem 'slather'
 gem 'xcpretty'
 gem 'cocoapods'
-
