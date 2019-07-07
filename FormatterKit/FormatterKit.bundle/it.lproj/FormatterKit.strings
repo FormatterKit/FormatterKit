@@ -1,4 +1,4 @@
-/* 
+﻿/* 
   Localizable.strings
   
 
@@ -120,6 +120,15 @@
 /* Kilometers Per Hour Unit */
 "km/h" = "km/h";
 
+/* No comment provided by engineer. */
+"last month" = "un mese fa";
+
+/* No comment provided by engineer. */
+"last week" = "una settimana fa";
+
+/* No comment provided by engineer. */
+"last year" = "un anno fa";
+
 /* Meter Unit */
 "m" = "m";
 
@@ -179,6 +188,15 @@
 
 /* Northeast Direction Abbreviation */
 "NE" = "NE";
+
+/* No comment provided by engineer. */
+"next month" = "il mese prossimo";
+
+/* No comment provided by engineer. */
+"next week" = "la prossima settimana";
+
+/* No comment provided by engineer. */
+"next year" = "l'anno prossimo";
 
 /* North Direction */
 "North" = "Nord";
@@ -244,6 +262,9 @@
 /* Tebibit Unit */
 "Tibit" = "Tibit";
 
+/* No comment provided by engineer. */
+"tomorrow" = "domani";
+
 /* #{Value} #{Unit} */
 "Unit of Information Format String" = "%1$@ %2$@";
 
@@ -273,6 +294,9 @@
 
 /* Year Unit (Plural) */
 "years" = "anni";
+
+/* No comment provided by engineer. */
+"yesterday" = "ieri";
 
 /* Year Unit (Singular, Abbreviated) */
 "yr" = "anno";
