@@ -1,6 +1,6 @@
 // TTTColorFormatter.m
-// 
-// Copyright (c) 2013 Mattt Thompson (http://mattt.me)
+//
+// Copyright (c) 2013 Mattt (https://mat.tt)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -8,10 +8,10 @@
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -158,21 +158,21 @@ static void TTTGetHSLComponentsFromColor(TTTColor *color, CGFloat *hue, CGFloat 
 - (TTTColor *)colorFromCMYKString:(NSString *)string {
     NSScanner *scanner = [NSScanner scannerWithString:string];
     scanner.charactersToBeSkipped = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
-    
+
     float c, m, y, k;
-    
+
     [scanner scanFloat:&c];
     [scanner scanFloat:&m];
     [scanner scanFloat:&y];
     [scanner scanFloat:&k];
-    
+
     c *= 0.01f;
     m *= 0.01f;
     y *= 0.01f;
     k *= 0.01f;
-    
+
     CGFloat dk = 1.0f - k;
-    
+
     return [TTTColor colorWithRed:(1.0f - c) * dk green:(1.0f - m) * dk blue:(1.0f - y) * dk alpha:1.0f];
 }
 

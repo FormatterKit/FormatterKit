@@ -1,17 +1,17 @@
 // ArrayFormatterViewController.m
 //
-// Copyright (c) 2012 Mattt Thompson (http://mattt.me)
-// 
+// Copyright (c) 2012 – 2019 Mattt (https://mat.tt)
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -48,9 +48,9 @@ NS_ENUM(NSUInteger, AddressFormatterViewControllerFormatterViewControllerRowInde
     if (!self) {
         return nil;
     }
-    
+
     self.title = NSLocalizedString(@"Address Formatter", nil);
-    
+
     NSMutableArray *mutableExamples = [NSMutableArray array];
     [mutableExamples addObject:@[@"633 Stag Trail Rd", @"North Caldwell", @"NJ", @"07006", @"United States"]];
     [mutableExamples addObject:@[@"221b Baker St", @"Paddington", @"Greater London", @"NW1 6XE", @"United Kingdom"]];
@@ -80,7 +80,7 @@ NS_ENUM(NSUInteger, AddressFormatterViewControllerFormatterViewControllerRowInde
 titleForHeaderInSection:(NSInteger)section
 {
     switch (section) {
-        case UnitedStatesSectionIndex:            
+        case UnitedStatesSectionIndex:
             return NSLocalizedString(@"United States", nil);
         case UnitedKingdomSectionIndex:
             return NSLocalizedString(@"United Kingdom", nil);
@@ -99,7 +99,7 @@ titleForHeaderInSection:(NSInteger)section
     dispatch_once(&onceToken, ^{
         _addressFormatter = [[TTTAddressFormatter alloc] init];
     });
-    
+
     switch (indexPath.row) {
         case ComponentsRowIndex:
             cell.detailTextLabel.font = [UIFont fontWithName:@"Menlo" size:14.0f];
@@ -125,20 +125,20 @@ titleForHeaderInSection:(NSInteger)section
         default:
             break;
     }
-    
+
     cell.textLabel.textColor = [UIColor lightGrayColor];
     cell.textLabel.font = [UIFont systemFontOfSize:16.0f];
     cell.detailTextLabel.font = [UIFont boldSystemFontOfSize:14.0f];
     cell.detailTextLabel.textColor = [UIColor darkGrayColor];
     cell.detailTextLabel.numberOfLines = 5;
-  
+
     NSArray *addressComponents = self.examples[(NSUInteger)indexPath.section];
     NSString *street = addressComponents[0];
     NSString *locality = addressComponents[1];
     NSString *region = addressComponents[2];
     NSString *postalCode = addressComponents[3];
     NSString *country = addressComponents[4];
-    
+
     switch (indexPath.row) {
         case ComponentsRowIndex:
             cell.textLabel.text = NSLocalizedString(@"Components", nil);
@@ -153,7 +153,7 @@ titleForHeaderInSection:(NSInteger)section
         default:
             break;
     }
-    
+
     if (indexPath.row == CurrentLocaleFormattedRowIndex || indexPath.row == NativeLocaleFormattedRowIndex ) {
         cell.detailTextLabel.text = [_addressFormatter stringFromAddressWithStreet:street locality:locality region:region postalCode:postalCode country:country];
     }

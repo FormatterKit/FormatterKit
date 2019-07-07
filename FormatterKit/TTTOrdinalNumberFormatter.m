@@ -1,6 +1,6 @@
 // TTTOrdinalNumberFormatter.m
 //
-// Copyright (c) 2011–2015 Mattt Thompson (http://mattt.me)
+// Copyright (c) 2011–2019 Mattt (https://mat.tt)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -217,7 +217,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
     if (NSLocationInRange([number integerValue] % 100, NSMakeRange(11, 2))) {
         return @":e";
     }
-    
+
     // 1:a, 2:a, 3:e, 4:e and so on. Also, 21:a, 22:a, 23:e ...
     switch ([number integerValue] % 10) {
         case 1:

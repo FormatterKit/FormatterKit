@@ -1,6 +1,6 @@
 // TTTAddressFormatter.m
 //
-// Copyright (c) 2012 Mattt Thompson (http://mattt.me)
+// Copyright (c) 2012 – 2019 Mattt (https://mat.tt)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -55,9 +55,9 @@
     if (!self) {
         return nil;
     }
-    
+
     self.locale = [NSLocale currentLocale];
-    
+
     return self;
 }
 
@@ -68,32 +68,32 @@
                                   country:(NSString *)country
 {
     NSMutableDictionary *mutableAddressComponents = [NSMutableDictionary dictionary];
-    
+
     if (street) {
         mutableAddressComponents[TTTAddressStreetKey] = street;
     }
-    
+
     if (locality) {
         mutableAddressComponents[TTTAddressLocalityKey] = locality;
     }
-    
+
     if (region) {
         mutableAddressComponents[TTTAddressRegionKey] = region;
     }
-    
+
     if (postalCode) {
         mutableAddressComponents[TTTAddressPostalCodeKey] = postalCode;
     }
-    
+
     if (country) {
         mutableAddressComponents[TTTAddressCountryKey] = country;
     }
-    
+
     NSString *countryCode = [self.locale objectForKey:NSLocaleCountryCode];
     if (countryCode) {
         mutableAddressComponents[TTTAddressCountryCodeKey] = countryCode;
     }
-    
+
     return [self stringForObjectValue:mutableAddressComponents];
 }
 
@@ -118,7 +118,7 @@
       errorDescription:(out NSString *__autoreleasing *)error
 {
     *error = NSLocalizedStringFromTableInBundle(@"Method Not Implemented", @"FormatterKit", [NSBundle formatterKitBundle], nil);
-    
+
     return NO;
 }
 
@@ -135,15 +135,15 @@
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
-    
+
     self.locale = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(locale))];
-    
+
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [super encodeWithCoder:aCoder];
-    
+
     [aCoder encodeObject:self.locale forKey:NSStringFromSelector(@selector(locale))];
 }
 

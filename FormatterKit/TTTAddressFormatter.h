@@ -1,6 +1,6 @@
 // TTTAddressFormatter.h
 //
-// Copyright (c) 2012 Mattt Thompson (http://mattt.me)
+// Copyright (c) 2012 – 2019 Mattt (https://mat.tt)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -26,15 +26,15 @@
 
 /**
  Instances of `TTTAddressFormatter` create address strings formatted according to a given locale.
- 
+
  For example, addresses in the United States take the form:
-    
+
     Street Address
     City State ZIP
     Country
- 
+
  Whereas addresses in Japan follow a different convention:
- 
+
     Postal Code
     Prefecture Municipality
     Street Address
@@ -55,7 +55,7 @@
 
 /**
  Returns an address string for the specified components formatted with the receiver's locale.
- 
+
  @param street The street address
  @param locality The locality (a.k.a. city, municipality, township)
  @param region The region (a.k.a. state, prefecture, principality)
