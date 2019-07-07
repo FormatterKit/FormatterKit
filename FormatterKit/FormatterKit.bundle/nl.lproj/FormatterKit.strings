@@ -68,6 +68,15 @@
 "just now" = "zojuist";
 
 /* No comment provided by engineer. */
+"last month" = "vorige maand";
+
+/* No comment provided by engineer. */
+"last week" = "vorige week";
+
+/* No comment provided by engineer. */
+"last year" = "vorig jaar";
+
+/* No comment provided by engineer. */
 "Method Not Implemented" = "Methode niet geïmplementeerd";
 
 /* Mile Unit (Singular) */
@@ -109,6 +118,15 @@
 /* Northeast Direction Abbreviation */
 "NE" = "NO";
 
+/* No comment provided by engineer. */
+"next month" = "volgende maand";
+
+/* No comment provided by engineer. */
+"next week" = "volgende week";
+
+/* No comment provided by engineer. */
+"next year" = "volgend jaar";
+
 /* North Direction */
 "North" = "Noord";
 
@@ -149,6 +167,9 @@
 /* Southwest Direction Abbreviation */
 "SW" = "ZW";
 
+/* No comment provided by engineer. */
+"tomorrow" = "morgen";
+
 /* #{Value} #{Unit} */
 "Unit of Information Format String" = "%1$@ %2$@";
 
@@ -178,6 +199,9 @@
 
 /* Year Unit (Plural) */
 "years" = "jaar";
+
+/* No comment provided by engineer. */
+"yesterday" = "gisteren";
 
 /* Year Unit (Singular, Abbreviated) */
 "yr" = "jr.";
