@@ -1,5 +1,32 @@
 # FormatterKit
 
+> This library is no longer being maintained.
+> Since its initial release in 2011,
+> Apple has filled in many of the gaps FormatterKit was created to fill
+> in Foundation and other SDK frameworks:
+
+| Deprecated FormatterKit API     | Apple SDK API                                                                          | Availability             |
+| ------------------------------- | -------------------------------------------------------------------------------------- | ------------------------ |
+| `TTTAddressFormatter`           | [`CNPostalAddressFormatter`][cnpostaladdressformatter]                                 | iOS 9.0+ / macOS 10.11+  |
+| `TTTArrayFormatter`             | [`NSListFormatter`][nslistformatter]                                                   | iOS 13.0+ / macOS 10.15+ |
+| `TTTNameFormatter`              | [`NSPersonNameComponentsFormatter`][nspersonnamecomponentsformatter]                   | iOS 9.0+ / macOS 10.11+  |
+| `TTTLocationFormatter`          | [`NSMeasurementFormatter` + `NSUnitDistance` / `NSUnitAngle`][nsmeasurementformatter]  | iOS 10.0+ / macOS 10.12+ |
+| `TTTOrdinalNumberFormatter`     | [`NSNumberFormatter` + `NSNumberFormatterOrdinalStyle`][nsnumberformatterordinalstyle] | iOS 9.0+ / macOS 10.11+  |
+| `TTTTimeIntervalFormatter`      | [`NSRelativeDateTimeFormatter`][nsrelativedatetimeformatter]                           | iOS 13.0+ / macOS 10.15+ |
+| `TTTUnitOfInformationFormatter` | [`NSMeasurementFormatter` + `NSUnitInformationStorage`][nsunitinformationstorage]      | iOS 13.0+ / macOS 10.15+ |
+
+> You can continue to use FormatterKit in your projects,
+> but we recommend switching to the corresponding Apple APIs
+> as soon as it makes sense to do so.
+>
+> Going forward, we plan to spin out non-deprecated formatters
+> into their own repositories for future development
+> as well as any new projects.
+> This repository will remain archived here
+> for compatibility with existing installations.
+
+---
+
 `FormatterKit` is a collection of well-crafted `NSFormatter` subclasses for things like units of information, distance, and relative time intervals. Each formatter abstracts away the complex business logic of their respective domain, so that you can focus on the more important aspects of your application.
 
 In short, use this library if you're manually formatting any of the following (with string interpolation or the like):
@@ -289,8 +316,48 @@ NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL U
 
     curl -X POST "https://www.example.com/" -H "Accept: text/html"
 
+## Localizations
+
+FormatterKit comes fully internationalized,
+with `.strings` files for the following locales:
+
+- Catalan (`ca`)
+- Chinese (Simplified) (`zh_Hans`)
+- Chinese (Traditional) (`zh_Hant`)
+- Czech (`cs`)
+- Danish (`da`)
+- Dutch (`nl`)
+- English (`en`)
+- French (`fr`)
+- German (`de`)
+- Greek (`el`)
+- Hebrew (`he`)
+- Hungarian (`hu`)
+- Indonesian (`id`)
+- Italian (`it`)
+- Korean (`ko`)
+- Norwegian Bokmål (`nb`)
+- Norwegian Nynorsk (`nn`)
+- Polish (`pl`)
+- Portuguese (Brazilian) (`pt_BR`)
+- Russian (`ru`)
+- Spanish (`es`)
+- Swedish (`sv`)
+- Turkish (`tr`)
+- Ukranian (`uk`)
+- Vietnamese (`vi`)
+
 ---
 
 ## License
 
-FormatterKit is available under the MIT license. See the LICENSE file for more info.
+FormatterKit is available under the MIT license.
+See the LICENSE file for more info.
+
+[cnpostaladdressformatter]: https://developer.apple.com/documentation/contacts/cnpostaladdressformatter?language=objc
+[nslistformatter]: https://developer.apple.com/documentation/foundation/nslistformatter?language=objc
+[nspersonnamecomponentsformatter]: https://developer.apple.com/documentation/foundation/NSPersonNameComponentsFormatter
+[nsmeasurementformatter]: https://developer.apple.com/documentation/foundation/NSMeasurementFormatter
+[nsnumberformatterordinalstyle]: https://developer.apple.com/documentation/foundation/nsnumberformatterstyle/nsnumberformatterordinalstyle?language=objc
+[nsrelativedatetimeformatter]: https://developer.apple.com/documentation/foundation/NSRelativeDateTimeFormatter
+[nsunitinformationstorage]: https://developer.apple.com/documentation/foundation/NSUnitInformationStorage
