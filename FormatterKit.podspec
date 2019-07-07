@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary   = '`stringWithFormat:` for the sophisticated hacker set.'
   s.homepage  = 'https://github.com/mattt/FormatterKit'
   s.social_media_url = 'https://twitter.com/mattt'
-  s.author    = { 'Mattt Thompson' => 'm@mattt.me' }
+  s.author    = { 'Mattt' => 'mattt@me.com' }
   s.source    = { :git => 'https://github.com/mattt/FormatterKit.git',
                   :tag => s.version
                 }
