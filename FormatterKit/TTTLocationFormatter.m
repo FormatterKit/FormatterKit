@@ -64,6 +64,8 @@ static inline void TTTGetDegreesMinutesSecondsFromCoordinateDegrees(CLLocationDe
     r = *m - floor(*m);
 
     *s = 60.0 * r;
+    
+    *d = fabs(*d);
 }
 
 static inline void TTTGetCardinalDirectionsFromCoordinate(CLLocationCoordinate2D coordinate, TTTLocationCardinalDirection *latitudeDirection, TTTLocationCardinalDirection *longitudeDirection) {

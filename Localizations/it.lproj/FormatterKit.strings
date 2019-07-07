@@ -1,5 +1,19 @@
+﻿/* 
+  Localizable.strings
+  
+
+  Created by Gabriele Petronella on 04.07.13.
+
+*/
+
 /* List separator */
 " " = " ";
+
+/* #{Dimensional Quantity} #{Direction}
+   #{Distance} #{Unit}
+   #{Speed} #{Unit}
+   Deictic Expression Format (#{Time} #{Ago/From Now} */
+"%@ %@" = "%1$@ %2$@";
 
 /* No comment provided by engineer. */
 "&" = "&";
@@ -11,52 +25,40 @@
 "," = ",";
 
 /* Approximate Qualifier Format */
-"about %@" = "yaklaşık %@";
+"about %@" = "circa %@";
 
 /* Past Deictic Expression */
-"ago" = "önce";
+"ago" = "fa";
 
 /* List conjunction */
-"and" = "ve";
+"and" = "e";
 
 /* Bit Unit */
 "bits" = "bit";
 
 /* Byte Unit */
-"bytes" = "bayt";
+"bytes" = "byte";
 
 /* Error converting to NSArray */
-"Couldn’t convert to NSArray" = "Couldn’t convert to NSArray";
+"Couldn’t convert to NSArray" = "Impossibile convertire a NSArray";
 
 /* Day Unit (Singular) */
-"day" = "gün";
+"day" = "g";
 
 /* Day Unit (Plural) */
-"days" = "gün";
+"days" = "g";
 
 /* Day Unit (Singular, Abbreviated) */
-"d" = "gün";
+"d" = "g";
 
 /* Day Unit (Plural, Abbreviated) */
-"ds" = "gün";
-
-/* Past Deictic Expression Format (#{Time} #{Ago} */
-"Past Deictic Expression Format String" = "%1$@ %2$@";
-
-/* Future Deictic Expression Format (#{In} #{Time} */
-"Future Deictic Expression Format String" = "%1$@ %2$@";
-
-/* #{Dimensional Quantity} #{Direction} */
-"Dimension Format String" = "%1$@ %2$@";
-
-/* #{Distance} #{Unit} */
-"Distance Format String" = "%1$@ %2$@";
+"ds" = "g";
 
 /* East Direction Abbreviation */
-"E" = "D";
+"E" = "E";
 
 /* East Direction */
-"East" = "Doğu";
+"East" = "Est";
 
 /* Exabyte Unit */
 "EB" = "EB";
@@ -65,10 +67,10 @@
 "EiB" = "EiB";
 
 /* Future Deictic Expression */
-"from now" = "sonra";
+"from now" = "da adesso";
 
 /* Feet Unit */
-"ft" = "fit";
+"ft" = "ft";
 
 /* Feet Per Second Unit */
 "ft/s" = "ft/s";
@@ -86,19 +88,19 @@
 "Gibit" = "Gibit";
 
 /* Hour Unit (Singular) */
-"hour" = "saat";
+"hour" = "ora";
 
 /* Hour Unit (Plural) */
-"hours" = "saat";
+"hours" = "ore";
 
 /* Hour Unit (Singular, Abbreviated) */
-"hr" = "sa";
+"hr" = "h";
 
 /* Hour Unit (Plural, Abbreviated) */
-"hrs" = "sa";
+"hrs" = "h";
 
 /* Present Deictic Expression */
-"just now" = "az önce";
+"just now" = "adesso";
 
 /* Kilobyte Unit */
 "KB" = "KB";
@@ -116,16 +118,16 @@
 "km" = "km";
 
 /* Kilometers Per Hour Unit */
-"km/h" = "km/sa";
+"km/h" = "km/h";
 
 /* No comment provided by engineer. */
-"last month" = "geçen ay";
+"last month" = "un mese fa";
 
 /* No comment provided by engineer. */
-"last week" = "geçen hafta";
+"last week" = "una settimana fa";
 
 /* No comment provided by engineer. */
-"last year" = "geçen yıl";
+"last year" = "un anno fa";
 
 /* Meter Unit */
 "m" = "m";
@@ -140,7 +142,7 @@
 "Mbit" = "Mbit";
 
 /* No comment provided by engineer. */
-"Method Not Implemented" = "Metod Tamamlanmadı";
+"Method Not Implemented" = "Metodo non implementato";
 
 /* Mebibyte Unit */
 "MiB" = "MiB";
@@ -149,64 +151,64 @@
 "Mibit" = "Mibit";
 
 /* Mile Unit (Singular) */
-"mile" = "mil";
+"mile" = "miglio";
 
 /* Mile Unit (Plural) */
-"miles" = "mil";
+"miles" = "miglia";
 
 /* Minute Unit (Singular, Abbreviated) */
-"min" = "dak";
+"min" = "min";
 
 /* Minute Unit (Plural, Abbreviated) */
-"mins" = "dak";
+"mins" = "min";
 
 /* Minute Unit (Singular) */
-"minute" = "dakika";
+"minute" = "minuto";
 
 /* Minute Unit (Plural) */
-"minutes" = "dakika";
+"minutes" = "minuti";
 
 /* Month Unit (Singular, Abbreviated) */
-"mo" = "ay";
+"mo" = "mese";
 
 /* Month Unit (Singular) */
-"month" = "ay";
+"month" = "mese";
 
 /* Month Unit (Plural) */
-"months" = "ay";
+"months" = "mesi";
 
 /* Month Unit (Plural, Abbreviated) */
-"mos" = "ay";
+"mos" = "mesi";
 
 /* Miles Per Hour Unit */
-"mph" = "mil/s";
+"mph" = "mph";
 
 /* North Direction Abbreviation */
-"N" = "K";
+"N" = "N";
 
 /* Northeast Direction Abbreviation */
-"NE" = "KD";
+"NE" = "NE";
 
 /* No comment provided by engineer. */
-"next month" = "sonraki ay";
+"next month" = "il mese prossimo";
 
 /* No comment provided by engineer. */
-"next week" = "sonraki hafta";
+"next week" = "la prossima settimana";
 
 /* No comment provided by engineer. */
-"next year" = "sonraki yıl";
+"next year" = "l'anno prossimo";
 
 /* North Direction */
-"North" = "Kuzey";
+"North" = "Nord";
 
 /* Northeast Direction */
-"Northeast" = "Kuzeydoğu";
+"Northeast" = "Nord-est";
 
 /* Northwest Direction */
-"Northwest" = "Kuzeybatı";
+"Northwest" = "Nord-ovest";
 
 /* Northwest Direction Abbreviation */
-"NW" = "KB";
+"NW" = "NO";
 
 /* Petabyte Unit */
 "PB" = "PB";
@@ -221,35 +223,32 @@
 "Pibit" = "Pibit";
 
 /* South Direction Abbreviation */
-"S" = "G";
+"S" = "S";
 
 /* Second Unit (Plural, Abbreviated)
    Second Unit (Singular, Abbreviated) */
-"s" = "s";
+"s" = "sec";
 
 /* Southeast Direction Abbreviation */
-"SE" = "GD";
+"SE" = "SE";
 
 /* Second Unit (Singular) */
-"second" = "saniye";
+"second" = "secondo";
 
 /* Second Unit (Plural) */
-"seconds" = "saniye";
+"seconds" = "secondi";
 
 /* South Direction */
-"South" = "Güney";
+"South" = "South";
 
 /* Southeast Direction */
-"Southeast" = "Güneydoğu";
+"Southeast" = "Southeast";
 
 /* Southwest Direction */
-"Southwest" = "Güneybatı";
-
-/* #{Speed} #{Unit} */
-"Speed Format String" = "%1$@ %2$@";
+"Southwest" = "Southwest";
 
 /* Southwest Direction Abbreviation */
-"SW" = "GB";
+"SW" = "SW";
 
 /* Terabyte Unit */
 "TB" = "TB";
@@ -264,44 +263,44 @@
 "Tibit" = "Tibit";
 
 /* No comment provided by engineer. */
-"tomorrow" = "yarın";
+"tomorrow" = "domani";
 
 /* #{Value} #{Unit} */
 "Unit of Information Format String" = "%1$@ %2$@";
 
 /* West Direction Abbreviation */
-"W" = "B";
+"W" = "W";
 
 /* Week Unit (Singular) */
-"week" = "hafta";
+"week" = "settimana";
 
 /* Week Unit (Plural) */
-"weeks" = "hafta";
+"weeks" = "settimane";
 
 /* West Direction */
-"West" = "Batı";
+"West" = "Ovest";
 
 /* Week Unit (Singular, Abbreviated) */
-"wk" = "h";
+"wk" = "sett";
 
 /* Week Unit (Plural, Abbreviated) */
-"wks" = "h";
+"wks" = "sett";
 
 /* Yard Unit */
-"yds" = "yarda";
+"yds" = "yds";
 
 /* Year Unit (Singular) */
-"year" = "yıl";
+"year" = "anno";
 
 /* Year Unit (Plural) */
-"years" = "yıl";
+"years" = "anni";
 
 /* No comment provided by engineer. */
-"yesterday" = "dün";
+"yesterday" = "ieri";
 
 /* Year Unit (Singular, Abbreviated) */
-"yr" = "y";
+"yr" = "anno";
 
 /* Year Unit (Plural, Abbreviated) */
-"yrs" = "y";
+"yrs" = "anni";
 

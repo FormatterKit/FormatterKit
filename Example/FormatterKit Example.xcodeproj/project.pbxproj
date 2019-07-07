@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01B49DDE1EAFDE4100BE7EAE /* LocationFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B49DDD1EAFDE4100BE7EAE /* LocationFormatterTests.swift */; };
 		500C0A6D1C948B5500F643D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C0A6C1C948B5500F643D3 /* Main.storyboard */; };
 		500C616B1CE79EE7002A1D96 /* ArrayFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C616A1CE79EE7002A1D96 /* ArrayFormatterTests.swift */; };
 		502F03151CA8FDCC0026119C /* FormatterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502F03141CA8FDCC0026119C /* FormatterKit.framework */; };
@@ -296,6 +297,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01B49DDD1EAFDE4100BE7EAE /* LocationFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationFormatterTests.swift; sourceTree = "<group>"; };
 		500782F51CAB9A2A0065B481 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		500782F71CAB9B910065B481 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		500782F81CAB9B920065B481 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 		504AB6B01DB332E000F6C09B /* TTTTimeIntervalFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TTTTimeIntervalFormatterTests.swift; path = "Tests-Bulgarian/TTTTimeIntervalFormatterTests.swift"; sourceTree = "<group>"; };
 		505136C11CCE1EF600569478 /* Tests-Russian.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-Russian.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		505136C31CCE1EF600569478 /* TimeIntervalFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalFormatterTests.swift; sourceTree = "<group>"; };
+		509EC2F01E92BBB400EA1044 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Playground.playground; path = "FormatterKit Example/Playground.playground"; sourceTree = "<group>"; };
 		50ACC1E01CD0B0DA004FB5F1 /* Tests-Arabic.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-Arabic.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50ACC1E21CD0B0DA004FB5F1 /* TimeIntervalFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalFormatterTests.swift; sourceTree = "<group>"; };
 		50ACC1EE1CD0B111004FB5F1 /* Tests-Catalan.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-Catalan.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -879,6 +882,7 @@
 			isa = PBXGroup;
 			children = (
 				50ACC2FA1CD0B2B0004FB5F1 /* TimeIntervalFormatterTests.swift */,
+				01B49DDD1EAFDE4100BE7EAE /* LocationFormatterTests.swift */,
 			);
 			name = Turkish;
 			path = "Tests-Turkish";
@@ -1011,6 +1015,7 @@
 		F8FBF9D91427A456001409DB = {
 			isa = PBXGroup;
 			children = (
+				509EC2F01E92BBB400EA1044 /* Playground.playground */,
 				F8FBF9EE1427A456001409DB /* FormatterKit Example */,
 				F8FBF9E71427A456001409DB /* Frameworks */,
 				F8FBF9E51427A456001409DB /* Products */,
@@ -1737,7 +1742,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					504AB6A31DB332A800F6C09B = {
@@ -1908,6 +1913,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				ja,
 				ru,
@@ -2403,6 +2409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50ACC2FB1CD0B2B0004FB5F1 /* TimeIntervalFormatterTests.swift in Sources */,
+				01B49DDE1EAFDE4100BE7EAE /* LocationFormatterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4411,15 +4418,21 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = NO;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -4463,6 +4476,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -4472,15 +4486,21 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = NO;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -4518,6 +4538,7 @@
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -4544,7 +4565,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FormatterKit Example/FormatterKit Example-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -4571,7 +4591,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mattt.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FormatterKit Example/FormatterKit Example-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

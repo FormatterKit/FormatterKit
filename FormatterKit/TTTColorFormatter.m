@@ -23,15 +23,13 @@
 #import "TTTColorFormatter.h"
 #import "NSBundle+FormatterKit.h"
 
-#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
-
 #import <tgmath.h>
 
-static void TTTGetRGBAComponentsFromColor(UIColor *color, CGFloat *red, CGFloat *green, CGFloat *blue, CGFloat *alpha) {
+static void TTTGetRGBAComponentsFromColor(TTTColor *color, CGFloat *red, CGFloat *green, CGFloat *blue, CGFloat *alpha) {
     [color getRed:red green:green blue:blue alpha:alpha];
 }
 
-static void TTTGetCMYKComponentsFromColor(UIColor *color, CGFloat *cyan, CGFloat *magenta, CGFloat *yellow, CGFloat *black) {
+static void TTTGetCMYKComponentsFromColor(TTTColor *color, CGFloat *cyan, CGFloat *magenta, CGFloat *yellow, CGFloat *black) {
     CGFloat r = 0.0f, g = 0.0f, b = 0.0f;
     TTTGetRGBAComponentsFromColor(color, &r, &g, &b, NULL);
 
@@ -48,7 +46,7 @@ static void TTTGetCMYKComponentsFromColor(UIColor *color, CGFloat *cyan, CGFloat
     if (black) *black = k;
 }
 
-static void TTTGetHSLComponentsFromColor(UIColor *color, CGFloat *hue, CGFloat *saturation, CGFloat *lightness) {
+static void TTTGetHSLComponentsFromColor(TTTColor *color, CGFloat *hue, CGFloat *saturation, CGFloat *lightness) {
     CGFloat r = 0.0f, g = 0.0f, b = 0.0f;
     TTTGetRGBAComponentsFromColor(color, &r, &g, &b, NULL);
 
@@ -87,14 +85,14 @@ static void TTTGetHSLComponentsFromColor(UIColor *color, CGFloat *hue, CGFloat *
 
 @implementation TTTColorFormatter
 
-- (NSString *)hexadecimalStringFromColor:(UIColor *)color {
+- (NSString *)hexadecimalStringFromColor:(TTTColor *)color {
     CGFloat r = 0.0f, g = 0.0f, b = 0.0f;
     TTTGetRGBAComponentsFromColor(color, &r, &g, &b, NULL);
 
     return [NSString stringWithFormat:@"#%02lX%02lX%02lX", (unsigned long)round(r * 0xFF), (unsigned long)round(g * 0xFF), (unsigned long)round(b * 0xFF)];
 }
 
-- (UIColor *)colorFromHexadecimalString:(NSString *)string {
+- (TTTColor *)colorFromHexadecimalString:(NSString *)string {
     NSScanner *scanner = [NSScanner scannerWithString:string];
     scanner.charactersToBeSkipped = [[NSCharacterSet alphanumericCharacterSet] invertedSet];
 
@@ -105,25 +103,25 @@ static void TTTGetHSLComponentsFromColor(UIColor *color, CGFloat *hue, CGFloat *
     CGFloat g = ((value & 0xFF00) >> 8) / 255.0f;
     CGFloat b = ((value & 0xFF)) / 255.0f;
 
-    return [UIColor colorWithRed:r green:g blue:b alpha:1.0];
+    return [TTTColor colorWithRed:r green:g blue:b alpha:1.0];
 }
 
 #pragma mark -
 
-- (NSString *)RGBStringFromColor:(UIColor *)color {
+- (NSString *)RGBStringFromColor:(TTTColor *)color {
     CGFloat r = 0.0f, g = 0.0f, b = 0.0f;
     TTTGetRGBAComponentsFromColor(color, &r, &g, &b, NULL);
 
     return [NSString stringWithFormat:@"rgb(%lu, %lu, %lu)", (unsigned long)round(r * 0xFF), (unsigned long)round(g * 0xFF), (unsigned long)round(b * 0xFF)];
 }
 
-- (UIColor *)colorFromRGBString:(NSString *)string {
+- (TTTColor *)colorFromRGBString:(NSString *)string {
     return [self colorFromRGBAString:string];
 }
 
 #pragma mark -
 
-- (NSString *)RGBAStringFromColor:(UIColor *)color {
+- (NSString *)RGBAStringFromColor:(TTTColor *)color {
     CGFloat r = 0.0f, g = 0.0f, b = 0.0f, a = 0.0f;
     TTTGetRGBAComponentsFromColor(color, &r, &g, &b, &a);
 
@@ -131,7 +129,7 @@ static void TTTGetHSLComponentsFromColor(UIColor *color, CGFloat *hue, CGFloat *
 
 }
 
-- (UIColor *)colorFromRGBAString:(NSString *)string {
+- (TTTColor *)colorFromRGBAString:(NSString *)string {
     NSScanner *scanner = [NSScanner scannerWithString:string];
     scanner.charactersToBeSkipped = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
 
@@ -141,23 +139,23 @@ static void TTTGetHSLComponentsFromColor(UIColor *color, CGFloat *hue, CGFloat *
     [scanner scanInteger:&b];
 
     if ([scanner scanFloat:&a]) {
-        return [UIColor colorWithRed:(r / 255.0f) green:(g / 255.0f) blue:(b / 255.0f) alpha:a];
+        return [TTTColor colorWithRed:(r / 255.0f) green:(g / 255.0f) blue:(b / 255.0f) alpha:a];
     } else {
-        return [UIColor colorWithRed:(r / 255.0f) green:(g / 255.0f) blue:(b / 255.0f) alpha:1.0];
+        return [TTTColor colorWithRed:(r / 255.0f) green:(g / 255.0f) blue:(b / 255.0f) alpha:1.0];
     }
 
 }
 
 #pragma mark -
 
-- (NSString *)CMYKStringFromColor:(UIColor *)color {
+- (NSString *)CMYKStringFromColor:(TTTColor *)color {
     CGFloat c = 0.0f, m = 0.0f, y = 0.0f, k = 0.0f;
     TTTGetCMYKComponentsFromColor(color, &c, &m, &y, &k);
 
     return [NSString stringWithFormat:@"cmyk(%g%%, %g%%, %g%%, %g%%)", c * 100.0f, m * 100.0f, y * 100.0f, k * 100.0f];
 }
 
-- (UIColor *)colorFromCMYKString:(NSString *)string {
+- (TTTColor *)colorFromCMYKString:(NSString *)string {
     NSScanner *scanner = [NSScanner scannerWithString:string];
     scanner.charactersToBeSkipped = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
     
@@ -175,19 +173,19 @@ static void TTTGetHSLComponentsFromColor(UIColor *color, CGFloat *hue, CGFloat *
     
     CGFloat dk = 1.0f - k;
     
-    return [UIColor colorWithRed:(1.0f - c) * dk green:(1.0f - m) * dk blue:(1.0f - y) * dk alpha:1.0f];
+    return [TTTColor colorWithRed:(1.0f - c) * dk green:(1.0f - m) * dk blue:(1.0f - y) * dk alpha:1.0f];
 }
 
 #pragma mark -
 
-- (NSString *)HSLStringFromColor:(UIColor *)color {
+- (NSString *)HSLStringFromColor:(TTTColor *)color {
     CGFloat h = 0.0f, s = 0.0f, l = 0.0f;
     TTTGetHSLComponentsFromColor(color, &h, &s, &l);
 
     return [NSString stringWithFormat:@"hsl(%0.0lu, %g%%, %g%%)", (unsigned long)round(h * 0xFF), s * 100.0f, l * 100.0f];
 }
 
-- (UIColor *)colorFromHSLString:(NSString *)string {
+- (TTTColor *)colorFromHSLString:(NSString *)string {
     NSScanner *scanner = [NSScanner scannerWithString:string];
     scanner.charactersToBeSkipped = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
 
@@ -196,33 +194,48 @@ static void TTTGetHSLComponentsFromColor(UIColor *color, CGFloat *hue, CGFloat *
     [scanner scanInteger:&s];
     [scanner scanInteger:&l];
 
-    return [UIColor colorWithHue:(h / 359.0f) saturation:(s / 100.0f) brightness:(l / 100.0f) alpha:1.0f];
+    return [TTTColor colorWithHue:(h / 359.0f) saturation:(s / 100.0f) brightness:(l / 100.0f) alpha:1.0f];
 }
 
 #pragma mark -
 
-- (NSString *)UIColorDeclarationFromColor:(UIColor *)color {
+- (NSString *)TTTColorDeclarationFromColor:(TTTColor *)color {
     CGFloat r = 0.0f, g = 0.0f, b = 0.0f, a = 0.0f;
     [color getRed:&r green:&g blue:&b alpha:&a];
 
-    return [NSString stringWithFormat:@"[UIColor colorWithRed:%g green:%g blue:%g alpha:%g]", r, g, b, a];
+    return [NSString stringWithFormat:@"[TTTColor colorWithRed:%g green:%g blue:%g alpha:%g]", r, g, b, a];
 }
+
+#if TARGET_OS_IPHONE
+
+- (NSString *)UIColorDeclarationFromColor:(UIColor *)color {
+	return [self TTTColorDeclarationFromColor:color];
+}
+
+#elif TARGET_OS_MAC
+
+- (NSString *)NSColorDeclarationFromColor:(NSColor *)color {
+	return [self TTTColorDeclarationFromColor:color];
+}
+
+#endif
+
 
 #pragma mark - NSFormatter
 
 - (NSString *)stringForObjectValue:(id)anObject {
-    if (![anObject isKindOfClass:[UIColor class]]) {
+    if (![anObject isKindOfClass:[TTTColor class]]) {
         return nil;
     }
 
-    return [self hexadecimalStringFromColor:(UIColor *)anObject];
+    return [self hexadecimalStringFromColor:(TTTColor *)anObject];
 }
 
 - (BOOL)getObjectValue:(out __autoreleasing id *)obj
              forString:(NSString *)string
       errorDescription:(out NSString *__autoreleasing *)error
 {
-    UIColor *color = nil;
+    TTTColor *color = nil;
     if ([string hasPrefix:@"#"]) {
         color = [self colorFromHexadecimalString:string];
     } else if ([string hasPrefix:@"rgb("]) {
@@ -248,4 +261,3 @@ static void TTTGetHSLComponentsFromColor(UIColor *color, CGFloat *hue, CGFloat *
 
 @end
 
-#endif

@@ -23,8 +23,19 @@
 #import <Foundation/Foundation.h>
 #import <Availability.h>
 
-#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
+
+#include "TargetConditionals.h"
+
+#if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
+#define TTTColor UIColor
+
+#elif TARGET_OS_MAC
+#import <Cocoa/Cocoa.h>
+#define TTTColor NSColor
+#endif
+
+
 
 /**
  Instances of `TTTColorFormatter` create string representations of `UIColor` objects, and convert textual representations of colors into `UIColor` objects.
@@ -50,7 +61,7 @@
  
  @return A hexadecimal string representation.
  */
-- (NSString *)hexadecimalStringFromColor:(UIColor *)color;
+- (NSString *)hexadecimalStringFromColor:(TTTColor *)color;
 
 /**
  Returns the color represented by the specified hexadecimal string.
@@ -59,7 +70,7 @@
  
  @return The color.
  */
-- (UIColor *)colorFromHexadecimalString:(NSString *)string;
+- (TTTColor *)colorFromHexadecimalString:(NSString *)string;
 
 ///----------
 /// @name RGB
@@ -72,7 +83,7 @@
 
  @return An RGB string representation.
  */
-- (NSString *)RGBStringFromColor:(UIColor *)color;
+- (NSString *)RGBStringFromColor:(TTTColor *)color;
 
 /**
  Returns the color represented by the specified RGB string.
@@ -81,7 +92,7 @@
 
  @return The color.
  */
-- (UIColor *)colorFromRGBString:(NSString *)string;
+- (TTTColor *)colorFromRGBString:(NSString *)string;
 
 ///-----------
 /// @name RGBA
@@ -94,7 +105,7 @@
 
  @return An RGBA string representation.
  */
-- (NSString *)RGBAStringFromColor:(UIColor *)color;
+- (NSString *)RGBAStringFromColor:(TTTColor *)color;
 
 /**
  Returns the color represented by the specified RGBA string.
@@ -103,7 +114,7 @@
 
  @return The color.
  */
-- (UIColor *)colorFromRGBAString:(NSString *)string;
+- (TTTColor *)colorFromRGBAString:(NSString *)string;
 
 ///-----------
 /// @name CMYK
@@ -116,7 +127,7 @@
 
  @return A CMYK string representation.
  */
-- (NSString *)CMYKStringFromColor:(UIColor *)color;
+- (NSString *)CMYKStringFromColor:(TTTColor *)color;
 
 /**
  Returns the color represented by the specified CMYK string.
@@ -125,7 +136,7 @@
 
  @return The color.
  */
-- (UIColor *)colorFromCMYKString:(NSString *)string;
+- (TTTColor *)colorFromCMYKString:(NSString *)string;
 
 ///----------
 /// @name HSL
@@ -138,7 +149,7 @@
 
  @return An HSL string representation.
  */
-- (NSString *)HSLStringFromColor:(UIColor *)color;
+- (NSString *)HSLStringFromColor:(TTTColor *)color;
 
 /**
  Returns the color represented by the specified HSL string.
@@ -147,12 +158,22 @@
 
  @return The color.
  */
-- (UIColor *)colorFromHSLString:(NSString *)string;
+- (TTTColor *)colorFromHSLString:(NSString *)string;
 
 ///--------------------------
 /// @name UIColor Declaration
 ///--------------------------
 
+/**
+ Returns a `TTTColor` declaration for the specified color.
+
+ @param color The color.
+
+ @return A `TTTColor` declaration.
+ */
+- (NSString *)TTTColorDeclarationFromColor:(TTTColor *)color;
+
+#if TARGET_OS_IPHONE
 /**
  Returns a `UIColor` declaration for the specified color.
 
@@ -162,6 +183,18 @@
  */
 - (NSString *)UIColorDeclarationFromColor:(UIColor *)color;
 
-@end
+#elif TARGET_OS_MAC
+
+/**
+ Returns a `NSColor` declaration for the specified color.
+
+ @param color The color.
+
+ @return A `NSColor` declaration.
+ */
+- (NSString *)NSColorDeclarationFromColor:(NSColor *)color;
 
 #endif
+
+@end
+

@@ -29,6 +29,10 @@ class ColorFormatterTests: XCTestCase {
         XCTAssertEqual(formatter.hexadecimalString(from: orange), "#FF8000")
     }
 
+    func testColorFromHexadecimalWithoutPound() {
+        XCTAssertEqual(formatter.color(fromHexadecimalString: "FF8000"), formatter.color(fromHexadecimalString: "#FF8000"))
+    }
+
     func testRGB() {
         XCTAssertEqual(formatter.rgbString(from: UIColor.white), "rgb(255, 255, 255)")
         XCTAssertEqual(formatter.rgbString(from: UIColor.black), "rgb(0, 0, 0)")
