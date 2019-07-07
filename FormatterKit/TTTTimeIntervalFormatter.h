@@ -59,9 +59,14 @@
 @property (nonatomic, copy) NSString *futureDeicticExpression;
 
 /**
- Specifies the localized string used to format the time interval string and deictic expression. Defaults to a format with the deictic expression following the time interval
+ Specifies the localized string used to format the past time interval string and deictic expression. Defaults to a format with the deictic expression following the time interval
  */
-@property (nonatomic, copy) NSString *deicticExpressionFormat;
+@property (nonatomic, copy) NSString *pastDeicticExpressionFormat;
+
+/**
+ Specifies the localized string used to format the future time interval string and deictic expression. Defaults to a format with the deictic expression following the time interval
+ */
+@property (nonatomic, copy) NSString *futureDeicticExpressionFormat;
 
 /**
  Specifies the localized string used to format the time with its suffix. "#{Time} #{Unit}" by default.

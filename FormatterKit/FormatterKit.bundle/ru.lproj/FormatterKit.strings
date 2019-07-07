@@ -40,8 +40,11 @@
 /* Day Unit (Plural, Abbreviated) */
 "ds" = "дней";
 
-/* Deictic Expression Format (#{Time} #{Ago/From Now} */
-"Deictic Expression Format String" = "%1$@ %2$@";
+/* Past Deictic Expression Format (#{Time} #{Ago} */
+"Past Deictic Expression Format String" = "%1$@ %2$@";
+
+/* Future Deictic Expression Format (#{In} #{Time} */
+"Future Deictic Expression Format String" = "%1$@ %2$@";
 
 /* #{Dimensional Quantity} #{Direction} */
 "Dimension Format String" = "%1$@ %2$@";

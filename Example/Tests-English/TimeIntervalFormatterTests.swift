@@ -96,35 +96,35 @@ class TTTTimeIntervalFormatterTests: XCTestCase {
     // MARK: Future
 
     func testSecondsFromNow() {
-        XCTAssertEqual(formatter.string(forTimeInterval: 3), "3 seconds from now")
+        XCTAssertEqual(formatter.string(forTimeInterval: 3), "in 3 seconds")
     }
 
     func testMinutesFromNow() {
-        XCTAssertEqual(formatter.string(forTimeInterval: 60 * 21), "21 minutes from now")
+        XCTAssertEqual(formatter.string(forTimeInterval: 60 * 21), "in 21 minutes")
     }
 
     func testHoursFromNow() {
-        XCTAssertEqual(formatter.string(forTimeInterval: 3600), "1 hour from now")
-        XCTAssertEqual(formatter.string(forTimeInterval: 3600 * 2), "2 hours from now")
+        XCTAssertEqual(formatter.string(forTimeInterval: 3600), "in 1 hour")
+        XCTAssertEqual(formatter.string(forTimeInterval: 3600 * 2), "in 2 hours")
     }
 
     func testDaysFromNow() {
-        XCTAssertEqual(formatter.string(forTimeInterval: 3600 * 24), "1 day from now")
-        XCTAssertEqual(formatter.string(forTimeInterval: 3600 * 24 * 6), "6 days from now")
+        XCTAssertEqual(formatter.string(forTimeInterval: 3600 * 24), "in 1 day")
+        XCTAssertEqual(formatter.string(forTimeInterval: 3600 * 24 * 6), "in 6 days")
     }
 
     func testWeeksFromNow() {
-        XCTAssertEqual(formatter.string(forTimeInterval: 3600 * 24 * 7), "1 week from now")
-        XCTAssertEqual(formatter.string(forTimeInterval: 3600 * 24 * 25), "3 weeks from now")
+        XCTAssertEqual(formatter.string(forTimeInterval: 3600 * 24 * 7), "in 1 week")
+        XCTAssertEqual(formatter.string(forTimeInterval: 3600 * 24 * 25), "in 3 weeks")
     }
 
     func testMonthsFromNow() {
-        XCTAssertEqual(formatter.string(forTimeInterval: 3600 * 24 * 32), "1 month from now")
-        XCTAssertEqual(formatter.string(forTimeInterval: 3600 * 24 * 31 * 6), "6 months from now")
+        XCTAssertEqual(formatter.string(forTimeInterval: 3600 * 24 * 32), "in 1 month")
+        XCTAssertEqual(formatter.string(forTimeInterval: 3600 * 24 * 31 * 6), "in 6 months")
     }
 
     func testYearsFromNow() {
-        XCTAssertEqual(formatter.string(forTimeInterval: 3600 * 24 * 366), "1 year from now")
-        XCTAssertEqual(formatter.string(forTimeInterval: 3600 * 24 * 366 * 2), "2 years from now")
+        XCTAssertEqual(formatter.string(forTimeInterval: 3600 * 24 * 366), "in 1 year")
+        XCTAssertEqual(formatter.string(forTimeInterval: 3600 * 24 * 366 * 2), "in 2 years")
     }
 }
