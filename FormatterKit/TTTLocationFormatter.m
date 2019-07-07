@@ -206,9 +206,7 @@ static NSString * TTTLocalizedStringForAbbreviatedCardinalDirection(TTTLocationC
     _numberFormatter = [[NSNumberFormatter alloc] init];
     [_numberFormatter setLocale:[NSLocale currentLocale]];
     [_numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
-    [_numberFormatter setMaximumSignificantDigits:2];
-    [_numberFormatter setUsesSignificantDigits:YES];
-
+    
     return self;
 }
 
